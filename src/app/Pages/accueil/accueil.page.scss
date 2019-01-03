@@ -1,0 +1,77 @@
+@import '../../Shared/Styles/Variables';
+
+#accueil {
+  .bg {
+    // transform: scaleX(-1);
+  }
+  .container {
+    height: 100%;
+    padding-bottom: calc(#{$padding} + #{$navHeight});
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 80px;
+  }
+
+  .introduce {
+    h3 {
+      font-size: 20px;
+      letter-spacing: 3px;
+      font-weight: 300;
+    }
+    h4 {
+      font-size: 15px;
+      letter-spacing: 3px;
+      font-weight: 300;
+    }
+  }
+
+
+  .entete {
+    margin: 50px 0;
+    h1 {
+      font-size: 130px;
+      letter-spacing: 2px;
+      line-height: 140px;
+    }
+    h2 {
+      font-size: 16px;
+      letter-spacing: 3px;
+      font-weight: 300;
+    }
+  }
+
+  .formEnter {
+    p {
+      font-family: $font-subtitles;
+      color: $color-secondary;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 3px;
+    }
+  }
+
+  .accueil__realisation {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: flex-start;
+    p {
+      margin: 0 30px 0 0;
+      letter-spacing: 2px;
+      font-size: 10px;
+      text-transform: uppercase;
+      opacity: 1;
+      color: rgba($color-secondary, .5);
+      font-weight: 400;
+      span {
+        color: rgba($color-secondary, .8);
+        font-weight: initial;
+      }
+    }
+  }
+}

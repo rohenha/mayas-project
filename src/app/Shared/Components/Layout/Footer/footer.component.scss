@@ -1,0 +1,55 @@
+@import '../../../Styles/Variables';
+
+.footer {
+  position: fixed;
+  bottom: $padding;
+  // width: calc(100% - (#{$padding} * 2));
+  z-index: 30;
+  height: $navHeight;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
+    li {
+      list-style-type: none;
+      margin-left: 15px;
+      a {
+        transition: color .2s ease-in-out;
+      }
+      img {
+        padding-top: 5px;
+        width: 12px;
+        opacity: .5;
+        transition: opacity .2s ease-in-out;
+      }
+      &:hover {
+        a {
+          color: $color-secondary;
+        }
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+#footer-left {
+  left: $padding;
+  a {
+    transition: color .2s ease-in-out;
+  }
+  &:hover {
+    a {
+      color: $color-secondary;
+    }
+  }
+}
+
+#footer-right {
+  right: $padding;
+}

@@ -1,0 +1,68 @@
+@import '../../../../Styles/Variables';
+
+
+.content__interactive360 {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  flex: 0 0 auto;
+  overflow: hidden;
+
+  .cube {
+    width: 100%;
+    height: 100%;
+    perspective: 600px;
+    perspective-origin: 50% 50%;
+    position: relative;
+    &__container {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      cursor: move;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      transform-style: preserve-3d;
+      //   animation: animCube 20s linear infinite;
+      //   transform: rotateY(10deg);
+      transform: translateZ(50vw);
+    }
+    &__face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      backface-visibility: hidden;
+    }
+    &__back {
+      transform: translate3d(0, 0, 50vw) rotate3d(0, 1, 0, 180deg);
+    }
+    &__right {
+      transform: rotate3d(0, 1, 0, -90deg) translate3d(0, 0, -50vw);
+    }
+    &__left {
+      transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, -50vw);
+    }
+    &__front {
+      transform: translate3d(0, 0, -50vw);
+    }
+    &__up {
+      transform: translate3d(0, -50vw, 0);
+    }
+  }
+}
+
+@keyframes animCube {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}

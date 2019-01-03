@@ -1,7 +1,7 @@
 // Colors
-$color-primary: #0747A6;
-$color-secondary: #DEEBFF;
-$color-third: #091E42;
+$color-primary: #F25F5C;
+$color-secondary: #FEFEFE;
+$color-third: rgba($color-secondary, .5);
 $color-white: #FFF;
 $color-black: #141414;
 
@@ -13,8 +13,13 @@ $width-m: '1024px';
 $width-l: '1366px';
 $width-xl: '1600px';
 $width-xxl: '1920px';
+$padding: 20px;
+$navHeight: 26px;
 
 
 // Fonts
-$font-regular: 'Helvetica Neue', sans-serif;
-$font-titles: 'Georgia', serif;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700|Oswald');
+$font-regular: 'Open Sans', sans-serif;
+$font-titles: 'Oswald', serif;
+$font-subtitles: 'Open Sans Condensed', serif;

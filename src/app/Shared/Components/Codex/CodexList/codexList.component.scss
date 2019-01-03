@@ -1,0 +1,44 @@
+@import '../../../Styles/Variables';
+
+.codex {
+  &__accueil {
+    &--list {
+      &-single {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid $color-black;
+        margin-bottom: 10px;
+        transition: background-color .2s ease-in-out;
+        &.active,
+        &:hover {
+          background-color: $color-black;
+        }
+        p {
+          margin: 0;
+          cursor: pointer;
+        }
+        span {
+          display: block;
+        }
+        &-type {
+          color: $color-primary;
+          letter-spacing: 3px;
+          line-height: 10px;
+          font-size: 12px;
+          font-weight: 300;
+          font-family: $font-subtitles;
+          text-transform: uppercase;
+        }
+        &-name {
+          font-size: 14px;
+          letter-spacing: 2px;
+          line-height: 22px;
+          font-family: $font-titles;
+          color: $color-secondary;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

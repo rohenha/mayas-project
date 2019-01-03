@@ -18,14 +18,16 @@
     "noUnusedLocals": true,
     "baseUrl": "./",
     "paths": {
-      "Components": [ "src/app/Shared/Components/index.ts" ],
-      "Styles/*": [ "src/app/Shared/Styles/*" ],
-      "Services": [ "src/app/Core/Services/index.ts" ],
-      "Resolvers": [ "src/app/Core/Resolvers/index.ts" ],
+      "Pages": [ "src/app/Pages/index.ts" ],
+      "Content": [ "src/app/Content/index.ts" ],
+      "Services": [ "src/app/Common/Services/index.ts" ],
+      "Resolvers": [ "src/app/Common/Resolvers/index.ts" ],
       "Interfaces": [ "src/app/Common/Interfaces/index.ts" ],
       "Mocks": [ "src/app/Common/Mocks/index.ts" ],
-      "Pages": [ "src/app/Pages/index.ts" ],
-      "Animations": [ "src/app/Core/Animations/index.ts" ],
+      "Animations": [ "src/app/Common/Animations/index.ts" ],
+      "Routes": [ "src/app/Shared/Routes/index.ts" ],
+      "Styles/*": [ "src/app/Shared/Styles/*" ],
+      "Components": [ "src/app/Shared/Components/index.ts" ],
     }
   },
   "include": [

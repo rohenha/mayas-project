@@ -1,0 +1,21 @@
+@import '../../../Styles/Variables';
+
+.loader__anim {
+  width: 100px;
+  polygon {
+    fill: none;
+    stroke: $color-secondary;
+    stroke-width: 1px;
+    stroke-dasharray: 450px;
+    animation: loader 8s infinite linear;
+  }
+}
+
+@keyframes loader {
+  from {
+    stroke-dashoffset: 450;
+  }
+  to {
+    stroke-dashoffset: -450;
+  }
+}

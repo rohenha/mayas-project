@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
 
 // Components
-import { Header } from 'Components';
+// import { Footer } from 'Components';
 import Base from './app/Base';
 
 export default class App extends React.Component {
@@ -15,7 +15,7 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Header />
+          {/* <Header /> */}
           <Route path="/" component={Base}  />
         </React.Fragment>
       </BrowserRouter>

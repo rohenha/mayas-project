@@ -3,20 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: #FFF;
+  background-color: $color-black;
+  // padding: 20px;
 }
 
-.container {
+html,
+body,
+#root {
   width: 100%;
-  max-width: $width-l;
-  padding: 0 20px;
+  height: 100%;
 }
 
-.box {
-  border-radius: 3px;
-  background: $color-white;
-  box-shadow: 0 5px 10px 5px rgba($color-black, .15);
-  text-align: center;
-  padding: 10px;
+#root {
+  position: relative;
 }

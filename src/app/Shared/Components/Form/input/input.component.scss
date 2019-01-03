@@ -1,0 +1,52 @@
+@import '../../../Styles/Variables';
+
+.input {
+  margin: 20px auto;
+  width: 300px;
+  display: flex;
+  flex-flow: wrap column;
+  align-items: flex-start;
+  justify-content: center;
+  label {
+    width: 100%;
+    color: $color-secondary;
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 5px;
+    text-align: left;
+    display: inline-block;
+  }
+}
+
+input {
+  border: 1px solid rgba($color-primary, .2);
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-size: 16px;
+  width: 100%;
+  display: inline-block;
+  font-family: $font-regular;
+  &:focus {
+    outline: 0;
+    border: 1px solid lighten($color-primary, 1);
+  }
+}
+
+
+// button {
+//   background-color: lighten($color-primary, 10%);
+//   color: $color-secondary;
+//   padding: 7px 40px;
+//   font-family: $font-regular;
+//   border: 0;
+//   border-radius: 3px;
+//   font-size: 16px;
+//   cursor: pointer;
+//   transition: background-color .15s ease-in-out;
+//   &:hover {
+//     background-color: $color-primary;
+//   }
+//   &:disabled {
+//     background-color: lighten($color-black, 40%);
+//   }
+// }

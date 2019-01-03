@@ -1,0 +1,46 @@
+@import '../../Shared/Styles/Variables';
+
+
+#P404 {
+  .container {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 80px;
+    height: 100%;
+    width: 550px;
+  }
+
+  .introduce {
+    margin: 0 0 50px 0;
+    h3 {
+      font-size: 14px;
+      letter-spacing: 3px;
+      font-weight: 300;
+      //   text-transform: inherit;
+    }
+  }
+
+  .entete {
+    margin: 50px 0;
+    h1 {
+      font-size: 130px;
+      letter-spacing: 2px;
+      line-height: 140px;
+    }
+    h2 {
+      font-size: 16px;
+      letter-spacing: 3px;
+      font-weight: 300;
+    }
+  }
+}
+
+// .P404 {
+//   &__button {
+//     width: 100%;
+//     display: flex;
+//     justify-content: flex-end;
+//   }
+// }
