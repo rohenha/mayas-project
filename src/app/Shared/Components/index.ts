@@ -36,6 +36,7 @@ export * from './Quiz/Screen/screen.component';
 export * from './Quiz/Question/question.component';
 
 export * from './Video/video.component';
+export * from './Video/VideoYoutube/video-youtube.component';
 export * from './Video/VideoFooter/video-footer.component';
 
 export * from './Galerie/galerie.component';

@@ -89,14 +89,6 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                             x: "50%",
                             y: "50%"
                         },
-                        // {
-                        //     content: "",
-                        //     file: require('../../../Assets/Sounds/carnival-daniel_simon.mp3'),
-                        //     style: "audio",
-                        //     title:"Intitulé",
-                        //     x: "80%",
-                        //     y: "80%"
-                        // },
                     ]} />
                 </DetailsComponent>
             </React.Fragment>
