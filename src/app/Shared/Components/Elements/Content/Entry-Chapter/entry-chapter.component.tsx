@@ -31,8 +31,9 @@ export class EntryChapterComponent extends React.Component<IEntryChapterProps, I
                 : <img className="bg" src={this.props.imgs[0]} />
                 }
                 <div className="content__entryChapter-content">
-                    <p className="quiz-screen__title--chapter"><span>Chapitre 1</span> Mayas</p>
+                    <p className="quiz-screen__title--chapter"><span>Chapitre {this.props.chapter.number}</span> {this.props.chapter.name}</p>
                     <h1>{this.props.text}</h1>
+                    <p className="content__entryChapter-content--desc">{this.props.introduction}</p>
                     <p className="content__entryChapter-content--scroll">Scroll <span className="content__entryChapter-content--scroll-arrow"/></p>
                 </div>
             </div>

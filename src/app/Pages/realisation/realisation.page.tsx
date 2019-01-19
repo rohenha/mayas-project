@@ -44,18 +44,21 @@ export class PageRealisation extends React.Component<IRealisationProps, IRealisa
                     <QuoteImgComponent
                         imgs={[require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),]}
                         top={true}
+                        title={''}
                     >
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                     </QuoteImgComponent>
                     <QuoteImgComponent
                         imgs={[require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),]}
                         top={false}
+                        title={''}
                     >
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                     </QuoteImgComponent>
                     <QuoteImgComponent
                         imgs={[require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),]}
                         top={true}
+                        title={''}
                     >
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                     </QuoteImgComponent>

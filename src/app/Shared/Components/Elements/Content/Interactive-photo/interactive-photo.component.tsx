@@ -30,7 +30,7 @@ export class InteractivePhotoComponent extends React.Component<IInteractivePhoto
     public render(): React.ReactElement<any> {
         return (
             <div className="content__interactivePhoto">
-                <img className="bg" src={this.props.img} />
+                <img src={this.props.img} />
                 <SoundDocComponent sound={this.state.sound} delay={0} autoplay={false} play={this.state.play} />
                 <div className="content__interactivePhoto-content">
                     {this.props.points.map((point: any, index: number) =>

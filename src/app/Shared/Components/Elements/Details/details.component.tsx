@@ -16,8 +16,7 @@ export class DetailsComponent extends React.Component<IDetailsProps, IDetailsSta
 
     public render(): React.ReactElement<any> {
         return (
-            <div id="introduction" className="page" data-page="Details">
-                {/* {this.props.children} */}
+            <div className="page pageContent" data-page="Details">
                 <div className="content">
                     <div className="container">
                         {this.props.children}

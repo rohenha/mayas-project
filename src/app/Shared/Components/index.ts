@@ -16,14 +16,17 @@ export * from './Sound/ambiance/sound-ambiance.component';
 
 export * from './Preloader/preloader.component';
 
+export * from './Elements/Subfolder/subfolder.component';
 export * from './Elements/MultiplePaths/multiple-paths.component';
 export * from './Elements/Details/details.component';
 export * from './Elements/Loader/loader.component';
 export * from './Elements/Content/Quote-Img/quote-img.component';
+export * from './Elements/Content/Text-Img/text-img.component';
 export * from './Elements/Content/Entry-Chapter/entry-chapter.component';
 export * from './Elements/Content/Content-Part/content-part.component';
 export * from './Elements/Content/Interactive-photo/interactive-photo.component';
 export * from './Elements/Content/Interactive360/interactive360.component';
+export * from './Elements/Content/Next-step/next-step.component';
 
 export * from './Codex/codex.component';
 export * from './Codex/CodexList/codexList.component';

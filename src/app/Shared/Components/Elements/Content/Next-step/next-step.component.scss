@@ -1,0 +1,15 @@
+@import '../../../../Styles/Variables';
+
+.content {
+  &__nextStep {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 400px;
+    background-color: $color-black;
+    color: $color-white;
+  }
+}

@@ -9,6 +9,14 @@ export interface IMultiplePathsState {
     windowWidth: number
 }
 
+// tslint:disable-next-line:no-empty-interface
+export interface ISubFolderProps {
+    paths: IMultiplePath[]
+}
+// tslint:disable-next-line:no-empty-interface
+export interface ISubFolderState {
+}
+
 export interface IMultiplePath {
     img: string,
     name: string,

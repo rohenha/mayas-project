@@ -1,6 +1,7 @@
 {
   "name": "maya-project",
   "version": "0.5.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@types/gsap": "^1.20.0",

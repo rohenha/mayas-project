@@ -30,6 +30,7 @@ export class QuoteImgComponent extends React.Component<IQuoteImgProps, IQuoteImg
                     </div>
                 )}
                 <div className="content__quoteImg-content">
+                    {this.props.title === '' ? <p className="title">{this.props.title}</p> : null}
                     {this.props.children}
                 </div>
             </div>

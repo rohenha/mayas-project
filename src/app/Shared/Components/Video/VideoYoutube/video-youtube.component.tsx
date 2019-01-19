@@ -3,7 +3,7 @@ import { IVideoProps, IVideoState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './VideoYoutube.component.scss';
+import './video-youtube.component.scss';
 
 // Components
 

@@ -6,7 +6,8 @@ import * as React from 'react';
 import './multiple-paths.styleguide.scss';
 
 // Components
-import { MultiplePathComponent } from 'Components';
+// import { MultiplePathComponent } from 'Components';
+import { SubFolderComponent } from 'Components';
 
 export class StyleGuideMultiplePaths extends React.Component<ICommonProps, ICommonState> {
     public stote: any;
@@ -57,7 +58,9 @@ export class StyleGuideMultiplePaths extends React.Component<ICommonProps, IComm
         return (
             <div className="page" data-page="Common">
                 {/* <HeaderExpComponent soundDelay={0} audio={false} sound={''} page={this.stote.page} /> */}
-                <MultiplePathComponent paths={this.stote.paths} />
+                {/* <MultiplePathComponent paths={this.stote.paths} /> */}
+                <SubFolderComponent paths={this.stote.paths} />
+                {/* <MultiplePathComponent paths={this.stote.paths} /> */}
                 {/* <FooterExpComponent codexDatas={this.stote.codexDatas} nextPage={'/cgu'} history={this.props.history} /> */}
             </div>
         );

@@ -1,17 +1,24 @@
 // tslint:disable-next-line:no-empty-interface
 export interface IQuoteImgProps {
     imgs: string[],
-    top: boolean
+    top: boolean,
+    title: string
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IQuoteImgState {
 }
 
+export interface IChapter {
+    number: number,
+    name: string
+}
 // tslint:disable-next-line:no-empty-interface
 export interface IEntryChapterProps {
     imgs: string[],
     text: string,
     video: boolean,
+    chapter: IChapter,
+    introduction: string,
     history: any
 }
 // tslint:disable-next-line:no-empty-interface
@@ -48,4 +55,21 @@ export interface IInteractive360State {
     play: boolean,
     mousePos: { x: number, y: number },
     rot: { x: number, y: number},
+}
+
+// tslint:disable-next-line:no-empty-interface
+export interface ITextImgProps {
+    img: any,
+}
+// tslint:disable-next-line:no-empty-interface
+export interface ITextImgState {
+}
+
+// tslint:disable-next-line:no-empty-interface
+export interface INextStepProps {
+    history: any,
+    chapter: IChapter
+}
+// tslint:disable-next-line:no-empty-interface
+export interface INextStepState {
 }

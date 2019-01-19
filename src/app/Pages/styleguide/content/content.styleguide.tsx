@@ -6,7 +6,16 @@ import * as React from 'react';
 import './content.styleguide.scss';
 
 // Components
-import { ContentPartComponent, DetailsComponent, EntryChapterComponent, Interactive360Component, InteractivePhotoComponent, QuoteImgComponent } from 'Components';
+import {
+    // ContentPartComponent,
+    DetailsComponent,
+    EntryChapterComponent,
+    // Interactive360Component,
+    InteractivePhotoComponent,
+    NextStepComponent,
+    QuoteImgComponent,
+    TextImgComponent,
+} from 'Components';
 
 export class StyleGuideContent extends React.Component<ICommonProps, ICommonState> {
     constructor(props: any) {
@@ -29,21 +38,33 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         ]} 
                         text="Chapter" 
                         video={false} 
+                        chapter= {{name: "Mayas", number: 1}}
+                        introduction="Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores provident minus."
                         {...this.props}
                     />
+
+                    <TextImgComponent
+                        img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')} 
+                    >
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+                        <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                        <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                    </TextImgComponent>
 
                     <QuoteImgComponent
                         imgs={[require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),
                             require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')
                         ]}
-                        top={false}
+                        top={true}
+                        title={"Lorem Ipsum"}
                     >
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+                        <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                     </QuoteImgComponent>
 
-                    <ContentPartComponent img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')}>
+                    {/* <ContentPartComponent img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')}>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat odit cum iure similique saepe voluptatum voluptas, corrupti beatae repellat velit debitis magnam, nulla quibusdam assumenda deleniti! Totam repudiandae est eveniet?</p>
-                    </ContentPartComponent>
+                    </ContentPartComponent> */}
 
                     <InteractivePhotoComponent img={require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} points={[
                         {
@@ -72,7 +93,7 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         // },
                     ]} />
 
-                    <Interactive360Component img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')} points={[
+                    {/* <Interactive360Component img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')} points={[
                         {
                             content: "",
                             file: require('../../../Assets/Sounds/carnival-daniel_simon.mp3'),
@@ -89,7 +110,11 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                             x: "50%",
                             y: "50%"
                         },
-                    ]} />
+                    ]} /> */}
+                    <NextStepComponent
+                        chapter={{ name: "Mayas", number: 1 }}
+                        {...this.props}
+                    />
                 </DetailsComponent>
             </React.Fragment>
         );

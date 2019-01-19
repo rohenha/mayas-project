@@ -29,7 +29,7 @@ export class VideoComponent extends React.Component<IVideoProps, IVideoState> {
                 <video
                     id="videoBg"
                     className="bg"
-                    playsinline = {true}
+                    playsInline = {true}
                     controls={this.props.controls}
                     autoPlay={this.props.autoplay}
                     loop={this.props.loop}

@@ -32,6 +32,13 @@
         font-size: 70px;
         line-height: 70px;
       }
+      &--desc {
+        width: 60%;
+        max-width: 300px;
+        margin-top: 30px;
+        font-size: 14px;
+        font-weight: 300;
+      }
       &--scroll {
         display: flex;
         flex-flow: row wrap;

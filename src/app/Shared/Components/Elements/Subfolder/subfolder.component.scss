@@ -1,0 +1,86 @@
+@import '../../../Styles/Variables';
+
+
+.content__subfolder {
+  display: grid;
+  grid-template-areas: 'a b' 'a c';
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  &--single {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $color-black;
+    &:hover {
+      img {
+        transform: scale(1);
+        opacity: 1;
+      }
+      span {
+        transform: translateX(10px);
+      }
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.1);
+      opacity: .5;
+      transition: all 1s ease-in-out;
+    }
+    p {
+      display: inline-block;
+      position: absolute;
+      line-height: 35px;
+      left: 40px;
+      bottom: 40px;
+      margin: auto;
+      z-index: 4;
+      pointer-events: none;
+      font-family: $font-titles;
+      color: $color-white;
+      font-size: 40px;
+      max-width: 200px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      span {
+        display: block;
+        font-family: $font-subtitles;
+        font-weight: 700;
+        font-size: 16px;
+        color: $color-primary;
+        transition: transform 1s ease-in-out;
+
+        // margin-top: 20px;
+      }
+    }
+
+    &.subfolder {
+      &__left {
+        transition: width 1s ease-in-out;
+        grid-area: a;
+      }
+      &__top {
+        grid-area: b;
+      }
+      &__bottom {
+        grid-area: c;
+      }
+    }
+  }
+  .subfolder__right {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: width 1s ease-in-out;
+  }
+}
