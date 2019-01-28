@@ -11,13 +11,23 @@ import {
     DetailsComponent,
     EntryChapterComponent,
     // Interactive360Component,
+    ImageSliderComponent,
     InteractivePhotoComponent,
-    NextStepComponent,
+    // NextStepComponent,
     QuoteImgComponent,
+    TextComponent,
     TextImgComponent,
 } from 'Components';
 
 export class StyleGuideContent extends React.Component<ICommonProps, ICommonState> {
+    public images: any[] =[
+        require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),
+        require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg'),
+    ];
+    public images2: any[] = [
+        require('../../../Assets/Images/jimmy-baum-346127-unsplash.jpg'),
+        require('../../../Assets/Images/john-salzarulo-78830-unsplash.jpg'),
+    ];
     constructor(props: any) {
         super(props);
     }
@@ -51,10 +61,18 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                     </TextImgComponent>
 
+                    <TextComponent>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+                        <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                        <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                    </TextComponent>
+
+                    <ImageSliderComponent
+                        imgs={this.images}
+                    />
+
                     <QuoteImgComponent
-                        imgs={[require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),
-                            require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')
-                        ]}
+                        imgs={this.images2}
                         top={true}
                         title={"Lorem Ipsum"}
                     >
@@ -111,10 +129,11 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                             y: "50%"
                         },
                     ]} /> */}
-                    <NextStepComponent
+                    {/* <NextStepComponent
                         chapter={{ name: "Mayas", number: 1 }}
+                        url = "/"
                         {...this.props}
-                    />
+                    /> */}
                 </DetailsComponent>
             </React.Fragment>
         );

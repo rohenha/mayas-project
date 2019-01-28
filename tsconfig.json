@@ -20,7 +20,7 @@
     "paths": {
       "Pages": [ "src/app/Pages/index.ts" ],
       "Content": [ "src/app/Content/index.ts" ],
-      "Services": [ "src/app/Common/Services/index.ts" ],
+      "Services": [ "src/app/Services/index.ts" ],
       "Resolvers": [ "src/app/Common/Resolvers/index.ts" ],
       "Interfaces": [ "src/app/Common/Interfaces/index.ts" ],
       "Mocks": [ "src/app/Common/Mocks/index.ts" ],

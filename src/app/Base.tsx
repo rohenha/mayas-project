@@ -4,6 +4,7 @@ import { IBaseProps, IBaseState, IPath} from 'Interfaces';
 import * as React from 'react';
 import { Route, Switch } from 'react-router';
 import {  Transition, TransitionGroup } from 'react-transition-group';
+import { PagesService } from 'Services';
 
 // Styles
 import './Base.scss';
@@ -22,6 +23,7 @@ import Routes from 'Routes';
 export default class Base extends React.Component<IBaseProps, IBaseState> {
     public enterTrans: (node: any) => void = this.enter.bind(this);
     public exitTrans: (node: any) => void = this.exit.bind(this);
+    public pagesService: PagesService = new PagesService();
     constructor(props: any) {
         super(props);
         this.state = {
@@ -92,12 +94,9 @@ export default class Base extends React.Component<IBaseProps, IBaseState> {
                 </TransitionGroup>
                 {this.state.page && this.state.page.content && this.state.page.type !== "quiz" ? 
                     <FooterExpComponent
-                        footerText={ Routes.ExpRoutes[Routes.ExpRoutes.indexOf(this.state.page) + 1] !== undefined ? { text1: "Poursuivre", text2: "l'expérience" } : { text1: "Terminer", text2: "l'expérience" }}
+                        footerText={this.pagesService.getTextButtonNextPage(Routes, this.state.page)}
                         codexDatas={this.state.page.content.codex}
-                        nextPage={
-                            Routes.ExpRoutes[Routes.ExpRoutes.indexOf(this.state.page) + 1] !== undefined ?
-                            Routes.ExpRoutes[Routes.ExpRoutes.indexOf(this.state.page) + 1].content.url : ''
-                        }
+                        nextPage={this.pagesService.getNextPage(Routes, this.state.page) }
                         history={this.props.history}
                     /> 
                 : null}

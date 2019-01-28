@@ -22,6 +22,8 @@ export * from './Elements/Details/details.component';
 export * from './Elements/Loader/loader.component';
 export * from './Elements/Content/Quote-Img/quote-img.component';
 export * from './Elements/Content/Text-Img/text-img.component';
+export * from './Elements/Content/Text/text.component';
+export * from './Elements/Content/Image-Slider/image-slider.component';
 export * from './Elements/Content/Entry-Chapter/entry-chapter.component';
 export * from './Elements/Content/Content-Part/content-part.component';
 export * from './Elements/Content/Interactive-photo/interactive-photo.component';

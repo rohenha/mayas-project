@@ -68,8 +68,25 @@ export interface ITextImgState {
 // tslint:disable-next-line:no-empty-interface
 export interface INextStepProps {
     history: any,
-    chapter: IChapter
+    chapter: IChapter,
+    url: string
 }
 // tslint:disable-next-line:no-empty-interface
 export interface INextStepState {
+}
+
+// tslint:disable-next-line:no-empty-interface
+export interface ITextProps {
+}
+// tslint:disable-next-line:no-empty-interface
+export interface ITextState {
+}
+
+// tslint:disable-next-line:no-empty-interface
+export interface IImageSliderProps {
+    imgs: string[]
+}
+// tslint:disable-next-line:no-empty-interface
+export interface IImageSliderState {
+    index: number
 }

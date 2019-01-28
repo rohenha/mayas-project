@@ -2,6 +2,8 @@
 import { TweenMax } from 'gsap';
 import { IScreenQuizProps, IScreenQuizState } from 'Interfaces';
 import * as React from 'react';
+import { PagesService } from 'Services';
+
 
 // Styles
 import './screen.component.scss';
@@ -15,6 +17,7 @@ import Routes from 'Routes';
 export class QuizScreenComponent extends React.Component<IScreenQuizProps, IScreenQuizState> {
     public node: React.RefObject<HTMLDivElement>;
     public onNextStep: () => {}= this.nextStep.bind(this);
+    public pagesService: PagesService = new PagesService();
     constructor(props: any) {
         super(props);
         this.state = {
@@ -74,11 +77,8 @@ export class QuizScreenComponent extends React.Component<IScreenQuizProps, IScre
                         }
                     {this.state.page ?
                         <ButtonExpComponent
-                            text={Routes.ExpRoutes[Routes.ExpRoutes.indexOf(this.state.page) + 1] !== undefined ? { text1: "Poursuivre", text2: "l'expérience" } : { text1: "Terminer", text2: "l'expérience" }}
-                            redirection={
-                                Routes.ExpRoutes[Routes.ExpRoutes.indexOf(this.state.page) + 1] !== undefined ?
-                                    Routes.ExpRoutes[Routes.ExpRoutes.indexOf(this.state.page) + 1].content.url : ''
-                            }
+                            text={this.pagesService.getTextButtonNextPage(Routes, this.state.page)}
+                            redirection={this.pagesService.getNextPage(Routes, this.state.page)}
                             back={false}
                             {...this.props}
                         />

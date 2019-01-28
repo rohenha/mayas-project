@@ -8,7 +8,6 @@ import './text-img.component.scss';
 // Components
 
 export class TextImgComponent extends React.Component<ITextImgProps, ITextImgState> {
-    public node: React.RefObject<HTMLDivElement>;
     constructor(props: any) {
         super(props);
     }

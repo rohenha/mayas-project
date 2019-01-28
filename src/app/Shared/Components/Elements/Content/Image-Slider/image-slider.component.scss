@@ -1,0 +1,96 @@
+@import '../../../../Styles/Variables';
+
+
+.pageContent {
+  .content {
+    &__imageSlider {
+      width: 100vw;
+      height: 100%;
+      flex: 0 0 auto;
+      background-color: $color-black;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      &-container {
+        width: 60%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+      &-content {
+        height: auto;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        &_image {
+          width: 100%;
+          height: 500px;
+          margin: 50px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .slide {
+        width: 35px;
+        height: 35px;
+        background: rgba(#49403A, .5);
+        border: 1px solid rgba(#F6F6F6, .3);
+        border-radius: 35px;
+        position: relative;
+        overflow: hidden;
+        transition: background .3s ease-in-out, border .3s ease-in-out;
+        cursor: pointer;
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url('../../../../../Assets/Images/right-arrow.svg');
+          background-position: center center;
+          background-size: 75% 75%;
+          background-repeat: repeat-x;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          transition: background-position .4s ease-in-out;
+          transform: rotate(90deg);
+        }
+        &:hover {
+          background: rgba(#F6F6F6, .5);
+          border: 1px solid rgba(#F6F6F6, .8);
+          &::before {
+            background-position: 30px center;
+          }
+        }
+        &-previous {
+          &::before {
+            transform: rotate(-90deg);
+          }
+        }
+        &-next {
+          margin-top: 30px;
+        }
+        &-controller {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          left: 10%;
+          height: 100px;
+        }
+      }
+    }
+  }
+}
