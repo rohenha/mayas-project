@@ -21,11 +21,13 @@ export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
     }
 
     public componentDidUpdate(prevProps: any): void {
-        if (this.props.toggleMenu !== prevProps.toggleMenu && this.props.toggleMenu === true) {
-            this.enterMenu();
-        }
-        if (this.props.toggleMenu !== prevProps.toggleMenu && this.props.toggleMenu === false) {
-            this.exitMenu();
+        if (this.props.toggleMenu !== prevProps.toggleMenu) {
+            if (this.props.toggleMenu === true) {
+                this.enterMenu();
+            }
+            if (this.props.toggleMenu === false) {
+                this.exitMenu();
+            }
         }
     }
 

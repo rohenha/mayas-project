@@ -45,9 +45,13 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
     }
 
     public updateSound(): void {
-        const current = Math.floor(this.sound.currentTime / 60) + ':' + Math.floor(this.sound.currentTime);
-        const total = Math.floor(this.sound.duration / 60) + ':' + Math.floor(this.sound.duration);
+        const current = this.getSound(this.sound.currentTime);
+        const total = this.getSound(this.sound.duration);
         this.setState({ currentSound: Math.round(this.sound.currentTime / this.sound.duration * 100), current, total });
+    }
+
+    public getSound(time: number) : string {
+        return Math.floor(time / 60) + ':' + Math.floor(time);
     }
 
 
