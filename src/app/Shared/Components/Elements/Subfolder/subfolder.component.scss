@@ -63,24 +63,18 @@
         // margin-top: 20px;
       }
     }
-
-    &.subfolder {
-      &__left {
-        transition: width 1s ease-in-out;
-        grid-area: a;
-      }
-      &__top {
-        grid-area: b;
-      }
-      &__bottom {
-        grid-area: c;
-      }
-    }
   }
-  .subfolder__right {
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
+}
+
+.content__subfolder--single {
+  &:first-child {
     transition: width 1s ease-in-out;
+    grid-area: a;
+  }
+  &:nth-child(2) {
+    grid-area: b;
+  }
+  &:last-child {
+    grid-area: c;
   }
 }
