@@ -27,6 +27,7 @@ export * from './Elements/Content/Image-Slider/image-slider.component';
 export * from './Elements/Content/Entry-Chapter/entry-chapter.component';
 export * from './Elements/Content/Content-Part/content-part.component';
 export * from './Elements/Content/Interactive-photo/interactive-photo.component';
+export * from './Elements/Content/Content-interactive/content-interactive.component';
 export * from './Elements/Content/Interactive360/interactive360.component';
 export * from './Elements/Content/Next-step/next-step.component';
 

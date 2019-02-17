@@ -33,6 +33,13 @@ export interface IContentPartProps {
 export interface IContentPartState {
 }
 
+export interface ITextInteractive {
+    content: [],
+    file: string[],
+    title: string,
+    type: string
+}
+
 // tslint:disable-next-line:no-empty-interface
 export interface IInteractivePhotoProps {
     img: string,
@@ -40,8 +47,22 @@ export interface IInteractivePhotoProps {
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IInteractivePhotoState {
+    play: boolean,
     sound: any,
-    play: boolean
+    soundOpen: boolean,
+    text: ITextInteractive,
+    textOpen: boolean
+}
+
+// tslint:disable-next-line:no-empty-interface
+export interface IContentInteractiveProps {
+    open: boolean,
+    text: ITextInteractive,
+    closeFunction: any
+}
+// tslint:disable-next-line:no-empty-interface
+export interface IContentInteractiveState {
+    index: number
 }
 
 // tslint:disable-next-line:no-empty-interface

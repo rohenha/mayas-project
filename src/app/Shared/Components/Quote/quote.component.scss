@@ -37,7 +37,7 @@
     position: relative;
     &::after {
       content: '';
-      background: url('../../../Assets/Images/quote.svg');
+      background: url('/Assets/Images/quote.svg');
       background-position: center center;
       background-size: contain;
       display: inline-block;
@@ -58,7 +58,7 @@
       text-transform: uppercase;
       &::before {
         content: '';
-        background: url('../../../Assets/Images/quote.svg');
+        background: url('/Assets/Images/quote.svg');
         background-position: center center;
         background-size: contain;
         display: inline-block;

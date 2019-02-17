@@ -84,31 +84,40 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat odit cum iure similique saepe voluptatum voluptas, corrupti beatae repellat velit debitis magnam, nulla quibusdam assumenda deleniti! Totam repudiandae est eveniet?</p>
                     </ContentPartComponent> */}
 
-                    <InteractivePhotoComponent img={require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} points={[
+                    <InteractivePhotoComponent 
+                        img={require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')}
+                        points={[
                         {
                             content: "",
                             file: require('../../../Assets/Sounds/carnival-daniel_simon.mp3'),
-                            style: "audio",
                             title:"Intitulé",
+                            type: "audio",
                             x: "20%",
                             y: "20%"
                         },
                         {
                             content: "",
                             file: require('../../../Assets/Sounds/bensound-hey.mp3'),
-                            style: "audio",
                             title:"Intitulé 2",
+                            type: "audio",
                             x: "50%",
                             y: "50%"
                         },
-                        // {
-                        //     content: "",
-                        //     file: require('../../../Assets/Sounds/carnival-daniel_simon.mp3'),
-                        //     style: "audio",
-                        //     title:"Intitulé",
-                        //     x: "80%",
-                        //     y: "80%"
-                        // },
+                        {
+                            content: [
+                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus iure recusandae dolorum quibusdam nihil facilis, dolor exercitationem quia hic? Corrupti autem esse quis, similique dolores delectus. Aspernatur facilis itaque corporis!",
+                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus iure recusandae dolorum quibusdam nihil facilis, dolor exercitationem quia hic? Corrupti autem esse quis, similique dolores delectus. Aspernatur facilis itaque corporis!"
+                            ],
+                            file: [
+                                require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),
+                                require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),
+                                require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')
+                            ],
+                            title:"Intitulé",
+                            type: "text",
+                            x: "80%",
+                            y: "80%"
+                        },
                     ]} />
 
                     {/* <Interactive360Component img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')} points={[

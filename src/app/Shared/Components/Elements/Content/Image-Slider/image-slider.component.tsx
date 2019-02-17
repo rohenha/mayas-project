@@ -11,8 +11,8 @@ import './image-slider.component.scss';
 export class ImageSliderComponent extends React.Component<IImageSliderProps, IImageSliderState> {
     public node: React.RefObject<HTMLDivElement>;
     public imageHeight: number;
-    public nextSlide: () => any = this.nextSlideAnimation.bind(this)
-    public previousSlide: () => any = this.previousSlideAnimation.bind(this)
+    public nextSlide: () => any = this.nextSlideAnimation.bind(this);
+    public previousSlide: () => any = this.previousSlideAnimation.bind(this);
     constructor(props: any) {
         super(props);
         this.node = React.createRef();
@@ -46,7 +46,7 @@ export class ImageSliderComponent extends React.Component<IImageSliderProps, IIm
                     <div className="content__imageSlider-content" ref={this.node}>
                         {this.props.imgs.map((img, j: number) => {
                             return (
-                                <div className="content__imageSlider-content_image" key="i" onClick={this.slideAnimation.bind(this, j)}>
+                                <div className="content__imageSlider-content_image" key={j * 4} onClick={this.slideAnimation.bind(this, j)}>
                                     <img src={ img } alt="" />
                                 </div>
                             );
