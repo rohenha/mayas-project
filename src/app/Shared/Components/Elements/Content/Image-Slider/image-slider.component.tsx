@@ -34,7 +34,10 @@ export class ImageSliderComponent extends React.Component<IImageSliderProps, IIm
     }
 
     public slideAnimation(index:number): void {
-        this.imageHeight = this.node.current!.getElementsByClassName('content__imageSlider-content_image')[0].getBoundingClientRect().height;
+        this.imageHeight = this.node.current!
+          .getElementsByClassName('content__imageSlider-content_image')[0]
+          .getBoundingClientRect()
+          .height;
         TweenMax.to(this.node.current!, 0.5, { y: -index * (this.imageHeight + 50) });
         this.setState({ index });
     }

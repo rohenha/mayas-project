@@ -34,7 +34,7 @@ export interface IContentPartState {
 }
 
 export interface ITextInteractive {
-    content: [],
+    content: any[],
     file: string[],
     title: string,
     type: string

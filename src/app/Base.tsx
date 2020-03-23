@@ -11,11 +11,11 @@ import './Base.scss';
 
 // Components
 import Animations from 'Animations';
-import { 
-    Footer, 
-    FooterExpComponent, 
-    HeaderExpComponent, 
-    // LoadingComponent 
+import {
+    Footer,
+    FooterExpComponent,
+    HeaderExpComponent,
+    // LoadingComponent
 } from 'Components';
 import Routes from 'Routes';
 
@@ -73,34 +73,38 @@ export default class Base extends React.Component<IBaseProps, IBaseState> {
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
-                {/* <LoadingComponent /> */}
-                {this.state.page && this.state.page.content ? 
-                    <HeaderExpComponent page={ {chapter: this.state.page.content.chapter, name: this.state.page.content.pageName} } /> 
-                : null}
-                <TransitionGroup component="div" id="content">
-                    <Transition
-                        key={this.props.location.pathname}
-                        timeout={2000}
-                        onEnter={this.enterTrans}
-                        onExit={this.exitTrans}
-                        appear={true}
-                    >
-                        <Switch location={this.props.location}>
-                            {Routes.AppRoutes.map((route: IPath, index: number) =>
-                                <Route key={index} path={route.path} exact={route.exact} {...this.props} component={route.component}/>
-                            )}
-                        </Switch>
-                    </Transition>
-                </TransitionGroup>
-                {this.state.page && this.state.page.content && this.state.page.type !== "quiz" ? 
-                    <FooterExpComponent
-                        footerText={this.pagesService.getTextButtonNextPage(Routes, this.state.page)}
-                        codexDatas={this.state.page.content.codex}
-                        nextPage={this.pagesService.getNextPage(Routes, this.state.page) }
-                        history={this.props.history}
-                    /> 
-                : null}
-                <Footer />
+
+              {this.state.page && this.state.page.content ?
+                  <HeaderExpComponent page={ {chapter: this.state.page.content.chapter, name: this.state.page.content.pageName} } />
+              : null}
+
+              <TransitionGroup component="div" id="content">
+                  <Transition
+                      key={this.props.location.pathname}
+                      timeout={2000}
+                      onEnter={this.enterTrans}
+                      onExit={this.exitTrans}
+                      appear={true}
+                  >
+                      <Switch location={this.props.location}>
+                          {Routes.AppRoutes.map((route: IPath, index: number) =>
+                              <Route key={index} path={route.path} exact={route.exact} {...this.props} component={route.component}/>
+                          )}
+                      </Switch>
+                  </Transition>
+              </TransitionGroup>
+
+              {this.state.page && this.state.page.content && this.state.page.type !== "quiz" ?
+                  <FooterExpComponent
+                      footerText={this.pagesService.getTextButtonNextPage(Routes, this.state.page)}
+                      codexDatas={this.state.page.content.codex}
+                      nextPage={this.pagesService.getNextPage(Routes, this.state.page) }
+                      history={this.props.history}
+                  />
+              : null}
+
+              <Footer/>
+
             </React.Fragment>
         );
     }
