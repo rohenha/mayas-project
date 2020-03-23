@@ -3,7 +3,7 @@ import { IHeaderProps, IHeaderState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './header.component.scss';
+import './header.component.sass';
 
 // Components
 

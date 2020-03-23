@@ -4,7 +4,7 @@ import { IGalerieProps, IGalerieState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './galerie.component.scss';
+import './galerie.component.sass';
 
 // Components
 import Animations from 'Animations';

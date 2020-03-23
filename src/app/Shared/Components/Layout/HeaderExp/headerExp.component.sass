@@ -1,0 +1,68 @@
+@import "../../../Styles/Variables"
+
+.headerExp
+    align-items: center
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    position: absolute
+    top: $padding
+    z-index: 3
+    &__map
+        appearance: none
+        background: rgba(#49403A, .5)
+        border: 1px solid rgba(#F6F6F6, .3)
+        border-radius: 2px
+        color: $color-secondary
+        cursor: pointer
+        height: 65px
+        overflow: hidden
+        width: 65px
+        &:hover,
+        &:focus
+            background: rgba($color-black, 1)
+            outline: none
+
+        svg
+            width: 100%
+            path
+                background-color: rgba(#F6F6F6, .3)
+
+#headerExp
+    &-left
+        appearance: none
+        background: none
+        border: none
+        cursor: pointer
+        height: 40px
+        left: $padding
+        outline: none
+        width: 40px
+        svg
+            width: 100%
+
+
+    &-right
+        align-items: flex-start
+        display: flex
+        flex-flow: row wrap
+        justify-content: flex-end
+        right: $padding
+        p
+            font-family: $font-titles
+            font-size: 13px
+            letter-spacing: 3px
+            margin-right: 10px
+            text-align: right
+            text-transform: uppercase
+
+        span
+            display: block
+            &.white
+                letter-spacing: 2px
+                line-height: 16px
+
+            &.red
+                color: $color-primary
+                font-family: $font-subtitles
+                font-size: 12px

@@ -3,7 +3,7 @@ import { ICommonProps, ICommonState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './docsound.styleguide.scss';
+import './docsound.styleguide.sass';
 
 // Components
 import { SoundDocComponent} from 'Components';
@@ -18,7 +18,7 @@ export class StyleGuideDocSound extends React.Component<ICommonProps, ICommonSta
     public render(): React.ReactElement<any> {
         return (
             <div id="vie" className="page" data-page="Common">
-                <SoundDocComponent 
+                <SoundDocComponent
                 sound={require('../../../Assets/Sounds/carnival-daniel_simon.mp3')}
                 delay={1000}
                 autoplay={true}

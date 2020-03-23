@@ -3,7 +3,7 @@ import { IAccueilProps, IAccueilState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './accueil.page.scss';
+import './accueil.page.sass';
 
 import { VideoComponent } from 'Components';
 
@@ -17,7 +17,7 @@ export class PageAccueil extends React.Component<IAccueilProps, IAccueilState> {
     }
 
     public onSliderDone() : any {
-        this.props.history.push("/introduction") 
+        this.props.history.push("/introduction")
     }
 
     public render(): React.ReactElement<any> {
@@ -57,7 +57,7 @@ export class PageAccueil extends React.Component<IAccueilProps, IAccueilState> {
                         <p>Compositeur : <span>Guillaume Cabarrou</span></p>
                     </div>
                 </div>
-               
+
             </div>
         );
     }

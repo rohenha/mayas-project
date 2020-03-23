@@ -3,7 +3,7 @@ import { IPartenairesProps, IPartenairesState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './partenaires.page.scss';
+import './partenaires.page.sass';
 
 // Components
 import { VideoComponent } from 'Components';

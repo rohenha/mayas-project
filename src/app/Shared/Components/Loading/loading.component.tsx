@@ -3,7 +3,7 @@ import { ILoadingProps, ILoadingState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './loading.component.scss';
+import './loading.component.sass';
 
 // Components
 import { LoaderComponent } from 'Components';

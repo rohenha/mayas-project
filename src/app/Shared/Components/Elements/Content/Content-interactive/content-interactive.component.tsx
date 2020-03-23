@@ -4,7 +4,7 @@ import { IContentInteractiveProps, IContentInteractiveState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './content-interactive.component.scss';
+import './content-interactive.component.sass';
 
 // Components
 export class ContentInteractiveComponent extends React.Component<IContentInteractiveProps, IContentInteractiveState> {
@@ -62,7 +62,7 @@ export class ContentInteractiveComponent extends React.Component<IContentInterac
                             </React.Fragment>
                             : null
                     }
-                        
+
                         <div className="content__interactivePhoto--imgs-container" style={{ width: this.props.text.file.length * 100 + "%" }}>
                             {this.props.text.file.map((img: any, index: number) =>
                                 <img key={index * 7} className="content__interactivePhoto--imgs-single" src={img} style={{ width: 100 / this.props.text.file.length + "%" }}/>

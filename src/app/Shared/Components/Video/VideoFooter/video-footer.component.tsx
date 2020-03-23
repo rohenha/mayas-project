@@ -3,7 +3,7 @@ import { IVideoFooterProps, IVideoFooterState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './video-footer.component.scss';
+import './video-footer.component.sass';
 
 // Components
 // import { ButtonExpComponent } from 'Components';
@@ -23,7 +23,7 @@ export class VideoFooterComponent extends React.Component<IVideoFooterProps, IVi
 
     public componentWillReceiveProps(nextProps: any): any {
         if(nextProps.videoState === 100 && this.state.videoDone === false) {
-            this.setState({ videoDone: true, }, () => { 
+            this.setState({ videoDone: true, }, () => {
                 setTimeout(() => {
                     this.changePage();
                 }, 1000);

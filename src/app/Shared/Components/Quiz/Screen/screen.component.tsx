@@ -6,7 +6,7 @@ import { PagesService } from 'Services';
 
 
 // Styles
-import './screen.component.scss';
+import './screen.component.sass';
 
 // Components
 import Animations from 'Animations';
@@ -68,9 +68,9 @@ export class QuizScreenComponent extends React.Component<IScreenQuizProps, IScre
             <div className="quiz-screen-content" ref={this.node}>
                 <p className="quiz-screen-content__desc">{this.props.desc.desc}</p>
                 <div className="quiz-screen-content__buttons">
-                        { !this.props.end ? 
+                        { !this.props.end ?
                         <button className="button__base" onClick={this.onNextStep} >
-                                Commencer le quiz 
+                                Commencer le quiz
                             </button>
                         : <p className="quiz-screen-content__result-title">Résultat : <span>{this.props.result}/{this.props.total}</span></p>
 
@@ -88,7 +88,7 @@ export class QuizScreenComponent extends React.Component<IScreenQuizProps, IScre
                             redirection="/"
                             back={false}
                             {...this.props}
-                        /> 
+                        />
                     }
                 </div>
             </div>

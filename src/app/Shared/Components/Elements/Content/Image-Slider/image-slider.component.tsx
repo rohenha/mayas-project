@@ -4,7 +4,7 @@ import { IImageSliderProps, IImageSliderState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './image-slider.component.scss';
+import './image-slider.component.sass';
 
 // Components
 

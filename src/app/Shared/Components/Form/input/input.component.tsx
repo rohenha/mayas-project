@@ -3,7 +3,7 @@ import { IInputProps, IInputState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './input.component.scss';
+import './input.component.sass';
 
 // Components
 

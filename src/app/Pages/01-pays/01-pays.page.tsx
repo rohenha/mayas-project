@@ -3,7 +3,7 @@ import { IPaysProps, IPaysState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './01-pays.page.scss';
+import './01-pays.page.sass';
 
 // Components
 import { MultiplePathComponent } from 'Components';

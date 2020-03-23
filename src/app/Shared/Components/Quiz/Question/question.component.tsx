@@ -4,7 +4,7 @@ import { IQuestionQuizProps, IQuestionQuizState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './question.component.scss';
+import './question.component.sass';
 
 // Components
 import Animations from 'Animations';
@@ -71,10 +71,10 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
                 </div>
                 <form onSubmit={this.validator}>
                     <ul className={
-                        this.state.answered ? 
-                            this.state.goodResponse ? 
+                        this.state.answered ?
+                            this.state.goodResponse ?
                                 "quiz-question__responses quiz-question__good"
-                                : "quiz-question__responses quiz-question__bad" 
+                                : "quiz-question__responses quiz-question__bad"
                         : "quiz-question__responses"
                     }>
                         {this.props.question.propositions.map((prop: string, index: number) =>
@@ -83,7 +83,7 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
                                 className={
                                     this.state.answered && this.props.question.reponse === index + 1 ? "quiz-question__good_Response" : ''
                             }>
-                                <input 
+                                <input
                                     type="radio"
                                     name={this.props.question.name}
                                     value={index + 1}

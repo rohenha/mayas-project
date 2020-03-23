@@ -3,7 +3,7 @@ import { I404Props, I404State } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './404.page.scss';
+import './404.page.sass';
 
 // Components
 import { ButtonExpComponent } from 'Components';

@@ -3,7 +3,7 @@ import { IInteractivePhotoProps, IInteractivePhotoState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './interactive-photo.component.scss';
+import './interactive-photo.component.sass';
 
 // Components
 import { ContentInteractiveComponent, SoundDocComponent } from 'Components';
@@ -52,14 +52,14 @@ export class InteractivePhotoComponent extends React.Component<IInteractivePhoto
                 { this.state.soundOpen ? <SoundDocComponent sound={this.state.sound} delay={0} autoplay={false} play={this.state.play} /> : null }
                 <div className="content__interactivePhoto-content">
                     {this.props.points.map((point: any, index: number) =>
-                        <div 
+                        <div
                             className={point.file === this.state.sound && point.type === "audio" ? "content__interactivePhoto-content--point active" : point.file !== this.state.sound && point.type === "audio" ? "content__interactivePhoto-content--point" : "content__interactivePhoto-content--point text"}
                             style={ {left: point.x, top: point.y} }
                             key={index}
                             onClick={this.openElement.bind(this, point)}
                         >
                             <h3>{point.title}</h3>
-                        </div>    
+                        </div>
                     )}
                 </div>
                 <ContentInteractiveComponent open={this.state.textOpen} closeFunction={this.openElement.bind(this, {type: "text"})} text={this.state.text} />

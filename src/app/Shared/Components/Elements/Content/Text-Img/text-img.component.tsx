@@ -3,7 +3,7 @@ import { ITextImgProps, ITextImgState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './text-img.component.scss';
+import './text-img.component.sass';
 
 // Components
 

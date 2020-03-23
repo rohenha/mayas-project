@@ -3,10 +3,10 @@ import { IQuizProps, IQuizState, IStep } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './quiz.component.scss';
+import './quiz.component.sass';
 
 // Components
-import { 
+import {
     QuizQuestionComponent,
     QuizScreenComponent
 } from 'Components';
@@ -54,7 +54,7 @@ export class QuizComponent extends React.Component<IQuizProps, IQuizState> {
                                     />
                                 );
                                 break;
-                            case "question":  
+                            case "question":
                                 step.content.number = index;
                                 return (
                                     <QuizQuestionComponent
@@ -65,7 +65,7 @@ export class QuizComponent extends React.Component<IQuizProps, IQuizState> {
                                         nextStep={this.onChangeStep}
                                         active={this.state.step === index ? true : false}
                                     />
-                                );                           
+                                );
                                 break;
                             case "end":
                                 return (

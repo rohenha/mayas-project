@@ -3,7 +3,7 @@ import { ICommonProps, ICommonState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './galerie.styleguide.scss';
+import './galerie.styleguide.sass';
 
 // Components
 import { GalerieComponent } from 'Components';

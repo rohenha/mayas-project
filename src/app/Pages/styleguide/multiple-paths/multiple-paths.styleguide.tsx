@@ -3,7 +3,7 @@ import { ICommonProps, ICommonState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './multiple-paths.styleguide.scss';
+import './multiple-paths.styleguide.sass';
 
 // Components
 // import { MultiplePathComponent } from 'Components';

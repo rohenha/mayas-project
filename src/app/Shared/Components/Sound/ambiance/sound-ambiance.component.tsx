@@ -3,7 +3,7 @@ import { ISoundProps, ISoundState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './sound-ambiance.component.scss';
+import './sound-ambiance.component.sass';
 
 // Components
 
@@ -20,7 +20,7 @@ export class SoundAmbianceComponent extends React.Component<ISoundProps, ISoundS
     }
 
     public componentDidMount(): void {
-        setTimeout(() => { this.toggleSound() }, this.props.delay); 
+        setTimeout(() => { this.toggleSound() }, this.props.delay);
     }
 
     public componentWillUnmount(): void {

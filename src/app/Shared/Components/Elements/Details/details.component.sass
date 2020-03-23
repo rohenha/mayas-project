@@ -1,0 +1,47 @@
+@import '../../../Styles/Variables'
+
+.pageContent
+    .content
+        height: 100%
+        overflow: hidden
+        position: relative
+        width: 100%
+
+    .container
+        -webkit-overflow-scrolling: touch
+        align-items: flex-start
+        background-color: $color-black
+        display: flex
+        flex-flow: row nowrap
+        height: 100%
+        justify-content: flex-start
+        overflow-x: auto
+        padding: 0
+        &::-webkit-scrollbar
+            display: none
+
+    .block
+        flex: 0 0 auto
+        height: 100%
+        padding: 20px
+        width: 700px
+
+    h2
+        color: $color-white
+        margin-bottom: 20px
+        width: 80%
+
+    p.text
+        font-size: 14px
+        line-height: 25px
+        opacity: .5
+        text-align: left
+
+
+
+.square
+    &-red
+        background-color: $color-primary
+
+    &-blue
+        background-color: $color-secondary

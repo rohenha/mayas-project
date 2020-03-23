@@ -3,7 +3,7 @@ import { ICommonProps, ICommonState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './03-vie.page.scss';
+import './03-vie.page.sass';
 
 // Components
 

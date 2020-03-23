@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 
 // Styles
-import './buttonExp.component.scss';
+import './buttonExp.component.sass';
 
 // Components
 

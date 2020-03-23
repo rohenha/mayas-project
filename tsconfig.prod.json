@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "outDir": "build/dist",
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "baseUrl": "./",
+    "paths": {
+      "Pages": [ "src/app/Pages/index.ts" ],
+      "Content": [ "src/app/Content/index.ts" ],
+      "Services": [ "src/app/Services/index.ts" ],
+      "Resolvers": [ "src/app/Common/Resolvers/index.ts" ],
+      "Interfaces": [ "src/app/Common/Interfaces/index.ts" ],
+      "Mocks": [ "src/app/Common/Mocks/index.ts" ],
+      "Animations": [ "src/app/Common/Animations/index.ts" ],
+      "Routes": [ "src/app/Shared/Routes/index.ts" ],
+      "Styles/*": [ "src/app/Shared/Styles/*" ],
+      "Components": [ "src/app/Shared/Components/index.ts" ],
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
+  ]
+}

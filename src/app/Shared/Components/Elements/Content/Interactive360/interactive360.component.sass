@@ -1,0 +1,62 @@
+@import '../../../../Styles/Variables'
+
+
+.content__interactive360
+    flex: 0 0 auto
+    height: 100%
+    overflow: hidden
+    position: relative
+    width: 100vw
+
+    .cube
+        height: 100%
+        perspective: 600px
+        perspective-origin: 50% 50%
+        position: relative
+        width: 100%
+        &__container
+            //   animation: animCube 20s linear infinite
+            bottom: 0
+            cursor: move
+            height: 100vh
+            left: 0
+            margin: auto
+            position: absolute
+            right: 0
+            top: 0
+            transform: translateZ(50vw)
+            //   transform: rotateY(10deg)
+            transform-style: preserve-3d
+            width: 100vw
+
+        &__face
+            backface-visibility: hidden
+            bottom: 0
+            height: 100%
+            left: 0
+            margin: auto
+            position: absolute
+            right: 0
+            top: 0
+            width: 100%
+
+        &__back
+            transform: translate3d(0, 0, 50vw) rotate3d(0, 1, 0, 180deg)
+
+        &__right
+            transform: rotate3d(0, 1, 0, -90deg) translate3d(0, 0, -50vw)
+
+        &__left
+            transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, -50vw)
+
+        &__front
+            transform: translate3d(0, 0, -50vw)
+
+        &__up
+            transform: translate3d(0, -50vw, 0)
+
+@keyframes animCube
+    from
+        transform: rotateY(0deg)
+    to
+        transform: rotateY(360deg)

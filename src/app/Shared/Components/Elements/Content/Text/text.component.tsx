@@ -3,7 +3,7 @@ import { ITextProps, ITextState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './text.component.scss';
+import './text.component.sass';
 
 // Components
 

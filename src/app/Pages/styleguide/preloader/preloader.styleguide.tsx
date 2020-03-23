@@ -3,7 +3,7 @@ import { ICommonProps, ICommonState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './preloader.styleguide.scss';
+import './preloader.styleguide.sass';
 
 // Components
 import { PreloaderComponent } from 'Components';

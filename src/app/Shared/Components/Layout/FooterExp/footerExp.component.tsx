@@ -3,7 +3,7 @@ import { IFooterExpProps, IFooterExpState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './footerExp.component.scss';
+import './footerExp.component.sass';
 
 // Components
 import { ButtonExpComponent, CodexComponent } from 'Components';

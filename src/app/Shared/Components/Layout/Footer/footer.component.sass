@@ -1,0 +1,45 @@
+@import "../../../Styles/Variables"
+
+.footer
+    align-items: center
+    bottom: $padding
+    display: flex
+    height: $navHeight
+    justify-content: space-between
+    position: fixed
+    z-index: 30
+    ul
+        align-items: center
+        display: flex
+        flex-flow: row wrap
+        justify-content: flex-end
+        li
+            list-style-type: none
+            margin-left: 15px
+            a
+                transition: color .2s ease-in-out
+
+            img
+                opacity: .5
+                padding-top: 5px
+                transition: opacity .2s ease-in-out
+                width: 12px
+
+            &:hover
+                a
+                    color: $color-secondary
+
+                img
+                    opacity: 1
+
+#footer-left
+    left: $padding
+    a
+        transition: color .2s ease-in-out
+
+    &:hover
+        a
+            color: $color-secondary
+        
+#footer-right
+    right: $padding

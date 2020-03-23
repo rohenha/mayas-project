@@ -7,7 +7,7 @@ import {  Transition, TransitionGroup } from 'react-transition-group';
 import { PagesService } from 'Services';
 
 // Styles
-import './Base.scss';
+import './Base.sass';
 
 // Components
 import Animations from 'Animations';

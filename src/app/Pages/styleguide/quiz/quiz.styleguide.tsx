@@ -3,7 +3,7 @@ import { IPageQuizProps, IPageQuizState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './quiz.styleguide.scss';
+import './quiz.styleguide.sass';
 
 // Components
 import { QuizComponent } from 'Components';
@@ -63,9 +63,9 @@ export class StyleGuideQuiz extends React.Component<IPageQuizProps, IPageQuizSta
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
-                <QuizComponent 
+                <QuizComponent
                     {...this.props}
-                    img={require('../../../Assets/Images/john-salzarulo-78830-unsplash.jpg')} 
+                    img={require('../../../Assets/Images/john-salzarulo-78830-unsplash.jpg')}
                     chapter= {{ chapter: 2, name: "Le Mexique"} }
                     nextUrl = '/realisation'
                     steps = { this.state.steps }

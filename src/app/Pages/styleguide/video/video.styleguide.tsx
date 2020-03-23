@@ -3,7 +3,7 @@ import { ICommonProps, ICommonState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './video.styleguide.scss';
+import './video.styleguide.sass';
 
 // Components
 import { VideoComponent } from 'Components';

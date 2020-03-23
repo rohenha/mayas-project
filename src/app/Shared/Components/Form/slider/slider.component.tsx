@@ -3,7 +3,7 @@ import { ISliderProps, ISliderState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './slider.component.scss';
+import './slider.component.sass';
 
 // Components
 

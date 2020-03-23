@@ -3,7 +3,7 @@ import { IVideoProps, IVideoState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './video.component.scss';
+import './video.component.sass';
 
 // Components
 import { VideoFooterComponent } from 'Components';
@@ -38,11 +38,11 @@ export class VideoComponent extends React.Component<IVideoProps, IVideoState> {
                     poster={this.props.poster}
                     onTimeUpdate={this.currentTime}
                 >
-                    {this.props.sources.map( (source: any, index: number) => 
+                    {this.props.sources.map( (source: any, index: number) =>
                         <source key={index} src={source.path} type={'video/' + source.type} />
                     )}
                 </video>
-                { !this.props.loop ? 
+                { !this.props.loop ?
                     <VideoFooterComponent videoState={this.state.percent} history={this.props.history} nextPage={this.props.nextPage} duree={{ current: this.state.current, total: this.state.total }} />
                     : null
                 }

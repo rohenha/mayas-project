@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 
 // Styles
-import './menu.component.scss';
+import './menu.component.sass';
 
 // Components
 import Animations from 'Animations';
@@ -55,7 +55,7 @@ export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
                     <ul>
                         {Routes.ExpRoutes.map((route: IPathMenu, index: number) =>
                             <li key={index}>
-                                <NavLink 
+                                <NavLink
                                     exact={route.content.exact}
                                     to={route.content.url}
                                     activeClassName="active"

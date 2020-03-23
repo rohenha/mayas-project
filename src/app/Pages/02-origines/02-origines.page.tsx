@@ -3,7 +3,7 @@ import { IOriginesProps, IOriginesState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './02-origines.page.scss';
+import './02-origines.page.sass';
 
 // Components
 import { DetailsComponent } from 'Components';

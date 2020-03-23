@@ -4,7 +4,7 @@ import { IImageProps, IImageState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './image.component.scss';
+import './image.component.sass';
 
 // Components
 
@@ -46,7 +46,7 @@ export class ImageComponent extends React.Component<IImageProps, IImageState> {
         const scale = nodeDetails.width > nodeDetails.height ? (window.innerWidth - 500) / nodeDetails.width : (window.innerHeight * (2 / 3)) / nodeDetails.width;
         // // const xPos = (window.innerWidth / 2) - (nodeDetails.left + (nodeDetails.width / 2));
         const xPos = (window.innerWidth - nodeDetails.width*scale / 2 - 20) - (nodeDetails.left + (nodeDetails.width / 2));
-        const yPos = ((window.innerHeight / 2) - (nodeDetails.top + nodeDetails.height / 2));     
+        const yPos = ((window.innerHeight / 2) - (nodeDetails.top + nodeDetails.height / 2));
         const tl = new TimelineMax();
         // tl.to(node, 0.5, { x: xPos, y: yPos, scaleX: scale, scaleY: scale, rotateX: 0, rotateY: 0 });
         tl.to(node, 0.5, { x: xPos, y: yPos, scaleX: scale, scaleY: scale, rotateX: 0, rotateY:0 });

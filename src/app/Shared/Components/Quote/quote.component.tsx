@@ -3,7 +3,7 @@ import { IQuoteProps, IQuoteState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './quote.component.scss';
+import './quote.component.sass';
 
 // Components
 

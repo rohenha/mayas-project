@@ -3,7 +3,7 @@ import { ICommonProps, ICommonState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './citation.styleguide.scss';
+import './citation.styleguide.sass';
 
 // Components
 import { QuoteComponent } from 'Components';

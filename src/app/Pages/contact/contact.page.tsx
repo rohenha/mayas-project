@@ -3,7 +3,7 @@ import { IContactProps, IContactState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './contact.page.scss';
+import './contact.page.sass';
 
 // Components
 

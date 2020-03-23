@@ -3,7 +3,7 @@ import { ICommonProps, ICommonState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './content.styleguide.scss';
+import './content.styleguide.sass';
 
 // Components
 import {
@@ -37,7 +37,7 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
             <React.Fragment>
                 <DetailsComponent>
                     {/* <div className="block square-red" /> */}
-                    <EntryChapterComponent 
+                    <EntryChapterComponent
                         imgs={[
                             require('../../../Assets/Videos/Breezy/Breezy.jpg'),
                             [
@@ -45,16 +45,16 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                                 { type: 'webm', path: require('../../../Assets/Videos/Breezy/Breezy.webm') },
                                 { type: 'ogv', path: require('../../../Assets/Videos/Breezy/Breezy.ogv') }
                             ]
-                        ]} 
-                        text="Chapter" 
-                        video={false} 
+                        ]}
+                        text="Chapter"
+                        video={false}
                         chapter= {{name: "Mayas", number: 1}}
                         introduction="Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores provident minus."
                         {...this.props}
                     />
 
                     <TextImgComponent
-                        img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')} 
+                        img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')}
                     >
                         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
                         <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
@@ -84,7 +84,7 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat odit cum iure similique saepe voluptatum voluptas, corrupti beatae repellat velit debitis magnam, nulla quibusdam assumenda deleniti! Totam repudiandae est eveniet?</p>
                     </ContentPartComponent> */}
 
-                    <InteractivePhotoComponent 
+                    <InteractivePhotoComponent
                         img={require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')}
                         points={[
                         {

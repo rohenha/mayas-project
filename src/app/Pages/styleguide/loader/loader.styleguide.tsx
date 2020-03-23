@@ -3,7 +3,7 @@ import { ICommonProps, ICommonState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './loader.styleguide.scss';
+import './loader.styleguide.sass';
 
 // Components
 import { LoadingComponent } from 'Components';

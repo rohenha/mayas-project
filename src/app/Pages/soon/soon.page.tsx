@@ -3,7 +3,7 @@ import { IAccueilProps, IAccueilState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './soon.page.scss';
+import './soon.page.sass';
 
 import { VideoComponent } from 'Components';
 

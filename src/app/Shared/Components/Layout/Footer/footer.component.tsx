@@ -4,7 +4,7 @@ import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
 // Styles
-import './footer.component.scss';
+import './footer.component.sass';
 
 // Components
 import Routes from 'Routes';

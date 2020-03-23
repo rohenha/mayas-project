@@ -3,7 +3,7 @@ import { IContentPartProps, IContentPartState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './content-part.component.scss';
+import './content-part.component.sass';
 
 // Components
 

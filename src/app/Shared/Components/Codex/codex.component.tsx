@@ -4,7 +4,7 @@ import { ICodexProps, ICodexState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './codex.component.scss';
+import './codex.component.sass';
 
 // Components
 import Animations from 'Animations';

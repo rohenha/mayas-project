@@ -3,7 +3,7 @@ import { ICodexListProps, ICodexListState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './codexList.component.scss';
+import './codexList.component.sass';
 
 // Components
 
@@ -15,7 +15,7 @@ export class CodexListComponent extends React.Component<ICodexListProps, ICodexL
 
     public render(): React.ReactElement<any> {
         return (
-            <li 
+            <li
                 className={this.props.index === this.props.dataOpen ? 'codex__accueil--list-single active' : 'codex__accueil--list-single'}
                 onClick={this.props.changeDef}
             >

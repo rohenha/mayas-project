@@ -3,7 +3,7 @@ import { IDetailsProps, IDetailsState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './details.component.scss';
+import './details.component.sass';
 
 // Components
 

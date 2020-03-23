@@ -3,7 +3,7 @@ import { IPreloadProps, IPreloadState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './preloader.component.scss';
+import './preloader.component.sass';
 
 // Components
 import { LoaderComponent } from 'Components';

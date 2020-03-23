@@ -1,0 +1,62 @@
+@import "../../Shared/Styles/Variables"
+
+#accueil
+    .container
+        align-items: flex-start
+        display: flex
+        flex-flow: column wrap
+        height: 100%
+        justify-content: center
+        padding-bottom: calc(#{$padding} + #{$navHeight})
+        padding-left: 80px
+
+    .introduce
+        h3
+            font-size: 20px
+            font-weight: 300
+            letter-spacing: 3px
+
+        h4
+            font-size: 15px
+            font-weight: 300
+            letter-spacing: 3px
+
+    .entete
+        margin: 50px 0
+        h1
+            font-size: 130px
+            letter-spacing: 2px
+            line-height: 140px
+
+        h2
+            font-size: 16px
+            font-weight: 300
+            letter-spacing: 3px
+
+    .formEnter
+        p
+            color: $color-secondary
+            font-family: $font-subtitles
+            font-size: 13px
+            font-weight: 300
+            letter-spacing: 3px
+            text-transform: uppercase
+
+    .accueil__realisation
+        align-items: flex-end
+        display: flex
+        flex-flow: row wrap
+        justify-content: flex-start
+        position: relative
+        top: 100px
+        p
+            color: rgba($color-secondary, .5)
+            font-size: 10px
+            font-weight: 400
+            letter-spacing: 2px
+            margin: 0 30px 0 0
+            opacity: 1
+            text-transform: uppercase
+            span
+                color: rgba($color-secondary, .8)
+                font-weight: initial

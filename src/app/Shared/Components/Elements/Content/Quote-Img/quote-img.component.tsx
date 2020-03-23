@@ -3,7 +3,7 @@ import { IQuoteImgProps, IQuoteImgState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './quote-img.component.scss';
+import './quote-img.component.sass';
 
 // Components
 
@@ -24,7 +24,7 @@ export class QuoteImgComponent extends React.Component<IQuoteImgProps, IQuoteImg
     public render(): React.ReactElement<any> {
         return (
             <div className={this.classQuoteImg()}>
-                { this.props.imgs.map( (img: string, index:number) => 
+                { this.props.imgs.map( (img: string, index:number) =>
                     <div key={index} className="content__quoteImg-img">
                         <img src={img} alt="" />
                     </div>

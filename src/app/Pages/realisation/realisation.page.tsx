@@ -3,7 +3,7 @@ import { IRealisationProps, IRealisationState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './realisation.page.scss';
+import './realisation.page.sass';
 
 // Components
 import { DetailsComponent, QuoteImgComponent, VideoComponent } from 'Components';

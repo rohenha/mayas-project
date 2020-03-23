@@ -3,7 +3,7 @@ import { IIntroductionProps, IIntroductionState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './00-introduction.page.scss';
+import './00-introduction.page.sass';
 
 // Components
 import { VideoComponent } from 'Components';

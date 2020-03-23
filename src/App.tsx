@@ -4,7 +4,7 @@ import { Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 
 // Styles
-import './App.scss';
+import './App.sass';
 
 // Components
 // import { Footer } from 'Components';

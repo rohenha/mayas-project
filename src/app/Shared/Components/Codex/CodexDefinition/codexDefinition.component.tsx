@@ -3,7 +3,7 @@ import { ICodexDefProps, ICodexDefState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './codexDefinition.component.scss';
+import './codexDefinition.component.sass';
 
 // Components
 

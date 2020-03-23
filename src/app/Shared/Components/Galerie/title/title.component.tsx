@@ -3,7 +3,7 @@ import { IITitleProps, IITitleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './title.component.scss';
+import './title.component.sass';
 
 // Components
 

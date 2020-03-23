@@ -3,7 +3,7 @@ import { IEntryChapterProps, IEntryChapterState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './entry-chapter.component.scss';
+import './entry-chapter.component.sass';
 
 // Components
 import { VideoComponent } from 'Components';
@@ -17,7 +17,7 @@ export class EntryChapterComponent extends React.Component<IEntryChapterProps, I
     public render(): React.ReactElement<any> {
         return (
             <div className="content__entryChapter">
-                { this.props.video ? 
+                { this.props.video ?
                     <VideoComponent
                         sources={this.props.imgs[1]}
                         poster={this.props.imgs[0]}

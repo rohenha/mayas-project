@@ -3,7 +3,7 @@ import { IVideoProps, IVideoState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './video-youtube.component.scss';
+import './video-youtube.component.sass';
 
 // Components
 
@@ -47,7 +47,7 @@ export class VideoYoutubeComponent extends React.Component<IVideoProps, IVideoSt
                     poster={this.props.poster}
                     onTimeUpdate={this.currentTime}
                 >
-                    {this.props.sources.map( (source: any, index: number) => 
+                    {this.props.sources.map( (source: any, index: number) =>
                         <source key={index} src={source.path} type={'video/' + source.type} />
                     )}
                 </video> */}

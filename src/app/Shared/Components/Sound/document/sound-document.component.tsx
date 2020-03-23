@@ -3,7 +3,7 @@ import { ISoundProps, ISoundState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './sound-document.component.scss';
+import './sound-document.component.sass';
 
 // Components
 

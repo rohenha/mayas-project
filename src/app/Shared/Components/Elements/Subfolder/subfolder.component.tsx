@@ -4,7 +4,7 @@ import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
 // Styles
-import './subfolder.component.scss';
+import './subfolder.component.sass';
 
 // Components
 
