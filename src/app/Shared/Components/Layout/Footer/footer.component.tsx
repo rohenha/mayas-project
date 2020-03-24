@@ -30,12 +30,12 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                         )}
                         <li>
                             <a  href="https://www.instagram.com/voyageterreshistoire/" target="_blank">
-                                <img className="bg" src={require('../../../../Assets/Images/instagram.svg')} />
+                                <img className="bg" src={require('../../../../assets/images/instagram.svg')} />
                             </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/voyageterreshistoire/" target="_blank">
-                                <img className="bg" src={require('../../../../Assets/Images/facebook.svg')} />
+                                <img className="bg" src={require('../../../../assets/images/facebook.svg')} />
                             </a>
                         </li>
                     </ul>

@@ -7,7 +7,7 @@ import {  Transition, TransitionGroup } from 'react-transition-group';
 import { PagesService } from 'Services';
 
 // Styles
-import './Base.sass';
+import './layout.sass';
 
 // Components
 import Animations from 'Animations';
@@ -20,7 +20,7 @@ import {
 import Routes from 'Routes';
 
 
-export default class Base extends React.Component<IBaseProps, IBaseState> {
+export default class Layout extends React.Component<IBaseProps, IBaseState> {
     public enterTrans: (node: any) => void = this.enter.bind(this);
     public exitTrans: (node: any) => void = this.exit.bind(this);
     public pagesService: PagesService = new PagesService();

@@ -3,7 +3,7 @@ import { ICodexListProps, ICodexListState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './codexList.component.sass';
+import './codex-list.component.sass';
 
 // Components
 

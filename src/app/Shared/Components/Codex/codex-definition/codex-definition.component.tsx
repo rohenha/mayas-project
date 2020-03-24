@@ -3,7 +3,7 @@ import { ICodexDefProps, ICodexDefState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './codexDefinition.component.sass';
+import './codex-definition.component.sass';
 
 // Components
 
@@ -20,7 +20,7 @@ export class CodexDefinitionComponent extends React.Component<ICodexDefProps, IC
                 <h3>{this.props.data.title}</h3>
                 <div className="codex__definition--content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
-                    <img src={require('../../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} />
+                    <img src={require('../../../../assets/images/john-salzarulo-37827-unsplash.jpg')} />
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
@@ -30,7 +30,7 @@ export class CodexDefinitionComponent extends React.Component<ICodexDefProps, IC
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
-                    <img src={require('../../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} />
+                    <img src={require('../../../../assets/images/john-salzarulo-37827-unsplash.jpg')} />
                 </div>
             </div>
         );

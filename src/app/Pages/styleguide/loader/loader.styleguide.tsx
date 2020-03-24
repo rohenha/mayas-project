@@ -16,7 +16,7 @@ export class StyleGuideLoader extends React.Component<ICommonProps, ICommonState
     public render(): React.ReactElement<any> {
         return (
             <div className="page" data-page="Common">
-                <img className="bg" src={require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} />
+                <img className="bg" src={require('../../../assets/images/john-salzarulo-37827-unsplash.jpg')} />
                 <LoadingComponent />
             </div>
         );

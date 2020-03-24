@@ -24,17 +24,17 @@ export class PaysContent {
     public static content: Array<{ img: string, name: string, url: string }> = 
     [
         {
-            img: require('../Assets/Images/jezael-melgoza-551505-unsplash.jpg'),
+            img: require('../assets/images/jezael-melgoza-551505-unsplash.jpg'),
             name: 'Mexique',
             url: '/realisation'
         },
         {
-            img: require('../Assets/Images/landscape-2389023_1920.jpg'),
+            img: require('../assets/images/landscape-2389023_1920.jpg'),
             name: 'Guatemala',
             url: '/realisation'
         },
         {
-            img: require('../Assets/Images/earth-608344-unsplash.jpg'),
+            img: require('../assets/images/earth-608344-unsplash.jpg'),
             name: 'Bélize',
             url: '/realisation'
         }

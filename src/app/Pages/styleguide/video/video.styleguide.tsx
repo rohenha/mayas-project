@@ -23,11 +23,11 @@ export class StyleGuideVideo extends React.Component<ICommonProps, ICommonState>
             <div className="page" data-page="Common">
                 <VideoComponent
                     sources={[
-                        { type: 'mp4', path: require('../../../Assets/Videos/Breezy/Breezy.mp4') },
-                        { type: 'webm', path: require('../../../Assets/Videos/Breezy/Breezy.webm') },
-                        { type: 'ogv', path: require('../../../Assets/Videos/Breezy/Breezy.ogv') }
+                        { type: 'mp4', path: require('../../../assets/videos/Breezy/Breezy.mp4') },
+                        { type: 'webm', path: require('../../../assets/videos/Breezy/Breezy.webm') },
+                        { type: 'ogv', path: require('../../../assets/videos/Breezy/Breezy.ogv') }
                     ]}
-                    poster={require('../../../Assets/Videos/Breezy/Breezy.jpg')}
+                    poster={require('../../../assets/videos/Breezy/Breezy.jpg')}
                     controls={false}
                     autoplay={true}
                     loop={false}

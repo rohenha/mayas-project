@@ -49,7 +49,7 @@ export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
     public render(): React.ReactElement<any> {
         return (
             <div id="menu" ref={this.node} >
-                <img className="bg" src={require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} />
+                <img className="bg" src={require('../../../assets/images/john-salzarulo-37827-unsplash.jpg')} />
                 <div className="menu__content">
                     <h3>Menu <span className="menu__close" onClick={this.props.closeMenu}/></h3>
                     <ul>

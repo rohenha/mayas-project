@@ -19,11 +19,11 @@ export class StyleGuideDocSound extends React.Component<ICommonProps, ICommonSta
         return (
             <div id="vie" className="page" data-page="Common">
                 <SoundDocComponent
-                sound={require('../../../Assets/Sounds/carnival-daniel_simon.mp3')}
+                sound={require('../../../assets/sounds/carnival-daniel_simon.mp3')}
                 delay={1000}
                 autoplay={true}
                 play={true} />
-                <img className="bg" src={require('../../../Assets/Videos/Breezy/Breezy.jpg')} />
+                <img className="bg" src={require('../../../assets/videos/Breezy/Breezy.jpg')} />
             </div>
         );
     }

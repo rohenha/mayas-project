@@ -5,8 +5,8 @@
 import { IAnimArray } from 'Interfaces';
 
 // Components
-import { P404Animation } from './Common/404.animation';
-import { CommonAnimation } from './Common/common.animation';
+import { P404Animation } from './commons/404.animation';
+import { CommonAnimation } from './commons/common.animation';
 
 import { CodexAnimation } from './Components/codex.animation';
 import { DetailsAnimation } from './Components/details.animation';

@@ -19,14 +19,14 @@ export class PageRealisation extends React.Component<IRealisationProps, IRealisa
             <div id="realisation" className="page" data-page="Realisation">
                 <DetailsComponent>
                     <div className="realisation__entete">
-                        {/* <img className="bg" src={require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} /> */}
+                        {/* <img className="bg" src={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} /> */}
                         <VideoComponent
                             sources={[
-                                { type: 'mp4', path:require('../../Assets/Videos/Breezy/Breezy.mp4') },
-                                { type: 'webm', path:require('../../Assets/Videos/Breezy/Breezy.webm') },
-                                { type: 'ogv', path:require('../../Assets/Videos/Breezy/Breezy.ogv') }
+                                { type: 'mp4', path:require('../../assets/videos/Breezy/Breezy.mp4') },
+                                { type: 'webm', path:require('../../assets/videos/Breezy/Breezy.webm') },
+                                { type: 'ogv', path:require('../../assets/videos/Breezy/Breezy.ogv') }
                             ]}
-                            poster={require('../../Assets/Videos/Breezy/Breezy.jpg')}
+                            poster={require('../../assets/videos/Breezy/Breezy.jpg')}
                             controls={false}
                             autoplay={true}
                             loop={true}
@@ -42,21 +42,21 @@ export class PageRealisation extends React.Component<IRealisationProps, IRealisa
                         </div>
                     </div>
                     <QuoteImgComponent
-                        imgs={[require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),]}
+                        imgs={[require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),]}
                         top={true}
                         title={''}
                     >
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                     </QuoteImgComponent>
                     <QuoteImgComponent
-                        imgs={[require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),]}
+                        imgs={[require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),]}
                         top={false}
                         title={''}
                     >
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                     </QuoteImgComponent>
                     <QuoteImgComponent
-                        imgs={[require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),]}
+                        imgs={[require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),]}
                         top={true}
                         title={''}
                     >

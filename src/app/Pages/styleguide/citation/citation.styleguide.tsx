@@ -19,7 +19,7 @@ export class StyleGuideCitation extends React.Component<ICommonProps, ICommonSta
         return (
             <div id="vie" className="page" data-page="Common">
                 <QuoteComponent
-                    img={require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')}
+                    img={require('../../../assets/images/john-salzarulo-37827-unsplash.jpg')}
                     citation={[<b key={0}>Lorem ipsum dolor sit</b>, "amet consectetur adipisicing elit. Maxime placeat obcaecati id, repellendus ratione porro"]}
                     name={"Lorem Ipsum"}
                 />

@@ -23,14 +23,14 @@ export class PageAccueil extends React.Component<IAccueilProps, IAccueilState> {
     public render(): React.ReactElement<any> {
         return (
             <div id="accueil" className="page" data-page="Accueil">
-                {/* <img className="bg" src={require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} /> */}
+                {/* <img className="bg" src={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} /> */}
                 <VideoComponent
                     sources={[
-                        { type: 'mp4', path:require('../../Assets/Videos/Breezy/Breezy.mp4') },
-                        { type: 'webm', path:require('../../Assets/Videos/Breezy/Breezy.webm') },
-                        { type: 'ogv', path:require('../../Assets/Videos/Breezy/Breezy.ogv') }
+                        { type: 'mp4', path:require('../../assets/videos/Breezy/Breezy.mp4') },
+                        { type: 'webm', path:require('../../assets/videos/Breezy/Breezy.webm') },
+                        { type: 'ogv', path:require('../../assets/videos/Breezy/Breezy.ogv') }
                     ]}
-                    poster={require('../../Assets/Videos/Breezy/Breezy.jpg')}
+                    poster={require('../../assets/videos/Breezy/Breezy.jpg')}
                     controls={false}
                     autoplay={true}
                     loop={true}

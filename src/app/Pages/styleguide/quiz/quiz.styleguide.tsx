@@ -21,7 +21,7 @@ export class StyleGuideQuiz extends React.Component<IPageQuizProps, IPageQuizSta
                 },
                 {
                     content: {
-                        img: require('../../../Assets/Images/jimmy-baum-346127-unsplash.jpg'),
+                        img: require('../../../assets/images/jimmy-baum-346127-unsplash.jpg'),
                         name: "question1",
                         number: null,
                         propositions: [
@@ -65,7 +65,7 @@ export class StyleGuideQuiz extends React.Component<IPageQuizProps, IPageQuizSta
             <React.Fragment>
                 <QuizComponent
                     {...this.props}
-                    img={require('../../../Assets/Images/john-salzarulo-78830-unsplash.jpg')}
+                    img={require('../../../assets/images/john-salzarulo-78830-unsplash.jpg')}
                     chapter= {{ chapter: 2, name: "Le Mexique"} }
                     nextUrl = '/realisation'
                     steps = { this.state.steps }

@@ -1,50 +1,50 @@
 // Export Modules
-export * from './Layout/Header/header.component';
-export * from './Layout/Footer/footer.component';
-export * from './Layout/HeaderExp/headerExp.component';
-export * from './Layout/FooterExp/footerExp.component';
+export * from './layout/header/header.component';
+export * from './layout/footer/footer.component';
+export * from './layout/header-exp/header-exp.component';
+export * from './layout/footer-exp/footer-exp.component';
 
-export * from './Form/input/input.component';
-export * from './Form/slider/slider.component';
-export * from './Form/buttonExp/buttonExp.component';
+export * from './form/input/input.component';
+export * from './form/slider/slider.component';
+export * from './form/button-exp/button-exp.component';
 
-export * from './Menu/menu.component';
-export * from './Loading/loading.component';
+export * from './menu/menu.component';
+export * from './loading/loading.component';
 
-export * from './Sound/document/sound-document.component';
-export * from './Sound/ambiance/sound-ambiance.component';
+export * from './sound/document/sound-document.component';
+export * from './sound/ambiance/sound-ambiance.component';
 
-export * from './Preloader/preloader.component';
+export * from './preloader/preloader.component';
 
-export * from './Elements/Subfolder/subfolder.component';
-export * from './Elements/MultiplePaths/multiple-paths.component';
-export * from './Elements/Details/details.component';
-export * from './Elements/Loader/loader.component';
-export * from './Elements/Content/Quote-Img/quote-img.component';
-export * from './Elements/Content/Text-Img/text-img.component';
-export * from './Elements/Content/Text/text.component';
-export * from './Elements/Content/Image-Slider/image-slider.component';
-export * from './Elements/Content/Entry-Chapter/entry-chapter.component';
-export * from './Elements/Content/Content-Part/content-part.component';
-export * from './Elements/Content/Interactive-photo/interactive-photo.component';
-export * from './Elements/Content/Content-interactive/content-interactive.component';
-export * from './Elements/Content/Interactive360/interactive360.component';
-export * from './Elements/Content/Next-step/next-step.component';
+export * from './elements/subfolder/subfolder.component';
+export * from './elements/multiple-paths/multiple-paths.component';
+export * from './elements/details/details.component';
+export * from './elements/loader/loader.component';
+export * from './elements/content/quote-img/quote-img.component';
+export * from './elements/content/text-img/text-img.component';
+export * from './elements/content/text/text.component';
+export * from './elements/content/image-slider/image-slider.component';
+export * from './elements/content/entry-chapter/entry-chapter.component';
+export * from './elements/content/content-part/content-part.component';
+export * from './elements/content/interactive-photo/interactive-photo.component';
+export * from './elements/content/content-interactive/content-interactive.component';
+export * from './elements/content/interactive-360/interactive-360.component';
+export * from './elements/content/next-step/next-step.component';
 
-export * from './Codex/codex.component';
-export * from './Codex/CodexList/codexList.component';
-export * from './Codex/CodexDefinition/codexDefinition.component';
+export * from './codex/codex.component';
+export * from './codex/codex-list/codex-list.component';
+export * from './codex/codex-definition/codex-definition.component';
 
-export * from './Quote/quote.component';
+export * from './quote/quote.component';
 
-export * from './Quiz/quiz.component';
-export * from './Quiz/Screen/screen.component';
-export * from './Quiz/Question/question.component';
+export * from './quiz/quiz.component';
+export * from './quiz/screen/screen.component';
+export * from './quiz/question/question.component';
 
-export * from './Video/video.component';
-export * from './Video/VideoYoutube/video-youtube.component';
-export * from './Video/VideoFooter/video-footer.component';
+export * from './video/video.component';
+export * from './video/video-youtube/video-youtube.component';
+export * from './video/video-footer/video-footer.component';
 
-export * from './Galerie/galerie.component';
-export * from './Galerie/Image/image.component';
-export * from './Galerie/title/title.component';
+export * from './galerie/galerie.component';
+export * from './galerie/image/image.component';
+export * from './galerie/title/title.component';

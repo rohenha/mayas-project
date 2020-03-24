@@ -19,11 +19,11 @@ export class PageSoon extends React.Component<IAccueilProps, IAccueilState> {
             <div id="accueil" className="page" data-page="Accueil">
                 <VideoComponent
                     sources={[
-                        { type: 'mp4', path: require('../../Assets/Videos/Breezy/Breezy.mp4') },
-                        { type: 'webm', path: require('../../Assets/Videos/Breezy/Breezy.webm') },
-                        { type: 'ogv', path: require('../../Assets/Videos/Breezy/Breezy.ogv') }
+                        { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
+                        { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
+                        { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
                     ]}
-                    poster={require('../../Assets/Videos/Breezy/Breezy.jpg')}
+                    poster={require('../../assets/videos/Breezy/Breezy.jpg')}
                     controls={false}
                     autoplay={true}
                     loop={true}

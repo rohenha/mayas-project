@@ -17,8 +17,8 @@ export class PagePays extends React.Component<IPaysProps, IPaysState> {
     public render(): React.ReactElement<any> {
         return (
             <div id="pays" className="page" data-page="Pays">
-                {/* <SoundAmbianceComponent delay={0} sound={require('../../Assets/Sounds/carnival-daniel_simon.mp3')} /> */}
-                {/* <img className="bg" src={require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} /> */}
+                {/* <SoundAmbianceComponent delay={0} sound={require('../../assets/sounds/carnival-daniel_simon.mp3')} /> */}
+                {/* <img className="bg" src={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} /> */}
                 <MultiplePathComponent paths={PaysContent.content} />
             </div>
         );

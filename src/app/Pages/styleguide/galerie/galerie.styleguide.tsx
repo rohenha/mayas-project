@@ -16,7 +16,7 @@ export class StyleGuideGalerie extends React.Component<ICommonProps, ICommonStat
     public render(): React.ReactElement<any> {
         return (
             <div className="page" data-page="Common">
-                <img className="bg" src={require('../../../Assets/Images/branches-dawn-environment-975771.jpg')} />
+                <img className="bg" src={require('../../../assets/images/branches-dawn-environment-975771.jpg')} />
                 <GalerieComponent />
             </div>
         );

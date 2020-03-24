@@ -19,25 +19,25 @@ export class GalerieComponent extends React.Component<IGalerieProps, IGalerieSta
         this.images = [
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/forest-hd-wallpaper-jungle-58557.jpg'),
+                image: require('../../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
                 name: 'Image 1',
                 portrait: false
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/forest-hd-wallpaper-jungle-58557.jpg'),
+                image: require('../../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
                 name: 'Image 1',
                 portrait: false
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/bernard-hermant-669688-unsplash.jpg'),
+                image: require('../../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 name: 'Image 1',
                 portrait: true
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/forest-hd-wallpaper-jungle-58557.jpg'),
+                image: require('../../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
                 name: 'Image 1',
                 portrait: false
             },
@@ -49,49 +49,49 @@ export class GalerieComponent extends React.Component<IGalerieProps, IGalerieSta
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/bernard-hermant-669688-unsplash.jpg'),
+                image: require('../../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 name: 'Image 1',
                 portrait: true
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/bernard-hermant-669688-unsplash.jpg'),
+                image: require('../../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 name: 'Image 1',
                 portrait: true
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/bernard-hermant-669688-unsplash.jpg'),
+                image: require('../../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 name: 'Image 1',
                 portrait: true
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/bernard-hermant-669688-unsplash.jpg'),
+                image: require('../../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 name: 'Image 1',
                 portrait: true
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/forest-hd-wallpaper-jungle-58557.jpg'),
+                image: require('../../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
                 name: 'Image 1',
                 portrait: false
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/bernard-hermant-669688-unsplash.jpg'),
+                image: require('../../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 name: 'Image 1',
                 portrait: true
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/bernard-hermant-669688-unsplash.jpg'),
+                image: require('../../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 name: 'Image 1',
                 portrait: true
             },
             {
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../../Assets/Images/bernard-hermant-669688-unsplash.jpg'),
+                image: require('../../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 name: 'Image 1',
                 portrait: true
             },

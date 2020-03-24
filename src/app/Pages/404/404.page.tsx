@@ -17,7 +17,7 @@ export class Page404 extends React.Component<I404Props, I404State> {
     public render(): React.ReactElement<any> {
         return (
             <div id="P404" className="page" data-page="P404">
-                <img className="bg" src={require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} />
+                <img className="bg" src={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} />
                 <div className="container">
                     <div className="entete">
                         <h2>Vous êtes vous perdu dans la</h2>

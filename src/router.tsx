@@ -4,19 +4,18 @@ import { Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 
 // Styles
-import './App.sass';
+import './router.sass';
 
 // Components
-// import { Footer } from 'Components';
-import Base from './app/Base';
+import Layout from './app/layout';
 
-export default class App extends React.Component {
+export default class Router extends React.Component {
   public render(): React.ReactElement<any> {
     return (
       <BrowserRouter>
         <React.Fragment>
           {/* <Header /> */}
-          <Route path="/" component={Base}  />
+          <Route path="/" component={Layout}  />
         </React.Fragment>
       </BrowserRouter>
     );

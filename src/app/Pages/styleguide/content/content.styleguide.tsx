@@ -21,12 +21,12 @@ import {
 
 export class StyleGuideContent extends React.Component<ICommonProps, ICommonState> {
     public images: any[] =[
-        require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),
-        require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg'),
+        require('../../../assets/images/john-salzarulo-37827-unsplash.jpg'),
+        require('../../../assets/images/jezael-melgoza-551505-unsplash.jpg'),
     ];
     public images2: any[] = [
-        require('../../../Assets/Images/jimmy-baum-346127-unsplash.jpg'),
-        require('../../../Assets/Images/john-salzarulo-78830-unsplash.jpg'),
+        require('../../../assets/images/jimmy-baum-346127-unsplash.jpg'),
+        require('../../../assets/images/john-salzarulo-78830-unsplash.jpg'),
     ];
     constructor(props: any) {
         super(props);
@@ -39,11 +39,11 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                     {/* <div className="block square-red" /> */}
                     <EntryChapterComponent
                         imgs={[
-                            require('../../../Assets/Videos/Breezy/Breezy.jpg'),
+                            require('../../../assets/videos/Breezy/Breezy.jpg'),
                             [
-                                { type: 'mp4', path: require('../../../Assets/Videos/Breezy/Breezy.mp4') },
-                                { type: 'webm', path: require('../../../Assets/Videos/Breezy/Breezy.webm') },
-                                { type: 'ogv', path: require('../../../Assets/Videos/Breezy/Breezy.ogv') }
+                                { type: 'mp4', path: require('../../../assets/videos/Breezy/Breezy.mp4') },
+                                { type: 'webm', path: require('../../../assets/videos/Breezy/Breezy.webm') },
+                                { type: 'ogv', path: require('../../../assets/videos/Breezy/Breezy.ogv') }
                             ]
                         ]}
                         text="Chapter"
@@ -54,7 +54,7 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                     />
 
                     <TextImgComponent
-                        img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')}
+                        img={require('../../../assets/images/jezael-melgoza-551505-unsplash.jpg')}
                     >
                         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
                         <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
@@ -80,16 +80,16 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                     </QuoteImgComponent>
 
-                    {/* <ContentPartComponent img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')}>
+                    {/* <ContentPartComponent img={require('../../../assets/images/jezael-melgoza-551505-unsplash.jpg')}>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat odit cum iure similique saepe voluptatum voluptas, corrupti beatae repellat velit debitis magnam, nulla quibusdam assumenda deleniti! Totam repudiandae est eveniet?</p>
                     </ContentPartComponent> */}
 
                     <InteractivePhotoComponent
-                        img={require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')}
+                        img={require('../../../assets/images/john-salzarulo-37827-unsplash.jpg')}
                         points={[
                         {
                             content: "",
-                            file: require('../../../Assets/Sounds/carnival-daniel_simon.mp3'),
+                            file: require('../../../assets/sounds/carnival-daniel_simon.mp3'),
                             title:"Intitulé",
                             type: "audio",
                             x: "20%",
@@ -97,7 +97,7 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         },
                         {
                             content: "",
-                            file: require('../../../Assets/Sounds/bensound-hey.mp3'),
+                            file: require('../../../assets/sounds/bensound-hey.mp3'),
                             title:"Intitulé 2",
                             type: "audio",
                             x: "50%",
@@ -109,9 +109,9 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus iure recusandae dolorum quibusdam nihil facilis, dolor exercitationem quia hic? Corrupti autem esse quis, similique dolores delectus. Aspernatur facilis itaque corporis!"
                             ],
                             file: [
-                                require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),
-                                require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg'),
-                                require('../../../Assets/Images/john-salzarulo-37827-unsplash.jpg')
+                                require('../../../assets/images/john-salzarulo-37827-unsplash.jpg'),
+                                require('../../../assets/images/john-salzarulo-37827-unsplash.jpg'),
+                                require('../../../assets/images/john-salzarulo-37827-unsplash.jpg')
                             ],
                             title:"Intitulé",
                             type: "text",
@@ -120,10 +120,10 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         },
                     ]} />
 
-                    {/* <Interactive360Component img={require('../../../Assets/Images/jezael-melgoza-551505-unsplash.jpg')} points={[
+                    {/* <Interactive360Component img={require('../../../assets/images/jezael-melgoza-551505-unsplash.jpg')} points={[
                         {
                             content: "",
-                            file: require('../../../Assets/Sounds/carnival-daniel_simon.mp3'),
+                            file: require('../../../assets/sounds/carnival-daniel_simon.mp3'),
                             style: "audio",
                             title: "Intitulé",
                             x: "20%",
@@ -131,7 +131,7 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         },
                         {
                             content: "",
-                            file: require('../../../Assets/Sounds/bensound-hey.mp3'),
+                            file: require('../../../assets/sounds/bensound-hey.mp3'),
                             style: "audio",
                             title: "Intitulé 2",
                             x: "50%",

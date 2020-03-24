@@ -5,7 +5,7 @@ import * as React from 'react';
 
 
 // Styles
-import './headerExp.component.sass';
+import './header-exp.component.sass';
 
 // Components
 // import Animations from 'Animations';

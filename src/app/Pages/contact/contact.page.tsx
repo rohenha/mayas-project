@@ -17,7 +17,7 @@ export class PageContact extends React.Component<IContactProps, IContactState> {
     public render(): React.ReactElement<any> {
         return (
             <div id="contact" className="page" data-page="Contact">
-                <img className="bg" src={require('../../Assets/Images/john-salzarulo-37827-unsplash.jpg')} />
+                <img className="bg" src={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} />
                 <div className="container">
                     <div className="entete">
                         <h1>Contact</h1>

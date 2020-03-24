@@ -3,7 +3,7 @@ import { IInteractive360Props, IInteractive360State } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
-import './interactive360.component.sass';
+import './interactive-360.component.sass';
 
 // Components
 
