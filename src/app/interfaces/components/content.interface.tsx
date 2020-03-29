@@ -17,7 +17,7 @@ export interface IEntryChapterProps {
     imgs: string[],
     text: string,
     video: boolean,
-    chapter: IChapter,
+    subtitle: string,
     introduction: string,
     history: any
 }

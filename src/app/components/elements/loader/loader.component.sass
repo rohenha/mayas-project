@@ -1,0 +1,19 @@
+@import "../../../assets/stylesheets/tools/variables"
+
+.loader__anim
+    width: 100px
+    polygon
+        animation: loader 8s infinite linear
+        fill: none
+        stroke: $color-secondary
+        stroke-dasharray: 450px
+        stroke-width: 1px
+
+
+
+@keyframes loader
+    from
+        stroke-dashoffset: 450
+
+    to
+        stroke-dashoffset: -450

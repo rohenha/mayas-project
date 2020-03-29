@@ -1,0 +1,22 @@
+.cross
+    cursor: pointer
+    height: 25px
+    position: relative
+    width: 25px
+    &::before,
+    &::after
+        background-color: $color-secondary
+        bottom: 0
+        content: ''
+        display: block
+        height: 1px
+        left: 0
+        margin: auto
+        position: absolute
+        right: 0
+        top: 0
+        transform: rotate(45deg)
+        width: 100%
+
+    &::after
+        transform: rotate(-45deg)

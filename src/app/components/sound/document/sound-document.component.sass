@@ -1,0 +1,100 @@
+@import "../../../assets/stylesheets/tools/variables"
+
+.player
+    background-color: rgba($color-secondary, 1)
+    border-radius: 30px
+    bottom: 0
+    height: 90%
+    left: 0
+    margin: auto
+    position: absolute
+    right: 0
+    top: 0
+    width: 90%
+
+    &.visible
+        opacity: 1
+        pointer-events: inherit
+
+    &.pause
+        &::before,
+        &::after
+            background-color: $color-primary
+            bottom: 0
+            content: ''
+            display: block
+            height: 50%
+            left: 0
+            margin: auto
+            position: absolute
+            right: 0
+            top: 0
+            width: 10%
+
+        &::before
+            right: 7px
+
+        &::after
+            left: 7px
+
+
+    &.play
+        &::before
+            _border-color: #000000 #000000 #000000 #FFFFFF
+            _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000')
+            border-color: transparent transparent transparent $color-primary
+            border-style: solid
+            border-width: 7.5px 0 7.5px 13.0px
+            bottom: 0
+            content: ''
+            display: block
+            height: 0
+            left: 0
+            line-height: 0
+            margin: auto
+            position: absolute
+            right: 0
+            top: 0
+            width: 0
+
+    svg
+        position: relative
+        z-index: 2
+
+    &__back
+        fill-opacity: 0
+        stroke: rgba($color-secondary, .3)
+        stroke-width: 2
+
+    &__front
+        fill-opacity: 0
+        stroke: $color-primary
+        stroke-width: 2
+        transition: stroke-dasharray 1s linear
+
+
+
+
+.headerExp-left--time
+    background-color: darken($color-white, 10%)
+    border-radius: 35px
+    bottom: 0
+    height: 95%
+    left: 2px
+    line-height: 40px
+    margin: auto
+    opacity: 0
+    padding-left: 100%
+    position: absolute
+    top: 0
+    transform: translateX(-10px)
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out
+    width: 190px
+    z-index: -1
+    &.active
+        opacity: 1
+        transform: translateX(0)
+
+    p
+        color: $color-black
+        letter-spacing: 2px

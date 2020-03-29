@@ -3,6 +3,7 @@ import { IAnimation } from 'Interfaces';
 
 export const RealisationAnimation: IAnimation  = {
     duration: 1,
+    elements: {},
     enter(node: any, duration: number, delay: number): void {
         const tlIn = new TimelineMax();
         tlIn.delay(delay);
@@ -33,5 +34,10 @@ export const RealisationAnimation: IAnimation  = {
             x: -100,
         });
         tlOut.set(node, { clearProps: "position, width" });
+    },
+
+    setElements(node: any): void {
+      console.log('hello world', node);
     }
+
 }

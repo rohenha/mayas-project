@@ -1,0 +1,75 @@
+@import "../../assets/stylesheets/tools/variables"
+
+.quote
+    height: 100%
+    position: relative
+    width: 100%
+    &::before
+        background-color: $color-black
+        content: ''
+        display: block
+        height: 100%
+        opacity: .5
+        position: absolute
+        width: 100%
+        z-index: 1
+
+    .container
+        align-items: flex-start
+        display: flex
+        flex-flow: column wrap
+        height: 100%
+        justify-content: center
+        max-width: 600px
+        padding-left: 50px
+
+
+    h2
+        color: $color-primary
+        font-family: $font-regular
+        font-size: 16px
+        font-weight: 300
+        letter-spacing: 1px
+        line-height: 25px
+        margin-bottom: 50px
+        position: relative
+        text-transform: inherit
+        width: 100%
+        &::after
+            background: url('../../assets/images/quote.svg')
+            background-position: center center
+            background-size: contain
+            content: ''
+            display: inline-block
+            height: 16px
+            margin-left: 10px
+            opacity: 1
+            width: 16px
+
+        b
+            color: $color-secondary
+            display: block
+            font-family: $font-titles
+            font-size: 70px
+            letter-spacing: 0
+            line-height: 80px
+            margin-bottom: 10px
+            text-transform: uppercase
+            width: 100%
+            &::before
+                background: url('../../assets/images/quote.svg')
+                background-position: center center
+                background-size: contain
+                content: ''
+                display: inline-block
+                height: 50px
+                margin-right: 20px
+                opacity: 1
+                width: 50px
+
+    h3
+        color: rgba($color-secondary,.6)
+        font-family: $font-regular
+        font-size: 14px
+        font-weight: 300
+        letter-spacing: 2px

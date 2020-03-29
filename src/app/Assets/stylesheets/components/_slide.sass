@@ -1,0 +1,48 @@
+.slide
+    background: rgba(#49403A, .5)
+    border: 1px solid rgba(#F6F6F6, .3)
+    border-radius: 35px
+    cursor: pointer
+    height: 35px
+    overflow: hidden
+    position: relative
+    transition: background .3s ease-in-out, border .3s ease-in-out
+    width: 35px
+    &::before
+        background: url('/assets/images/right-arrow.svg')
+        background-position: center center
+        background-repeat: repeat-x
+        background-size: 75% 75%
+        bottom: 0
+        content: ''
+        display: block
+        height: 100%
+        left: 0
+        margin: auto
+        position: absolute
+        right: 0
+        top: 0
+        transform: rotate(90deg)
+        transition: background-position .4s ease-in-out
+        width: 100%
+
+    &:hover
+        background: rgba(#F6F6F6, .5)
+        border: 1px solid rgba(#F6F6F6, .8)
+        &::before
+            background-position: 30px center
+
+    &-previous
+        &::before
+            transform: rotate(-90deg)
+
+    &-next
+        margin-top: 30px
+
+    &-controller
+        bottom: 0
+        height: 100px
+        left: 10%
+        margin: auto
+        position: absolute
+        top: 0

@@ -7,6 +7,8 @@ import './01-pays.page.sass';
 
 // Components
 import { MultiplePathComponent } from 'Components';
+
+// Content
 import { PaysContent  } from 'Content';
 
 export class PagePays extends React.Component<IPaysProps, IPaysState> {

@@ -1,3 +1,106 @@
+@import "../tools/functions/fonts"
+
 html
+    color: $color-secondary
     font-family: $font-regular
     font-size: $font-size-base + px
+
+h1,
+h2,
+h3,
+.text__menu-element,
+.text__title,
+.text__section-title,
+.component__scroll
+    font-family: $font-titles
+    letter-spacing: ls2rem(60)
+    text-transform: uppercase
+
+a,
+.text__subtitle,
+.text__section-subtitle,
+.text__menu-chapter
+    font-family: $font-subtitles
+    text-transform: uppercase
+
+h1,
+h2
+    color: $color-secondary
+    font-size: px2rem(105)
+    line-height: px2rem(100)
+    margin-bottom: 60px
+
+h3
+    color: $color-secondary
+    font-size: px2rem(50)
+    letter-spacing: ls2rem(60)
+    line-height: px2rem(60)
+    margin-bottom: 60px
+
+p
+    color: $color-secondary
+    font-family: $font-regular
+    font-size: px2rem(14)
+    letter-spacing: ls2rem(60)
+
+.text
+    &__title
+        font-size: px2rem(200)
+        letter-spacing: ls2rem(60)
+        line-height: px2rem(210)
+    &__subtitle
+        color: $color-primary
+        font-size: px2rem(22)
+        letter-spacing: ls2rem(160)
+        line-height: px2rem(30)
+        margin-bottom: 0
+    &__section-title
+        font-size: px2rem(30)
+        letter-spacing: ls2rem(60)
+    &__section-subtitle
+        font-size: px2rem(18)
+        letter-spacing: ls2rem(160)
+    &__menu
+        &-element
+            font-size: px2rem(20)
+        &-chapter
+            font-size: px2rem(20)
+            letter-spacing: ls2rem(160)
+
+a,
+.text__link
+    color: $color-third
+    font-size: px2rem(12)
+    letter-spacing: ls2rem(160)
+    text-decoration: none
+    text-transform: uppercase
+    &.active
+        color: $color-secondary
+
+    &.link-text
+        color: $color-secondary
+        font-family: $font-regular
+        font-size: 14px
+        letter-spacing: initial
+        overflow: hidden
+        padding: 0 3px
+        position: relative
+        text-transform: inherit
+        transition: color .3s ease-in-out
+        &::before
+            background-color: $color-secondary
+            content: ""
+            display: block
+            height: 2px
+            left: 0
+            position: absolute
+            top: calc(100% - 2px)
+            transition: height .3s ease-in-out, top .3s ease-in-out
+            width: 100%
+            z-index: -1
+
+        &:hover
+            color: $color-black
+            &::before
+                height: 100%
+                top: 0

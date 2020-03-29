@@ -3,6 +3,7 @@ import { IAnimation } from 'Interfaces';
 
 export const CodexAnimation: IAnimation = {
     duration: 1,
+    elements: {},
     enter(node: any, duration: number, delay: number): void {
         const tlIn = new TimelineMax();
         tlIn.delay(delay);
@@ -19,6 +20,7 @@ export const CodexAnimation: IAnimation = {
         });
         tlIn.set(node, { clearProps: "position, width" });
     },
+
     exit(node: any, duration: number): void {
         const tlOut = new TimelineMax();
         tlOut.set(node, {
@@ -34,4 +36,10 @@ export const CodexAnimation: IAnimation = {
         });
         tlOut.set(node, { clearProps: "position, width" });
     }
+    ,
+
+    setElements(node: any): void {
+      console.log('hello world', node);
+    }
+
 }

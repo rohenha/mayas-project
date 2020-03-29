@@ -1,0 +1,33 @@
+@import "tools/variables"
+
+.details
+    justify-content: flex-start
+    overflow: hidden
+    &__content
+        -webkit-overflow-scrolling: touch
+        align-items: flex-start
+        background-color: $color-black
+        display: flex
+        flex-flow: row nowrap
+        height: 100%
+        justify-content: flex-start
+        overflow-x: auto
+        &::-webkit-scrollbar
+            display: none
+
+        >div
+            &:last-child
+                padding-right: 60px
+
+        .block
+            flex: 0 0 auto
+            height: 100%
+            padding: 20px
+            width: 700px
+
+.square
+    &-red
+        background-color: $color-primary
+
+    &-blue
+        background-color: $color-secondary

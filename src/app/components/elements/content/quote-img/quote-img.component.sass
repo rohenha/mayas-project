@@ -1,0 +1,53 @@
+@import "tools/variables"
+
+.content
+    &__quote-img
+        background-color: $color-black
+        display: flex
+        flex: 0 0 auto
+        flex-flow: row wrap
+        height: 100%
+        min-width: 600px
+        padding: 40px 0 60px 60px
+        width: 70vw
+        &--img
+            height: 65%
+            width: 50%
+            &:first-child
+                padding: 0 40px 0 0
+
+            &:nth-child(2)
+                padding: 0 40px 0 0
+
+        img
+            height: 100%
+            object-fit: cover
+            width: 100%
+
+        &--single
+            .content__quote-img--img
+                width: 100%
+                &:first-child
+                    padding: 0
+
+        &--bottom
+            .content__quote-img--content
+                justify-content: flex-start
+                order: 1
+                padding: 0 0 calc(#{$padding} + #{$navHeight})
+
+            .content__quote-img--img
+                order: 2
+
+        &--content
+            background-color: $color-black
+            display: flex
+            flex-flow: column wrap
+            height: 35%
+            justify-content: flex-end
+            padding: calc(#{$padding} + #{$navHeight}) 0 0
+            width: 100%
+            h3
+                color: $color-primary
+                margin-bottom: 40px
+                text-align: left

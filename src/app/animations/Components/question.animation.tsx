@@ -3,6 +3,7 @@ import { IAnimation } from 'Interfaces';
 
 export const QuestionAnimation: IAnimation = {
     duration: 1,
+    elements: {},
     enter(node: any, duration: number, delay: number): void {
         const tlIn = new TimelineMax();
         tlIn.delay(delay);
@@ -31,5 +32,10 @@ export const QuestionAnimation: IAnimation = {
             opacity: 0,
         });
         tlOut.set(node, { clearProps: "position, width" });
+    },
+
+    setElements(node: any): void {
+      console.log('hello world', node);
     }
+
 }

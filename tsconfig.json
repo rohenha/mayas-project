@@ -25,9 +25,11 @@
       "Interfaces": [ "src/app/interfaces/index.ts" ],
       "Mocks": [ "src/app/commons/mocks/index.ts" ],
       "Animations": [ "src/app/animations/index.ts" ],
-      "Routes": [ "src/app/shared/routes/index.ts" ],
-      "Styles/*": [ "src/app/shared/styles/*" ],
-      "Components": [ "src/app/shared/components/index.ts" ],
+      "Routes": [ "src/app/routes/index.ts" ],
+      "Styles": [ "src/app/styles/*" ],
+      "Images": [ "src/app/images/index.tsx"],
+      "Videos": [ "src/app/videos/index.tsx"],
+      "Components": [ "src/app/components/index.ts" ]
     }
   },
   "include": [

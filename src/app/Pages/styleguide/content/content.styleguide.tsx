@@ -48,7 +48,7 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         ]}
                         text="Chapter"
                         video={false}
-                        chapter= {{name: "Mayas", number: 1}}
+                        subtitle="Chapitre 1<span>Mayas</span>"
                         introduction="Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores provident minus."
                         {...this.props}
                     />

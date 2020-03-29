@@ -37,6 +37,7 @@ export * from './components/slider.interface';
 export * from './components/video.interface';
 export * from './components/sound.interface';
 export * from './components/codex.interface';
+export * from './components/home.interface';
 export * from './components/quiz.interface';
 export * from './components/buttonExp.interface';
 export * from './components/multiple-paths.interface';
