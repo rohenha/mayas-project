@@ -1,10 +1,10 @@
 // tslint:disable-next-line:no-empty-interface
-export interface IBaseProps {
+export interface ILayoutProps {
     location: any,
     history: any
 }
 // tslint:disable-next-line:no-empty-interface
-export interface IBaseState {
+export interface ILayoutState {
     pageEnter: string,
     pageLeave: string,
     page: any

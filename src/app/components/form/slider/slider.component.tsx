@@ -7,44 +7,53 @@ import './slider.component.sass';
 
 // Components
 
-
 export class SliderComponent extends React.Component<ISliderProps, ISliderState> {
     public onChange: () => {} = this.changeValue.bind(this);
     public onReset: () => {} = this.resetVal.bind(this);
-    constructor(props: any) {
+    private animationInterval: number = 0;
+    constructor (props: any) {
         super(props);
         this.state = {
-            edit: true,
+            end: false,
             value: 0
-        }
-    }
+        };
+    };
 
-    public changeValue(event: any): void  {
+    public changeValue (event: any): void  {
         const value = event.target.value;
-        if( this.state.edit ) {
+        if (!this.state.end) {
             this.setState(
-                { edit: value === '100' ? false : true, value, },
-                () => { if( !this.state.edit) { this.props.onDone(); } }
+                { end: value === '100' , value },
+                this.checkIsDone
             );
         }
-    }
+    };
 
-    public resetVal () {
-        if (this.state.value > 0 && this.state.edit) {
-            setTimeout(
-                () => {
-                    this.setState({ value: this.state.value - 1 }, () => { this.resetVal(); });
-                },
-                5
-            );
+    public checkIsDone () : void {
+      if (this.state.end) {
+        setTimeout(this.props.onDone , 1000);
+      }
+    };
+
+    public resetVal (): void {
+        if (this.state.value > 0 && !this.state.end) {
+          this.animationInterval = setInterval(this.animateVal.bind(this), 5);
         }
-    }
+    };
+
+    public animateVal (): void {
+      const newValue = this.state.value - 1;
+      this.setState({ value: newValue });
+      if (newValue === 0) {
+        clearInterval(this.animationInterval);
+      }
+    };
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="container__range">
+            <div className="form-range__container">
                 <input
-                    className="container__range--input"
+                    className="form-range__input"
                     value={this.state.value}
                     type="range"
                     onChange={this.onChange}

@@ -1,5 +1,5 @@
 import { IPath } from 'Interfaces';
-import { 
+import {
     Page404,
     PageAccueil,
     // PageContact,
@@ -33,12 +33,6 @@ export const AppRoutes: IPath[] = [
         exact: true,
         name: 'Soon',
         path: "/",
-    },
-    {
-        component: Page404,
-        exact: true,
-        name: 'P404',
-        path: "/404",
     },
     {
         component: PageRealisation,
@@ -136,6 +130,12 @@ export const AppRoutes: IPath[] = [
         name: 'DocSound',
         path: "/styleguide/docsound",
     },
+    {
+        component: Page404,
+        exact: true,
+        name: 'P404',
+        path: "/404",
+    }
 ];
 
 export default AppRoutes;

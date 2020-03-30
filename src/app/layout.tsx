@@ -1,14 +1,12 @@
 // Imports
 import { TweenMax } from 'gsap';
-import { IBaseProps, IBaseState, IPath} from 'Interfaces';
+import { ILayoutProps, ILayoutState, IPath} from 'Interfaces';
 import * as React from 'react';
 import { Route, Switch } from 'react-router';
-import {  Transition, TransitionGroup } from 'react-transition-group';
+import { Transition, TransitionGroup } from 'react-transition-group';
 import { PagesService } from 'Services';
 
 // Styles
-import './layout.sass';
-
 // Components
 import Animations from 'Animations';
 import {
@@ -20,7 +18,7 @@ import {
 import Routes from 'Routes';
 
 
-export default class Layout extends React.Component<IBaseProps, IBaseState> {
+export default class Layout extends React.Component<ILayoutProps, ILayoutState> {
     public enterTrans: (node: any) => void = this.enter.bind(this);
     public exitTrans: (node: any) => void = this.exit.bind(this);
     public pagesService: PagesService = new PagesService();
@@ -34,48 +32,52 @@ export default class Layout extends React.Component<IBaseProps, IBaseState> {
     }
 
     public enter(node: any): void {
-        this.setState({
-            page: Routes.ExpRoutes.find((route: any) =>  {
-                return route.content.url === this.props.history.location.pathname;
-            } )
-        });
-        TweenMax.killTweensOf(node);
-        if (node !== null) {
-            const page = node.getAttribute('data-page');
-            this.setState({
-                pageEnter: page
-            }, () => {
-                Animations[this.state.pageEnter + 'Animation'].enter(
-                    node,
-                    Animations[this.state.pageEnter + 'Animation'].duration,
-                    this.state.pageLeave !== '' ? Animations[this.state.pageLeave + 'Animation'].duration : 0
-                );
-            });
-        } else {
-            this.props.history.push("/404");
+      this.animatePage(
+        node,
+        'pageEnter',
+        () => {
+          const animation = Animations[this.state.pageEnter + 'Animation'];
+          animation.enter(
+              node,
+              animation.duration,
+              this.state.pageLeave !== '' ? animation.duration : 0
+          );
         }
+      );
     }
 
     public exit(node: any): void{
-        TweenMax.killTweensOf(node);
-        if (node !== null) {
-           const  page = node.getAttribute('data-page');
-            this.setState({
-                pageLeave: page
-            }, () => {
-                Animations[this.state.pageLeave + 'Animation'].exit(node, Animations[this.state.pageLeave + 'Animation'].duration);
-            });
-        } else {
-            this.props.history.push("/404");
+      this.animatePage(
+        node,
+        'pageLeave',
+        () => {
+          const animationLeave = Animations[this.state.pageLeave + 'Animation'];
+          animationLeave.exit(node, animationLeave.duration);
         }
+      );
+    }
+
+    public animatePage(node: HTMLElement, newState: string, animationCallback: () => void): void {
+      let page;
+      const state = {};
+      TweenMax.killTweensOf(node);
+      if (node === null) {
+        this.props.history.push('/404');
+        return;
+      }
+      page = node.getAttribute('data-page');
+      if (page === null) {
+        page = 'Common';
+      }
+      state[newState] = page;
+      this.setState(state, animationCallback);
     }
 
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
-
               {this.state.page && this.state.page.content ?
-                  <HeaderExpComponent page={ {chapter: this.state.page.content.chapter, name: this.state.page.content.pageName} } />
+                  <HeaderExpComponent page={this.state.page} />
               : null}
 
               <TransitionGroup component="div" id="content">
@@ -104,7 +106,6 @@ export default class Layout extends React.Component<IBaseProps, IBaseState> {
               : null}
 
               <Footer/>
-
             </React.Fragment>
         );
     }

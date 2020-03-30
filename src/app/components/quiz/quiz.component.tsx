@@ -28,7 +28,7 @@ export class QuizComponent extends React.Component<IQuizProps, IQuizState> {
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="page quiz-screen" data-page="Quiz">
+            <div className="page quiz-screen" data-page="Common">
                 <img className="bg" src={this.props.img} />
                 {this.props.steps[this.state.step].content.img !== undefined && this.props.steps[this.state.step].content.img !== null ? <img className="quiz-question__img"  src={this.props.steps[this.state.step].content.img} alt="" /> : null}
                 <div className="container">

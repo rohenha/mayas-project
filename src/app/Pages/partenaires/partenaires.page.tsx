@@ -19,7 +19,7 @@ export class PagePartenaires extends React.Component<IPartenairesProps, IPartena
 
     public render(): React.ReactElement<any> {
         return (
-          <div className="page page__partenaires" data-page="Partenaires">
+          <div className="page page-partenaires" data-page="Common">
               <DetailsComponent>
                 <EntryChapterComponent
                     imgs={[

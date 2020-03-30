@@ -13,7 +13,7 @@ export * from './layout/Footer/footerExp.interface';
 ----------------------------------------*/
 export * from './commons/404.interface';
 export * from './commons/animations.interface';
-export * from './commons/base.interface';
+export * from './commons/layout.interface';
 export * from './commons/routes.interface';
 export * from './commons/menu.interface';
 export * from './commons/common.interface';

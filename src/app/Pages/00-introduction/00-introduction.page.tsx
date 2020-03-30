@@ -15,7 +15,7 @@ export class PageIntroduction extends React.Component<IIntroductionProps, IIntro
 
     public render(): React.ReactElement<any> {
         return (
-            <div id="introduction" className="page" data-page="Introduction">
+            <div id="introduction" className="page" data-page="Common">
                 {/* <img className="bg" src={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} /> */}
                 <VideoComponent
                     sources={[

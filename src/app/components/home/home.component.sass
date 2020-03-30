@@ -1,6 +1,6 @@
 @import "tools/variables"
 
-.page__home
+.page-home
     overflow: hidden
     .page__content
         display: flex
@@ -11,21 +11,23 @@
     .container-fluid
         padding-left: 80px
 
-    &--introduce,
-    &--title,
-    &--form-enter
+    &__introduce,
+    &__title,
+    &__form-enter
         margin-bottom: 70px
-    &--introduce
+    &__introduce
         h3
             color: $color-secondary
-    &--introduce,
-    &--form-enter
+    &__introduce,
+    &__form-enter
         p
             color: $color-secondary
 
-    &--form-enter
+    &__form-enter
         max-width: 500px
-    &--realisation
+        .form-range__container
+            margin-bottom: 20px
+    &__realisation
         p
             display: inline-block
             &:not(:last-child)

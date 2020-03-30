@@ -18,7 +18,7 @@ export class PageRealisation extends React.Component<IRealisationProps, IRealisa
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="page page__realisation" data-page="Realisation">
+            <div className="page page__realisation" data-page="Common">
                 <DetailsComponent>
                   <EntryChapterComponent
                       imgs={[

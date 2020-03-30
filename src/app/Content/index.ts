@@ -8,3 +8,4 @@ export * from './soon.content';
 export * from './realisation.content';
 export * from './partenaires.content';
 export * from './footer.content';
+export * from './404.content';

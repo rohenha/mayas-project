@@ -8,6 +8,9 @@ import './404.page.sass';
 // Components
 import { ButtonExpComponent } from 'Components';
 
+// Content
+import { P404Content } from 'Content';
+
 export class Page404 extends React.Component<I404Props, I404State> {
     constructor(props: any) {
         super(props);
@@ -16,21 +19,17 @@ export class Page404 extends React.Component<I404Props, I404State> {
 
     public render(): React.ReactElement<any> {
         return (
-            <div id="P404" className="page" data-page="P404">
-                <img className="bg" src={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} />
-                <div className="container">
-                    <div className="entete">
-                        <h2>Vous êtes vous perdu dans la</h2>
-                        <h1>foret ?</h1>
-                    </div>
-                    <div className="introduce">
-                        <h3>Il semblerai que la page que vous cherchez n'existe pas</h3>
-                    </div>
-                    <div className="P404__button">
-                        <ButtonExpComponent redirection={'/'} {...this.props} back={true} text={{ text1: "Revenir", text2: "à l'accueil" }} />
-                    </div>
+          <div className="page page-404 section__entry-chapter" data-page="Common">
+            <img className="page__bg" src={P404Content.background} />
+            <div className="page__content">
+                <div className="container-fluid">
+                  <h3 className="text__subtitle" dangerouslySetInnerHTML={{__html: P404Content.text.title.subtitle}}/>
+                  <h1>{P404Content.text.title.title}</h1>
+                  <p className="section__entry-chapter--text">{P404Content.text.text}</p>
+                  <ButtonExpComponent redirection={P404Content.url} {...this.props} back={true} text={P404Content.text.back} />
                 </div>
             </div>
+          </div>
         );
     }
 }

@@ -16,7 +16,7 @@ export class PageVie extends React.Component<ICommonProps, ICommonState> {
 
     public render(): React.ReactElement<any> {
         return (
-            <div id="vie" className="page" data-page="Vie"/>
+            <div id="vie" className="page" data-page="Common"/>
         );
     }
 }

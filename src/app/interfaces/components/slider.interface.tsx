@@ -4,6 +4,6 @@ export interface ISliderProps {
 }
 // tslint:disable-next-line:no-empty-interface
 export interface ISliderState {
-    edit: boolean,
+    end: boolean,
     value: number
 }
