@@ -35,6 +35,12 @@ export const AppRoutes: IPath[] = [
         path: "/",
     },
     {
+        component: Page404,
+        exact: true,
+        name: 'P404',
+        path: "/404",
+    },
+    {
         component: PageRealisation,
         exact: true,
         name: 'Realisation',
@@ -129,12 +135,6 @@ export const AppRoutes: IPath[] = [
         exact: true,
         name: 'DocSound',
         path: "/styleguide/docsound",
-    },
-    {
-        component: Page404,
-        exact: true,
-        name: 'P404',
-        path: "/404",
     }
 ];
 

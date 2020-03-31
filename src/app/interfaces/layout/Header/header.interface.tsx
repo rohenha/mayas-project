@@ -6,8 +6,10 @@ export interface IHeaderState {}
 
 // tslint:disable-next-line:no-empty-interface
 export interface IHeaderExpProps {
-    page: { chapter: number, name: string }
-
+    page: {
+      component: any,
+      content: any
+    }
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IHeaderExpState {

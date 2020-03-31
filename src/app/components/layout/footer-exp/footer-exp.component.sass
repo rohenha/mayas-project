@@ -1,18 +1,13 @@
-@import "../../../assets/stylesheets/tools/variables"
+@import "tools/variables"
 
-.footerExp
-    align-items: center
+.footer-exp
     bottom: calc(#{$padding} + #{$navHeight} + 10px)
-    display: flex
-    flex-flow: row wrap
-    justify-content: space-between
     position: absolute
     z-index: 3
 
-
-#footerExp
-    &-left
+    &--left
+        align-items: flex-start
         left: $padding
 
-    &-right
+    &--right
         right: $padding

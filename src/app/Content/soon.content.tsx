@@ -1,6 +1,5 @@
-export class SoonContent {
-    public static url: string = '';
-    public static text: object = {
+export const SoonContent: any = {
+    text: {
       authors: [
         {
           name: 'Romain Breton',
@@ -24,5 +23,6 @@ export class SoonContent {
         subtitle: 'Sur les traces d\'une civilisation mystérieuse',
         title: 'Mayas'
       }
-    };
-}
+    },
+    url: ''
+};

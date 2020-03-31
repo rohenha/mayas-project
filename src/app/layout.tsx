@@ -32,6 +32,11 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
     }
 
     public enter(node: any): void {
+      this.setState({
+        page: Routes.ExpRoutes.find((route: any) =>  {
+          return route.content.url === this.props.history.location.pathname;
+        })
+      });
       this.animatePage(
         node,
         'pageEnter',

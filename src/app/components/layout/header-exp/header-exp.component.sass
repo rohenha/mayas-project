@@ -1,13 +1,72 @@
-@import "../../../assets/stylesheets/tools/variables"
+@import "tools/variables"
 
-.headerExp
-    align-items: center
-    display: flex
-    flex-flow: row wrap
-    justify-content: center
+.header-exp
+    display: inline-block
     position: absolute
     top: $padding
     z-index: 3
+
+    &--left
+        left: $padding
+
+    &--right
+        right: $padding
+
+    &__text
+        display: inline-block
+        margin-right: 10px
+        text-align: right
+        > span
+            overflow: hidden
+
+        span
+            display: block
+            text-align: right
+
+        &--content
+            position: relative
+            transform: translateX(0)
+            transition: transform .6s ease-in-out
+            &::before
+                content: attr(data-content)
+                display: block
+                position: absolute
+                right: calc(100% + 10px)
+                top: 0
+                width: 100%
+
+        &--subtitle
+            color: $color-primary
+
+        &--subtitle
+            .header-exp__text--content
+                transition-delay: .1s
+
+    &__button
+        appearance: none
+        background: transparent
+        border: none
+        color: $color-secondary
+        cursor: pointer
+        display: flex
+        outline: none
+
+        &:hover
+            .header-exp
+                &__text
+                    &--subtitle .header-exp__text--content
+                        transition-delay: 0s
+
+                    &--title .header-exp__text--content
+                        transition-delay: .1s
+
+                    &--content
+                        transform: translateX(calc(100% + 10px))
+
+                &__map
+                    background: rgba($color-black, 1)
+                    outline: none
+
     &__map
         appearance: none
         background: rgba(#49403A, .5)
@@ -15,54 +74,12 @@
         border-radius: 2px
         color: $color-secondary
         cursor: pointer
+        display: inline-block
         height: 65px
         overflow: hidden
         width: 65px
-        &:hover,
-        &:focus
-            background: rgba($color-black, 1)
-            outline: none
 
         svg
             width: 100%
             path
                 background-color: rgba(#F6F6F6, .3)
-
-#headerExp
-    &-left
-        appearance: none
-        background: none
-        border: none
-        cursor: pointer
-        height: 40px
-        left: $padding
-        outline: none
-        width: 40px
-        svg
-            width: 100%
-
-
-    &-right
-        align-items: flex-start
-        display: flex
-        flex-flow: row wrap
-        justify-content: flex-end
-        right: $padding
-        p
-            font-family: $font-titles
-            font-size: 13px
-            letter-spacing: 3px
-            margin-right: 10px
-            text-align: right
-            text-transform: uppercase
-
-        span
-            display: block
-            &.white
-                letter-spacing: 2px
-                line-height: 16px
-
-            &.red
-                color: $color-primary
-                font-family: $font-subtitles
-                font-size: 12px

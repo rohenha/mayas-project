@@ -21,10 +21,10 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
-                <div id="footer-left" className="footer">
+                <div className="footer footer--left">
                     <NavLink className="link" exact={true} to="/" activeClassName="active">Voyage en terres d'histoire</NavLink>
                 </div>
-                <div id="footer-right" className="footer">
+                <div className="footer footer--right">
                     <ul>
                         {Routes.MenuRoutes.map((route: IPath, index: number) =>
                             <li key={index}>

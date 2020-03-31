@@ -1,7 +1,9 @@
 .cross
     cursor: pointer
+    display: inline-block
     height: 25px
     position: relative
+    transition: transform .3s ease-in-out
     width: 25px
     &::before,
     &::after
@@ -20,3 +22,7 @@
 
     &::after
         transform: rotate(-45deg)
+
+    &:hover,
+    &:focus
+        transform: rotate(90deg)

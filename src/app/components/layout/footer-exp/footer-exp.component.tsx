@@ -7,6 +7,7 @@ import './footer-exp.component.sass';
 
 // Components
 import { ButtonExpComponent, CodexComponent } from 'Components';
+import { CodexContent } from 'Content';
 
 export class FooterExpComponent extends React.Component<IFooterExpProps, IFooterExpState> {
     public toggle: () => void = this.toggleCodex.bind(this);
@@ -22,11 +23,11 @@ export class FooterExpComponent extends React.Component<IFooterExpProps, IFooter
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
-                <button id="footerExp-left" className="footerExp button__base" onClick={this.toggle} >
-                    Codex
-                        <img src={require('../../../assets/images/codex_icon.png')} alt="Icon Codex" />
+                <button className="footer-exp footer-exp--left button__base" onClick={this.toggle} >
+                    <span>Codex</span>
+                    <img src={CodexContent.image} alt="Icon Codex" />
                 </button>
-                <div id="footerExp-right" className="footerExp">
+                <div className="footer-exp footer-exp--right">
                     <ButtonExpComponent redirection={this.props.nextPage} {...this.props} back={false} text={this.props.footerText} />
                 </div>
                 <CodexComponent datas={this.props.codexDatas} toggleCodex={this.state.openCodex} closeCodex={this.toggle} />

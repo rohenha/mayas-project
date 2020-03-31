@@ -1,5 +1,5 @@
-export class RealisationContent {
-    public static background: any = {
+export const RealisationContent: any =  {
+    background: {
       image: require('../assets/videos/Breezy/Breezy.jpg'),
       isVideo: true,
       video: [
@@ -7,8 +7,8 @@ export class RealisationContent {
         { type: 'webm', path: require('../assets/videos/Breezy/Breezy.webm') },
         { type: 'ogv', path: require('../assets/videos/Breezy/Breezy.ogv') }
       ]
-    };
-    public static text: any = {
+    },
+    text: {
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ut amet at praesentium, libero, voluptatibus, maiores quas suscipit nostrum assumenda vitae. Commodi tempora numquam obcaecati assumenda nostrum quod',
       realisateurs: [
         {
@@ -28,5 +28,5 @@ export class RealisationContent {
         subtitle: 'l\'équipe de',
         title: 'Réalisation'
       }
-    };
-}
+    }
+};

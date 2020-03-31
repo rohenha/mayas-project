@@ -9,3 +9,5 @@ export * from './realisation.content';
 export * from './partenaires.content';
 export * from './footer.content';
 export * from './404.content';
+export * from './menu.content';
+export * from './codex.content';

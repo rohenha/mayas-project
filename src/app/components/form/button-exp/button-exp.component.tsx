@@ -16,13 +16,13 @@ export class ButtonExpComponent extends React.Component<IButtonExpProps, IButton
 
     public render(): React.ReactElement<any> {
         return (
-            <div className={this.props.back ? " buttonExp buttonExp__back" : "buttonExp"}>
-                <NavLink to={this.props.redirection} className="buttonExp__button">
-                    <p>
-                        <span className="red"><span className="text-content" data-content={this.props.text.text1}>{this.props.text.text1}</span></span>
-                        <span className="white"><span className="text-content" data-content={this.props.text.text2}>{this.props.text.text2}</span></span>
-                    </p>
-                    <span className="circleNext"/>
+            <div className={this.props.back ? " form-button-exp form-button-exp__back" : "form-button-exp"}>
+                <NavLink to={this.props.redirection} className="form-button-exp__button">
+                    <span className="form-button-exp__text">
+                      <span className="form-button-exp__text--subtitle"><span className="form-button-exp__text--content" data-content={this.props.text.text1}>{this.props.text.text1}</span></span>
+                      <span className="form-button-exp__text--title"><span className="form-button-exp__text--content" data-content={this.props.text.text2}>{this.props.text.text2}</span></span>
+                    </span>
+                    <span className="form-button-exp__circle"/>
                 </NavLink>
             </div>
 

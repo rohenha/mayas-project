@@ -1,12 +1,11 @@
-@import "../../assets/stylesheets/tools/variables"
+@import "tools/variables"
 
-#menu
+.menu
     background-color: #000000
     height: 100%
     opacity: 0
     padding: 50px
     position: fixed
-    right: 0
     top: 0
     transform: translateX(100px)
     visibility: hidden
@@ -25,7 +24,7 @@
         width: 100%
         z-index: 1
 
-    .bg
+    &__bg
         height: 100%
         left: 0
         object-fit: cover
@@ -40,34 +39,8 @@
         transition: visibility 0s ease, opacity .3s ease-in-out .1s
         visibility: visible
 
-.menu
     &__close
-        cursor: pointer
-        display: block
-        height: 30px
-        margin-left: 10px
-        position: relative
-        width: 30px
-        &::before,
-        &::after
-            background-color: $color-secondary
-            bottom: 0
-            content: ''
-            display: block
-            height: 2px
-            left: 0
-            margin: auto
-            position: absolute
-            right: 0
-            top: 0
-            width: 100%
-
-        &::before
-            transform: rotate(45deg)
-
-        &::after
-            transform: rotate(-45deg)
-
+        margin: 7px 0 0 10px
 
     &__content
         align-items: flex-start
@@ -77,16 +50,11 @@
         justify-content: center
         position: relative
         z-index: 2
-        h3
+        h2
             align-items: flex-start
-            color: $color-secondary
             display: flex
             flex-flow: row wrap
-            font-family: $font-titles
-            font-size: 70px
             justify-content: flex-start
-            letter-spacing: 3px
-            line-height: 53px
             margin-bottom: 50px
 
         ul
@@ -96,23 +64,38 @@
                 a
                     color: $color-secondary
                     display: inline-block
-                    font-family: $font-titles
-                    font-size: 13px
-                    letter-spacing: 1px
-                    opacity: .5
-                    transition: color .3s ease-in-out, opacity .3s ease-in-out, transform .3s ease-in-out
+                    overflow: hidden
                     &:hover,
                     &.active
-                        color: $color-secondary
-                        opacity: 1
-                        transform: translateX(10px)
-                        span
-                            color: $color-primary
-                            opacity: 1
+                        .text__menu
+                            &-chapter
+                                transition-delay: 0s
+                            &-element
+                                transition-delay: .1s
+                            &-element,
+                            &-chapter
+                                transform: translateY(calc(-100% - 10px))
 
-                span
-                    color: darken($color-secondary, 20%)
-                    font-family: $font-subtitles
-                    letter-spacing: 2px
-                    margin-right: 10px
-                    transition: color .3s ease-in-out, opacity .3s ease-in-out
+        .text__menu
+            &-chapter,
+            &-element
+                color: rgba(darken($color-secondary, 20%), .5)
+                display: inline-block
+                position: relative
+                transition: transform .6s ease-in-out
+                &::before
+                    content: attr(data-content)
+                    display: block
+                    left: 0
+                    position: absolute
+                    top: calc(100% + 10px)
+                    width: 100%
+            &-element
+                transition-delay: 0s
+                &::before
+                    color: $color-secondary
+            &-chapter
+                margin-right: 10px
+                transition-delay: .1s
+                &::before
+                    color: $color-primary

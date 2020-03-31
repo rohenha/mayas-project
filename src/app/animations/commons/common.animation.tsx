@@ -11,7 +11,8 @@ export const CommonAnimation: IAnimation = {
             autoAlpha: 0,
             opacity: 0,
             position: "fixed",
-            x: 100
+            x: 100,
+            zIndex: 1
         });
         tlIn.to(node, duration, {
             autoAlpha: 1,
@@ -24,16 +25,19 @@ export const CommonAnimation: IAnimation = {
         const tlOut = new TimelineMax();
         tlOut.set(node, {
             autoAlpha: 1,
+            left: 0,
             opacity: 1,
             position: "fixed",
-            x: 0
+            top: 0,
+            x: 0,
+            zIndex: 3
         });
         tlOut.to(node, duration, {
             autoAlpha: 0,
             opacity: 0,
             x: -100,
         });
-        tlOut.set(node, { clearProps: "position, width" });
+        // tlOut.set(node, { clearProps: "position, width" });
     },
 
     setElements(node: any): void {
