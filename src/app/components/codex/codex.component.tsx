@@ -1,5 +1,5 @@
 // Imports
-import { TweenMax } from 'gsap';
+// import { TweenMax } from 'gsap';
 import { ICodexProps, ICodexState } from 'Interfaces';
 import * as React from 'react';
 
@@ -7,11 +7,14 @@ import * as React from 'react';
 import './codex.component.sass';
 
 // Components
-import Animations from 'Animations';
-import { CodexDefinitionComponent ,CodexListComponent } from 'Components';
+import { CodexDefinitionComponent, CodexListComponent } from 'Components';
+
+// Services
+import { AnimationsService } from 'Services';
 
 export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
     public node: React.RefObject<HTMLDivElement>;
+    public animationsService: AnimationsService = new AnimationsService();
     constructor(props: any) {
         super(props);
         this.state = {
@@ -20,12 +23,20 @@ export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
         this.node = React.createRef();
     }
 
+    // public componentDidUpdate(prevProps: any): void {
+    //     if (this.props.toggleCodex !== prevProps.toggleCodex && this.props.toggleCodex === true) {
+    //         this.enterCodex(this.node.current);
+    //     }
+    //     if (this.props.toggleCodex !== prevProps.toggleCodex && this.props.toggleCodex === false) {
+    //         this.exitCodex(this.node.current);
+    //     }
+    // }
+
     public componentDidUpdate(prevProps: any): void {
-        if (this.props.toggleCodex !== prevProps.toggleCodex && this.props.toggleCodex === true) {
-            this.enterCodex(this.node.current);
-        }
-        if (this.props.toggleCodex !== prevProps.toggleCodex && this.props.toggleCodex === false) {
-            this.exitCodex(this.node.current);
+        let state;
+        if (this.props.toggleCodex !== prevProps.toggleCodex) {
+          state = this.props.toggleCodex ? 'enter': 'exit';
+          this.animationsService.toggleAnimation(this.node, 'CodexAnimation', state);
         }
     }
 
@@ -33,19 +44,19 @@ export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
         this.setState({ dataOpen : index});
     }
 
-    public enterCodex(node: any): void {
-        TweenMax.killTweensOf(node);
-        Animations.CodexAnimation.enter(
-            node,
-            Animations.CodexAnimation.duration,
-            0
-        );
-    }
-
-    public exitCodex(node: any): void {
-        TweenMax.killTweensOf(node);
-        Animations.CodexAnimation.exit(node, Animations.CodexAnimation.duration);
-    }
+    // public enterCodex(node: any): void {
+    //     TweenMax.killTweensOf(node);
+    //     Animations.CodexAnimation.enter(
+    //         node,
+    //         Animations.CodexAnimation.duration,
+    //         0
+    //     );
+    // }
+    //
+    // public exitCodex(node: any): void {
+    //     TweenMax.killTweensOf(node);
+    //     Animations.CodexAnimation.exit(node, Animations.CodexAnimation.duration);
+    // }
 
     public render(): React.ReactElement<any> {
         return (

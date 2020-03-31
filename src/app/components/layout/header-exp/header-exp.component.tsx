@@ -28,7 +28,7 @@ export class HeaderExpComponent extends React.Component<IHeaderExpProps, IHeader
       return (
           <React.Fragment>
               <MenuComponent toggleMenu={this.state.openMenu} closeMenu={this.toggle} />
-              <div className="header-exp header-exp--right">
+              <header className="header-exp header-exp--right">
               <button className="header-exp__button text__link">
                 <span className="header-exp__text">
                   <span className="header-exp__text--subtitle"><span className="header-exp__text--content" data-content={MenuContent.menu.subtitle}>{chapter}</span></span>
@@ -36,7 +36,7 @@ export class HeaderExpComponent extends React.Component<IHeaderExpProps, IHeader
                 </span>
                 <span className="header-exp__map" onClick={this.toggle} />
               </button>
-              </div>
+              </header>
           </React.Fragment>
         );
     }

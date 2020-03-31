@@ -1,32 +1,28 @@
 
-.button__base
-    align-items: center
-    appearance: none
-    background: rgba(#49403A, .5)
-    border: 1px solid rgba(#F6F6F6, .3)
-    border-radius: 2px
-    color: $color-secondary
-    cursor: pointer
-    display: flex
-    flex-flow: row wrap
-    font-family: $font-subtitles
-    font-size: 12px
-    justify-content: center
-    letter-spacing: 2px
-    padding: 4px 20px
-    text-transform: uppercase
-    transition: background .2s ease-in-out
-    &:hover,
-    &:focus
-        background: rgba($color-black, 1)
-        outline: none
+.button
+    &__base
+        align-items: center
+        appearance: none
+        background: rgba(#49403A, .5)
+        border: 1px solid rgba(#F6F6F6, .3)
+        border-radius: 2px
+        color: $color-secondary
+        cursor: pointer
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        padding: 4px 20px
+        transition: background .3s ease-in-out
+        &:hover,
+        &:focus
+            background: rgba($color-black, 1)
+            outline: none
 
-    img
-        height: 20px
-        margin-left: 5px
-        width: 20px
+        img
+            height: 20px
+            margin-left: 5px
 
-    &.button__red
+    &__red
         background: rgba($color-primary, .5)
         border: 1px solid rgba($color-primary,.3)
         &:hover,

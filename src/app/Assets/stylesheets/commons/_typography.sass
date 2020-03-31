@@ -17,6 +17,7 @@ h3,
     text-transform: uppercase
 
 a,
+.button__base,
 .text__subtitle,
 .text__section-subtitle,
 .text__menu-chapter,
@@ -43,6 +44,8 @@ p
     font-family: $font-regular
     font-size: px2rem(14)
     letter-spacing: ls2rem(60)
+    &:not(:last-child)
+        margin-bottom: 30px
 
 .form-button-exp__text,
 .header-exp__text
@@ -80,6 +83,7 @@ p
             letter-spacing: ls2rem(160)
 
 a,
+.button__base,
 .text__link
     color: $color-third
     font-size: px2rem(12)
@@ -89,30 +93,30 @@ a,
     &.active
         color: $color-secondary
 
-    &.link-text
-        color: $color-secondary
-        font-family: $font-regular
-        font-size: 14px
-        letter-spacing: initial
-        overflow: hidden
-        padding: 0 3px
-        position: relative
-        text-transform: inherit
-        transition: color .3s ease-in-out
-        &::before
-            background-color: $color-secondary
-            content: ""
-            display: block
-            height: 2px
-            left: 0
-            position: absolute
-            top: calc(100% - 2px)
-            transition: height .3s ease-in-out, top .3s ease-in-out
-            width: 100%
-            z-index: -1
-
         &:hover
             color: $color-black
             &::before
                 height: 100%
                 top: 0
+
+.link-text
+    color: $color-secondary
+    font-family: $font-regular
+    font-size: 14px
+    letter-spacing: initial
+    overflow: hidden
+    padding: 0 3px
+    position: relative
+    text-transform: inherit
+    transition: color .3s ease-in-out
+    &::before
+        background-color: $color-secondary
+        content: ""
+        display: block
+        height: 2px
+        left: 0
+        position: absolute
+        top: calc(100% - 2px)
+        transition: height .3s ease-in-out, top .3s ease-in-out
+        width: 100%
+        z-index: -1

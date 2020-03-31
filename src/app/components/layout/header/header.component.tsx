@@ -15,9 +15,9 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
 
     public render(): React.ReactElement<any> {
         return (
-            <nav id="header">
+            <header id="header">
                 <p>Header</p>
-            </nav>
+            </header>
         );
     }
 }

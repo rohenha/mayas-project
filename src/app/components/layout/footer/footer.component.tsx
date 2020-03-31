@@ -21,25 +21,27 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
-                <div className="footer footer--left">
+                <footer className="footer footer--left">
                     <NavLink className="link" exact={true} to="/" activeClassName="active">Voyage en terres d'histoire</NavLink>
-                </div>
-                <div className="footer footer--right">
+                </footer>
+                <footer className="footer footer--right">
+                  <nav>
                     <ul>
-                        {Routes.MenuRoutes.map((route: IPath, index: number) =>
-                            <li key={index}>
-                                <NavLink exact={route.exact} to={route.path} activeClassName="active">{route.name}</NavLink>
-                            </li>
-                        )}
-                        {FooterContent.social.map((social: any, index: number) =>
+                      {Routes.MenuRoutes.map((route: IPath, index: number) =>
                           <li key={index}>
-                            <a  href={social.link} target="_blank">
-                              <img className="bg" src={social.image} />
-                            </a>
+                              <NavLink exact={route.exact} to={route.path} activeClassName="active">{route.name}</NavLink>
                           </li>
-                        )}
+                      )}
+                      {FooterContent.social.map((social: any, index: number) =>
+                        <li key={index}>
+                          <a  href={social.link} target="_blank">
+                            <img className="bg" src={social.image} />
+                          </a>
+                        </li>
+                      )}
                     </ul>
-                </div>
+                  </nav>
+                </footer>
             </React.Fragment>
         );
     }

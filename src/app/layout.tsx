@@ -85,7 +85,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
                   <HeaderExpComponent page={this.state.page} />
               : null}
 
-              <TransitionGroup component="div" id="content">
+              <TransitionGroup component="main" id="content">
                   <Transition
                       key={this.props.location.pathname}
                       timeout={2000}
