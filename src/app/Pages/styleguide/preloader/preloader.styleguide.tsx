@@ -16,7 +16,7 @@ export class StyleGuidePreloader extends React.Component<ICommonProps, ICommonSt
     public render(): React.ReactElement<any> {
         return (
             <div className="page" data-page="Common">
-                <PreloaderComponent />
+                <PreloaderComponent sound={true} />
             </div>
         );
     }

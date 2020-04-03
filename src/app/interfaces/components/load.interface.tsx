@@ -4,6 +4,10 @@ export interface ILoadingProps { }
 export interface ILoadingState { }
 
 // tslint:disable-next-line:no-empty-interface
-export interface IPreloadProps { }
+export interface IPreloadProps {
+  sound: boolean
+}
 // tslint:disable-next-line:no-empty-interface
-export interface IPreloadState { }
+export interface IPreloadState {
+  avancement: number
+}

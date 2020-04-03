@@ -18,61 +18,46 @@ export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
     constructor(props: any) {
         super(props);
         this.state = {
-            dataOpen: 0
+            dataOpen: -1
         };
         this.node = React.createRef();
-    }
-
-    // public componentDidUpdate(prevProps: any): void {
-    //     if (this.props.toggleCodex !== prevProps.toggleCodex && this.props.toggleCodex === true) {
-    //         this.enterCodex(this.node.current);
-    //     }
-    //     if (this.props.toggleCodex !== prevProps.toggleCodex && this.props.toggleCodex === false) {
-    //         this.exitCodex(this.node.current);
-    //     }
-    // }
+    };
 
     public componentDidUpdate(prevProps: any): void {
         let state;
         if (this.props.toggleCodex !== prevProps.toggleCodex) {
           state = this.props.toggleCodex ? 'enter': 'exit';
           this.animationsService.toggleAnimation(this.node, 'CodexAnimation', state);
+          if (!this.props.toggleCodex) {
+            setTimeout(() => { this.changeData(-1); }, 1000);
+          }
         }
-    }
+    };
 
     public changeData(index: number): any {
         this.setState({ dataOpen : index});
-    }
-
-    // public enterCodex(node: any): void {
-    //     TweenMax.killTweensOf(node);
-    //     Animations.CodexAnimation.enter(
-    //         node,
-    //         Animations.CodexAnimation.duration,
-    //         0
-    //     );
-    // }
-    //
-    // public exitCodex(node: any): void {
-    //     TweenMax.killTweensOf(node);
-    //     Animations.CodexAnimation.exit(node, Animations.CodexAnimation.duration);
-    // }
+    };
 
     public render(): React.ReactElement<any> {
         return (
-            <div id="codex" ref={this.node}>
-                <div className="codex__accueil">
-                    <span className="codex__accueil--cross cross" onClick={this.props.closeCodex} />
-                    <h3>Codex</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
-                    <ul className="codex__accueil--list">
-                        {this.props.datas.map((data: { content: any[], title: string, type: string }, index: number) =>
-                            <CodexListComponent key={index} index={index} data={data} dataOpen={this.state.dataOpen} changeDef={this.changeData.bind(this, index)}/>
-                        )}
-                    </ul>
-                </div>
-                <CodexDefinitionComponent data={this.props.datas[this.state.dataOpen]} />
+            <div className="codex" ref={this.node}>
+              <div className="codex__background js-bg" onClick={this.props.closeCodex} />
+              {this.props.datas[this.state.dataOpen] !== undefined ?
+                  <CodexDefinitionComponent data={this.props.datas[this.state.dataOpen]} />
+              : null}
+              <div className="codex__home js-home">
+                <span className="codex__home--cross cross" onClick={this.props.closeCodex} />
+                <h3>Codex</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
+                <nav>
+                  <ul className="codex__home--list">
+                    {this.props.datas.map((data: { content: any[], title: string, type: string }, index: number) =>
+                      <CodexListComponent key={index} index={index} data={data} dataOpen={this.state.dataOpen} changeDef={this.changeData.bind(this, index)}/>
+                    )}
+                  </ul>
+                </nav>
+              </div>
             </div>
         );
-    }
+    };
 }

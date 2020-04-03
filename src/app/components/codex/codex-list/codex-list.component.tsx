@@ -16,13 +16,13 @@ export class CodexListComponent extends React.Component<ICodexListProps, ICodexL
     public render(): React.ReactElement<any> {
         return (
             <li
-                className={this.props.index === this.props.dataOpen ? 'codex__accueil--list-single active' : 'codex__accueil--list-single'}
+                className={this.props.index === this.props.dataOpen ? 'codex__home--element active' : 'codex__home--element'}
                 onClick={this.props.changeDef}
             >
-                <p>
-                    <span className="codex__accueil--list-single-type">{this.props.data.type}</span>
-                    <span className="codex__accueil--list-single-name">{this.props.data.title}</span>
-                </p>
+              <p className="form-button-exp__text">
+                <span className="form-button-exp__text--subtitle">{this.props.data.type}</span>
+                <span className="form-button-exp__text--title">{this.props.data.title}</span>
+              </p>
             </li>
         );
     }
