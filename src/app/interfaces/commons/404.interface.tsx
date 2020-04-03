@@ -1,6 +1,6 @@
 // tslint:disable-next-line:no-empty-interface
-export interface I404Props {
+export interface IP404Props {
     history: any
 }
 // tslint:disable-next-line:no-empty-interface
-export interface I404State { }
+export interface IP404State { }

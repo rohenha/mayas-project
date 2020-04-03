@@ -1,5 +1,5 @@
 // Imports
-import { I404Props, I404State } from 'Interfaces';
+import { IP404Props, IP404State } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -11,7 +11,7 @@ import { ButtonExpComponent } from 'Components';
 // Content
 import { P404Content } from 'Content';
 
-export class Page404 extends React.Component<I404Props, I404State> {
+export class Page404 extends React.Component<IP404Props, IP404State> {
     constructor(props: any) {
         super(props);
     }
