@@ -12,3 +12,4 @@ export * from './404.content';
 export * from './menu.content';
 export * from './codex.content';
 export * from './preloader.content';
+export * from './mobile.content';

@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@types/gsap": "^1.20.0",
+    "@types/react-imgix": "^9.0.3",
     "@types/react-router": "^4.4.3",
     "@types/react-router-dom": "^4.3.1",
     "@types/react-transition-group": "^2.0.15",
@@ -16,6 +17,7 @@
     "react": "^16.7.0",
     "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.7.0",
+    "react-imgix": "^9.0.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-router-transition": "^1.2.1",
@@ -35,7 +37,7 @@
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "eslint-plugin-react": "^7.19.0",
-    "typescript": "^2.9.2"
+    "typescript": "^3.8.3"
   },
   "browserslist": [
     ">0.2%",

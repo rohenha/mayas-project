@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Layout from './app/layout';
 
 export default class Router extends React.Component {
-  
+
   public render(): React.ReactElement<any> {
     return (
       <BrowserRouter>

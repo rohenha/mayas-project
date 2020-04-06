@@ -13,6 +13,7 @@ import {
     Footer,
     FooterExpComponent,
     HeaderExpComponent,
+    MobileComponent
     // LoadingComponent
 } from 'Components';
 import Routes from 'Routes';
@@ -81,6 +82,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
+              <MobileComponent />
               {this.state.page && this.state.page.content ?
                   <HeaderExpComponent page={this.state.page} />
               : null}

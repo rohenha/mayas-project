@@ -1,0 +1,28 @@
+@import "tools/variables"
+
+.section__mobile
+    background-color: $color-black
+    display: none
+    height: 100%
+    left: 0
+    padding: calc(#{$padding} + #{$navHeight}) 0
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 99999
+    &.active
+        display: block
+
+    .container-fluid
+        display: flex
+        flex-flow: column wrap
+        height: 100%
+        justify-content: center
+        padding-left: 60px
+
+    h2
+        margin-bottom: 30px
+
+    h2,
+    h3
+        width: 100%

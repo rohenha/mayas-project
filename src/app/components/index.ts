@@ -9,6 +9,9 @@ export * from './form/slider/slider.component';
 export * from './form/button-exp/button-exp.component';
 
 export * from './menu/menu.component';
+
+export * from './mobile/mobile.component';
+
 export * from './loading/loading.component';
 
 export * from './sound/document/sound-document.component';
@@ -38,6 +41,8 @@ export * from './codex/codex-list/codex-list.component';
 export * from './codex/codex-definition/codex-definition.component';
 
 export * from './quote/quote.component';
+
+export * from './image/image.component';
 
 export * from './quiz/quiz.component';
 export * from './quiz/screen/screen.component';

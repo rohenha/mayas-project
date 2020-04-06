@@ -1,6 +1,6 @@
 // Imports
 import {TimelineMax} from 'gsap';
-import { IImageProps, IImageState } from 'Interfaces';
+import { IImageGalerieProps, IImageGalerieState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -8,7 +8,7 @@ import './image.component.sass';
 
 // Components
 
-export class ImageComponent extends React.Component<IImageProps, IImageState> {
+export class ImageGalerieComponent extends React.Component<IImageGalerieProps, IImageGalerieState> {
     public node: React.RefObject<HTMLDivElement>;
     public onClickImg: any = this.toggleImage.bind(this);
     constructor(props: any) {

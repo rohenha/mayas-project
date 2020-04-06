@@ -8,7 +8,7 @@ import './galerie.component.sass';
 
 // Components
 import Animations from 'Animations';
-import { ImageComponent, ImageTitleComponent } from 'Components';
+import { ImageGalerieComponent, ImageTitleComponent } from 'Components';
 
 export class GalerieComponent extends React.Component<IGalerieProps, IGalerieState> {
     public images: Array<{image: string, name: string, description: string, portrait: boolean}>;
@@ -126,7 +126,7 @@ export class GalerieComponent extends React.Component<IGalerieProps, IGalerieSta
                         return image.image === null ?
                             <ImageTitleComponent key={index} title={image.name} />
                             :
-                            <ImageComponent key={index} image={image.image} index={index} toggleImage={this.toggleImage} open={this.state.imageOpen === index} portrait={image.portrait} />
+                            <ImageGalerieComponent key={index} image={image.image} index={index} toggleImage={this.toggleImage} open={this.state.imageOpen === index} portrait={image.portrait} />
                         }
                     )}
                     <div className="galerie__details" ref={this.node}>

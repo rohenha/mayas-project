@@ -8,6 +8,14 @@ export interface IGalerieState {
 
 // tslint:disable-next-line:no-empty-interface
 export interface IImageProps {
+  path: any
+}
+// tslint:disable-next-line:no-empty-interface
+export interface IImageState {
+}
+
+// tslint:disable-next-line:no-empty-interface
+export interface IImageGalerieProps {
     toggleImage: (element:number) => any,
     image: string,
     open: boolean,
@@ -15,7 +23,7 @@ export interface IImageProps {
     portrait: boolean
 }
 // tslint:disable-next-line:no-empty-interface
-export interface IImageState {
+export interface IImageGalerieState {
     transform: {
         transform: string,
         MozTransform: string,

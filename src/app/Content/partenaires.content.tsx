@@ -8,6 +8,7 @@ export const PartenairesContent: any = {
       { type: 'ogv', path: require('../assets/videos/Breezy/Breezy.ogv') }
     ]
   },
+  image: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
   text: {
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ut amet at praesentium, libero, voluptatibus, maiores quas suscipit nostrum assumenda vitae. Commodi tempora numquam obcaecati assumenda nostrum quod',
     title: {

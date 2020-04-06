@@ -10,7 +10,7 @@ import './slider.component.sass';
 export class SliderComponent extends React.Component<ISliderProps, ISliderState> {
     public onChange: () => {} = this.changeValue.bind(this);
     public onReset: () => {} = this.resetVal.bind(this);
-    private animationInterval: number = 0;
+    private animationInterval: ReturnType<typeof setTimeout>;
     constructor (props: any) {
         super(props);
         this.state = {
