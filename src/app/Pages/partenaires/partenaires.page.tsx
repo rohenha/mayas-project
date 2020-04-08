@@ -32,7 +32,8 @@ export class PagePartenaires extends React.Component<IPartenairesProps, IPartena
                     introduction={PartenairesContent.text.content}
                     {...this.props}
                 />
-                <ImageComponent path={"http://voyageterreshistoire.imgix.net/" + "john-salzarulo-37827-unsplash.jpg" } />
+                // <ImageComponent path={"http://voyageterreshistoire.imgix.net/" + "john-salzarulo-37827-unsplash.jpg" } />
+                <ImageComponent path={PartenairesContent.image} />
               </DetailsComponent>
           </div>
         );

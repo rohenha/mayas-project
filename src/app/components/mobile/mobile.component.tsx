@@ -35,7 +35,7 @@ export class MobileComponent extends React.Component<IMobileProps, IMobileState>
 
     public render(): React.ReactElement<any> {
         return (
-            <div className={"section__mobile " + this.state.active} >
+            <div className={"section_mobile " + this.state.active} >
               <div className="container-fluid">
                 <h2>{MobileContent.title.title}</h2>
                 <h3 className='text__subtitle'>{MobileContent.title.subtitle}</h3>

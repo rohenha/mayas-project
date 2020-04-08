@@ -10,57 +10,56 @@ import './multiple-paths.component.sass';
 
 
 export class MultiplePathComponent extends React.Component<IMultiplePathsProps, IMultiplePathsState> {
-    public onMouseEnter: (event: any) => void = this.elEnter.bind(this);
-    public onMouseLeave: (event: any) => void = this.elExit.bind(this);
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            hover: -1,
-            toggleHover: false,
-            windowWidth: window.innerWidth
-        };
-    }
+  public onMouseEnter: (event: any) => void = this.updateHover.bind(this, true);
+  public onMouseLeave: (event: any) => void = this.updateHover.bind(this, false);
 
-    public componentDidMount(): void {
-        window.addEventListener("resize", this.updateWidth.bind(this));
-    }
+  constructor(props: any) {
+      super(props);
+      this.state = {
+          hover: '',
+          screenSize: 0
+      };
+  }
 
-    public updateWidth(): void {
-        this.setState({ windowWidth: window.innerWidth});
-    }
+  public componentDidMount(): void {
+    this.updateWidth();
+    window.addEventListener("resize", this.updateWidth.bind(this));
+  }
 
-    public elEnter(event: any): void {
-        if( event.target.getAttribute('data-index') !== null ) {
-            this.setState({ hover: event.target.getAttribute('data-index'), toggleHover: true });
-        }
-    }
+  public componentWillUnmount(): void {
+    window.removeEventListener('resize', this.updateWidth.bind(this));
+  }
 
-    public elExit(event: any): void {
-        if (this.state.toggleHover === true) {
-            this.setState({ hover: -1, toggleHover: false });
-        }
-    }
+  public updateWidth(): void {
+    this.setState({ screenSize: window.innerWidth});
+  }
 
-    public render(): React.ReactElement<any> {
-        return (
-            <div className="multiple_paths">
-                <ul className={this.state.toggleHover === true ? 'multiple_paths--list multiple_paths--list__active' : 'multiple_paths--list'}>
-                    {this.props.paths.map((element: IMultiplePath, index: number) =>
-                        <li
-                            key={index}
-                            className="multiple_paths--list__element"
-                            style={{ width: 100 / this.props.paths.length + "%" }}
-                            onMouseEnter={this.onMouseEnter}
-                            onMouseLeave={this.onMouseLeave}
-                        >
-                            <img src={element.img} style={ {width: this.state.windowWidth} } />
-                            <div className="multiple_paths--list__element-content">
-                                <NavLink exact={true} to={element.url} data-index={index}>{element.name}</NavLink>
-                            </div>
-                        </li>
-                    )}
-               </ul>
+  public updateHover(state: boolean): void {
+    this.setState({
+      hover: state ? 'active' : ''
+    });
+  }
+
+  public render(): React.ReactElement<any> {
+    return (
+      <ul
+        className={"section_multiple-paths " + this.state.hover}
+        onMouseEnter={this.onMouseEnter}
+        onMouseLeave={this.onMouseLeave}
+      >
+        {this.props.paths.map((element: IMultiplePath, index: number) =>
+          <li
+            key={index}
+            className="section_multiple-paths__element"
+            style={{ width: 100 / this.props.paths.length + "%" }}
+          >
+            <img src={element.img} style={ {width: this.state.screenSize} } />
+            <div className="section_multiple-paths__element--content">
+                <NavLink exact={true} to={element.url} data-index={index} className="text__title-multi-path">{element.name}</NavLink>
             </div>
-        );
-    }
+          </li>
+        )}
+     </ul>
+    );
+  }
 }

@@ -50,7 +50,7 @@ export * from './quiz/question/question.component';
 
 export * from './video/video.component';
 export * from './video/video-youtube/video-youtube.component';
-export * from './video/video-footer/video-footer.component';
+export * from './video/controls/controls.component';
 
 export * from './galerie/galerie.component';
 export * from './galerie/image/image.component';

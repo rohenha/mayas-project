@@ -4,9 +4,8 @@ export interface IMultiplePathsProps {
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IMultiplePathsState {
-    hover : number,
-    toggleHover: boolean,
-    windowWidth: number
+    hover : string,
+    screenSize: number
 }
 
 // tslint:disable-next-line:no-empty-interface

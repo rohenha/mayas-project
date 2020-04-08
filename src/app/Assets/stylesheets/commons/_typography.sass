@@ -11,7 +11,9 @@ h3,
 .text__menu-element,
 .text__title,
 .text__section-title,
-.component__scroll
+.component__scroll,
+.text__title-page,
+.text__title-multi-path
     font-family: $font-titles
     letter-spacing: ls2rem(60)
     text-transform: uppercase
@@ -28,13 +30,15 @@ a,
     text-transform: uppercase
 
 h1,
-h2
+h2,
+.text__title-page
     color: $color-secondary
     font-size: px2rem(105)
     line-height: px2rem(100)
     margin-bottom: 60px
 
-h3
+h3,
+.text__title-little
     color: $color-secondary
     font-size: px2rem(50)
     letter-spacing: ls2rem(60)
@@ -78,6 +82,10 @@ p
     &__section-subtitle
         font-size: px2rem(18)
         letter-spacing: ls2rem(160)
+    &__title-multi-path
+        color: $color-secondary
+        font-size: px2rem(80)
+        line-height: px2rem(85)
     &__menu
         &-element
             font-size: px2rem(20)

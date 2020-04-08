@@ -18,7 +18,7 @@ export class ImageComponent extends React.Component<IImageProps, IImageState> {
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="section__image">
+            <div className="section_image">
               <img src={this.props.path} />
             </div>
         );

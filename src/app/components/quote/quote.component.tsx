@@ -17,12 +17,14 @@ export class QuoteComponent extends React.Component<IQuoteProps, IQuoteState> {
     public render(): React.ReactElement<any> {
         return (
             <div className="quote">
-                <img className="bg" src={this.props.img} />
-                <div className="container">
-                    <h2>{this.props.citation}</h2>
-                    <h3>{this.props.name}</h3>
-                    {this.props.children}
-                </div>
+              {this.props.img !== '' ?
+                <img className="page__bg" src={this.props.img} />
+              : null}
+              <div className="container-fluid">
+                <h2 className="text__title-multi-path">{this.props.citation[0]}</h2>
+                <h3 className="text__subtitle">{this.props.citation[1]}</h3>
+                <p>{this.props.name}</p>
+              </div>
             </div>
         );
     }

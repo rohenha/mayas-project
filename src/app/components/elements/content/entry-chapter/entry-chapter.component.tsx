@@ -27,6 +27,8 @@ export class EntryChapterComponent extends React.Component<IEntryChapterProps, I
                         muted={true}
                         {...this.props}
                         nextPage=""
+                        cover={true}
+                        subtitles=''
                     />
                 : <img className="page__bg" src={this.props.imgs[0]} />
                 }

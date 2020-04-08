@@ -20,20 +20,20 @@ export class StyleGuideVideo extends React.Component<ICommonProps, ICommonState>
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="page" data-page="Common">
+            <div data-page="Common">
                 <VideoComponent
                     sources={[
-                        { type: 'mp4', path: require('../../../assets/videos/Breezy/Breezy.mp4') },
-                        { type: 'webm', path: require('../../../assets/videos/Breezy/Breezy.webm') },
-                        { type: 'ogv', path: require('../../../assets/videos/Breezy/Breezy.ogv') }
+                        { type: 'mp4', path: require('../../../assets/videos/Semaine/semaine.mp4') }
                     ]}
-                    poster={require('../../../assets/videos/Breezy/Breezy.jpg')}
-                    controls={false}
-                    autoplay={true}
+                    poster={require('../../../assets/videos/Semaine/semaine.jpg')}
+                    controls={true}
+                    autoplay={false}
                     loop={false}
                     muted={false}
                     history={this.props.history}
-                    nextPage={'/pays'}
+                    nextPage={''}
+                    cover={false}
+                    subtitles={require('../../../assets/videos/Semaine/sous-titres.vtt')}
                 />
             </div>
         );

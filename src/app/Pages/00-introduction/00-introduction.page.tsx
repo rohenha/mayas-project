@@ -29,6 +29,8 @@ export class PageIntroduction extends React.Component<IIntroductionProps, IIntro
                     muted={false}
                     history={this.props.history}
                     nextPage={'/pays'}
+                    cover={true}
+                    subtitles=''
                 />
             </div>
         );

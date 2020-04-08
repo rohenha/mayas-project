@@ -34,6 +34,8 @@ export class HomeComponent extends React.Component<IHomeProps, IHomeState> {
                   muted={true}
                   {...this.props}
                   nextPage=""
+                  cover={true}
+                  subtitles=''
               />
               <div className="page__content js-container">
                 <div className="container-fluid">

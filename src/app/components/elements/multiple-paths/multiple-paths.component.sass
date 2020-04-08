@@ -1,107 +1,70 @@
-@import "../../../assets/stylesheets/tools/variables"
+@import "tools/variables"
 
-.multiple_paths
+.section_multiple-paths
     height: 100%
+    list-style: none
+    padding: 0
+    position: relative
     width: 100%
-    &--list
-        align-items: center
-        display: flex
-        flex-flow: row nowrap
+
+    &::before
+        background-color: $color-black
+        content: ''
+        display: block
         height: 100%
-        justify-content: center
+        left: 0
+        opacity: .4
+        position: absolute
+        top: 0
+        width: 100%
+
+    &.active
+        .section_multiple-paths__element:not(:hover)
+            img
+                opacity: 0
+            a
+                opacity: .5
+
+    &__element
+        display: inline-block
+        float: left
+        height: 100%
         overflow: hidden
         position: relative
-        width: 100%
-        z-index: 2
-        &__element
-            cursor: pointer
-            height: 100%
-            list-style: none
-            overflow: hidden
-            position: relative
-            &:not(:last-child)
-                &::after
-                    background-color: rgba($color-black, .5)
-                    content: ''
-                    display: block
-                    height: 100%
-                    position: absolute
-                    right: 0
-                    top: 0
-                    width: 2px
 
-            img
-                height: 100%
-                object-fit: cover
-                pointer-events: none
-                position: absolute
-                top: 0
-                transition: opacity .4s ease-in-out
-                z-index: 2
+        &:first-child img
+            left: 0
 
-            &-content
-                height: 100%
-                position: relative
-                width: 100%
-                &::before
-                    background: $color-black
-                    content: ''
-                    display: block
-                    height: 100%
-                    left: 0
-                    opacity: .5
-                    position: absolute
-                    top: 0
-                    // transition: opacity .2s ease-in-out
-                    width: 100%
-                    z-index: 2
+        &:nth-child(2) img
+            left: 50%
+            transform: translateX(-50%)
 
+        &:last-child img
+            right: 0
 
+        &:hover
+            overflow: visible
+            img,
             a
-                align-items: center
-                color: $color-secondary
-                display: flex
-                flex-flow: row wrap
-                font-family: $font-titles
-                font-size: 55px
-                font-weight: 600
-                height: 100%
-                justify-content: center
-                letter-spacing: 3px
                 opacity: 1
-                position: relative
-                transition: opacity .5s ease-in-out
-                width: 100%
-                z-index: 3
 
-            &:first-child img
-                left: 0
+        img
+            height: 100%
+            object-fit: cover
+            position: absolute
+            top: 0
+            width: 100%
+            z-index: -1
 
-            &:nth-child(2) img
-                left: 50%
-                transform: translateX(-50%)
+        a
+            align-items: center
+            display: flex
+            flex-flow: column wrap
+            height: 100%
+            justify-content: center
+            width: 100%
 
-            &:last-child img
-                right: 0
-
-
-        &__active
-            .multiple_paths--list__element
-                &:hover
-                    overflow: visible
-                &-content
-                    &::before
-                        opacity: 0
-
-
-                img
-                    z-index: 1
-
-
-                &:not(:hover)
-                    img
-                        opacity: 0
-                        transition: opacity .4s ease-in-out .1s
-
-                    a
-                        opacity: .5
+        &--content
+            height: 100%
+            text-align: center
+            width: 100%
