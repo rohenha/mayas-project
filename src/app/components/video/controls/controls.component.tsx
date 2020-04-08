@@ -61,6 +61,17 @@ export class ControlsComponent extends React.Component<IControlsProps, IControls
         }
     };
 
+    public initFullscreen(): any {
+      if (this.props.fullscreen) {
+        return (
+          <button
+          className="section_video__fullscreen"
+          onClick={this.onSetFullsreen}
+          >fullscreen</button>
+        );
+      }
+    };
+
     public render(): React.ReactElement<any> {
         return (
           <div className="section_video__status">
@@ -70,24 +81,18 @@ export class ControlsComponent extends React.Component<IControlsProps, IControls
                   className={this.props.video.current! && this.props.video.current!.muted ? "section_video__sound": "section_video__sound active"}
                   onClick={this.onChangeSound}
                   >sound</button>
-                  { this.track ?
+                  {this.track ?
                     <button
-                      className={this.track && this.track.mode === 'showing' ? "section_video__subtitles": "section_video__subtitles active"}
-                      onClick={this.onChangeSubtitles}
+                    className={this.track && this.track.mode === 'showing' ? "section_video__subtitles active": "section_video__subtitles"}
+                    onClick={this.onChangeSubtitles}
                     >subtitles</button>
                     : null
                   }
                 </div>
                 <p><span>{this.props.duree.current}</span> / <span>{this.props.duree.total}</span></p>
-                { this.props.fullscreen ?
-                  <div className="section_video__controls--right">
-                    <button
-                      className="section_video__fullscreen"
-                      onClick={this.onSetFullsreen}
-                    >fullscreen</button>
-                  </div>
-                  : null
-                }
+                <div className="section_video__controls--right">
+                  {this.initFullscreen()}
+                </div>
               </div>
               <div className="section_video__progress--container">
                 <div className="section_video__progress" style={ {width: this.props.videoState + '%'} }/>
