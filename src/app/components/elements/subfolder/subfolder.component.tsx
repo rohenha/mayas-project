@@ -16,15 +16,15 @@ export class SubFolderComponent extends React.Component<ISubFolderProps, ISubFol
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="content__subfolder">
+            <div className="section_subfolder">
                 {this.props.paths.map((path: IMultiplePath, index: number) =>
-                    <div className="content__subfolder--single" key={index}>
+                    <div className="section_subfolder__single" key={index}>
                         <NavLink exact={true} to={path.url}>
                             <img src={path.img} alt={path.name} />
-                            <p>
+                            <span className="text__title-multi-path">
                                 {path.name}
-                                <span>Découvrir</span>
-                            </p>
+                                <span className="text__subtitle">Découvrir</span>
+                            </span>
                         </NavLink>
                     </div>
                 )}

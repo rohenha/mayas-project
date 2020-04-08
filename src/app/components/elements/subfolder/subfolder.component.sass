@@ -1,6 +1,6 @@
-@import "../../../assets/stylesheets/tools/variables"
+@import "tools/variables"
 
-.content__subfolder
+.section_subfolder
     display: grid
     grid-template-areas: 'a b' 'a c'
     grid-template-columns: 50% 50%
@@ -8,18 +8,24 @@
     height: 100%
     overflow: hidden
     width: 100%
-    &--single
+    &__single
         background-color: $color-black
         height: 100%
         overflow: hidden
         width: 100%
         &:hover
             img
-                opacity: 1
+                opacity: .8
                 transform: scale(1)
 
-            span
-                transform: translateX(10px)
+        &:first-child
+            grid-area: a
+
+        &:nth-child(2)
+            grid-area: b
+
+        &:last-child
+            grid-area: c
 
         a
             display: inline-block
@@ -31,40 +37,18 @@
             height: 100%
             object-fit: cover
             opacity: .5
-            transform: scale(1.1)
-            transition: all 1s ease-in-out
+            transform: scale(1.03)
+            transition: all .5s ease-in-out
             width: 100%
 
-        p
+        .text__title-multi-path
             bottom: 40px
-            color: $color-white
             display: inline-block
-            font-family: $font-titles
-            font-size: 40px
             left: 40px
-            letter-spacing: 2px
-            line-height: 35px
             margin: auto
             max-width: 200px
             pointer-events: none
             position: absolute
-            text-transform: uppercase
             z-index: 4
             span
-                color: $color-primary
                 display: block
-                font-family: $font-subtitles
-                font-size: 16px
-                font-weight: 700
-                transition: transform 1s ease-in-out
-
-.content__subfolder--single
-    &:first-child
-        grid-area: a
-        transition: width 1s ease-in-out
-
-    &:nth-child(2)
-        grid-area: b
-
-    &:last-child
-        grid-area: c
