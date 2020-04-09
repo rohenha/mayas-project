@@ -7,7 +7,7 @@ export class AnimationsService {
       const animation = Animations[animationName];
       TweenMax.killTweensOf(node);
       animation[state](
-          node.current,
+          node,
           animation.duration,
           0
       );

@@ -30,7 +30,7 @@ export class CodexDefinitionComponent extends React.Component<ICodexDefProps, IC
     };
 
     public openDefinition(): void {
-      this.animationsService.toggleAnimation(this.node, 'CodexDefinitionAnimation', 'enter');
+      this.animationsService.toggleAnimation(this.node.current, 'CodexDefinitionAnimation', 'enter');
     };
 
     public render(): React.ReactElement<any> {

@@ -11,6 +11,7 @@ import { CommonAnimation } from './commons/common.animation';
 import { CodexDefinitionAnimation } from './Components/codex-definition.animation';
 import { CodexAnimation } from './Components/codex.animation';
 import { GalerieImageAnimation } from './Components/galerie-image.animation';
+import { MenuAnimation } from './Components/menu.animation';
 import { QuestionAnimation } from './Components/question.animation';
 
 import { AccueilAnimation } from './Pages/accueil.animation';
@@ -21,6 +22,7 @@ const Animations: IAnimArray = {
     CodexDefinitionAnimation,
     CommonAnimation,
     GalerieImageAnimation,
+    MenuAnimation,
     QuestionAnimation,
 };
 

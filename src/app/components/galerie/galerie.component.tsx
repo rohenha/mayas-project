@@ -27,10 +27,14 @@ export class GalerieComponent extends React.Component<IGalerieProps, IGalerieSta
 
     public openImage(element: number): void {
         const newEl = element !== this.state.imageOpen || element !== -1 ? element : -1;
-        // const state = element === -1 ? 'enter': 'exit';
-        // console.log(this.node);
-        // this.animationsService.toggleAnimation(this.node, 'CommonAnimation', state);
-        this.setState({ imageOpen: newEl });
+        let delay = 0;
+        if (element === -1) {
+          this.animationsService.toggleAnimation(null, 'CommonAnimation', 'exit');
+          delay = 1000;
+        }
+        setTimeout(() => {
+          this.setState({ imageOpen: newEl });
+        }, delay);
     }
 
     public renderGalerie(element: IGalerieElement, index: number): any {
@@ -57,7 +61,7 @@ export class GalerieComponent extends React.Component<IGalerieProps, IGalerieSta
 
     public render(): React.ReactElement<any> {
         return (
-          <div className="section_galerie page" data-page="Common">
+          <div className="section_galerie">
             <div className="page page__content section_details">
               <div className={this.state.imageOpen > -1 ? "page__scroller section_details__content section_galerie--active" : "page__scroller section_details__content"}>
                 {this.props.content.map((element: IGalerieElement, index: number) =>

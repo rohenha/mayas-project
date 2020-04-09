@@ -27,7 +27,7 @@ export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
         let state;
         if (this.props.toggleCodex !== prevProps.toggleCodex) {
           state = this.props.toggleCodex ? 'enter': 'exit';
-          this.animationsService.toggleAnimation(this.node, 'CodexAnimation', state);
+          this.animationsService.toggleAnimation(this.node.current, 'CodexAnimation', state);
           if (!this.props.toggleCodex) {
             setTimeout(() => { this.changeData(-1); }, 1000);
           }

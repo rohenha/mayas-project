@@ -21,14 +21,17 @@ export class ImageGalerieComponent extends React.Component<IImageGalerieProps, I
 
     public componentDidUpdate(prevProps: any): void {
       if (this.props.open !== prevProps.open && this.props.open === false) {
-          this.animationsService.toggleAnimation(this.node, 'GalerieImageAnimation', 'exit');
+          this.animationsService.toggleAnimation(this.node.current, 'GalerieImageAnimation', 'exit');
       }
     }
 
     public toggleImage(): void{
       const state = !this.props.open ? 'enter' : 'exit';
       const index = !this.props.open ? this.props.index : -1;
-      this.animationsService.toggleAnimation(this.node, 'GalerieImageAnimation', state);
+      const delay = index === -1 ? 1000 : 0;
+      setTimeout(() => {
+        this.animationsService.toggleAnimation(this.node.current, 'GalerieImageAnimation', state);
+      }, delay);
       this.props.toggleImage(index);
     }
 

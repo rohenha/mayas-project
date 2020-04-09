@@ -23,7 +23,7 @@ export class PageIntroduction extends React.Component<IIntroductionProps, IIntro
                         { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
                     ]}
                     poster={require('../../assets/videos/Breezy/Breezy.jpg')}
-                    controls={false}
+                    controls={true}
                     autoplay={true}
                     loop={false}
                     muted={false}

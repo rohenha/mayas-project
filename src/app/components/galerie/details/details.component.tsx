@@ -20,14 +20,11 @@ export class DetailsGalerieComponent extends React.Component<IGalerieDetailsProp
     }
 
     public closeImage(): void {
-      this.animationsService.toggleAnimation(this.node, 'CommonAnimation', 'exit');
-      setTimeout(() => {
-        this.props.closeDetails(-1);
-      }, 1000);
+      this.props.closeDetails(-1);
     };
 
     public componentDidMount(): void {
-      this.animationsService.toggleAnimation(this.node, 'CommonAnimation', 'enter');
+      this.animationsService.toggleAnimation(this.node.current, 'CommonAnimation', 'enter');
     }
 
     public render(): React.ReactElement<any> {

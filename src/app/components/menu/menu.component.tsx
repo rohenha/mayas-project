@@ -28,7 +28,7 @@ export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
         let state;
         if (this.props.toggleMenu !== prevProps.toggleMenu) {
           state = this.props.toggleMenu ? 'enter': 'exit';
-          this.animationsService.toggleAnimation(this.node, 'CodexAnimation', state);
+          this.animationsService.toggleAnimation(this.node.current, 'MenuAnimation', state);
         }
     }
 
