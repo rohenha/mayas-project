@@ -1,5 +1,13 @@
+export interface IGalerieElement {
+  description: string,
+  image: string,
+  name: string,
+  portrait: boolean,
+  type: string
+}
 // tslint:disable-next-line:no-empty-interface
 export interface IGalerieProps {
+  content: IGalerieElement[]
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IGalerieState {
@@ -15,22 +23,23 @@ export interface IImageState {
 }
 
 // tslint:disable-next-line:no-empty-interface
+export interface IGalerieDetailsProps {
+  content: IGalerieElement,
+  closeDetails: (element:number) => any
+}
+// tslint:disable-next-line:no-empty-interface
+export interface IGalerieDetailsState {
+}
+
+// tslint:disable-next-line:no-empty-interface
 export interface IImageGalerieProps {
     toggleImage: (element:number) => any,
-    image: string,
     open: boolean,
     index: number,
-    portrait: boolean
+    element: IGalerieElement
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IImageGalerieState {
-    transform: {
-        transform: string,
-        MozTransform: string,
-        msTransform: string,
-        OTransform: string,
-        WebkitTransform: string,
-    }
 }
 
 // tslint:disable-next-line:no-empty-interface

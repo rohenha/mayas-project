@@ -1,16 +1,23 @@
-@import "../../../assets/stylesheets/tools/variables"
+@import "tools/variables"
 
-.galerie
+.section_galerie
     &__title
-        align-items: center
         display: flex
+        flex: 0 0 auto
         flex-flow: column wrap
-        height: 200px
         justify-content: center
-        margin: 30px 30px
-        padding: 10px 20px
-        width: 300px
+        position: relative
+
         h3
-            font-size: 25px
-            opacity: .5
+            margin-bottom: 0
             text-align: center
+
+    &__space,
+    &__title
+        height: calc(50% - 30px)
+        padding: 0 30px
+        width: 600px
+        &:nth-child(odd)
+            margin-bottom: 30px
+        &:nth-child(even)
+            margin-top: 30px

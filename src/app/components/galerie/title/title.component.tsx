@@ -14,9 +14,11 @@ export class ImageTitleComponent extends React.Component<IITitleProps, IITitleSt
 
     public render(): React.ReactElement<any> {
         return (
-           <div className="galerie__title">
-                <h3>{this.props.title}</h3>
-            </div>
+           <React.Fragment>
+             <div className="section_galerie__title">
+                  <h3>{this.props.title}</h3>
+              </div>
+           </React.Fragment>
         );
     }
 }

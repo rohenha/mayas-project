@@ -1,101 +1,24 @@
 // Imports
-import { TweenMax } from 'gsap';
-import { IGalerieProps, IGalerieState } from 'Interfaces';
+import { IGalerieElement, IGalerieProps, IGalerieState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
 import './galerie.component.sass';
 
 // Components
-import Animations from 'Animations';
-import { ImageGalerieComponent, ImageTitleComponent } from 'Components';
+import { DetailsGalerieComponent, ImageGalerieComponent, ImageTitleComponent } from 'Components';
+
+
+// Services
+import { AnimationsService } from 'Services';
 
 export class GalerieComponent extends React.Component<IGalerieProps, IGalerieState> {
     public images: Array<{image: string, name: string, description: string, portrait: boolean}>;
     public toggleImage: () => any = this.openImage.bind(this);
+    public animationsService: AnimationsService = new AnimationsService();
     public node: React.RefObject<HTMLDivElement>;
     constructor(props: any) {
         super(props);
-        this.images = [
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
-                name: 'Image 1',
-                portrait: false
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
-                name: 'Image 1',
-                portrait: false
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
-                name: 'Image 1',
-                portrait: true
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
-                name: 'Image 1',
-                portrait: false
-            },
-            {
-                description: '',
-                image: null,
-                name: 'Lorem ipsum dolor sit amet consectetur',
-                portrait: false
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
-                name: 'Image 1',
-                portrait: true
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
-                name: 'Image 1',
-                portrait: true
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
-                name: 'Image 1',
-                portrait: true
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
-                name: 'Image 1',
-                portrait: true
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
-                name: 'Image 1',
-                portrait: false
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
-                name: 'Image 1',
-                portrait: true
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
-                name: 'Image 1',
-                portrait: true
-            },
-            {
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
-                image: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
-                name: 'Image 1',
-                portrait: true
-            },
-        ];
         this.state = {
             imageOpen: -1
         };
@@ -104,39 +27,49 @@ export class GalerieComponent extends React.Component<IGalerieProps, IGalerieSta
 
     public openImage(element: number): void {
         const newEl = element !== this.state.imageOpen || element !== -1 ? element : -1;
-        element === -1 ? this.exitImage(this.node.current) : this.enterImage(this.node.current);
+        // const state = element === -1 ? 'enter': 'exit';
+        // console.log(this.node);
+        // this.animationsService.toggleAnimation(this.node, 'CommonAnimation', state);
         this.setState({ imageOpen: newEl });
     }
 
-    public enterImage(node: any): void {
-        TweenMax.killTweensOf(node);
-        Animations.CodexAnimation.enter( node, Animations.CodexAnimation.duration, 0 );
-    }
-
-    public exitImage(node: any): void {
-        TweenMax.killTweensOf(node);
-        Animations.CodexAnimation.exit(node, Animations.CodexAnimation.duration);
-    }
+    public renderGalerie(element: IGalerieElement, index: number): any {
+      switch (element.type) {
+        case 'image':
+          return <ImageGalerieComponent
+            key={index}
+            index={index}
+            toggleImage={this.toggleImage}
+            open={this.state.imageOpen === index}
+            element={element} />
+          break;
+        case 'title':
+          return <ImageTitleComponent key={index} title={element.name} />
+          break;
+        case 'space':
+          return <div className="section_galerie__space" key={index}/>
+          break;
+        default:
+          return <div className="section_galerie__space" key={index}/>
+          break;
+      }
+    };
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="galerie">
-                <div className="galerie__container">
-                    {this.images.map((image, index: number) => {
-                        return image.image === null ?
-                            <ImageTitleComponent key={index} title={image.name} />
-                            :
-                            <ImageGalerieComponent key={index} image={image.image} index={index} toggleImage={this.toggleImage} open={this.state.imageOpen === index} portrait={image.portrait} />
-                        }
-                    )}
-                    <div className="galerie__details" ref={this.node}>
-                        <div className="galerie__details-container">
-                            <h1>{this.state.imageOpen > -1 ? this.images[this.state.imageOpen].name : ''}  <div className="galerie__details-cross cross" onClick={this.openImage.bind(this, -1)} /></h1>
-                            <p>{this.state.imageOpen > -1 ? this.images[this.state.imageOpen].description : ''}</p>
-                        </div>
-                    </div>
-                </div>
+          <div className="section_galerie page" data-page="Common">
+            <div className="page page__content section_details">
+              <div className={this.state.imageOpen > -1 ? "page__scroller section_details__content section_galerie--active" : "page__scroller section_details__content"}>
+                {this.props.content.map((element: IGalerieElement, index: number) =>
+                  this.renderGalerie(element, index)
+                )}
+                {this.state.imageOpen > -1 ?
+                  <DetailsGalerieComponent content={this.props.content[this.state.imageOpen]} closeDetails={this.toggleImage} />
+                  : null
+                }
+              </div>
             </div>
+          </div>
         );
     }
 }

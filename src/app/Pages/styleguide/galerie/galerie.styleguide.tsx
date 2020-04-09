@@ -8,6 +8,9 @@ import './galerie.styleguide.sass';
 // Components
 import { GalerieComponent } from 'Components';
 
+// Content
+import { GalerieContent } from 'Content';
+
 export class StyleGuideGalerie extends React.Component<ICommonProps, ICommonState> {
     constructor(props: any) {
         super(props);
@@ -16,8 +19,7 @@ export class StyleGuideGalerie extends React.Component<ICommonProps, ICommonStat
     public render(): React.ReactElement<any> {
         return (
             <div className="page" data-page="Common">
-                <img className="bg" src={require('../../../assets/images/branches-dawn-environment-975771.jpg')} />
-                <GalerieComponent />
+                <GalerieComponent content={GalerieContent.images} />
             </div>
         );
     }

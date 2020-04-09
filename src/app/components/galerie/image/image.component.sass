@@ -1,76 +1,68 @@
-@import "../../../assets/stylesheets/tools/variables"
+@import "tools/variables"
 
-.galerie
-    &__image
+.section_galerie__image
+    cursor: pointer
+    position: relative
+    transition: opacity .3s ease-in-out
+
+    &:hover
+        .section_galerie__image--hoverImg
+            transform: rotate(45deg)
+    img
+        max-height: 100%
+        max-width: 100%
+
+    &--container
         flex: 0 0 auto
-        height: calc(50% - 60px)
-        margin: 30px 30px
-        max-height: 290px
+        height: calc(50% - 30px)
+        padding: 0 30px
         position: relative
-        transition: opacity .3s ease-in-out
-        width: 220px
-        &-hoverImg
-            background-color: rgba($color-black, .2)
-            height: 100%
+        &:nth-child(odd)
+            margin-bottom: 30px
+        &:nth-child(even)
+            margin-top: 30px
+
+    &--hoverImg
+        background-color: $color-black
+        border-radius: 20px
+        bottom: 10px
+        height: 20px
+        opacity: .6
+        position: absolute
+        right: 10px
+        transition: transform .1s ease-in-out, opacity .5s ease-in-out
+        width: 20px
+        z-index: 2
+        &::before,
+        &::after
+            background-color: $color-secondary
+            bottom: 0
+            content: ''
+            display: block
+            height: 2px
             left: 0
-            opacity: .5
+            margin: auto
             position: absolute
+            right: 0
             top: 0
-            transform: scale(.8)
-            transition: opacity .3s ease-in-out, transform .3s ease-in-out
-            width: 100%
-            z-index: 2
-            &::before,
-            &::after
-                background-color: $color-secondary
-                bottom: 0
-                content: ''
-                display: block
-                height: 2px
-                left: 0
-                margin: auto
-                opacity: .5
-                position: absolute
-                right: 0
-                top: 0
-                transition: width .3s ease-in-out, transform .3s ease-in-out
-                width: 40px
+            width: 50%
 
-            &::after
-                transform: rotate(90deg)
+        &::after
+            transform: rotate(90deg)
 
-
-        &:not(.galerie__image-open)
-            cursor: pointer
-            &:hover
-                .galerie__image-hoverImg
-                    opacity: 1
-                    transform: scale(1)
-                    &::before,
-                    &::after
-                        width: 30px
-
-                    &::before
-                        transform: rotate(90deg)
-
-                    &::after
-                        transform: rotate(180deg)
-
-        img
+    &--portrait
+        .section_galerie__image
             height: 100%
-            object-fit: cover
+
+    &--paysage
+        align-items: center
+        display: flex
+        flex-flow: row wrap
+        width: 320px
+        .section_galerie__image
             width: 100%
 
-        &-paysage
-            height: initial
-            width: 320px
-
-        &-open
-            opacity: 1
-            position: relative
-            z-index: 100
-            .galerie__image-hoverImg
-                opacity: 0
-
-            img
-                transform: scale(1)
+    &--open
+        z-index: 5
+        .section_galerie__image--hoverImg
+            opacity: 0

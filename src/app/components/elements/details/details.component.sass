@@ -1,6 +1,6 @@
 @import "tools/variables"
 
-.details
+.section_details
     justify-content: flex-start
     overflow: hidden
     &__content
@@ -17,7 +17,9 @@
 
         >div
             &:last-child
-                padding-right: 60px
+                &:not(.section_galerie__image--container),
+                &:not(.section_galerie__details)
+                    padding-right: 60px
 
         .block
             flex: 0 0 auto

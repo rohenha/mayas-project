@@ -6,6 +6,7 @@ export const CommonAnimation: IAnimation = {
     elements: {},
     enter(node: any, duration: number, delay: number): void {
         const tlIn = new TimelineMax();
+        console.log('animation');
         tlIn.delay(delay);
         tlIn.set(node, {
             autoAlpha: 0,
@@ -19,7 +20,7 @@ export const CommonAnimation: IAnimation = {
             opacity: 1,
             x: 0,
         });
-        tlIn.set(node, { clearProps: "position, width" });
+        tlIn.set(node, { zIndex: 3, clearProps: "position, width" });
     },
     exit(node: any, duration: number): void {
         const tlOut = new TimelineMax();

@@ -16,8 +16,8 @@ export class DetailsComponent extends React.Component<IDetailsProps, IDetailsSta
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="page page__content details" data-page="Common">
-              <div className="page__scroller details__content">
+            <div className="page page__content section_details" data-page="Common">
+              <div className="page__scroller section_details__content">
                   {this.props.children}
               </div>
             </div>

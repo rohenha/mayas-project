@@ -55,3 +55,4 @@ export * from './video/controls/controls.component';
 export * from './galerie/galerie.component';
 export * from './galerie/image/image.component';
 export * from './galerie/title/title.component';
+export * from './galerie/details/details.component';
