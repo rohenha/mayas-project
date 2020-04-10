@@ -7,7 +7,8 @@ export interface IGalerieElement {
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IGalerieProps {
-  content: IGalerieElement[]
+  content: IGalerieElement[],
+  delayClose: number
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IGalerieState {
@@ -37,6 +38,7 @@ export interface IImageGalerieProps {
     open: boolean,
     index: number,
     element: IGalerieElement
+    delayClose: number
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IImageGalerieState {

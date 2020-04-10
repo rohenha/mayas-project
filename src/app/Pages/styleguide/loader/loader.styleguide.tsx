@@ -6,7 +6,7 @@ import * as React from 'react';
 import './loader.styleguide.sass';
 
 // Components
-import { LoadingComponent } from 'Components';
+import { LoaderPageComponent } from 'Components';
 
 export class StyleGuideLoader extends React.Component<ICommonProps, ICommonState> {
     constructor(props: any) {
@@ -15,10 +15,7 @@ export class StyleGuideLoader extends React.Component<ICommonProps, ICommonState
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="page" data-page="Common">
-                <img className="bg" src={require('../../../assets/images/john-salzarulo-37827-unsplash.jpg')} />
-                <LoadingComponent />
-            </div>
+            <LoaderPageComponent />
         );
     }
 }

@@ -18,9 +18,7 @@ export class StyleGuideGalerie extends React.Component<ICommonProps, ICommonStat
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="page page_galerie" data-page="Common">
-                <GalerieComponent content={GalerieContent.images} />
-            </div>
+          <GalerieComponent content={GalerieContent.images} delayClose={1000} />
         );
     }
 }

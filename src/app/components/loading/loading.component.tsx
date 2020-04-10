@@ -17,7 +17,7 @@ export class LoadingComponent extends React.Component<ILoadingProps, ILoadingSta
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="loading">
+            <div className="loading" data-page="Common">
                 <div className="container">
                     <div className="loader">
                         <svg className="pulseSvg" height="100" width="100" viewBox="0 0 100 100">

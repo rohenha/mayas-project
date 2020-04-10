@@ -6,7 +6,7 @@ import * as React from 'react';
 import './galerie.component.sass';
 
 // Components
-import { DetailsGalerieComponent, ImageGalerieComponent, ImageTitleComponent } from 'Components';
+import { DetailsComponent, DetailsGalerieComponent, ImageGalerieComponent, ImageTitleComponent } from 'Components';
 
 
 // Services
@@ -30,7 +30,7 @@ export class GalerieComponent extends React.Component<IGalerieProps, IGalerieSta
         let delay = 0;
         if (element === -1) {
           this.animationsService.toggleAnimation(null, 'CommonAnimation', 'exit');
-          delay = 1000;
+          delay = this.props.delayClose;
         }
         setTimeout(() => {
           this.setState({ imageOpen: newEl });
@@ -45,6 +45,7 @@ export class GalerieComponent extends React.Component<IGalerieProps, IGalerieSta
             index={index}
             toggleImage={this.toggleImage}
             open={this.state.imageOpen === index}
+            delayClose={this.props.delayClose}
             element={element} />
           break;
         case 'title':
@@ -61,18 +62,16 @@ export class GalerieComponent extends React.Component<IGalerieProps, IGalerieSta
 
     public render(): React.ReactElement<any> {
         return (
-          <div className="section_galerie">
-            <div className="page page__content section_details">
-              <div className={this.state.imageOpen > -1 ? "page__scroller section_details__content section_galerie--active" : "page__scroller section_details__content"}>
-                {this.props.content.map((element: IGalerieElement, index: number) =>
-                  this.renderGalerie(element, index)
-                )}
-                {this.state.imageOpen > -1 ?
-                  <DetailsGalerieComponent content={this.props.content[this.state.imageOpen]} closeDetails={this.toggleImage} />
-                  : null
-                }
-              </div>
-            </div>
+          <div className="section_galerie page" data-page="Common">
+            <DetailsComponent>
+              {this.props.content.map((element: IGalerieElement, index: number) =>
+                this.renderGalerie(element, index)
+              )}
+              {this.state.imageOpen > -1 ?
+                <DetailsGalerieComponent content={this.props.content[this.state.imageOpen]} closeDetails={this.toggleImage} />
+                : null
+              }
+            </DetailsComponent>
           </div>
         );
     }

@@ -13,6 +13,7 @@ export * from './menu/menu.component';
 export * from './mobile/mobile.component';
 
 export * from './loading/loading.component';
+export * from './loader/loader-page.component';
 
 export * from './sound/document/sound-document.component';
 export * from './sound/ambiance/sound-ambiance.component';

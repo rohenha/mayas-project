@@ -28,7 +28,7 @@ export class ImageGalerieComponent extends React.Component<IImageGalerieProps, I
     public toggleImage(): void{
       const state = !this.props.open ? 'enter' : 'exit';
       const index = !this.props.open ? this.props.index : -1;
-      const delay = index === -1 ? 1000 : 0;
+      const delay = index === -1 ? this.props.delayClose : 0;
       setTimeout(() => {
         this.animationsService.toggleAnimation(this.node.current, 'GalerieImageAnimation', state);
       }, delay);
