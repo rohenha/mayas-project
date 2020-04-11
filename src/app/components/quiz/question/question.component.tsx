@@ -94,6 +94,20 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
       />;
     };
 
+    public setExplication(): HTMLDivElement {
+      if (this.state.submitted) {
+        return <p>{this.props.question.explication}</p>;
+      }
+    };
+
+    public setFormClass(): string {
+      let className = 'section_quiz__question--responses';
+      if (this.state.submitted) {
+        className += ' section_quiz__question--answered';
+      }
+      return className;
+    };
+
     public render(): React.ReactElement<any> {
         return (
             <div className="section_quiz__question" ref={this.node}>
@@ -103,18 +117,12 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
                       <p className="text__question section_quiz__question--desc">{this.props.question.question}</p>
                   </div>
                   <form onSubmit={this.validator}>
-                      <ul className={
-                          this.state.submitted ?
-                          "section_quiz__question--responses section_quiz__question--answered"
-                          : "section_quiz__question--responses"
-                      }>
+                      <ul className={this.setFormClass()}>
                         {this.state.propositions.map((answer: IQuestionProposition, index: number) =>
                             this.setAnswer(answer, index)
                         )}
                       </ul>
-                      {this.state.submitted ?
-                        <p>{this.props.question.explication}</p>
-                      : null}
+                      {this.setExplication()}
                       <div className="section_quiz__question--nav">
                         <button className="button__base button__red" disabled={!this.state.answered}>
                           {!this.state.submitted ? "Valider" : "Suivant"}
