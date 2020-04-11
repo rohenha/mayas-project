@@ -14,24 +14,29 @@ export class EntryChapterComponent extends React.Component<IEntryChapterProps, I
         super(props);
     }
 
+    public setBackground (): any {
+      if (this.props.video) {
+        return <VideoComponent
+            sources={this.props.imgs[1]}
+            poster={this.props.imgs[0]}
+            controls={false}
+            autoplay={true}
+            loop={true}
+            muted={true}
+            {...this.props}
+            nextPage=""
+            cover={true}
+            subtitles=''
+        />;
+      } else {
+        return <img className="page__bg" src={this.props.imgs[0]} />;
+      }
+    };
+
     public render(): React.ReactElement<any> {
         return (
             <div className="page section__entry-chapter">
-                { this.props.video ?
-                    <VideoComponent
-                        sources={this.props.imgs[1]}
-                        poster={this.props.imgs[0]}
-                        controls={false}
-                        autoplay={true}
-                        loop={true}
-                        muted={true}
-                        {...this.props}
-                        nextPage=""
-                        cover={true}
-                        subtitles=''
-                    />
-                : <img className="page__bg" src={this.props.imgs[0]} />
-                }
+                {this.setBackground()}
                 <div className="page__content">
                     <div className="container-fluid">
                       <h3 className="text__subtitle" dangerouslySetInnerHTML={{__html: this.props.subtitle}}/>

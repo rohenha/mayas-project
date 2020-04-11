@@ -86,24 +86,24 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
       return this.state.submitted ? <p>{this.props.question.explication}</p> : null;
     };
 
-    public setFormClass(): string {
-      let className = 'section_quiz__question--responses';
-      if (this.state.submitted) {
-        className += ' section_quiz__question--answered';
+    public setClass(base: string, active: string, condition: boolean): string {
+      let className = base;
+      if (condition) {
+        className = className + ' ' + active;
       }
       return className;
     };
 
     public render(): React.ReactElement<any> {
         return (
-            <div className={this.props.active ? "section_quiz__question active" : "section_quiz__question"} ref={this.node}>
+            <div className={this.setClass('section_quiz__question', 'active', this.props.active)} ref={this.node}>
                 <div className="section_quiz__question--container">
                   <div className="section_quiz__question--title">
                       <p className="text__subtitle">Question {this.props.question.number}/{this.props.totQuestions}</p>
                       <p className="text__question section_quiz__question--desc">{this.props.question.question}</p>
                   </div>
                   <form onSubmit={this.validator}>
-                      <ul className={this.setFormClass()}>
+                      <ul className={this.setClass('section_quiz__question--responses', 'section_quiz__question--answered', this.state.submitted)}>
                         {this.state.propositions.map((answer: IQuestionProposition, index: number) =>
                             this.setAnswer(answer, index)
                         )}
