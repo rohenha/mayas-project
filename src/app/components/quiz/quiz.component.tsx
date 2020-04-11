@@ -47,7 +47,7 @@ export class QuizComponent extends React.Component<IQuizProps, IQuizState> {
           active={this.state.step === index ? true : false}
           result={this.state.result}
           total={this.state.questions}
-      />;
+      />
     };
 
 

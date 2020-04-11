@@ -8,14 +8,10 @@ import './question.component.sass';
 // Components
 import { QuizAnswerComponent } from 'Components';
 
-// Services
-import { AnimationsService } from 'Services';
-
 export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, IQuestionQuizState> {
     public validator: () => {} = this.validateQuestion.bind(this);
     public onChangeValue: () => {} = this.changeValue.bind(this);
     public node: React.RefObject<HTMLDivElement>;
-    public animationsService: AnimationsService = new AnimationsService();
     constructor(props: any) {
         super(props);
         this.state = {
@@ -37,14 +33,6 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
       });
       return goodAnswers;
     };
-
-    public componentDidUpdate(prevProps: any): void {
-      let state;
-        if (this.props.active !== prevProps.active) {
-          state = this.props.active ? 'enter': 'exit';
-          this.animationsService.toggleAnimation(this.node.current, 'QuestionAnimation', state);
-        }
-    }
 
     public changeValue(event: any): void {
       const target = event.target;
@@ -94,10 +82,8 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
       />;
     };
 
-    public setExplication(): HTMLDivElement {
-      if (this.state.submitted) {
-        return <p>{this.props.question.explication}</p>;
-      }
+    public setExplication(): any {
+      return this.state.submitted ? <p>{this.props.question.explication}</p> : null;
     };
 
     public setFormClass(): string {
@@ -110,7 +96,7 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="section_quiz__question" ref={this.node}>
+            <div className={this.props.active ? "section_quiz__question active" : "section_quiz__question"} ref={this.node}>
                 <div className="section_quiz__question--container">
                   <div className="section_quiz__question--title">
                       <p className="text__subtitle">Question {this.props.question.number}/{this.props.totQuestions}</p>

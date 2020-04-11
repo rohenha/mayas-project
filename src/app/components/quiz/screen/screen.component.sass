@@ -1,11 +1,11 @@
 @import "tools/variables"
 
 .section_quiz__screen
-    max-height: 0
+    display: none
     max-width: 500px
-    opacity: 0
     overflow: hidden
-    visibility: hidden
+    &.active
+        display: block
     .text__title-page
         margin-bottom: 0
 
