@@ -103,7 +103,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
                   </Transition>
               </TransitionGroup>
 
-              {this.state.page && this.state.page.content && this.state.page.type !== "quiz" ?
+              {this.state.page && this.state.page.content ?
                   <FooterExpComponent
                       footerText={this.pagesService.getTextButtonNextPage(Routes, this.state.page)}
                       codexDatas={this.state.page.content.codex}

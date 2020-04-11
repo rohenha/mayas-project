@@ -13,10 +13,14 @@
         justify-content: center
         padding: 4px 20px
         transition: background .3s ease-in-out
-        &:hover,
-        &:focus
-            background: rgba($color-black, 1)
-            outline: none
+        &:not(:disabled)
+            &:hover,
+            &:focus
+                background: rgba($color-black, 1)
+                outline: none
+
+        &:disabled
+            opacity: .5
 
         img
             height: 20px
@@ -25,7 +29,12 @@
     &__red
         background: rgba($color-primary, .5)
         border: 1px solid rgba($color-primary,.3)
-        &:hover,
-        &:focus
-            background: rgba($color-primary, 1)
-            outline: none
+        &:not(:disabled)
+            &:hover,
+            &:focus
+                background: rgba($color-primary, 1)
+                outline: none
+
+        &:disabled
+            background: rgba(#49403A, .5)
+            border: 1px solid rgba(#F6F6F6, .3)

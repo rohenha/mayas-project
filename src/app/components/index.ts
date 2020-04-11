@@ -48,6 +48,7 @@ export * from './image/image.component';
 export * from './quiz/quiz.component';
 export * from './quiz/screen/screen.component';
 export * from './quiz/question/question.component';
+export * from './quiz/answer/answer.component';
 
 export * from './video/video.component';
 export * from './video/video-youtube/video-youtube.component';

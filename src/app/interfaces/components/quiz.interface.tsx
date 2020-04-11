@@ -1,8 +1,15 @@
+export interface IQuestionProposition {
+  answer: string,
+  checked: boolean,
+  good: boolean
+}
+
 export interface IQuestion {
     active: boolean,
+    explication: string,
     name: string,
     number: number | null,
-    propositions: string[],
+    propositions: IQuestionProposition[],
     question: string,
     reponse: number,
     img: any | null
@@ -16,14 +23,14 @@ export interface IStep {
 export interface IPageQuizProps {
     history: any
 }
+
+// tslint:disable-next-line:no-empty-interface
 export interface IPageQuizState {
-    // questions: IQuestion[],
-    steps: IStep[]
 }
 
 export interface IQuizProps {
     history: any,
-    img: any,
+    background: any,
     chapter: { chapter: number, name: string},
     nextUrl: string,
     steps: IStep[],
@@ -39,6 +46,7 @@ export interface IScreenQuizProps {
     desc: { active: boolean, desc: string },
     end: boolean,
     nextUrl: string,
+    chapter: {chapter: number, name: string},
     nextStep: (result: false, question: false) => {},
     active: boolean,
     result: number | null,
@@ -46,7 +54,6 @@ export interface IScreenQuizProps {
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IScreenQuizState {
-    page: any
 }
 
 export interface IQuestionQuizProps {
@@ -58,7 +65,22 @@ export interface IQuestionQuizProps {
 }
 
 export interface IQuestionQuizState {
-    response: number | null,
-    goodResponse: boolean,
-    answered: boolean
+    answered: boolean,
+    good: boolean,
+    propositions: IQuestionProposition[],
+    submitted: boolean,
+    numberAnswers: number
+}
+
+export interface IAnswerQuizProps {
+    answer: IQuestionProposition,
+    disable: boolean,
+    functionUpdate: () => any,
+    index: number,
+    questionName: string,
+    type: string
+}
+
+// tslint:disable-next-line:no-empty-interface
+export interface IAnswerQuizState {
 }

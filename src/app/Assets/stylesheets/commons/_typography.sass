@@ -10,10 +10,10 @@ h2,
 h3,
 .text__menu-element,
 .text__title,
-.text__section-title,
 .component__scroll,
 .text__title-page,
-.text__title-multi-path
+.text__title-multi-path,
+.text__question
     font-family: $font-titles
     letter-spacing: ls2rem(60)
     text-transform: uppercase
@@ -21,7 +21,6 @@ h3,
 a,
 .button__base,
 .text__subtitle,
-.text__section-subtitle,
 .text__menu-chapter,
 .text__link,
 .codex__home--element p
@@ -45,7 +44,8 @@ h3,
     line-height: px2rem(60)
     margin-bottom: 60px
 
-p
+p,
+label
     color: $color-secondary
     font-family: $font-regular
     font-size: px2rem(14)
@@ -76,12 +76,6 @@ p
         letter-spacing: ls2rem(160)
         line-height: px2rem(30)
         margin-bottom: 0
-    &__section-title
-        font-size: px2rem(30)
-        letter-spacing: ls2rem(60)
-    &__section-subtitle
-        font-size: px2rem(18)
-        letter-spacing: ls2rem(160)
     &__title-multi-path
         color: $color-secondary
         font-size: px2rem(80)
@@ -92,6 +86,10 @@ p
         &-chapter
             font-size: px2rem(20)
             letter-spacing: ls2rem(160)
+
+    &__question
+        font-size: px2rem(40)
+        line-height: px2rem(40)
 
 a,
 .button__base,

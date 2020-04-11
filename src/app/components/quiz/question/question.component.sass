@@ -1,38 +1,47 @@
-@import "../../../assets/stylesheets/tools/variables"
+@import "tools/variables"
 
-.quiz-question
+.section_quiz__question
+    align-items: center
+    display: flex
     max-height: 0
     opacity: 0
     overflow: hidden
     visibility: hidden
-    &__question
-        margin: 50px 0 0
+    &--container,
+    &--image
+        display: inline-block
+        width: 50%
+    &--container
+        padding-right: 20px
+    &--image
+        padding-left: 20px
+        text-align: center
+        img
+            max-height: 500px
+            max-width: 100%
 
-    &__responses
-        margin: 50px 0
+    &--title
+        margin-bottom: 30px
+        .text__subtitle
+            margin-bottom: 0
+
+    &--responses
+        margin-bottom: 30px
         li
             list-style: none
             padding: 20px 0 20px 50px
             position: relative
 
             label
-                color: $color-secondary
-                font-family: $font-regular
-                font-size: 12px
-                letter-spacing: .7px
-                line-height: 16px
                 padding-left: 10px
                 &::before
                     background: rgba(#49403A, .5)
                     border: 1px solid rgba(#F6F6F6, .3)
                     border-radius: 3px
                     bottom: 0
-                    color: $color-secondary
                     content: attr(data-response)
                     cursor: pointer
                     display: block
-                    font-family: $font-titles
-                    font-size: 16px
                     height: 40px
                     left: 0
                     line-height: 40px
@@ -44,16 +53,13 @@
                     width: 40px
 
             input
-                border: 1px solid blue
-                bottom: 0
                 cursor: pointer
-                height: 50px
+                height: 100%
                 left: 0
-                margin: auto
                 opacity: 0
                 position: absolute
                 top: 0
-                width: 50px
+                width: 100%
                 z-index: 2
                 &:hover + label::before
                     background: rgba(#49403A, .8)
@@ -63,20 +69,7 @@
                     background-color: $color-secondary
                     border: 1px solid rgba($color-secondary, .3)
                     color: $color-black
-
-    &__good
-        li
-            input
-                &:hover + label::before,
-                &:focus + label::before
-                    background: rgba(#49403A, .5)
-                    border: 1px solid rgba(#F6F6F6, .3)
-
-                &:checked + label::before
-                    background: #B3FCA1
-                    border: 1px solid #B3FCA1
-
-    &__bad
+    &--answered
         li
             input
                 &:hover + label::before,
@@ -88,14 +81,18 @@
                     background: $color-primary
                     border: 1px solid $color-primary
 
-    &__good_Response
-        input + label,
-        input:hover + label,
-        input:focus + label
-            &::before
-                background: #B3FCA1 !important
-                border: 1px solid #B3FCA1 !important
-                color: $color-black !important
+            &.section_quiz__question--good-response
+                input + label,
+                input:hover + label,
+                input:focus + label
+                    &::before
+                        background: #B3FCA1 !important
+                        border: 1px solid #B3FCA1 !important
+                        color: $color-black !important
 
-    .quiz-screen__desc
-        margin: 0
+    &--nav
+        button
+            display: inline-block
+        p
+            display: inline-block
+            margin-left: 10px

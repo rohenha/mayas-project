@@ -1,5 +1,4 @@
 // Imports
-// import { TweenMax } from 'gsap';
 import { ICodexProps, ICodexState } from 'Interfaces';
 import * as React from 'react';
 
