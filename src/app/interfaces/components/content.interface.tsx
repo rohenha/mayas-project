@@ -81,6 +81,7 @@ export interface IInteractive360State {
 // tslint:disable-next-line:no-empty-interface
 export interface ITextImgProps {
     img: any,
+    sens: boolean
 }
 // tslint:disable-next-line:no-empty-interface
 export interface ITextImgState {

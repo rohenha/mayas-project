@@ -14,8 +14,8 @@ export class TextComponent extends React.Component<ITextProps, ITextState> {
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="content__text">
-                <div className="content__text-content">
+            <div className="section_text">
+                <div className="section_text__content">
                     {this.props.children}
                 </div>
             </div>

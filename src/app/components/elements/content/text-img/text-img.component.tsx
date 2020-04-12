@@ -12,14 +12,13 @@ export class TextImgComponent extends React.Component<ITextImgProps, ITextImgSta
         super(props);
     }
 
-
     public render(): React.ReactElement<any> {
         return (
-            <div className="content__textImg">
-                <div className="content__textImg-content">
+            <div className={this.props.sens ? "section_text-img" : "section_text-img section_text-img--invert"}>
+                <div className="section_text-img__content">
                     {this.props.children}
                 </div>
-                <div className="content__textImg-img">
+                <div className="section_text-img__img">
                     <img src={this.props.img} alt="" />
                 </div>
             </div>
