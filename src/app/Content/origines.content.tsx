@@ -3,17 +3,23 @@ export const OriginesContent: any = {
   codex: [
     {
       content: [
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.'
+        {
+          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.',
+          type: 'text'
+        }
       ],
       title: 'Toto Jean',
-      type: 'Personnalité'
+      type: 'Personnalité',
     },
     {
       content: [
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.'
+        {
+          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.',
+          type: 'text'
+        }
       ],
       title: 'Lorem Ipsum',
-      type: 'Définition'
+      type: 'Définition',
     }
   ],
   exactUrl: true,

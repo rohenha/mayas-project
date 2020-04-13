@@ -8,7 +8,6 @@ import './multiple-paths.component.sass';
 
 // Components
 
-
 export class MultiplePathComponent extends React.Component<IMultiplePathsProps, IMultiplePathsState> {
   public onMouseEnter: (event: any) => void = this.updateHover.bind(this, true);
   public onMouseLeave: (event: any) => void = this.updateHover.bind(this, false);

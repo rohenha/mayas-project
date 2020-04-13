@@ -1,53 +1,62 @@
 @import "tools/variables"
 
-.content
-    &__quote-img
-        background-color: $color-black
-        display: flex
-        flex: 0 0 auto
-        flex-flow: row wrap
+.section_quote-img
+    flex: 0 0 auto
+    height: 100%
+    padding: calc(#{$padding} + #{$navHeight} + 10px) 0
+    width: 70vw
+
+    .container-fluid
         height: 100%
-        min-width: 600px
-        padding: 40px 0 60px 60px
-        width: 70vw
-        &--img
-            height: 65%
-            width: 50%
-            &:first-child
-                padding: 0 40px 0 0
 
-            &:nth-child(2)
-                padding: 0 40px 0 0
+    h3:not(:last-child)
+        margin-bottom: 30px
 
-        img
+    &__content,
+    &__images
+        width: 100%
+
+    &__images
+        height: 65%
+        padding: 0 0 30px
+        .section_image
+            display: inline-block
+            float: left
             height: 100%
-            object-fit: cover
+            overflow: hidden
+            position: relative
+            width: calc(50% - 15px)
+
+            &:first-child
+                margin-right: 15px
+            &:last-child
+                margin-left: 15px
+
+            img
+                height: 100%
+                left: 50%
+                max-width: inherit
+                position: absolute
+                top: 50%
+                transform: translate(-50%, -50%)
+
+
+    &__content
+        height: 35%
+        padding: 30px 0 0
+        text-align: center
+
+    &__bottom
+        .section_quote-img
+            &__images
+                padding: 30px 0 0
+            &__content
+                padding: 0 0 30px
+
+    &__single
+        .section_image
             width: 100%
-
-        &--single
-            .content__quote-img--img
-                width: 100%
-                &:first-child
-                    padding: 0
-
-        &--bottom
-            .content__quote-img--content
-                justify-content: flex-start
-                order: 1
-                padding: 0 0 calc(#{$padding} + #{$navHeight})
-
-            .content__quote-img--img
-                order: 2
-
-        &--content
-            background-color: $color-black
-            display: flex
-            flex-flow: column wrap
-            height: 35%
-            justify-content: flex-end
-            padding: calc(#{$padding} + #{$navHeight}) 0 0
-            width: 100%
-            h3
-                color: $color-primary
-                margin-bottom: 40px
-                text-align: left
+            &:first-child,
+            &:last-child
+                margin-left: 0
+                margin-right: 0

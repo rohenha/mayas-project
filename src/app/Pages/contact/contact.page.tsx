@@ -6,7 +6,7 @@ import * as React from 'react';
 import './contact.page.sass';
 
 // Components
-
+import { ImageComponent } from 'Components';
 
 export class PageContact extends React.Component<IContactProps, IContactState> {
 
@@ -17,12 +17,12 @@ export class PageContact extends React.Component<IContactProps, IContactState> {
     public render(): React.ReactElement<any> {
         return (
             <div id="contact" className="page" data-page="Common">
-                <img className="bg" src={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} />
-                <div className="container">
-                    <div className="entete">
-                        <h1>Contact</h1>
-                    </div>
-                </div>
+              <ImageComponent image={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} fullscreen={true} />
+              <div className="container">
+                  <div className="entete">
+                      <h1>Contact</h1>
+                  </div>
+              </div>
             </div>
         );
     }

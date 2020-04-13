@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import './footer.component.sass';
 
 // Components
+import { ImageComponent } from 'Components';
 import Routes from 'Routes';
 
 // Content
@@ -35,7 +36,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                       {FooterContent.social.map((social: any, index: number) =>
                         <li key={index}>
                           <a  href={social.link} target="_blank">
-                            <img className="bg" src={social.image} />
+                            <ImageComponent image={social.image} fullscreen={false} />
                           </a>
                         </li>
                       )}

@@ -20,7 +20,6 @@ export class PagePays extends React.Component<IPaysProps, IPaysState> {
         return (
             <div id="pays" className="page" data-page="Common">
                 {/* <SoundAmbianceComponent delay={0} sound={require('../../assets/sounds/carnival-daniel_simon.mp3')} /> */}
-                {/* <img className="bg" src={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} /> */}
                 <MultiplePathComponent paths={PaysContent.content} />
             </div>
         );

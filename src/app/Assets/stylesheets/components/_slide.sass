@@ -9,7 +9,7 @@
     transition: background .3s ease-in-out, border .3s ease-in-out
     width: 35px
     &::before
-        background: url('/assets/images/right-arrow.svg')
+        background: url('./app/assets/images/right-arrow.svg')
         background-position: center center
         background-repeat: repeat-x
         background-size: 75% 75%
@@ -26,9 +26,11 @@
         transition: background-position .4s ease-in-out
         width: 100%
 
-    &:hover
+    &:hover,
+    &:focus
         background: rgba(#F6F6F6, .5)
         border: 1px solid rgba(#F6F6F6, .8)
+        outline: none
         &::before
             background-position: 30px center
 

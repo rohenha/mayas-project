@@ -6,7 +6,7 @@ import * as React from 'react';
 import './entry-chapter.component.sass';
 
 // Components
-import { VideoComponent } from 'Components';
+import { ImageComponent, VideoComponent } from 'Components';
 
 export class EntryChapterComponent extends React.Component<IEntryChapterProps, IEntryChapterState> {
 
@@ -29,7 +29,7 @@ export class EntryChapterComponent extends React.Component<IEntryChapterProps, I
             subtitles=''
         />;
       } else {
-        return <img className="page__bg" src={this.props.imgs[0]} />;
+        return <ImageComponent image={this.props.imgs[0]} fullscreen={true} />;
       }
     };
 

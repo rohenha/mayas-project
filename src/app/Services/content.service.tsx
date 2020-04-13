@@ -1,6 +1,9 @@
 // Imports
 import * as React from 'react';
 
+// Components
+import { ImageComponent } from 'Components';
+
 // Services
 import { IContent } from 'Interfaces';
 
@@ -10,7 +13,7 @@ export class ContentService {
       case 'text':
         return <p key={key}>{element.content}</p>;
       case 'img':
-        return <img key={key} src={element.content} />;
+        return <ImageComponent key={key} image={element.content} fullscreen={false} />;
       default:
         return null;
     }

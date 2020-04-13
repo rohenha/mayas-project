@@ -6,6 +6,7 @@ import * as React from 'react';
 import './text-img.component.sass';
 
 // Components
+import { ImageComponent } from 'Components';
 
 export class TextImgComponent extends React.Component<ITextImgProps, ITextImgState> {
     constructor(props: any) {
@@ -15,12 +16,14 @@ export class TextImgComponent extends React.Component<ITextImgProps, ITextImgSta
     public render(): React.ReactElement<any> {
         return (
             <div className={this.props.sens ? "section_text-img" : "section_text-img section_text-img--invert"}>
+              <div className="container-fluid">
                 <div className="section_text-img__content">
                     {this.props.children}
                 </div>
                 <div className="section_text-img__img">
-                    <img src={this.props.img} alt="" />
+                  <ImageComponent image={this.props.img} fullscreen={false} />
                 </div>
+              </div>
             </div>
         );
     }

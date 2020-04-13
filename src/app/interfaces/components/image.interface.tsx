@@ -15,9 +15,16 @@ export interface IGalerieState {
     imageOpen: number
 }
 
+export interface IImage {
+  title: string,
+  alt: string,
+  path: string
+}
+
 // tslint:disable-next-line:no-empty-interface
 export interface IImageProps {
-  path: any
+  image: any,
+  fullscreen: boolean
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IImageState {

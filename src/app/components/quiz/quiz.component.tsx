@@ -6,10 +6,7 @@ import * as React from 'react';
 import './quiz.component.sass';
 
 // Components
-import {
-    QuizQuestionComponent,
-    QuizScreenComponent
-} from 'Components';
+import { ImageComponent, QuizQuestionComponent, QuizScreenComponent } from 'Components';
 
 export class QuizComponent extends React.Component<IQuizProps, IQuizState> {
     public onChangeStep: (result:boolean, question: boolean) => {} = this.changeStep.bind(this);
@@ -54,12 +51,12 @@ export class QuizComponent extends React.Component<IQuizProps, IQuizState> {
     public render(): React.ReactElement<any> {
         return (
             <div className="page section_quiz" data-page="Common">
-                <img className="page__bg" src={this.props.background} />
-                <div className="container-fluid">
-                    {this.props.steps.map((step: IStep, index: number) =>
-                        this.renderElements(step, index)
-                    )}
-                </div>
+              <ImageComponent image={this.props.background} fullscreen={true} />
+              <div className="container-fluid">
+                {this.props.steps.map((step: IStep, index: number) =>
+                    this.renderElements(step, index)
+                )}
+              </div>
             </div>
         );
     }

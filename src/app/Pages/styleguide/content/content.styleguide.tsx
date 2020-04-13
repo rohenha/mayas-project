@@ -7,7 +7,7 @@ import './content.styleguide.sass';
 
 // Components
 import {
-    // ContentPartComponent,
+    ContentPartComponent,
     DetailsComponent,
     EntryChapterComponent,
     // Interactive360Component,
@@ -36,7 +36,6 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
         return (
             <React.Fragment>
                 <DetailsComponent>
-                    {/* <div className="block square-red" /> */}
                     <EntryChapterComponent
                         imgs={[
                             require('../../../assets/videos/Breezy/Breezy.jpg'),
@@ -66,6 +65,12 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                     </TextComponent>
 
                     <ImageSliderComponent
@@ -77,13 +82,12 @@ export class StyleGuideContent extends React.Component<ICommonProps, ICommonStat
                         top={true}
                         title={"Lorem Ipsum"}
                     >
-                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-                        <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nostrum dolorum totam, aut sed, tempora deleniti laboriosam provident dolor alias repellendus ipsa! Molestias impedit necessitatibus placeat ratione commodi adipisci officiis!</p>
                     </QuoteImgComponent>
 
-                    {/* <ContentPartComponent img={require('../../../assets/images/jezael-melgoza-551505-unsplash.jpg')}>
+                    {<ContentPartComponent img={require('../../../assets/images/jezael-melgoza-551505-unsplash.jpg')}>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat odit cum iure similique saepe voluptatum voluptas, corrupti beatae repellat velit debitis magnam, nulla quibusdam assumenda deleniti! Totam repudiandae est eveniet?</p>
-                    </ContentPartComponent> */}
+                    </ContentPartComponent>}
 
                     <InteractivePhotoComponent
                         img={require('../../../assets/images/john-salzarulo-37827-unsplash.jpg')}

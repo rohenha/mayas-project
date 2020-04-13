@@ -67,9 +67,8 @@ export class GalerieComponent extends React.Component<IGalerieProps, IGalerieSta
               {this.props.content.map((element: IGalerieElement, index: number) =>
                 this.renderGalerie(element, index)
               )}
-              {this.state.imageOpen > -1 ?
+              {this.state.imageOpen > -1 &&
                 <DetailsGalerieComponent content={this.props.content[this.state.imageOpen]} closeDetails={this.toggleImage} />
-                : null
               }
             </DetailsComponent>
           </div>

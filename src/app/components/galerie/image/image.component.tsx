@@ -6,6 +6,7 @@ import * as React from 'react';
 import './image.component.sass';
 
 // Components
+import { ImageComponent } from 'Components';
 
 // Services
 import { AnimationsService } from 'Services';
@@ -46,7 +47,7 @@ export class ImageGalerieComponent extends React.Component<IImageGalerieProps, I
         return (
             <div className={this.classGalerie()} onClick={this.onClickImg} ref={this.node}>
                 <div className="section_galerie__image">
-                  <img src={this.props.element.image} />
+                  <ImageComponent image={this.props.element.image} fullscreen={false} />
                   <div className="section_galerie__image--hoverImg"/>
                 </div>
             </div>

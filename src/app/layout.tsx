@@ -83,9 +83,9 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
         return (
             <React.Fragment>
               <MobileComponent />
-              {this.state.page && this.state.page.content ?
+              {this.state.page && this.state.page.content &&
                   <HeaderExpComponent page={this.state.page} />
-              : null}
+              }
 
               <TransitionGroup component="div" id="content">
                   <Transition
@@ -103,14 +103,14 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
                   </Transition>
               </TransitionGroup>
 
-              {this.state.page && this.state.page.content ?
+              {this.state.page && this.state.page.content &&
                   <FooterExpComponent
                       footerText={this.pagesService.getTextButtonNextPage(Routes, this.state.page)}
                       codexDatas={this.state.page.content.codex}
                       nextPage={this.pagesService.getNextPage(Routes, this.state.page) }
                       history={this.props.history}
                   />
-              : null}
+              }
 
               <Footer/>
             </React.Fragment>

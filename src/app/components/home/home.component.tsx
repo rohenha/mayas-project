@@ -48,7 +48,7 @@ export class HomeComponent extends React.Component<IHomeProps, IHomeState> {
                     <h2 className="text__subtitle">{this.props.text.title.subtitle}</h2>
                   </div>
                   <div className="page-home__form-enter js-form-enter">
-                    {this.props.url !== "" ? <SliderComponent onDone={this.sliderDone}/> : null}
+                    {this.props.url !== "" && <SliderComponent onDone={this.sliderDone}/>}
                     <p className="text__link">{this.props.text.interaction}</p>
                   </div>
                   <div className="page-home__realisation js-realisation">

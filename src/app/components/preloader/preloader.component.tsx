@@ -25,7 +25,7 @@ export class PreloaderComponent extends React.Component<IPreloadProps, IPreloadS
         return (
             <div className="preloader">
                 <div className="container-fluid">
-                    {this.props.sound ?
+                    {this.props.sound &&
                       <div className="preloader__sound">
                           <p className="text__link">{PreloaderContent.text.experience}</p>
                           <svg version="1.1" x="0px" y="0px" viewBox="0 0 50 50">
@@ -34,7 +34,7 @@ export class PreloaderComponent extends React.Component<IPreloadProps, IPreloadS
                               <path className="st1" d="M2,30h4.5C9,30,11,32,11,34.5v9.1C11,46,9,48,6.5,48H2V30z" />
                           </svg>
                       </div>
-                    : null}
+                    }
 
                     <h2>{PreloaderContent.text.title.title}</h2>
                     <h3 className="text__subtitle">{PreloaderContent.text.title.subtitle}</h3>

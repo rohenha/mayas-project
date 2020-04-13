@@ -6,7 +6,7 @@ import * as React from 'react';
 import './question.component.sass';
 
 // Components
-import { QuizAnswerComponent } from 'Components';
+import { ImageComponent, QuizAnswerComponent } from 'Components';
 
 export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, IQuestionQuizState> {
     public validator: () => {} = this.validateQuestion.bind(this);
@@ -113,19 +113,17 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
                         <button className="button__base button__red" disabled={!this.state.answered}>
                           {!this.state.submitted ? "Valider" : "Suivant"}
                         </button>
-                        {this.state.submitted ?
-                          <p className="section_quiz__question--feedback">
-                          {this.state.good ? 'Bonne réponse' : 'Mauvaise réponse' }
-                          </p>
-                        : null}
+                        {this.state.submitted &&
+                          <p className="section_quiz__question--feedback">{this.state.good ? 'Bonne réponse' : 'Mauvaise réponse' }</p>
+                        }
                       </div>
                   </form>
                 </div>
-                {this.props.question.img ?
+                {this.props.question.img &&
                   <div className="section_quiz__question--image">
-                    <img src={this.props.question.img} />
+                    <ImageComponent image={this.props.question.img} fullscreen={false} />
                   </div>
-                :null }
+                }
             </div>
         );
     }

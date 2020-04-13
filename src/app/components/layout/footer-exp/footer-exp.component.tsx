@@ -6,7 +6,7 @@ import * as React from 'react';
 import './footer-exp.component.sass';
 
 // Components
-import { ButtonExpComponent, CodexComponent } from 'Components';
+import { ButtonExpComponent, CodexComponent, ImageComponent } from 'Components';
 import { CodexContent } from 'Content';
 
 export class FooterExpComponent extends React.Component<IFooterExpProps, IFooterExpState> {
@@ -25,7 +25,7 @@ export class FooterExpComponent extends React.Component<IFooterExpProps, IFooter
             <React.Fragment>
                 <button className="footer-exp footer-exp--left button__base" onClick={this.toggle} >
                     <span>Codex</span>
-                    <img src={CodexContent.image} alt="Icon Codex" />
+                    <ImageComponent image={CodexContent.image} fullscreen={false} />
                 </button>
                 <div className="footer-exp footer-exp--right">
                     <ButtonExpComponent redirection={this.props.nextPage} {...this.props} back={false} text={this.props.footerText} />

@@ -110,5 +110,6 @@ export interface IImageSliderProps {
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IImageSliderState {
+    height: number,
     index: number
 }

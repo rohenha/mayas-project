@@ -6,7 +6,7 @@ import * as React from 'react';
 import './404.page.sass';
 
 // Components
-import { ButtonExpComponent } from 'Components';
+import { ButtonExpComponent, ImageComponent } from 'Components';
 
 // Content
 import { P404Content } from 'Content';
@@ -20,7 +20,7 @@ export class Page404 extends React.Component<IP404Props, IP404State> {
     public render(): React.ReactElement<any> {
         return (
           <div className="page page-404 section__entry-chapter" data-page="Common">
-            <img className="page__bg" src={P404Content.background} />
+            <ImageComponent image={P404Content.background} fullscreen={true} />
             <div className="page__content">
                 <div className="container-fluid">
                   <h3 className="text__subtitle" dangerouslySetInnerHTML={{__html: P404Content.text.title.subtitle}}/>

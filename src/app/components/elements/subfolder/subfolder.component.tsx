@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import './subfolder.component.sass';
 
 // Components
+import { ImageComponent } from 'Components';
 
 export class SubFolderComponent extends React.Component<ISubFolderProps, ISubFolderState> {
 
@@ -20,11 +21,11 @@ export class SubFolderComponent extends React.Component<ISubFolderProps, ISubFol
                 {this.props.paths.map((path: IMultiplePath, index: number) =>
                     <div className="section_subfolder__single" key={index}>
                         <NavLink exact={true} to={path.url}>
-                            <img src={path.img} alt={path.name} />
-                            <span className="text__title-multi-path">
-                                {path.name}
-                                <span className="text__subtitle">Découvrir</span>
-                            </span>
+                          <ImageComponent image={path.img} fullscreen={true} />
+                          <span className="text__title-multi-path">
+                              {path.name}
+                              <span className="text__subtitle">Découvrir</span>
+                          </span>
                         </NavLink>
                     </div>
                 )}

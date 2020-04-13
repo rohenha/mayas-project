@@ -6,7 +6,7 @@ import * as React from 'react';
 import './docsound.styleguide.sass';
 
 // Components
-import { SoundDocComponent} from 'Components';
+import { ImageComponent, SoundDocComponent} from 'Components';
 
 export class StyleGuideDocSound extends React.Component<ICommonProps, ICommonState> {
     public node: React.RefObject<HTMLDivElement>;
@@ -23,7 +23,7 @@ export class StyleGuideDocSound extends React.Component<ICommonProps, ICommonSta
                 delay={1000}
                 autoplay={true}
                 play={true} />
-                <img className="bg" src={require('../../../assets/videos/Breezy/Breezy.jpg')} />
+                <ImageComponent image={require('../../../assets/videos/Breezy/Breezy.jpg')} fullscreen={true} />
             </div>
         );
     }

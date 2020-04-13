@@ -6,6 +6,7 @@ import * as React from 'react';
 import './quote-img.component.sass';
 
 // Components
+import { ImageComponent } from 'Components';
 
 export class QuoteImgComponent extends React.Component<IQuoteImgProps, IQuoteImgState> {
     public node: React.RefObject<HTMLDivElement>;
@@ -14,9 +15,9 @@ export class QuoteImgComponent extends React.Component<IQuoteImgProps, IQuoteImg
     }
 
     public classQuoteImg(): any {
-        let classString = 'content__quote-img ';
-        classString = this.props.top ? classString : classString + ' content__quote-img--bottom ';
-        classString = this.props.imgs.length > 1 ? classString : classString + ' content__quote-img--single';
+        let classString = 'section_quote-img ';
+        classString = this.props.top ? classString : classString + ' section_quote-img__bottom ';
+        classString = this.props.imgs.length > 1 ? classString : classString + ' section_quote-img__single';
         return classString;
     }
 
@@ -24,15 +25,17 @@ export class QuoteImgComponent extends React.Component<IQuoteImgProps, IQuoteImg
     public render(): React.ReactElement<any> {
         return (
             <div className={this.classQuoteImg()}>
-                { this.props.imgs.map( (img: string, index:number) =>
-                    <div key={index} className="content__quote-img--img">
-                        <img src={img} alt="" />
-                    </div>
-                )}
-                <div className="content__quote-img--content">
-                    {this.props.title !== '' ? <h3>{this.props.title}</h3> : null}
+              <div className="container-fluid">
+                <div className="section_quote-img__images">
+                  { this.props.imgs.map( (img: string, index: number) =>
+                    <ImageComponent key={index} image={img} fullscreen={false} />
+                  )}
+                </div>
+                <div className="section_quote-img__content">
+                    {this.props.title !== '' && <h3 className="text__title-multi-path">{this.props.title}</h3> }
                     {this.props.children}
                 </div>
+              </div>
             </div>
         );
     }

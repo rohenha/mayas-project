@@ -8,6 +8,7 @@ import { NavLink } from 'react-router-dom';
 import './menu.component.sass';
 
 // Components
+import { ImageComponent } from 'Components';
 import Routes from 'Routes';
 
 // Content
@@ -35,27 +36,27 @@ export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
     public render(): React.ReactElement<any> {
         return (
             <div className="menu" ref={this.node} >
-                <img className="menu__bg" src={MenuContent.background} />
-                <div className="menu__content">
-                    <h2>
-                      {MenuContent.title}
-                      <span className="menu__close cross" onClick={this.props.closeMenu}/>
-                    </h2>
-                    <ul>
-                        {Routes.ExpRoutes.map((route: IPathMenu, index: number) =>
-                            <li key={index}>
-                                <NavLink
-                                    exact={route.content.exact}
-                                    to={route.content.url}
-                                    activeClassName="active"
-                                    onClick={this.props.closeMenu}
-                                >
-                                    <span className="text__menu-chapter" data-content={"Chapitre " + route.content.chapter}>{"Chapitre " + route.content.chapter}</span>
-                                    <span className="text__menu-element" data-content={route.content.pageName}>{route.content.pageName}</span>
-                                </NavLink>
-                            </li>
-                        )}
-                    </ul>
+              <ImageComponent image={MenuContent.background} fullscreen={true} />
+              <div className="menu__content">
+                  <h2>
+                    {MenuContent.title}
+                    <span className="menu__close cross" onClick={this.props.closeMenu}/>
+                  </h2>
+                  <ul>
+                      {Routes.ExpRoutes.map((route: IPathMenu, index: number) =>
+                          <li key={index}>
+                              <NavLink
+                                  exact={route.content.exact}
+                                  to={route.content.url}
+                                  activeClassName="active"
+                                  onClick={this.props.closeMenu}
+                              >
+                                  <span className="text__menu-chapter" data-content={"Chapitre " + route.content.chapter}>{"Chapitre " + route.content.chapter}</span>
+                                  <span className="text__menu-element" data-content={route.content.pageName}>{route.content.pageName}</span>
+                              </NavLink>
+                          </li>
+                      )}
+                  </ul>
                 </div>
             </div>
         );

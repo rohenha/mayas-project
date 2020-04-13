@@ -6,6 +6,7 @@ import * as React from 'react';
 import './quote.component.sass';
 
 // Components
+import { ImageComponent } from 'Components';
 
 export class QuoteComponent extends React.Component<IQuoteProps, IQuoteState> {
     public node: React.RefObject<HTMLDivElement>;
@@ -17,9 +18,7 @@ export class QuoteComponent extends React.Component<IQuoteProps, IQuoteState> {
     public render(): React.ReactElement<any> {
         return (
             <div className="quote">
-              {this.props.img !== '' ?
-                <img className="page__bg" src={this.props.img} />
-              : null}
+              {this.props.img !== '' && <ImageComponent image={this.props.img} fullscreen={true} />}
               <div className="container-fluid">
                 <h2 className="text__title-multi-path">{this.props.citation[0]}</h2>
                 <h3 className="text__subtitle">{this.props.citation[1]}</h3>

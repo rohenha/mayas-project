@@ -88,45 +88,43 @@ export class VideoComponent extends React.Component<IVideoProps, IVideoState> {
 
     public render(): React.ReactElement<any> {
         return (
-            <div className={this.props.cover ? "section_video js-bg page__bg" : "section_video js-bg"}>
-                <video
-                    playsInline = {true}
-                    controls={false}
-                    autoPlay={this.props.autoplay}
-                    loop={this.props.loop}
-                    muted = {this.props.muted}
-                    preload={"auto"}
-                    poster={this.props.poster}
-                    onLoadedMetadata={this.setDuration}
-                    onTimeUpdate={this.currentTime}
-                    onEnded={this.setControls}
-                    onClick={this.toggleVideo}
-                    onMouseMove={this.setControls}
-                    ref={this.video}
-                >
-                  {this.props.sources.map( (source: any, index: number) =>
-                    <source key={index} src={source.path} type={'video/' + source.type} />
-                  )}
-                  { this.props.subtitles ?
-                    <track label="Français" kind="subtitles" srcLang="fr" src={this.props.subtitles} default={true} />
-                    : null
-                  }
-                </video>
-                { this.props.controls ?
-                  <React.Fragment>
-                    <button className={this.setPlayerBtnClass()} />
-                    <ControlsComponent
-                      videoState={this.state.percent}
-                      history={this.props.history}
-                      nextPage={this.props.nextPage}
-                      duree={{ current: this.state.current, total: this.state.total }}
-                      video={this.video}
-                      fullscreen={!this.props.cover}
-                    />
-                  </React.Fragment>
-                  : null
-                }
-            </div>
+          <div className={this.props.cover ? "section_video js-bg page__bg" : "section_video js-bg"}>
+            <video
+                playsInline = {true}
+                controls={false}
+                autoPlay={this.props.autoplay}
+                loop={this.props.loop}
+                muted = {this.props.muted}
+                preload={"auto"}
+                poster={this.props.poster}
+                onLoadedMetadata={this.setDuration}
+                onTimeUpdate={this.currentTime}
+                onEnded={this.setControls}
+                onClick={this.toggleVideo}
+                onMouseMove={this.setControls}
+                ref={this.video}
+            >
+              {this.props.sources.map( (source: any, index: number) =>
+                <source key={index} src={source.path} type={'video/' + source.type} />
+              )}
+              { this.props.subtitles &&
+                <track label="Français" kind="subtitles" srcLang="fr" src={this.props.subtitles} default={true} />
+              }
+            </video>
+            { this.props.controls &&
+              <React.Fragment>
+                <button className={this.setPlayerBtnClass()} />
+                <ControlsComponent
+                  videoState={this.state.percent}
+                  history={this.props.history}
+                  nextPage={this.props.nextPage}
+                  duree={{ current: this.state.current, total: this.state.total }}
+                  video={this.video}
+                  fullscreen={!this.props.cover}
+                />
+              </React.Fragment>
+            }
+          </div>
         );
     }
 }
