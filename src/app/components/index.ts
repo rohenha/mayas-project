@@ -4,7 +4,6 @@ export * from './layout/footer/footer.component';
 export * from './layout/header-exp/header-exp.component';
 export * from './layout/footer-exp/footer-exp.component';
 
-export * from './form/input/input.component';
 export * from './form/slider/slider.component';
 export * from './form/button-exp/button-exp.component';
 
