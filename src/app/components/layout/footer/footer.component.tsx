@@ -1,5 +1,5 @@
 // Imports
-import { IFooterProps, IFooterState, IPath } from 'Interfaces';
+import { IFooterProps, IFooterState } from 'Interfaces';
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -8,7 +8,6 @@ import './footer.component.sass';
 
 // Components
 import { ImageComponent } from 'Components';
-import Routes from 'Routes';
 
 // Content
 import { FooterContent } from 'Content';
@@ -28,16 +27,13 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                 <footer className="footer footer--right">
                   <nav>
                     <ul>
-                      {Routes.MenuRoutes.map((route: IPath, index: number) =>
-                          <li key={index}>
-                              <NavLink exact={route.exact} to={route.path} activeClassName="active">{route.name}</NavLink>
-                          </li>
-                      )}
-                      {FooterContent.social.map((social: any, index: number) =>
+                      {FooterContent.links.map((link: any, index: number) =>
                         <li key={index}>
-                          <a  href={social.link} target="_blank">
-                            <ImageComponent image={social.image} fullscreen={false} />
-                          </a>
+                          <NavLink exact={true} to={link.link} activeClassName="active">
+                            {link.image ?
+                              <ImageComponent image={link.image} fullscreen={false} />
+                            : link.name}
+                          </NavLink>
                         </li>
                       )}
                     </ul>

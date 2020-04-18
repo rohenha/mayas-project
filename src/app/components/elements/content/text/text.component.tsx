@@ -14,13 +14,13 @@ export class TextComponent extends React.Component<ITextProps, ITextState> {
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="section_text">
+            <section className="section_text">
                 <div className="container-fluid section_text__container">
                     <div className="section_text__content">
                       {this.props.children}
                     </div>
                 </div>
-            </div>
+            </section>
         );
     }
 }

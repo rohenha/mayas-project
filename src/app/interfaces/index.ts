@@ -48,3 +48,4 @@ export * from './components/load.interface';
 export * from './components/quote.interface';
 export * from './components/image.interface';
 export * from './components/content.interface';
+export * from './components/page.interface';

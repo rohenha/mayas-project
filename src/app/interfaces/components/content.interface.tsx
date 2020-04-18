@@ -37,7 +37,9 @@ export interface ITextInteractive {
     content: any[],
     file: string[],
     title: string,
-    type: string
+    type: string,
+    x: string,
+    y: string
 }
 
 // tslint:disable-next-line:no-empty-interface
@@ -47,11 +49,7 @@ export interface IInteractivePhotoProps {
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IInteractivePhotoState {
-    play: boolean,
-    sound: any,
-    soundOpen: boolean,
-    text: ITextInteractive,
-    textOpen: boolean
+    active: ITextInteractive
 }
 
 // tslint:disable-next-line:no-empty-interface

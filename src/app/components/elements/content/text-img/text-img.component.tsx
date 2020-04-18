@@ -15,7 +15,7 @@ export class TextImgComponent extends React.Component<ITextImgProps, ITextImgSta
 
     public render(): React.ReactElement<any> {
         return (
-            <div className={this.props.sens ? "section_text-img" : "section_text-img section_text-img--invert"}>
+            <section className={this.props.sens ? "section_text-img" : "section_text-img section_text-img--invert"}>
               <div className="container-fluid">
                 <div className="section_text-img__content">
                     {this.props.children}
@@ -24,7 +24,7 @@ export class TextImgComponent extends React.Component<ITextImgProps, ITextImgSta
                   <ImageComponent image={this.props.img} fullscreen={false} />
                 </div>
               </div>
-            </div>
+            </section>
         );
     }
 }

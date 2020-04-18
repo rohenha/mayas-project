@@ -35,7 +35,7 @@ export class EntryChapterComponent extends React.Component<IEntryChapterProps, I
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="page section__entry-chapter">
+            <section className="page section__entry-chapter">
                 {this.setBackground()}
                 <div className="page__content">
                     <div className="container-fluid">
@@ -45,7 +45,7 @@ export class EntryChapterComponent extends React.Component<IEntryChapterProps, I
                       <p className="component__scroll">Scroll <span className="component__scroll--arrow"/></p>
                     </div>
                 </div>
-            </div>
+            </section>
         );
     }
 }

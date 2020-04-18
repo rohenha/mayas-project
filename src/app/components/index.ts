@@ -30,7 +30,6 @@ export * from './elements/content/text-img/text-img.component';
 export * from './elements/content/text/text.component';
 export * from './elements/content/image-slider/image-slider.component';
 export * from './elements/content/entry-chapter/entry-chapter.component';
-export * from './elements/content/content-part/content-part.component';
 export * from './elements/content/interactive-photo/interactive-photo.component';
 export * from './elements/content/content-interactive/content-interactive.component';
 export * from './elements/content/interactive-360/interactive-360.component';
@@ -43,6 +42,8 @@ export * from './codex/codex-definition/codex-definition.component';
 export * from './quote/quote.component';
 
 export * from './image/image.component';
+
+export * from './page/page.component';
 
 export * from './quiz/quiz.component';
 export * from './quiz/screen/screen.component';

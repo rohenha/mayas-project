@@ -58,10 +58,10 @@ export class ImageSliderComponent extends React.Component<IImageSliderProps, IIm
 
     public render(): React.ReactElement<any> {
         return (
-            <div className="section_slider-img">
+            <section className="section_slider-img">
               <div className="container-fluid" ref={this.container}>
                 <div className="section_slider-img__content" ref={this.node}>
-                  {this.props.imgs.map((img, index: number) => {
+                  {this.props.imgs.map((img: any, index: number) => {
                     return (
                       <div
                         className={this.state.index === index ? "section_slider-img__image section_slider-img__image--active" : "section_slider-img__image" }
@@ -79,7 +79,7 @@ export class ImageSliderComponent extends React.Component<IImageSliderProps, IIm
                   <button className="slide slide-next" onClick={this.nextSlide} />
                 </div>
               </div>
-            </div>
+            </section>
         );
     }
 }

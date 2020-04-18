@@ -7,7 +7,7 @@ export interface ISoundProps {
 }
 // tslint:disable-next-line:no-empty-interface
 export interface ISoundState {
-    currentSound: number,
-    current: any,
-    total: any
+    percent: number,
+    current: string,
+    total: string
 }

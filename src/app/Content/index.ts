@@ -14,3 +14,4 @@ export * from './codex.content';
 export * from './preloader.content';
 export * from './mobile.content';
 export * from './quiz.content';
+export * from './page.content';

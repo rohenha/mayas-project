@@ -6,16 +6,17 @@ import { Route, Switch } from 'react-router';
 import { Transition, TransitionGroup } from 'react-transition-group';
 import { PagesService } from 'Services';
 
-// Styles
 // Components
 import Animations from 'Animations';
 import {
     Footer,
     FooterExpComponent,
     HeaderExpComponent,
-    MobileComponent
+    MobileComponent,
+    PageComponent
     // LoadingComponent
 } from 'Components';
+import { PageContent } from 'Content';
 import Routes from 'Routes';
 
 
@@ -79,6 +80,10 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
       this.setState(state, animationCallback);
     }
 
+    public renderPage(props: any): any {
+      return <PageComponent {...props} content={PageContent} />;
+    };
+
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
@@ -97,8 +102,9 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
                   >
                       <Switch location={this.props.location}>
                           {Routes.AppRoutes.map((route: IPath, index: number) =>
-                              <Route key={index} path={route.path} exact={route.exact} {...this.props} component={route.component}/>
+                            <Route key={index} path={route.path} exact={route.exact} {...this.props} component={route.component}/>
                           )}
+                          <Route path="/page" exact={true} render={this.renderPage} />
                       </Switch>
                   </Transition>
               </TransitionGroup>

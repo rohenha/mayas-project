@@ -12,9 +12,6 @@ export class SoundAmbianceComponent extends React.Component<ISoundProps, ISoundS
     public playpauseSound: () => void = this.toggleSound.bind(this);
     constructor(props: any) {
         super(props);
-            // this.state = {
-            //     currentSound: 0,
-            // };
         this.sound.ontimeupdate = () => { this.updateSound(); };
         this.sound.play();
     }
@@ -40,7 +37,7 @@ export class SoundAmbianceComponent extends React.Component<ISoundProps, ISoundS
     public updateSound(): void {
         const step = Math.round(this.sound.currentTime / this.sound.duration * 100);
         if (step === 100) { this.sound.play(); }
-        this.setState({ currentSound: step });
+        this.setState({ percent: step });
     }
 
 

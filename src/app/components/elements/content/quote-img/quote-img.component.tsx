@@ -24,7 +24,7 @@ export class QuoteImgComponent extends React.Component<IQuoteImgProps, IQuoteImg
 
     public render(): React.ReactElement<any> {
         return (
-            <div className={this.classQuoteImg()}>
+            <section className={this.classQuoteImg()}>
               <div className="container-fluid">
                 <div className="section_quote-img__images">
                   { this.props.imgs.map( (img: string, index: number) =>
@@ -36,7 +36,7 @@ export class QuoteImgComponent extends React.Component<IQuoteImgProps, IQuoteImg
                     {this.props.children}
                 </div>
               </div>
-            </div>
+            </section>
         );
     }
 }

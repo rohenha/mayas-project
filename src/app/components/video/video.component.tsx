@@ -1,6 +1,8 @@
 // Imports
 import { IVideoProps, IVideoState } from 'Interfaces';
 import * as React from 'react';
+import { VideoService } from 'Services';
+
 
 // Styles
 import './video.component.sass';
@@ -13,6 +15,7 @@ export class VideoComponent extends React.Component<IVideoProps, IVideoState> {
     public toggleVideo: () => void = this.changeVideoState.bind(this);
     public setDuration: () => void = this.setTotalTime.bind(this);
     public setControls: () => void = this.activeControls.bind(this);
+    public videoService: VideoService = new VideoService();
     public video: React.RefObject<HTMLVideoElement>;
     public controlsTimeout: any;
 
@@ -52,26 +55,16 @@ export class VideoComponent extends React.Component<IVideoProps, IVideoState> {
 
     public getCurrentTime(): void {
         const percent = this.video.current!.currentTime / this.video.current!.duration * 100;
-        const current = this.setTime(this.video.current!.currentTime);
+        const current = this.videoService.setTime(this.video.current!.currentTime);
         this.setState({ percent, current });
     };
 
     public setTotalTime(): void {
       this.setState({
-        total: this.setTime(this.video.current!.duration)
+        total: this.videoService.setTime(this.video.current!.duration)
       });
       this.getCurrentTime();
       this.setControls();
-    };
-
-    public setTime(time: number): string {
-      const minutes = Math.floor(time / 60);
-      const seconds = this.setNumber(Math.floor(time - minutes * 60));
-      return minutes + ':' + seconds;
-    };
-
-    public setNumber(time: number): string {
-      return ('0' + time).slice(-2)
     };
 
     public changeVideoState(): void {
