@@ -28,13 +28,6 @@ export interface IPageQuizProps {
 export interface IPageQuizState {
 }
 
-export interface IQuizProps {
-    history: any,
-    background: any,
-    chapter: { chapter: number, name: string},
-    nextUrl: string,
-    steps: IStep[],
-}
 export interface IQuizState {
     step: number,
     result: number,

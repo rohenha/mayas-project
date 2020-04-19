@@ -14,6 +14,10 @@ export class PageComponent extends React.Component<IPageProps, IPageState> {
       super(props);
     };
 
+    public componentDidMount(): void {
+      this.props.setContent(this.props.content);
+    };
+
     public renderContainer(): any {
       if (this.props.content.container) {
         return <DetailsComponent>{this.renderContent()}</DetailsComponent>;
@@ -27,12 +31,8 @@ export class PageComponent extends React.Component<IPageProps, IPageState> {
         const TagName = Components[component.component];
         return <TagName
             key={index}
-            imgs={component.content.imgs}
-            text={component.content.text}
-            video={component.content.video}
-            subtitle={component.content.subtitle}
-            introduction={component.content.introduction}
             {...this.props}
+            content={component.content}
           />;
       });
     };

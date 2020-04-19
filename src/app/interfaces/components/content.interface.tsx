@@ -12,18 +12,6 @@ export interface IChapter {
     number: number,
     name: string
 }
-// tslint:disable-next-line:no-empty-interface
-export interface IEntryChapterProps {
-    imgs: string[],
-    text: string,
-    video: boolean,
-    subtitle: string,
-    introduction: string,
-    history: any
-}
-// tslint:disable-next-line:no-empty-interface
-export interface IEntryChapterState {
-}
 
 // tslint:disable-next-line:no-empty-interface
 export interface IContentPartProps {
@@ -93,13 +81,6 @@ export interface INextStepProps {
 }
 // tslint:disable-next-line:no-empty-interface
 export interface INextStepState {
-}
-
-// tslint:disable-next-line:no-empty-interface
-export interface ITextProps {
-}
-// tslint:disable-next-line:no-empty-interface
-export interface ITextState {
 }
 
 // tslint:disable-next-line:no-empty-interface

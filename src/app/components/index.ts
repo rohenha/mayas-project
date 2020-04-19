@@ -9,6 +9,8 @@ export * from './form/button-exp/button-exp.component';
 
 export * from './menu/menu.component';
 
+export * from './404/404.component';
+
 export * from './mobile/mobile.component';
 
 export * from './loading/loading.component';

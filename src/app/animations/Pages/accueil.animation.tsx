@@ -10,7 +10,7 @@ export const AccueilAnimation: IAnimation  = {
         tlIn.delay(delay);
         tlIn
           .set(this.elements.bg, { autoAlpha: 0, opacity: 0, scaleX: 1.5, scaleY:1.5 })
-          .set(this.elements.container.querySelectorAll('h3, p, h1, h2, .container__range'), { autoAlpha: 0, opacity: 0, y: 50 })
+          .set(this.elements.container.querySelectorAll('h3, p, h1, h2, .form-range__input'), { autoAlpha: 0, opacity: 0, y: 50 })
 
         tlIn
           .to(this.elements.bg, 2, { ease: Power1.easeInOut, autoAlpha: 1, opacity: 1 })
@@ -37,7 +37,7 @@ export const AccueilAnimation: IAnimation  = {
       this.elements.title = this.elements.node.querySelector('.js-title');
       this.elements.titleElements = this.elements.title.querySelectorAll('h1, h2');
       this.elements.formEnter = this.elements.node.querySelector('.js-form-enter');
-      this.elements.formEnterElements = this.elements.formEnter.querySelectorAll('.container__range, p');
+      this.elements.formEnterElements = this.elements.formEnter.querySelectorAll('.form-range__input, p');
       this.elements.realisation = this.elements.node.querySelector('.js-realisation');
       this.elements.realisationElements = this.elements.realisation.querySelectorAll('p');
     }

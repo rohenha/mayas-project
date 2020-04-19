@@ -1,25 +1,30 @@
-export const P404Content: any =  {
-  background: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
-  social: [
-      {
-        image: require('../assets/images/instagram.svg'),
-        link: "https://www.instagram.com/voyageterreshistoire/"
-      },
-      {
-        image: require('../assets/images/facebook.svg'),
-        link: "https://www.facebook.com/voyageterreshistoire/"
-      }
+export const P404Content: any = {
+  animation: 'Common',
+  chapter: 0,
+  class: 'page_404',
+  codex: [
   ],
-  text: {
-    back: {
-      text1: "Revenir",
-      text2: "à l'accueil"
-    },
-    text: "Il semblerai que la page que vous cherchez n'existe pas",
-    title: {
-      subtitle: "Vous êtes vous perdu dans la",
-      title: "foret ?"
+  container: false,
+  content: [
+    {
+      component: 'P404Component',
+      content: {
+        back: {
+          text1: "Revenir",
+          text2: "à l'accueil"
+        },
+        background: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+        subtitle: "Vous êtes vous perdu dans la",
+        text: "Il semblerai que la page que vous cherchez n'existe pas",
+        title: "foret ?",
+        url: '/'
+      }
     }
-  },
-  url: "/"
+  ],
+  exactUrl: true,
+  isExperience: false,
+  isPage: true,
+  pageName: "404",
+  title: "404",
+  url: "/404"
 };

@@ -1,5 +1,5 @@
 // Imports
-import { IEntryChapterProps, IEntryChapterState } from 'Interfaces';
+import { IPageComponentProps, IPageComponentState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -8,17 +8,17 @@ import './entry-chapter.component.sass';
 // Components
 import { ImageComponent, VideoComponent } from 'Components';
 
-export class EntryChapterComponent extends React.Component<IEntryChapterProps, IEntryChapterState> {
+export class EntryChapterComponent extends React.Component<IPageComponentProps, IPageComponentState> {
 
     constructor(props: any) {
         super(props);
     }
 
     public setBackground (): any {
-      if (this.props.video) {
+      if (this.props.content.video) {
         return <VideoComponent
-            sources={this.props.imgs[1]}
-            poster={this.props.imgs[0]}
+            sources={this.props.content.imgs[1]}
+            poster={this.props.content.imgs[0]}
             controls={false}
             autoplay={true}
             loop={true}
@@ -29,7 +29,7 @@ export class EntryChapterComponent extends React.Component<IEntryChapterProps, I
             subtitles=''
         />;
       } else {
-        return <ImageComponent image={this.props.imgs[0]} fullscreen={true} />;
+        return <ImageComponent image={this.props.content.imgs[0]} fullscreen={true} />;
       }
     };
 
@@ -39,9 +39,9 @@ export class EntryChapterComponent extends React.Component<IEntryChapterProps, I
                 {this.setBackground()}
                 <div className="page__content">
                     <div className="container-fluid">
-                      <h3 className="text__subtitle" dangerouslySetInnerHTML={{__html: this.props.subtitle}}/>
-                      <h1>{this.props.text}</h1>
-                      <p className="section__entry-chapter--text">{this.props.introduction}</p>
+                      <h3 className="text__subtitle" dangerouslySetInnerHTML={{__html: this.props.content.subtitle}}/>
+                      <h1>{this.props.content.text}</h1>
+                      <p className="section__entry-chapter--text">{this.props.content.introduction}</p>
                       <p className="component__scroll">Scroll <span className="component__scroll--arrow"/></p>
                     </div>
                 </div>

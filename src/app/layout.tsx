@@ -1,6 +1,6 @@
 // Imports
 import { TweenMax } from 'gsap';
-import { ILayoutProps, ILayoutState, IPath} from 'Interfaces';
+import { ILayoutProps, ILayoutState } from 'Interfaces';
 import * as React from 'react';
 import { Route, Switch } from 'react-router';
 import { Transition, TransitionGroup } from 'react-transition-group';
@@ -14,16 +14,16 @@ import {
     HeaderExpComponent,
     MobileComponent,
     PageComponent
-    // LoadingComponent
 } from 'Components';
-import { PageContent } from 'Content';
-import Routes from 'Routes';
+import * as Content from 'Content';
 
 
 export default class Layout extends React.Component<ILayoutProps, ILayoutState> {
     public enterTrans: (node: any) => void = this.enter.bind(this);
     public exitTrans: (node: any) => void = this.exit.bind(this);
     public pagesService: PagesService = new PagesService();
+    public onSetContent: (page: any) => void = this.setContent.bind(this);
+    public routes: any = [];
     constructor(props: any) {
         super(props);
         this.state = {
@@ -31,14 +31,21 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
             pageEnter: '',
             pageLeave: '',
         };
-    }
+        Object.keys(Content)
+          .forEach((key: any) => {
+            const content = Content[key];
+            if (content.isPage) {
+              this.routes.push(content);
+            }
+          });
+        console.log(this.routes);
+    };
+
+    public setContent(page: any): void {
+      this.setState({ page });
+    };
 
     public enter(node: any): void {
-      this.setState({
-        page: Routes.ExpRoutes.find((route: any) =>  {
-          return route.content.url === this.props.history.location.pathname;
-        })
-      });
       this.animatePage(
         node,
         'pageEnter',
@@ -80,15 +87,15 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
       this.setState(state, animationCallback);
     }
 
-    public renderPage(props: any): any {
-      return <PageComponent {...props} content={PageContent} />;
+    public renderPage(content: any, props: any): any {
+      return <PageComponent {...props} content={content} setContent={this.onSetContent} />;
     };
 
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
               <MobileComponent />
-              {this.state.page && this.state.page.content &&
+              {this.state.page && this.state.page.isExperience &&
                   <HeaderExpComponent page={this.state.page} />
               }
 
@@ -101,19 +108,18 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
                       appear={true}
                   >
                       <Switch location={this.props.location}>
-                          {Routes.AppRoutes.map((route: IPath, index: number) =>
-                            <Route key={index} path={route.path} exact={route.exact} {...this.props} component={route.component}/>
-                          )}
-                          <Route path="/page" exact={true} render={this.renderPage} />
+                        {this.routes.map((route: any, index: number) =>
+                          <Route key={index} path={route.url} exact={route.exact} render={this.renderPage.bind(this, route)} />
+                        )}
                       </Switch>
                   </Transition>
               </TransitionGroup>
 
-              {this.state.page && this.state.page.content &&
+              {this.state.page && this.state.page.isExperience &&
                   <FooterExpComponent
-                      footerText={this.pagesService.getTextButtonNextPage(Routes, this.state.page)}
+                      footerText={this.pagesService.getTextButtonNextPage(null, this.state.page)}
                       codexDatas={this.state.page.content.codex}
-                      nextPage={this.pagesService.getNextPage(Routes, this.state.page) }
+                      nextPage={this.pagesService.getNextPage(null, this.state.page) }
                       history={this.props.history}
                   />
               }

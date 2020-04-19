@@ -12,6 +12,8 @@ export class ContentService {
     switch(element.type) {
       case 'text':
         return <p key={key}>{element.content}</p>;
+      case 'h3':
+        return <h3 key={key}>{element.content}</h3>;
       case 'img':
         return <ImageComponent key={key} image={element.content} fullscreen={false} />;
       default:

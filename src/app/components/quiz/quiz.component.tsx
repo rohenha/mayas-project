@@ -1,5 +1,5 @@
 // Imports
-import { IQuizProps, IQuizState, IStep } from 'Interfaces';
+import { IPageComponentProps, IQuizState, IStep } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -8,11 +8,11 @@ import './quiz.component.sass';
 // Components
 import { ImageComponent, QuizQuestionComponent, QuizScreenComponent } from 'Components';
 
-export class QuizComponent extends React.Component<IQuizProps, IQuizState> {
+export class QuizComponent extends React.Component<IPageComponentProps, IQuizState> {
     public onChangeStep: (result:boolean, question: boolean) => {} = this.changeStep.bind(this);
     constructor(props: any) {
         super(props);
-        this.state = { step: 0, result: 0, questions: this.props.steps.filter((step) => step.type === "question").length };
+        this.state = { step: 0, result: 0, questions: this.props.content.steps.filter((step: IStep) => step.type === "question").length };
     };
 
     public changeStep(result: boolean, question: boolean): void {
@@ -37,9 +37,9 @@ export class QuizComponent extends React.Component<IQuizProps, IQuizState> {
           key={index}
           {...this.props}
           desc={step.content}
-          nextUrl={this.props.nextUrl}
+          nextUrl={this.props.content.nextUrl}
           end={step.type === 'end'}
-          chapter={{ chapter: this.props.chapter.chapter, name: this.props.chapter.name }}
+          chapter={{ chapter: this.props.content.chapter.chapter, name: this.props.content.chapter.name }}
           nextStep={this.onChangeStep}
           active={this.state.step === index ? true : false}
           result={this.state.result}
@@ -51,9 +51,9 @@ export class QuizComponent extends React.Component<IQuizProps, IQuizState> {
     public render(): React.ReactElement<any> {
         return (
             <div className="page section_quiz" data-page="Common">
-              <ImageComponent image={this.props.background} fullscreen={true} />
+              <ImageComponent image={this.props.content.background} fullscreen={true} />
               <div className="container-fluid">
-                {this.props.steps.map((step: IStep, index: number) =>
+                {this.props.content.steps.map((step: IStep, index: number) =>
                     this.renderElements(step, index)
                 )}
               </div>

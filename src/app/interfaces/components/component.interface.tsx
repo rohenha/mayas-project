@@ -1,9 +1,8 @@
 // tslint:disable-next-line:no-empty-interface
-export interface IPageProps {
-  content: any,
+export interface IPageComponentProps {
   history: any,
-  setContent: any
+  content: any
 }
 // tslint:disable-next-line:no-empty-interface
-export interface IPageState {
+export interface IPageComponentState {
 }

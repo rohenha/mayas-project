@@ -1,5 +1,4 @@
 export const FooterContent: any = {
-  isPage: false,
   links: [
     {
       image: '',

@@ -2,7 +2,6 @@ export const QuizContent: any =  {
   background: require('../assets/images/jimmy-baum-346127-unsplash.jpg'),
   chapter: 4,
   exactUrl: true,
-  isPage: false,
   nextUrl: '/realisation',
   pageName: "Quiz",
   steps: [

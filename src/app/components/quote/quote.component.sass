@@ -27,6 +27,18 @@
         text-align: center
         z-index: 3
 
+    h2,
+    h3
+        &:first-child
+            &::before
+                background: url('../../assets/images/quote.svg')
+                background-position: center center
+                background-size: contain
+                content: ''
+                display: inline-block
+                height: 16px
+                opacity: 1
+                width: 16px
 
     h2::before,
     h3::after
@@ -47,7 +59,10 @@
 
     h3
         color: $color-secondary
-        margin-bottom: 60px
+        margin-bottom: 0
         &::after
             margin-left: 10px
             vertical-align: bottom
+
+    p
+        margin-top: 60px

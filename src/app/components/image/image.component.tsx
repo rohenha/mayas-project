@@ -18,7 +18,7 @@ export class ImageComponent extends React.Component<IImageProps, IImageState> {
 
     public render(): React.ReactElement<any> {
         return (
-            <div className={this.props.fullscreen ? "section_image section_image__fullscreen" : "section_image"}>
+            <div className={this.props.fullscreen ? "section_image section_image__fullscreen js-bg" : "section_image"}>
               <img src={this.props.image} />
             </div>
         );

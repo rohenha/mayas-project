@@ -1,5 +1,5 @@
 // Imports
-import { ITextProps, ITextState } from 'Interfaces';
+import { IContent, IPageComponentProps, IPageComponentState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -7,20 +7,27 @@ import './text.component.sass';
 
 // Components
 
-export class TextComponent extends React.Component<ITextProps, ITextState> {
-    constructor(props: any) {
-        super(props);
-    }
+// Services
+import { ContentService } from 'Services';
 
-    public render(): React.ReactElement<any> {
-        return (
-            <section className="section_text">
-                <div className="container-fluid section_text__container">
-                    <div className="section_text__content">
-                      {this.props.children}
-                    </div>
-                </div>
-            </section>
-        );
-    }
+
+export class TextComponent extends React.Component<IPageComponentProps, IPageComponentState> {
+  public contentService: ContentService = new ContentService();
+  constructor(props: any) {
+    super(props);
+  }
+
+  public render(): React.ReactElement<any> {
+    return (
+      <section className="section_text">
+        <div className="container-fluid section_text__container">
+          <div className="section_text__content">
+            {this.props.content.map((element: IContent, index: number) =>
+              this.contentService.renderElement(element, index)
+            )}
+          </div>
+        </div>
+      </section>
+    );
+  }
 }
