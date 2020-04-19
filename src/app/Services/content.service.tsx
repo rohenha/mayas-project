@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 // Components
-import { ImageComponent } from 'Components';
+import { ImageComponent, VideoComponent } from 'Components';
 
 // Services
 import { IContent } from 'Interfaces';
@@ -18,6 +18,25 @@ export class ContentService {
         return <ImageComponent key={key} image={element.content} fullscreen={false} />;
       default:
         return null;
+    }
+  };
+
+  public renderBackground(isVideo: boolean, imgs: any, props: any): any {
+    if (isVideo) {
+      return <VideoComponent
+          sources={imgs[1]}
+          poster={imgs[0]}
+          controls={false}
+          autoplay={true}
+          loop={true}
+          muted={true}
+          {...props}
+          nextPage=""
+          cover={true}
+          subtitles=''
+      />;
+    } else {
+      return <ImageComponent image={imgs[0]} fullscreen={true} />;
     }
   };
 }

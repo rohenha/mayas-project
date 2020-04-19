@@ -20,7 +20,7 @@ export const StyleguideEntryChapterContent: any = {
         introduction: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores provident minus.",
         subtitle: "Chapitre 1<span>Mayas</span>",
         text: "Chapter",
-        video: false
+        video: true
       }
     }
   ],
