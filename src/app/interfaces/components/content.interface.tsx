@@ -1,13 +1,3 @@
-// tslint:disable-next-line:no-empty-interface
-export interface IQuoteImgProps {
-    imgs: string[],
-    top: boolean,
-    title: string
-}
-// tslint:disable-next-line:no-empty-interface
-export interface IQuoteImgState {
-}
-
 export interface IChapter {
     number: number,
     name: string
@@ -30,11 +20,6 @@ export interface ITextInteractive {
     y: string
 }
 
-// tslint:disable-next-line:no-empty-interface
-export interface IInteractivePhotoProps {
-    img: string,
-    points: any[]
-}
 // tslint:disable-next-line:no-empty-interface
 export interface IInteractivePhotoState {
     active: ITextInteractive

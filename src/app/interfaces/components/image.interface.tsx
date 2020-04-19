@@ -5,11 +5,7 @@ export interface IGalerieElement {
   portrait: boolean,
   type: string
 }
-// tslint:disable-next-line:no-empty-interface
-export interface IGalerieProps {
-  content: IGalerieElement[],
-  delayClose: number
-}
+
 // tslint:disable-next-line:no-empty-interface
 export interface IGalerieState {
     imageOpen: number

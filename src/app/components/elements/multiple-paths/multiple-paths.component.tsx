@@ -1,5 +1,5 @@
 // Imports
-import { IMultiplePath, IMultiplePathsProps, IMultiplePathsState } from 'Interfaces';
+import { IMultiplePath, IMultiplePathsState, IPageComponentProps } from 'Interfaces';
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ import './multiple-paths.component.sass';
 
 // Components
 
-export class MultiplePathComponent extends React.Component<IMultiplePathsProps, IMultiplePathsState> {
+export class MultiplePathComponent extends React.Component<IPageComponentProps, IMultiplePathsState> {
   public onMouseEnter: (event: any) => void = this.updateHover.bind(this, true);
   public onMouseLeave: (event: any) => void = this.updateHover.bind(this, false);
 
@@ -46,11 +46,11 @@ export class MultiplePathComponent extends React.Component<IMultiplePathsProps, 
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
       >
-        {this.props.paths.map((element: IMultiplePath, index: number) =>
+        {this.props.content.map((element: IMultiplePath, index: number) =>
           <li
             key={index}
             className="section_multiple-paths__element"
-            style={{ width: 100 / this.props.paths.length + "%" }}
+            style={{ width: 100 / this.props.content.length + "%" }}
           >
             <img src={element.img} style={ {width: this.state.screenSize} } />
             <div className="section_multiple-paths__element--content">

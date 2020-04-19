@@ -1,5 +1,5 @@
 // Imports
-import { IInteractivePhotoProps, IInteractivePhotoState } from 'Interfaces';
+import { IInteractivePhotoState, IPageComponentProps } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -9,7 +9,7 @@ import './interactive-photo.component.sass';
 import { ImageComponent, SoundDocComponent } from 'Components';
 // import { ContentInteractiveComponent, SoundDocComponent } from 'Components';
 
-export class InteractivePhotoComponent extends React.Component<IInteractivePhotoProps, IInteractivePhotoState> {
+export class InteractivePhotoComponent extends React.Component<IPageComponentProps, IInteractivePhotoState> {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -38,7 +38,6 @@ export class InteractivePhotoComponent extends React.Component<IInteractivePhoto
 
     public setSound(): any {
       if (this.state.active.type === 'audio') {
-        // console.log(this.state.active.type === 'audio');
         return <SoundDocComponent sound={this.state.active.file} delay={0} autoplay={true} play={true} />;
       }
     };
@@ -47,10 +46,10 @@ export class InteractivePhotoComponent extends React.Component<IInteractivePhoto
         return (
             <section className="section_interactive-photo">
                 <div className="container-fluid">
-                  <ImageComponent image={this.props.img} fullscreen={false} />
+                  <ImageComponent image={this.props.content.img} fullscreen={false} />
                   {this.setSound()}
                   <ul className="section_interactive-photo__points">
-                    {this.props.points.map((point: any, index: number) =>
+                    {this.props.content.points.map((point: any, index: number) =>
                       <li
                       style={ {left: point.x, top: point.y} }
                       key={index}>

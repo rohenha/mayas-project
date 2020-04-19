@@ -1,6 +1,6 @@
 // Imports
 import { TweenMax } from 'gsap';
-import { IImageSliderProps, IImageSliderState } from 'Interfaces';
+import { IImageSliderState, IPageComponentProps } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -9,7 +9,7 @@ import './image-slider.component.sass';
 // Components
 import { ImageComponent } from 'Components';
 
-export class ImageSliderComponent extends React.Component<IImageSliderProps, IImageSliderState> {
+export class ImageSliderComponent extends React.Component<IPageComponentProps, IImageSliderState> {
     public node: React.RefObject<HTMLDivElement>;
     public container: React.RefObject<HTMLDivElement>;
     public imageHeight: number;
@@ -41,7 +41,7 @@ export class ImageSliderComponent extends React.Component<IImageSliderProps, IIm
     }
 
     public nextSlideAnimation(): void {
-        if (this.state.index < this.props.imgs.length - 1) {
+        if (this.state.index < this.props.content.length - 1) {
             this.slideAnimation(this.state.index + 1);
         }
     };
@@ -61,7 +61,7 @@ export class ImageSliderComponent extends React.Component<IImageSliderProps, IIm
             <section className="section_slider-img">
               <div className="container-fluid" ref={this.container}>
                 <div className="section_slider-img__content" ref={this.node}>
-                  {this.props.imgs.map((img: any, index: number) => {
+                  {this.props.content.map((img: any, index: number) => {
                     return (
                       <div
                         className={this.state.index === index ? "section_slider-img__image section_slider-img__image--active" : "section_slider-img__image" }
