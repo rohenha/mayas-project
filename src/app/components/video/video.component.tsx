@@ -1,5 +1,5 @@
 // Imports
-import { IVideoProps, IVideoState } from 'Interfaces';
+import { IPageComponentProps, IVideoState } from 'Interfaces';
 import * as React from 'react';
 import { VideoService } from 'Services';
 
@@ -10,7 +10,7 @@ import './video.component.sass';
 // Components
 import { ControlsComponent } from 'Components';
 
-export class VideoComponent extends React.Component<IVideoProps, IVideoState> {
+export class VideoComponent extends React.Component<IPageComponentProps, IVideoState> {
     public currentTime: () => void = this.getCurrentTime.bind(this);
     public toggleVideo: () => void = this.changeVideoState.bind(this);
     public setDuration: () => void = this.setTotalTime.bind(this);
@@ -81,15 +81,15 @@ export class VideoComponent extends React.Component<IVideoProps, IVideoState> {
 
     public render(): React.ReactElement<any> {
         return (
-          <div className={this.props.cover ? "section_video js-bg page__bg" : "section_video js-bg"}>
+          <div className={this.props.content.cover ? "section_video js-bg page__bg" : "section_video js-bg"}>
             <video
                 playsInline = {true}
                 controls={false}
-                autoPlay={this.props.autoplay}
-                loop={this.props.loop}
-                muted = {this.props.muted}
+                autoPlay={this.props.content.autoplay}
+                loop={this.props.content.loop}
+                muted = {this.props.content.muted}
                 preload={"auto"}
-                poster={this.props.poster}
+                poster={this.props.content.poster}
                 onLoadedMetadata={this.setDuration}
                 onTimeUpdate={this.currentTime}
                 onEnded={this.setControls}
@@ -97,23 +97,23 @@ export class VideoComponent extends React.Component<IVideoProps, IVideoState> {
                 onMouseMove={this.setControls}
                 ref={this.video}
             >
-              {this.props.sources.map( (source: any, index: number) =>
+              {this.props.content.sources.map( (source: any, index: number) =>
                 <source key={index} src={source.path} type={'video/' + source.type} />
               )}
-              { this.props.subtitles &&
-                <track label="Français" kind="subtitles" srcLang="fr" src={this.props.subtitles} default={true} />
+              { this.props.content.subtitles &&
+                <track label="Français" kind="subtitles" srcLang="fr" src={this.props.content.subtitles} default={true} />
               }
             </video>
-            { this.props.controls &&
+            { this.props.content.controls &&
               <React.Fragment>
                 <button className={this.setPlayerBtnClass()} />
                 <ControlsComponent
                   videoState={this.state.percent}
                   history={this.props.history}
-                  nextPage={this.props.nextPage}
+                  nextPage={this.props.content.nextPage}
                   duree={{ current: this.state.current, total: this.state.total }}
                   video={this.video}
-                  fullscreen={!this.props.cover}
+                  fullscreen={!this.props.content.cover}
                 />
               </React.Fragment>
             }

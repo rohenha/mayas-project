@@ -3,14 +3,6 @@ export interface IChapter {
     name: string
 }
 
-// tslint:disable-next-line:no-empty-interface
-export interface IContentPartProps {
-    img: string
-}
-// tslint:disable-next-line:no-empty-interface
-export interface IContentPartState {
-}
-
 export interface ITextInteractive {
     content: any[],
     file: string[],
@@ -27,13 +19,12 @@ export interface IInteractivePhotoState {
 
 // tslint:disable-next-line:no-empty-interface
 export interface IContentInteractiveProps {
-    open: boolean,
-    text: ITextInteractive,
-    closeFunction: any
+    content: ITextInteractive,
+    closeFunction: any,
+    history: any
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IContentInteractiveState {
-    index: number
 }
 
 // tslint:disable-next-line:no-empty-interface

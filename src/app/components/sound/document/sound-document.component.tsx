@@ -12,6 +12,7 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
     public sound: HTMLAudioElement = new Audio(this.props.sound);
     public playpauseSound: () => void = this.toggleSound.bind(this);
     public videoService: VideoService = new VideoService();
+    public nodeTitle: React.RefObject<HTMLDivElement>;
     constructor(props: any) {
       super(props);
       this.state = {
@@ -19,6 +20,7 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
         percent: 0,
         total: '0:0'
       };
+      this.nodeTitle = React.createRef();
     }
 
     public componentWillUnmount(): void {
@@ -39,9 +41,6 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
             this.sound.pause();
             this.sound = new Audio(this.props.sound);
             this.componentDidMount();
-        }
-        if (this.props.play !== prevProps.play) {
-            this.toggleSound();
         }
     }
 
@@ -69,6 +68,16 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
         return Math.floor(time / 60) + ':' + Math.floor(time);
     }
 
+    public setTitleAnimated(): string {
+      let className = 'section_sound-document__title';
+      if (this.nodeTitle.current! !== null) {
+        const span = this.nodeTitle.current.querySelector('span');
+        if (span!.getBoundingClientRect().width > this.nodeTitle.current.getBoundingClientRect().width) {
+          className += ' animated';
+        }
+      }
+      return className;
+    };
 
     public render(): React.ReactElement<any> {
         return (
@@ -85,11 +94,10 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
                         style={{ strokeDasharray: this.state.percent + ", 100" }}
                     />
                 </svg>
-                { this.sound.duration &&
-                  <div className={this.props.sound ? "section_sound-document__time active" : "section_sound-document__time"}>
-                    <p><span>{this.state.current}</span> / <span>{this.state.total}</span></p>
-                  </div>
-                }
+                <div className={this.props.sound ? "section_sound-document__details active" : "section_sound-document__details"}>
+                  <p ref={this.nodeTitle} className={this.setTitleAnimated()}><span>{this.props.title}</span></p>
+                  <p className="section_sound-document__time"><span>{this.state.current}</span> / <span>{this.state.total}</span></p>
+                </div>
             </div>
         );
     }

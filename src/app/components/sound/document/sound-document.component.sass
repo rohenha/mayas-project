@@ -9,7 +9,7 @@
     z-index: 5
 
     &__player,
-    &__time
+    &__details
         bottom: 0
         margin: auto
         position: absolute
@@ -82,13 +82,14 @@
             position: relative
             z-index: 2
 
-    &__time
+    &__details
         background-color: rgba($color-black, .5)
         border-radius: 35px
         height: 100%
         left: 2px
         opacity: 0
-        padding-left: 100%
+        overflow: hidden
+        padding-left: 120%
         transform: translateX(-10px)
         transition: transform .3s ease-in-out, opacity .3s ease-in-out
         width: 190px
@@ -97,6 +98,15 @@
             opacity: 1
             transform: translateX(0)
 
-        p
-            line-height: 35px
-            text-align: center
+
+    &__title
+        overflow: hidden
+        white-space: nowrap
+        &:not(:last-child)
+            margin-bottom: 0
+        span
+            display: inline-block
+
+        &.animated
+            span
+                animation: animSoundTitle 10s infinite linear alternate

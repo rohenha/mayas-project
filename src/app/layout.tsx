@@ -109,7 +109,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
                   >
                       <Switch location={this.props.location}>
                         {this.routes.map((route: any, index: number) =>
-                          <Route key={index} path={route.url} exact={route.exact} render={this.renderPage.bind(this, route)} />
+                          <Route key={index} path={route.url} exact={route.exactUrl} render={this.renderPage.bind(this, route)} />
                         )}
                       </Switch>
                   </Transition>

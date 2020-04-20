@@ -40,7 +40,7 @@ export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
               <div className="menu__content">
                   <h2>
                     {MenuContent.title}
-                    <span className="menu__close cross" onClick={this.props.closeMenu}/>
+                    <button className="menu__close cross" onClick={this.props.closeMenu}/>
                   </h2>
                   <ul>
                       {Routes.ExpRoutes.map((route: IPathMenu, index: number) =>

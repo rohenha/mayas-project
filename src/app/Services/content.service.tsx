@@ -24,16 +24,18 @@ export class ContentService {
   public renderBackground(isVideo: boolean, imgs: any, props: any): any {
     if (isVideo) {
       return <VideoComponent
-          sources={imgs[1]}
-          poster={imgs[0]}
-          controls={false}
-          autoplay={true}
-          loop={true}
-          muted={true}
-          {...props}
-          nextPage=""
-          cover={true}
-          subtitles=''
+        {...props}
+        content={{
+          autoplay: true,
+          controls: false,
+          cover: true,
+          loop: true,
+          muted: true,
+          nextPage: '',
+          poster: imgs[0],
+          sources: imgs[1],
+          subtitles: ''
+        }}
       />;
     } else {
       return <ImageComponent image={imgs[0]} fullscreen={true} />;

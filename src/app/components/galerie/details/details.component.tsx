@@ -31,7 +31,7 @@ export class DetailsGalerieComponent extends React.Component<IGalerieDetailsProp
         return (
           <div className="section_galerie__details" ref={this.node}>
             <div className="section_galerie__details-container">
-              <h1>{this.props.content.name}<div className="section_galerie__details--cross cross" onClick={this.onCloseDetails} /></h1>
+              <h1>{this.props.content.name}<button className="section_galerie__details--cross cross" onClick={this.onCloseDetails} /></h1>
               <p>{this.props.content.description}</p>
             </div>
           </div>

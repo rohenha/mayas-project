@@ -1,12 +1,12 @@
 // Imports
-import { IInteractivePhotoState, IPageComponentProps } from 'Interfaces';
+import { IInteractivePhotoState, IPageComponentProps, ITextInteractive } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
 import './interactive-photo.component.sass';
 
 // Components
-import { ImageComponent, SoundDocComponent } from 'Components';
+import { ContentInteractiveComponent, ImageComponent, SoundDocComponent } from 'Components';
 // import { ContentInteractiveComponent, SoundDocComponent } from 'Components';
 
 export class InteractivePhotoComponent extends React.Component<IPageComponentProps, IInteractivePhotoState> {
@@ -36,9 +36,18 @@ export class InteractivePhotoComponent extends React.Component<IPageComponentPro
       return className;
     };
 
-    public setSound(): any {
-      if (this.state.active.type === 'audio') {
-        return <SoundDocComponent sound={this.state.active.file} delay={0} autoplay={true} play={true} />;
+    public setContent(): any {
+      switch (this.state.active.type) {
+        case 'audio':
+          return <SoundDocComponent sound={this.state.active.file} title={this.state.active.title} delay={0} autoplay={true} />;
+          break;
+
+        case 'text':
+          return <ContentInteractiveComponent {...this.props} closeFunction={this.openElement.bind(this, this.state.active)} content={this.state.active} />;
+          break;
+
+        default:
+          break;
       }
     };
 
@@ -47,9 +56,9 @@ export class InteractivePhotoComponent extends React.Component<IPageComponentPro
             <section className="section_interactive-photo">
                 <div className="container-fluid">
                   <ImageComponent image={this.props.content.img} fullscreen={false} />
-                  {this.setSound()}
+                  {this.setContent()}
                   <ul className="section_interactive-photo__points">
-                    {this.props.content.points.map((point: any, index: number) =>
+                    {this.props.content.points.map((point: ITextInteractive, index: number) =>
                       <li
                       style={ {left: point.x, top: point.y} }
                       key={index}>

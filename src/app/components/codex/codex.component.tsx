@@ -45,7 +45,7 @@ export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
                   <CodexDefinitionComponent data={this.props.datas[this.state.dataOpen]} />
               }
               <div className="codex__home js-home">
-                <span className="codex__home--cross cross" onClick={this.props.closeCodex} />
+                <button className="codex__home--cross cross" onClick={this.props.closeCodex} />
                 <h3>Codex</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
                 <nav>

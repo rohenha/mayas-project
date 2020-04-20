@@ -41,7 +41,7 @@ export class ImageSliderComponent extends React.Component<IPageComponentProps, I
     }
 
     public nextSlideAnimation(): void {
-        if (this.state.index < this.props.content.length - 1) {
+        if (this.state.index < this.props.content.images.length - 1) {
             this.slideAnimation(this.state.index + 1);
         }
     };
@@ -58,10 +58,10 @@ export class ImageSliderComponent extends React.Component<IPageComponentProps, I
 
     public render(): React.ReactElement<any> {
         return (
-            <section className="section_slider-img">
+            <section className={this.props.content.vertical ? "section_slider-img" : "section_slider-img section_slider-img--horizontal"}>
               <div className="container-fluid" ref={this.container}>
                 <div className="section_slider-img__content" ref={this.node}>
-                  {this.props.content.map((img: any, index: number) => {
+                  {this.props.content.images.map((img: any, index: number) => {
                     return (
                       <div
                         className={this.state.index === index ? "section_slider-img__image section_slider-img__image--active" : "section_slider-img__image" }
@@ -74,10 +74,8 @@ export class ImageSliderComponent extends React.Component<IPageComponentProps, I
                     );
                   })}
                 </div>
-                <div className="section_slider-img__nav">
-                  <button className="slide slide-previous" onClick={this.previousSlide} />
-                  <button className="slide slide-next" onClick={this.nextSlide} />
-                </div>
+                <button className="slide slide--previous" onClick={this.previousSlide} />
+                <button className="slide slide--next" onClick={this.nextSlide} />
               </div>
             </section>
         );

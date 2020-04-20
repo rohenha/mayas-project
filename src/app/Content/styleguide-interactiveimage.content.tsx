@@ -14,7 +14,7 @@ export const StyleguideInteractiveImageContent: any = {
           {
             content: "",
             file: require('../assets/sounds/carnival-daniel_simon.mp3'),
-            title:"Intitulé",
+            title:"Lorem ipsum dolor sit amet, consectetur adipisicing elit",
             type: "audio",
             x: "20%",
             y: "20%"
@@ -22,15 +22,37 @@ export const StyleguideInteractiveImageContent: any = {
           {
             content: "",
             file: require('../assets/sounds/bensound-hey.mp3'),
-            title:"Intitulé 2",
+            title:"Lorem ipsum",
             type: "audio",
             x: "50%",
             y: "50%"
           },
           {
             content: [
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus iure recusandae dolorum quibusdam nihil facilis, dolor exercitationem quia hic? Corrupti autem esse quis, similique dolores delectus. Aspernatur facilis itaque corporis!",
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus iure recusandae dolorum quibusdam nihil facilis, dolor exercitationem quia hic? Corrupti autem esse quis, similique dolores delectus. Aspernatur facilis itaque corporis!"
+              {
+                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.',
+                type: 'text'
+              },
+              {
+                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.',
+                type: 'text'
+              },
+              {
+                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.',
+                type: 'text'
+              },
+              {
+                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.',
+                type: 'text'
+              },
+              {
+                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.',
+                type: 'text'
+              },
+              {
+                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.',
+                type: 'text'
+              }
             ],
             file: [
               require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
