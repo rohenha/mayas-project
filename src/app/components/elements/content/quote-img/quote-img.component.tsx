@@ -1,5 +1,5 @@
 // Imports
-import { IContent, IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IPageComponentProps, IPageComponentState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -38,9 +38,7 @@ export class QuoteImgComponent extends React.Component<IPageComponentProps, IPag
           </div>
           <div className="section_quote-img__content">
             <div className="section_text__content">
-              {this.props.content.text.map((element: IContent, index: number) =>
-                this.contentService.renderElement(element, index)
-              )}
+              {this.contentService.renderContent(this.props.content.text)}
             </div>
           </div>
         </div>

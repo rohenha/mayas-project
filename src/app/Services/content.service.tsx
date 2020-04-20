@@ -8,6 +8,13 @@ import { ImageComponent, VideoComponent } from 'Components';
 import { IContent } from 'Interfaces';
 
 export class ContentService {
+
+  public renderContent(elements: IContent[]): any {
+    return elements.map((element: IContent, index: number) =>
+      this.renderElement(element, index)
+    );
+  };
+
   public renderElement(element: IContent, key: number): any {
     switch(element.type) {
       case 'text':

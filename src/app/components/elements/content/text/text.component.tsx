@@ -1,5 +1,5 @@
 // Imports
-import { IContent, IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IPageComponentProps, IPageComponentState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -22,9 +22,7 @@ export class TextComponent extends React.Component<IPageComponentProps, IPageCom
       <section className="section_text">
         <div className="container-fluid section_text__container">
           <div className="section_text__content">
-            {this.props.content.map((element: IContent, index: number) =>
-              this.contentService.renderElement(element, index)
-            )}
+            {this.contentService.renderContent(this.props.content)}
           </div>
         </div>
       </section>

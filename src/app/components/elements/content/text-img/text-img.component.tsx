@@ -1,5 +1,5 @@
 // Imports
-import { IContent, IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IPageComponentProps, IPageComponentState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -22,9 +22,7 @@ export class TextImgComponent extends React.Component<IPageComponentProps, IPage
       <section className={this.props.content.sens ? "section_text-img" : "section_text-img section_text-img--invert"}>
         <div className="container-fluid">
           <div className="section_text-img__content">
-            {this.props.content.text.map((element: IContent, index: number) =>
-              this.contentService.renderElement(element, index)
-            )}
+            {this.contentService.renderContent(this.props.content)}
           </div>
           <div className="section_text-img__img">
             <ImageComponent image={this.props.content.img} fullscreen={false} />

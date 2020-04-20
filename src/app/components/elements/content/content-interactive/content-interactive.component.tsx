@@ -1,5 +1,5 @@
 // Imports
-import { IContent, IContentInteractiveProps, IContentInteractiveState } from 'Interfaces';
+import { IContentInteractiveProps, IContentInteractiveState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -36,9 +36,7 @@ export class ContentInteractiveComponent extends React.Component<IContentInterac
                       {this.props.content.title}
                       <button className="section_content-interactive__cross cross" onClick={this.closeFunction} />
                     </h3>
-                    {this.props.content.content.map((element: IContent, index: number) =>
-                      this.contentService.renderElement(element, index)
-                    )}
+                    {this.contentService.renderContent(this.props.content.content)}
                   </div>
                 </div>
               </div>
