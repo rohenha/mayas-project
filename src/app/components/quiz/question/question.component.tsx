@@ -119,9 +119,9 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
                       </div>
                   </form>
                 </div>
-                {this.props.question.img &&
+                {this.props.question.image &&
                   <div className="section_quiz__question--image">
-                    <ImageComponent image={this.props.question.img} fullscreen={false} />
+                    <ImageComponent image={this.props.question.image} fullscreen={false} />
                   </div>
                 }
             </div>

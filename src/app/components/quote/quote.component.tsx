@@ -18,7 +18,7 @@ export class QuoteComponent extends React.Component<IPageComponentProps, IPageCo
     public render(): React.ReactElement<any> {
         return (
             <section className="section_quote">
-              {this.props.content.img !== '' && <ImageComponent image={this.props.content.img} fullscreen={true} />}
+              {this.props.content.image !== '' && <ImageComponent image={this.props.content.image} fullscreen={true} />}
               <div className="container-fluid">
                 <h2 className="text__title-multi-path">{this.props.content.citation[0]}</h2>
                 {this.props.content.citation[1] && <h3 className="text__subtitle">{this.props.content.citation[1]}</h3> }

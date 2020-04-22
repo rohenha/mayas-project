@@ -1,3 +1,5 @@
+import { IImage } from 'Interfaces';
+
 export interface IQuestionProposition {
   answer: string,
   checked: boolean,
@@ -12,7 +14,7 @@ export interface IQuestion {
     propositions: IQuestionProposition[],
     question: string,
     reponse: number,
-    img: any | null
+    image: IImage | null
 }
 
 export interface IStep {

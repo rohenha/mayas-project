@@ -9,7 +9,11 @@ export const StyleguideTextImgContent: any = {
     {
       component: 'TextImgComponent',
       content: {
-        img: require('../assets/images/jimmy-baum-346127-unsplash.jpg'),
+        image: {
+          alt: '',
+          path: require('../assets/images/jimmy-baum-346127-unsplash.jpg'),
+          title: ''
+        },
         sens: true,
         text: [
           {

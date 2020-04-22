@@ -13,7 +13,11 @@ export const P404Content: any = {
           text1: "Revenir",
           text2: "à l'accueil"
         },
-        background: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+        background: {
+          alt: '',
+          path: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+          title: ''
+        },
         subtitle: "Vous êtes vous perdu dans la",
         text: "Il semblerai que la page que vous cherchez n'existe pas",
         title: "foret ?",

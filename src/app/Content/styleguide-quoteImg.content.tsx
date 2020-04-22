@@ -10,7 +10,11 @@ export const StyleguideQuoteImgContent: any = {
       component: 'QuoteImgComponent',
       content: {
         imgs: [
-          require('../assets/images/jimmy-baum-346127-unsplash.jpg')
+          {
+            alt: '',
+            path: require('../assets/images/jimmy-baum-346127-unsplash.jpg'),
+            title: ''
+          }
         ],
         text: [
           {

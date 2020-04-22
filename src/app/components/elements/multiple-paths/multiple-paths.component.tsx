@@ -52,7 +52,7 @@ export class MultiplePathComponent extends React.Component<IPageComponentProps, 
             className="section_multiple-paths__element"
             style={{ width: 100 / this.props.content.length + "%" }}
           >
-            <img src={element.img} style={ {width: this.state.screenSize} } />
+            <img src={element.image.path} title={element.image.title} alt={element.image.alt} style={ {width: this.state.screenSize} } />
             <div className="section_multiple-paths__element--content">
                 <NavLink exact={true} to={element.url} data-index={index} className="text__title-multi-path">{element.name}</NavLink>
             </div>

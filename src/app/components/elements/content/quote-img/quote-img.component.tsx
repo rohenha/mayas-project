@@ -1,5 +1,5 @@
 // Imports
-import { IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IImage, IPageComponentProps, IPageComponentState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -32,7 +32,7 @@ export class QuoteImgComponent extends React.Component<IPageComponentProps, IPag
       <section className={this.classQuoteImg()}>
         <div className="container-fluid">
           <div className="section_quote-img__images">
-            { this.props.content.imgs.map( (img: string, index: number) =>
+            { this.props.content.imgs.map( (img: IImage, index: number) =>
               <ImageComponent key={index} image={img} fullscreen={false} />
             )}
           </div>

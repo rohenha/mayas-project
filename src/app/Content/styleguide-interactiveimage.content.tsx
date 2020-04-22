@@ -9,7 +9,11 @@ export const StyleguideInteractiveImageContent: any = {
     {
       component: 'InteractivePhotoComponent',
       content: {
-        img: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+        image: {
+          alt: '',
+          path: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+          title: ''
+        },
         points: [
           {
             content: "",
@@ -55,9 +59,21 @@ export const StyleguideInteractiveImageContent: any = {
               }
             ],
             file: [
-              require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
-              require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
-              require('../assets/images/john-salzarulo-37827-unsplash.jpg')
+              {
+                alt: '',
+                path: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+                title: ''
+              },
+              {
+                alt: '',
+                path: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+                title: ''
+              },
+              {
+                alt: '',
+                path: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+                title: ''
+              }
             ],
             title:"Intitulé",
             type: "text",

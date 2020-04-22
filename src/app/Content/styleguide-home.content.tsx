@@ -24,7 +24,11 @@ export const StyleguideHomeContent: any = {
           }
         ],
         imgs: [
-            require('../assets/videos/Breezy/Breezy.jpg'),
+            {
+              alt: '',
+              path: require('../assets/videos/Breezy/Breezy.jpg'),
+              title: ''
+            },
             [
                 { type: 'mp4', path: require('../assets/videos/Breezy/Breezy.mp4') },
                 { type: 'webm', path: require('../assets/videos/Breezy/Breezy.webm') },

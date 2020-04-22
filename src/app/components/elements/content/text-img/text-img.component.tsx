@@ -15,7 +15,6 @@ export class TextImgComponent extends React.Component<IPageComponentProps, IPage
   public contentService: ContentService = new ContentService();
   constructor(props: any) {
       super(props);
-      console.log(this.props.content);
   }
 
   public render(): React.ReactElement<any> {
@@ -26,7 +25,7 @@ export class TextImgComponent extends React.Component<IPageComponentProps, IPage
             {this.contentService.renderContent(this.props.content.text)}
           </div>
           <div className="section_text-img__img">
-            <ImageComponent image={this.props.content.img} fullscreen={false} />
+            <ImageComponent image={this.props.content.image} fullscreen={false} />
           </div>
         </div>
       </section>

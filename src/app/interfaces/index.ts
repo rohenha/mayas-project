@@ -20,17 +20,6 @@ export * from './commons/menu.interface';
 export * from './commons/common.interface';
 
 /* ---------------------------------------
------------------ pages ------------------
-----------------------------------------*/
-export * from './pages/accueil.interface';
-export * from './pages/realisation.interface';
-export * from './pages/contact.interface';
-export * from './pages/partenaires.interface';
-export * from './pages/introduction.interface';
-export * from './pages/pays.interface';
-export * from './pages/origines.interface';
-
-/* ---------------------------------------
 --------------- components ---------------
 ----------------------------------------*/
 export * from './components/input.interface';

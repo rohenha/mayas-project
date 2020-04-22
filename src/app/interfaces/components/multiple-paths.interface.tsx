@@ -1,3 +1,4 @@
+import { IImage } from 'Interfaces';
 // tslint:disable-next-line:no-empty-interface
 export interface IMultiplePathsState {
     hover : string,
@@ -5,7 +6,7 @@ export interface IMultiplePathsState {
 }
 
 export interface IMultiplePath {
-    img: string,
+    image: IImage,
     name: string,
     url: string
 }

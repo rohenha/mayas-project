@@ -21,7 +21,7 @@ export class SubFolderComponent extends React.Component<IPageComponentProps, IPa
                 {this.props.content.map((path: IMultiplePath, index: number) =>
                     <div className="section_subfolder__single" key={index}>
                         <NavLink exact={true} to={path.url}>
-                          <ImageComponent image={path.img} fullscreen={true} />
+                          <ImageComponent image={path.image} fullscreen={true} />
                           <span className="text__title-multi-path">
                               {path.name}
                               <span className="text__subtitle">Découvrir</span>

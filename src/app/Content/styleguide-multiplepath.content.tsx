@@ -10,17 +10,29 @@ export const StyleguideMultiplepathContent: any = {
       component: 'MultiplePathComponent',
       content: [
         {
-          img: require('../assets/images/jezael-melgoza-551505-unsplash.jpg'),
+          image: {
+            alt: '',
+            path: require('../assets/images/jezael-melgoza-551505-unsplash.jpg'),
+            title: ''
+          },
           name: 'Mexique',
           url: '/realisation'
         },
         {
-          img: require('../assets/images/landscape-2389023_1920.jpg'),
+          image: {
+            alt: '',
+            path: require('../assets/images/landscape-2389023_1920.jpg'),
+            title: ''
+          },
           name: 'Guatemala',
           url: '/realisation'
         },
         {
-          img: require('../assets/images/earth-608344-unsplash.jpg'),
+          image: {
+            alt: '',
+            path: require('../assets/images/earth-608344-unsplash.jpg'),
+            title: ''
+          },
           name: 'Bélize',
           url: '/realisation'
         }

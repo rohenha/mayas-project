@@ -55,7 +55,7 @@ export class InteractivePhotoComponent extends React.Component<IPageComponentPro
         return (
             <section className="section_interactive-photo">
                 <div className="container-fluid">
-                  <ImageComponent image={this.props.content.img} fullscreen={false} />
+                  <ImageComponent image={this.props.content.image} fullscreen={false} />
                   {this.setContent()}
                   <ul className="section_interactive-photo__points">
                     {this.props.content.points.map((point: ITextInteractive, index: number) =>

@@ -15,7 +15,11 @@ export const StyleguideVideoContent: any = {
         loop: false,
         muted: false,
         nextPage: '',
-        poster: require('../assets/videos/Breezy/Breezy.jpg'),
+        poster: {
+          alt: '',
+          path: require('../assets/videos/Breezy/Breezy.jpg'),
+          title: ''
+        },
         sources: [
             { type: 'mp4', path: require('../assets/videos/Breezy/Breezy.mp4') },
             { type: 'webm', path: require('../assets/videos/Breezy/Breezy.webm') },
