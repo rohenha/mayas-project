@@ -5,4 +5,4 @@ export interface IMenuProps {
     toggleMenu: boolean
 }
 // tslint:disable-next-line:no-empty-interface
-export interface IMenuState { }
+export interface IMenuState {}

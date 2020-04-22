@@ -11,13 +11,12 @@ export * from './layout/footerExp.interface';
 /* ---------------------------------------
 ----------------- COMMON -----------------
 ----------------------------------------*/
-export * from './commons/404.interface';
 export * from './commons/animations.interface';
+export * from './commons/common.interface';
 export * from './commons/content.interface';
 export * from './commons/layout.interface';
-export * from './commons/routes.interface';
 export * from './commons/menu.interface';
-export * from './commons/common.interface';
+export * from './commons/routes.interface';
 
 /* ---------------------------------------
 --------------- components ---------------
