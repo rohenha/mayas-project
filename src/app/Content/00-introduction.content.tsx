@@ -1,7 +1,7 @@
-export const RealisationContent: any = {
+export const PIntroductionContent: any = {
   animation: 'Common',
   chapter: 1,
-  class: 'page_realisation',
+  class: 'page_introduction',
   codex: [
   ],
   container: true,
@@ -18,17 +18,18 @@ export const RealisationContent: any = {
             ]
         ],
         introduction: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores provident minus.",
-        subtitle: "L\'équipe de",
-        text: "Réalisation",
+        subtitle: "Chapitre 1<span>Mayas</span>",
+        text: "Chapter",
         video: true
       }
     }
   ],
   exactUrl: true,
   hasParent: '',
-  isExperience: false,
+  isExperience: true,
   isPage: true,
-  pageName: "realisation",
-  title: "Réalisation",
-  url: "/realisation"
+  nextChapter: 'PPaysContent',
+  pageName: "introduction",
+  title: "Introduction",
+  url: "/exp/introduction"
 };

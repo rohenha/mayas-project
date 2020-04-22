@@ -15,7 +15,7 @@ export class LoaderPageComponent extends React.Component<ISimpleProps, ISimpleSt
 
     public render(): React.ReactElement<any> {
         return (
-          <div className="page" data-page="Common">
+          <div data-page="Common">
             <ImageComponent image={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} fullscreen={true} />
             <LoadingComponent />
           </div>

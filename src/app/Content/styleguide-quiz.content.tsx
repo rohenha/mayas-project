@@ -81,6 +81,7 @@ export const StyleguideQuizContent: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "quiz",

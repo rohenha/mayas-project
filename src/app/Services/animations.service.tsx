@@ -8,7 +8,6 @@ export class AnimationsService {
       TweenMax.killTweensOf(node);
       animation[state](
           node,
-          animation.duration,
           0
       );
     };

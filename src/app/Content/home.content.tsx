@@ -36,16 +36,17 @@ export const HomeContent: any = {
           subtitle: 'présente',
           title: 'Voyage en terres d\'histoire'
         },
+        start: 'PIntroductionContent',
         title: {
           subtitle: 'Sur les traces d\'une civilisation mystérieuse',
           title: 'Mayas'
         },
-        url: '/',
         video: true
       }
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "home",

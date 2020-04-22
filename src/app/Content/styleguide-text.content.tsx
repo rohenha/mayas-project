@@ -21,6 +21,7 @@ export const StyleguideTextContent: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "text",

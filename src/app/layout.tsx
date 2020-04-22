@@ -51,10 +51,10 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
         'pageEnter',
         () => {
           const animation = Animations[this.state.pageEnter + 'Animation'];
+          const animationLeave = Animations[this.state.pageLeave + 'Animation'];
           animation.enter(
               node,
-              animation.duration,
-              this.state.pageLeave !== '' ? animation.duration : 0
+              this.state.pageLeave !== '' ? animationLeave.duration.leave : 0
           );
         }
       );
@@ -66,7 +66,8 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
         'pageLeave',
         () => {
           const animationLeave = Animations[this.state.pageLeave + 'Animation'];
-          animationLeave.exit(node, animationLeave.duration);
+          // TweenMax.set(node, { zIndex: 3 });
+          animationLeave.exit(node);
         }
       );
     }
@@ -96,7 +97,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
             <React.Fragment>
               <MobileComponent />
               {this.state.page && this.state.page.isExperience &&
-                  <HeaderExpComponent page={this.state.page} />
+                  <HeaderExpComponent page={this.state.page} routes={this.routes} />
               }
 
               <TransitionGroup component="div" id="content">
@@ -117,9 +118,8 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
 
               {this.state.page && this.state.page.isExperience &&
                   <FooterExpComponent
-                      footerText={this.pagesService.getTextButtonNextPage(null, this.state.page)}
-                      codexDatas={this.state.page.content.codex}
-                      nextPage={this.pagesService.getNextPage(null, this.state.page) }
+                      codexDatas={this.state.page.codex}
+                      nextPage={this.pagesService.getNextPage(this.state.page) }
                       history={this.props.history}
                   />
               }

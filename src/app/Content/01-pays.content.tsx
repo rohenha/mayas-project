@@ -1,7 +1,7 @@
-export const StyleguideTextImgContent: any = {
+export const PPaysContent: any = {
   animation: 'Common',
-  chapter: 1,
-  class: 'page_styleguide',
+  chapter: 2,
+  class: 'page_pays',
   codex: [
   ],
   container: true,
@@ -30,9 +30,10 @@ export const StyleguideTextImgContent: any = {
   ],
   exactUrl: true,
   hasParent: '',
-  isExperience: false,
+  isExperience: true,
   isPage: true,
-  pageName: "textimg",
-  title: "TextImg",
-  url: "/styleguide/textimg"
+  nextChapter: 'HomeContent',
+  pageName: "pays",
+  title: "Pays",
+  url: "/exp/pays"
 };

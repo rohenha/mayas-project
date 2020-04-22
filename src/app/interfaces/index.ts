@@ -3,9 +3,9 @@
 /* ---------------------------------------
 ----------------- LAYOUT -----------------
 ----------------------------------------*/
-export * from './layout/Header/header.interface';
-export * from './layout/Footer/footer.interface';
-export * from './layout/Footer/footerExp.interface';
+export * from './layout/header.interface';
+export * from './layout/footer.interface';
+export * from './layout/footerExp.interface';
 
 
 /* ---------------------------------------

@@ -1,12 +1,8 @@
-export class PagesService {
-    public getNextPage(Routes: any, page: string) {
-        return Routes.ExpRoutes[Routes.ExpRoutes.indexOf(page) + 1] !== undefined ?
-            Routes.ExpRoutes[Routes.ExpRoutes.indexOf(page) + 1].content.url : '';
-    }
+import * as Content from 'Content';
 
-    public getTextButtonNextPage(Routes: any, page: string): any {
-        return Routes.ExpRoutes[Routes.ExpRoutes.indexOf(page) + 1] !== undefined ?
-            { text1: "Poursuivre", text2: "l'expérience" } :
-            { text1: "Terminer", text2: "l'expérience" };
-    }
+export class PagesService {
+    public getNextPage(page: any) {
+      const element = page.hasParent ? Content[page.hasParent] : page;
+      return Content[element.nextChapter].url;
+    };
 }

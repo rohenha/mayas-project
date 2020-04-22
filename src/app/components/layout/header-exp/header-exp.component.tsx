@@ -24,15 +24,15 @@ export class HeaderExpComponent extends React.Component<IHeaderExpProps, IHeader
     }
 
     public render(): React.ReactElement<any> {
-      const chapter = "Chapitre " + this.props.page.content.chapter;
+      const chapter = "Chapitre " + this.props.page.chapter;
       return (
           <React.Fragment>
-              <MenuComponent toggleMenu={this.state.openMenu} closeMenu={this.toggle} />
+              <MenuComponent toggleMenu={this.state.openMenu} closeMenu={this.toggle} routes={this.props.routes} />
               <header className="header-exp header-exp--right">
               <button className="header-exp__button text__link">
                 <span className="header-exp__text">
                   <span className="header-exp__text--subtitle"><span className="header-exp__text--content" data-content={MenuContent.menu.subtitle}>{chapter}</span></span>
-                  <span className="header-exp__text--title"><span className="header-exp__text--content" data-content={MenuContent.menu.title}>{this.props.page.content.title}</span></span>
+                  <span className="header-exp__text--title"><span className="header-exp__text--content" data-content={MenuContent.menu.title}>{this.props.page.pageName}</span></span>
                 </span>
                 <span className="header-exp__map" onClick={this.toggle} />
               </button>

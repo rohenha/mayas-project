@@ -22,6 +22,7 @@ export const P404Content: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "404",

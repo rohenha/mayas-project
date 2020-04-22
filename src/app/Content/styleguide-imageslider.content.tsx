@@ -19,6 +19,7 @@ export const StyleguideImagesSliderContent: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "imagesslider",

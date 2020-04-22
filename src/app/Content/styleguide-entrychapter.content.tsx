@@ -25,6 +25,7 @@ export const StyleguideEntryChapterContent: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "page",

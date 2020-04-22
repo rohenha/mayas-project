@@ -8,6 +8,9 @@ import './home.component.sass';
 // Components
 import { SliderComponent } from 'Components';
 
+// Content
+import * as Content from 'Content';
+
 // Services
 import { ContentService } from 'Services';
 
@@ -19,12 +22,13 @@ export class HomeComponent extends React.Component<IPageComponentProps, IPageCom
   }
 
   public onSliderDone() : any {
-    this.props.history.push(this.props.content.url)
+    const redirection = Content[this.props.content.start];
+    this.props.history.push(redirection.url);
   }
 
   public render(): React.ReactElement<any> {
     return (
-      <div className="page page-home js-home">
+      <div className="page-home js-home">
         {this.contentService.renderBackground(this.props.content.video, this.props.content.imgs, this.props)}
         <div className="page__content js-container">
           <div className="container-fluid">
@@ -37,7 +41,7 @@ export class HomeComponent extends React.Component<IPageComponentProps, IPageCom
               <h2 className="text__subtitle">{this.props.content.title.subtitle}</h2>
             </div>
             <div className="page-home__form-enter js-form-enter">
-              {this.props.content.url !== "" && <SliderComponent onDone={this.sliderDone}/>}
+              {this.props.content.start !== "" && <SliderComponent onDone={this.sliderDone}/>}
               <p className="text__link">{this.props.content.interaction}</p>
             </div>
             <div className="page-home__realisation js-realisation">

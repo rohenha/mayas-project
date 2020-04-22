@@ -20,6 +20,12 @@ export class FooterExpComponent extends React.Component<IFooterExpProps, IFooter
         this.setState({ openCodex: !this.state.openCodex});
     }
 
+    public setText(): any {
+      return this.props.nextPage === '/' ?
+        { text1: "Terminer", text2: "l'expérience" } :
+        { text1: "Poursuivre", text2: "l'expérience" };
+    };
+
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
@@ -28,7 +34,7 @@ export class FooterExpComponent extends React.Component<IFooterExpProps, IFooter
                     <ImageComponent image={CodexContent.image} fullscreen={false} />
                 </button>
                 <div className="footer-exp footer-exp--right">
-                    <ButtonExpComponent redirection={this.props.nextPage} {...this.props} back={false} text={this.props.footerText} />
+                    <ButtonExpComponent redirection={this.props.nextPage} {...this.props} back={false} text={this.setText()} />
                 </div>
                 <CodexComponent datas={this.props.codexDatas} toggleCodex={this.state.openCodex} closeCodex={this.toggle} />
             </React.Fragment>

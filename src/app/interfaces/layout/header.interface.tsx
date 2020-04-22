@@ -6,10 +6,8 @@ export interface IHeaderState {}
 
 // tslint:disable-next-line:no-empty-interface
 export interface IHeaderExpProps {
-    page: {
-      component: any,
-      content: any
-    }
+    page: any,
+    routes: any[]
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IHeaderExpState {

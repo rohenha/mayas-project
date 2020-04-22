@@ -26,6 +26,7 @@ export const StyleguideVideoContent: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "video",

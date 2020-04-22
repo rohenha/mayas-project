@@ -25,6 +25,7 @@ export const PartenairesContent: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "partenaires",

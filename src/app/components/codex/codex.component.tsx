@@ -8,6 +8,9 @@ import './codex.component.sass';
 // Components
 import { CodexDefinitionComponent, CodexListComponent } from 'Components';
 
+// Content
+import { CodexContent } from 'Content';
+
 // Services
 import { AnimationsService } from 'Services';
 
@@ -46,8 +49,8 @@ export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
               }
               <div className="codex__home js-home">
                 <button className="codex__home--cross cross" onClick={this.props.closeCodex} />
-                <h3>Codex</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.</p>
+                <h3>{CodexContent.pageName}</h3>
+                <p>{CodexContent.description}</p>
                 <nav>
                   <ul className="codex__home--list">
                     {this.props.datas.map((data: { content: any[], title: string, type: string }, index: number) =>

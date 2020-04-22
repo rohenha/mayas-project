@@ -1,8 +1,8 @@
 export interface IAnimation {
-    duration: number,
+    duration: { enter: number, leave: number },
     elements: any,
-    enter: (node: any, duration: number, delay: number) => void,
-    exit: (node: any, duration: number) => void,
+    enter: (node: any, delay: number) => void,
+    exit: (node: any) => void,
     setElements: (node: any) => void
 }
 

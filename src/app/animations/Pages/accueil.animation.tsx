@@ -2,9 +2,12 @@ import { Power1, TimelineMax } from 'gsap';
 import { IAnimation } from 'Interfaces';
 
 export const AccueilAnimation: IAnimation  = {
-    duration: 2.3,
+    duration: {
+      enter: 3.5,
+      leave: 2.7
+    },
     elements: {},
-    enter(node: any, duration: number, delay: number): void {
+    enter(node: any, delay: number): void {
         const tlIn = new TimelineMax();
         this.setElements(node);
         tlIn.delay(delay);
@@ -21,7 +24,7 @@ export const AccueilAnimation: IAnimation  = {
           .staggerTo(this.elements.realisationElements, 0.4, { ease: Power1.easeInOut,autoAlpha: 1, opacity: 1, y: 0 }, 0.1, '-=0.1');
     },
 
-    exit(node: any, duration: number): void {
+    exit(node: any): void {
         const tlOut = new TimelineMax();
         tlOut
           .to(this.elements.container, 0.7, { ease: Power1.easeInOut, autoAlpha: 0, opacity: 0, x: 50 })

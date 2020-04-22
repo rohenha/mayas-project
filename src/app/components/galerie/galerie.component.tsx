@@ -62,7 +62,7 @@ export class GalerieComponent extends React.Component<IPageComponentProps, IGale
 
     public render(): React.ReactElement<any> {
         return (
-          <div className="section_galerie page" data-page="Common">
+          <div className="section_galerie">
             <DetailsComponent>
               {this.props.content.images.map((element: IGalerieElement, index: number) =>
                 this.renderGalerie(element, index)

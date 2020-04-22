@@ -28,6 +28,7 @@ export const StyleguideSubfolderContent: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "subfolder",

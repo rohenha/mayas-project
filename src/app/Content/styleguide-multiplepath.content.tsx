@@ -28,6 +28,7 @@ export const StyleguideMultiplepathContent: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "multiplepath",

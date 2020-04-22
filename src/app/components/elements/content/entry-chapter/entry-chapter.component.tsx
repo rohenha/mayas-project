@@ -18,7 +18,7 @@ export class EntryChapterComponent extends React.Component<IPageComponentProps, 
 
   public render(): React.ReactElement<any> {
     return (
-      <section className="page section__entry-chapter">
+      <section className="section__entry-chapter">
         {this.contentService.renderBackground(this.props.content.video, this.props.content.imgs, this.props)}
         <div className="page__content">
           <div className="container-fluid">

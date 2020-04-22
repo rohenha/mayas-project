@@ -15,6 +15,7 @@ export class TextImgComponent extends React.Component<IPageComponentProps, IPage
   public contentService: ContentService = new ContentService();
   constructor(props: any) {
       super(props);
+      console.log(this.props.content);
   }
 
   public render(): React.ReactElement<any> {
@@ -22,7 +23,7 @@ export class TextImgComponent extends React.Component<IPageComponentProps, IPage
       <section className={this.props.content.sens ? "section_text-img" : "section_text-img section_text-img--invert"}>
         <div className="container-fluid">
           <div className="section_text-img__content">
-            {this.contentService.renderContent(this.props.content)}
+            {this.contentService.renderContent(this.props.content.text)}
           </div>
           <div className="section_text-img__img">
             <ImageComponent image={this.props.content.img} fullscreen={false} />

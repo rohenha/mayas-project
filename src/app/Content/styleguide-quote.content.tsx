@@ -19,6 +19,7 @@ export const StyleguideQuoteContent: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "quote",

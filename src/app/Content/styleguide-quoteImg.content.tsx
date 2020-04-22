@@ -27,9 +27,10 @@ export const StyleguideQuoteImgContent: any = {
     }
   ],
   exactUrl: true,
+  hasParent: '',
   isExperience: false,
   isPage: true,
-  pageName: "textimg",
-  title: "TextImg",
-  url: "/styleguide/textimg"
+  pageName: "quoteimg",
+  title: "Quote Img",
+  url: "/styleguide/quoteimg"
 };
