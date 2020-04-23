@@ -110,7 +110,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
                       timeout={2000}
                       onEnter={this.enterTrans}
                       onExit={this.exitTrans}
-                      appear={true}
+                      appear={false}
                   >
                       <Switch location={this.props.location}>
                         {this.routes.map((route: any, index: number) =>

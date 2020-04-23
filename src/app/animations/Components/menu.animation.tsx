@@ -9,9 +9,8 @@ export const MenuAnimation: IAnimation = {
     elements: {},
     enter(node: any, delay: number): void {
         const tlIn = new TimelineMax();
-        this.setElements(node);
         tlIn.delay(delay);
-        tlIn.to(this.elements.node, 1, {
+        tlIn.to(node, 1, {
               autoAlpha: 1,
               opacity: 1,
               x: 0,
@@ -20,7 +19,7 @@ export const MenuAnimation: IAnimation = {
     exit(node: any): void {
         const tlOut = new TimelineMax();
         tlOut
-          .to(this.elements.node, 1, {
+          .to(node, 1, {
               autoAlpha: 0,
               opacity: 0,
               x: -100,

@@ -1,4 +1,4 @@
-import { TimelineMax } from 'gsap';
+import { TimelineMax, TweenMax } from 'gsap';
 import { IAnimation } from 'Interfaces';
 
 export const QuestionAnimation: IAnimation = {
@@ -10,7 +10,7 @@ export const QuestionAnimation: IAnimation = {
     enter(node: any, delay: number): void {
         const tlIn = new TimelineMax();
         tlIn.delay(delay);
-        tlIn.set(node, {
+        TweenMax.set(node, {
             display: 'none'
         });
         tlIn.to(node, 1, {
@@ -19,9 +19,6 @@ export const QuestionAnimation: IAnimation = {
     },
     exit(node: any): void {
         const tlOut = new TimelineMax();
-        tlOut.set(node, {
-            display: 'block'
-        });
         tlOut.to(node, 1, {
             display: 'none'
         });
