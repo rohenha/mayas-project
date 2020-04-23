@@ -1,4 +1,5 @@
 export * from './00-introduction.content';
+export * from './01-pays-mexique.content';
 export * from './01-pays.content';
 export * from './404.content';
 export * from './codex.content';

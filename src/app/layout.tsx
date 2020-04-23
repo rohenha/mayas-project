@@ -11,6 +11,7 @@ import Animations from 'Animations';
 import {
     Footer,
     FooterExpComponent,
+    Header,
     HeaderExpComponent,
     MobileComponent,
     PageComponent
@@ -66,7 +67,6 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
         'pageLeave',
         () => {
           const animationLeave = Animations[this.state.pageLeave + 'Animation'];
-          // TweenMax.set(node, { zIndex: 3 });
           animationLeave.exit(node);
         }
       );
@@ -97,7 +97,11 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
             <React.Fragment>
               <MobileComponent />
               {this.state.page && this.state.page.isExperience &&
-                  <HeaderExpComponent page={this.state.page} routes={this.routes} />
+                  <HeaderExpComponent page={this.pagesService.getParent(this.state.page)} routes={this.routes} />
+              }
+
+              {this.state.page && this.state.page.isExperience && this.state.page.hasParent !== '' &&
+                <Header backLink={this.pagesService.getPreviousPage(this.state.page)} />
               }
 
               <TransitionGroup component="div" id="content">
@@ -119,7 +123,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
               {this.state.page && this.state.page.isExperience &&
                   <FooterExpComponent
                       codexDatas={this.state.page.codex}
-                      nextPage={this.pagesService.getNextPage(this.state.page) }
+                      nextPage={this.pagesService.getNextPage(this.state.page)}
                       history={this.props.history}
                   />
               }

@@ -1,4 +1,4 @@
-import { TimelineMax } from 'gsap';
+import { TimelineMax, TweenMax } from 'gsap';
 import { IAnimation } from 'Interfaces';
 
 export const CommonAnimation: IAnimation = {
@@ -11,16 +11,15 @@ export const CommonAnimation: IAnimation = {
         const tlIn = new TimelineMax();
         this.setElements(node);
         tlIn.delay(delay);
-        tlIn.set(this.elements.node, {
+        TweenMax.set(this.elements.node, {
             autoAlpha: 0,
             opacity: 0,
-            x: 100,
+            // x: 100,
         });
         tlIn.to(this.elements.node, 1, {
             autoAlpha: 1,
             opacity: 1,
-            x: 0,
-            zIndex: 3
+            // x: 0
         });
     },
     exit(node: any): void {
@@ -29,7 +28,7 @@ export const CommonAnimation: IAnimation = {
           .to(this.elements.node, 1, {
               autoAlpha: 0,
               opacity: 0,
-              x: -100,
+              // x: -100,
           });
     },
 

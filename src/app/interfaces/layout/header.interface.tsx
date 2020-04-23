@@ -1,5 +1,6 @@
 // tslint:disable-next-line:no-empty-interface
 export interface IHeaderProps {
+  backLink: string
 }
 // tslint:disable-next-line:no-empty-interface
 export interface IHeaderState {}

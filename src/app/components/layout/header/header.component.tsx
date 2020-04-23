@@ -1,6 +1,7 @@
 // Imports
 import { IHeaderProps, IHeaderState } from 'Interfaces';
 import * as React from 'react';
+import { NavLink } from 'react-router-dom';
 
 // Styles
 import './header.component.sass';
@@ -15,8 +16,10 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
 
     public render(): React.ReactElement<any> {
         return (
-            <header id="header">
-                <p>Header</p>
+            <header className="header">
+                <NavLink className="link" exact={true} to={this.props.backLink} activeClassName="active">
+                revenir au chapitre
+                </NavLink>
             </header>
         );
     }

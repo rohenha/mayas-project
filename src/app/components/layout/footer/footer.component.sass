@@ -4,14 +4,6 @@
     bottom: $padding
     position: fixed
     z-index: 30
-
-    a
-        transition: color .2s ease-in-out
-        &:hover
-            color: $color-secondary
-
-            img
-                opacity: 1
     ul
         align-items: center
         display: flex
@@ -33,3 +25,13 @@
 
     &--right
         right: $padding
+
+.footer,
+.header
+    a
+        transition: color .2s ease-in-out
+        &:hover
+            color: $color-secondary
+
+            img
+                opacity: 1

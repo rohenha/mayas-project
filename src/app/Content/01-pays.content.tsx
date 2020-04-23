@@ -4,32 +4,39 @@ export const PPaysContent: any = {
   class: 'page_pays',
   codex: [
   ],
-  container: true,
+  container: false,
   content: [
     {
-      component: 'TextImgComponent',
-      content: {
-        image: {
-          alt: '',
-          path: require('../assets/images/jimmy-baum-346127-unsplash.jpg'),
-          title: ''
+      component: 'MultiplePathComponent',
+      content: [
+        {
+          image: {
+            alt: '',
+            path: require('../assets/images/jezael-melgoza-551505-unsplash.jpg'),
+            title: ''
+          },
+          name: 'Mexique',
+          url: '/exp/pays/mexique'
         },
-        sens: true,
-        text: [
-          {
-            content: 'Lorem ipsum dolor sit',
-            type: 'h3'
+        {
+          image: {
+            alt: '',
+            path: require('../assets/images/landscape-2389023_1920.jpg'),
+            title: ''
           },
-          {
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.',
-            type: 'text'
+          name: 'Guatemala',
+          url: '/exp/pays/mexique'
+        },
+        {
+          image: {
+            alt: '',
+            path: require('../assets/images/earth-608344-unsplash.jpg'),
+            title: ''
           },
-          {
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente sint, rerum eaque reiciendis at voluptatem nesciunt, maiores velit earum numquam inventore quo ad vitae nobis. Accusamus ut dolores assumenda.',
-            type: 'text'
-          }
-        ]
-      }
+          name: 'Bélize',
+          url: '/exp/pays/mexique'
+        }
+      ]
     }
   ],
   exactUrl: true,
