@@ -2,7 +2,8 @@
 export interface ICodexProps {
     toggleCodex: boolean,
     closeCodex: () => any,
-    datas: ICodexData[]
+    datas: ICodexData[],
+    history: any
 }
 // tslint:disable-next-line:no-empty-interface
 export interface ICodexState {
@@ -28,6 +29,7 @@ export interface ICodexListState {}
 // tslint:disable-next-line:no-empty-interface
 export interface ICodexDefProps {
     data: { content: any[], title: string, type: string },
+    history: any
 }
 // tslint:disable-next-line:no-empty-interface
 export interface ICodexDefState { }

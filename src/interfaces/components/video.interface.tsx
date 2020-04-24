@@ -1,15 +1,3 @@
-export interface IVideoProps {
-    controls: boolean,
-    autoplay: boolean,
-    loop:boolean,
-    muted: boolean,
-    sources: any,
-    poster: string,
-    history: any,
-    nextPage: string,
-    cover: boolean
-    subtitles: string
-}
 export interface IVideoState {
     controls: boolean,
     percent: number,

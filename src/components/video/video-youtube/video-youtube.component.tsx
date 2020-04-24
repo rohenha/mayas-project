@@ -1,57 +1,35 @@
 // Imports
-import { IVideoProps, IVideoState } from 'Interfaces';
+import YouTube from '@u-wave/react-youtube';
+import { IPageComponentProps, IPageComponentState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
 import './video-youtube.component.sass';
 
 // Components
+import * as Content from 'Content';
 
-export class VideoYoutubeComponent extends React.Component<IVideoProps, IVideoState> {
-    public video: any;
-    constructor(props: any) {
-        super(props);
-        // let player = null;
-        // function onYouTubePlayerAPIReady() {
-        //     player = new YT.Player('player', {
-        //         width: '640',
-        //         height: '390',
-        //         videoId: '0Bmhjf0rKe8',
-        //         events: {
-        //             onReady: onPlayerReady,
-        //             onStateChange: onPlayerStateChange
-        //         }
-        //     });
-        // }
+export class VideoYoutubeComponent extends React.Component<IPageComponentProps, IPageComponentState> {
+  public onVideoEnded: () => any = this.onEnd.bind(this);
+  constructor(props: any) {
+      super(props);
+  }
 
-        // // autoplay video
-        // function onPlayerReady(event) {
-        //     event.target.playVideo();
-        // }
+  public onEnd(): any {
+    if (this.props.content.nextPage !== '') {
+      const redirection = Content[this.props.content.nextPage];
+      setTimeout(() => {
+        this.props.history.push(redirection.url);
+      }, 1000);
     }
+  };
 
 
-    public render(): React.ReactElement<any> {
-        return (
-            <div className="video bg">
-                <div id="videoBg" className="bg"/>
-                {/* <video
-                    id="videoBg"
-                    className="bg"
-                    playsinline = {true}
-                    controls={this.props.controls}
-                    autoPlay={this.props.autoplay}
-                    loop={this.props.loop}
-                    muted = {this.props.muted}
-                    preload={"auto"}
-                    poster={this.props.poster}
-                    onTimeUpdate={this.currentTime}
-                >
-                    {this.props.sources.map( (source: any, index: number) =>
-                        <source key={index} src={source.path} type={'video/' + source.type} />
-                    )}
-                </video> */}
-            </div>
-        );
-    }
+  public render(): React.ReactElement<any> {
+    return (
+      <div className="section_video-youtube">
+        <YouTube video={this.props.content.id} width={"100%"} autoplay={this.props.content.autoplay} playsInline={true} annotations={this.props.content.annotations} showRelatedVideos={false} modestBranding={false} allowFullscreen={this.props.content.allowFullscreen} controls={this.props.content.controls} showInfo={false} onEnd={this.onVideoEnded}/>
+      </div>
+    );
+  }
 }

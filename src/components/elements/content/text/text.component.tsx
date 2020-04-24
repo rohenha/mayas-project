@@ -22,7 +22,7 @@ export class TextComponent extends React.Component<IPageComponentProps, IPageCom
       <section className="section_text">
         <div className="container-fluid section_text__container">
           <div className="section_text__content">
-            {this.contentService.renderContent(this.props.content)}
+            {this.contentService.renderContent(this.props.content, this.props.history)}
           </div>
         </div>
       </section>

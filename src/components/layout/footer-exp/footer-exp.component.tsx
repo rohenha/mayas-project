@@ -36,7 +36,7 @@ export class FooterExpComponent extends React.Component<IFooterExpProps, IFooter
                 <div className="footer-exp footer-exp--right">
                     <ButtonExpComponent redirection={this.props.nextPage} {...this.props} back={false} text={this.setText()} />
                 </div>
-                <CodexComponent datas={this.props.codexDatas} toggleCodex={this.state.openCodex} closeCodex={this.toggle} />
+                <CodexComponent datas={this.props.codexDatas} toggleCodex={this.state.openCodex} closeCodex={this.toggle} history={this.props.history} />
             </React.Fragment>
         );
     }

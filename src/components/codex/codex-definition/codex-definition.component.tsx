@@ -41,7 +41,7 @@ export class CodexDefinitionComponent extends React.Component<ICodexDefProps, IC
               <h3>{this.props.data.title}</h3>
             </div>
             <div className="codex__definition--content">
-              {this.contentService.renderContent(this.props.data.content)}
+              {this.contentService.renderContent(this.props.data.content, this.props.history)}
             </div>
         </div>
       );

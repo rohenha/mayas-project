@@ -36,7 +36,7 @@ export class ContentInteractiveComponent extends React.Component<IContentInterac
                       {this.props.content.title}
                       <button className="section_content-interactive__cross cross" onClick={this.closeFunction} />
                     </h3>
-                    {this.contentService.renderContent(this.props.content.content)}
+                    {this.contentService.renderContent(this.props.content.content, this.props.history)}
                   </div>
                 </div>
               </div>

@@ -23,4 +23,5 @@ export * from './styleguide-quoteImg.content';
 export * from './styleguide-subfolder.content';
 export * from './styleguide-text.content';
 export * from './styleguide-textImg.content';
+export * from './styleguide-video-youtube.content';
 export * from './styleguide-video.content';

@@ -45,7 +45,7 @@ export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
             <div className="codex" ref={this.node}>
               <div className="codex__background js-bg" onClick={this.props.closeCodex} />
               {this.props.datas[this.state.dataOpen] !== undefined &&
-                  <CodexDefinitionComponent data={this.props.datas[this.state.dataOpen]} />
+                  <CodexDefinitionComponent data={this.props.datas[this.state.dataOpen]} history={this.props.history} />
               }
               <div className="codex__home js-home">
                 <button className="codex__home--cross cross" onClick={this.props.closeCodex} />

@@ -22,7 +22,7 @@ export class TextImgComponent extends React.Component<IPageComponentProps, IPage
       <section className={this.props.content.sens ? "section_text-img" : "section_text-img section_text-img--invert"}>
         <div className="container-fluid">
           <div className="section_text-img__content">
-            {this.contentService.renderContent(this.props.content.text)}
+            {this.contentService.renderContent(this.props.content.text, this.props.history)}
           </div>
           <div className="section_text-img__img">
             <ImageComponent image={this.props.content.image} fullscreen={false} />

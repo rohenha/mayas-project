@@ -38,7 +38,7 @@ export class QuoteImgComponent extends React.Component<IPageComponentProps, IPag
           </div>
           <div className="section_quote-img__content">
             <div className="section_text__content">
-              {this.contentService.renderContent(this.props.content.text)}
+              {this.contentService.renderContent(this.props.content.text, this.props.history)}
             </div>
           </div>
         </div>
