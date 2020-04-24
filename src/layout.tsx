@@ -92,18 +92,32 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
       return <PageComponent {...props} content={content} setContent={this.onSetContent} />;
     };
 
+    public renderHeader(): any {
+      if (this.state.page && this.state.page.isExperience && this.state.page.hasParent !== '') {
+        return <Header backLink={this.pagesService.getPreviousPage(this.state.page)} />;
+      }
+    };
+
+    public renderExperience(): any {
+      if (this.state.page && this.state.page.isExperience) {
+        return (
+          <React.Fragment>
+            <HeaderExpComponent page={this.pagesService.getParent(this.state.page)} routes={this.routes} />
+            <FooterExpComponent
+              codexDatas={this.state.page.codex}
+              nextPage={this.pagesService.getNextPage(this.state.page)}
+              history={this.props.history}
+            />
+          </React.Fragment>
+        );
+      }
+    };
+
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
-              <MobileComponent />
-              {this.state.page && this.state.page.isExperience &&
-                  <HeaderExpComponent page={this.pagesService.getParent(this.state.page)} routes={this.routes} />
-              }
-
-              {this.state.page && this.state.page.isExperience && this.state.page.hasParent !== '' &&
-                <Header backLink={this.pagesService.getPreviousPage(this.state.page)} />
-              }
-
+              {this.renderHeader()}
+              {this.renderExperience()}
               <TransitionGroup component="div" id="content">
                   <Transition
                       key={this.props.location.pathname}
@@ -119,15 +133,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
                       </Switch>
                   </Transition>
               </TransitionGroup>
-
-              {this.state.page && this.state.page.isExperience &&
-                  <FooterExpComponent
-                      codexDatas={this.state.page.codex}
-                      nextPage={this.pagesService.getNextPage(this.state.page)}
-                      history={this.props.history}
-                  />
-              }
-
+              <MobileComponent />
               <Footer/>
             </React.Fragment>
         );

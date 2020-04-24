@@ -26,6 +26,12 @@ export class HomeComponent extends React.Component<IPageComponentProps, IPageCom
     this.props.history.push(redirection.url);
   }
 
+  public renderAuthors(): any {
+    return this.props.content.authors.map((author: {poste: string, name: string}, index: number) =>
+      <p className="text__link" key={index}>{author.poste} : <span>{author.name}</span></p>
+    );
+  };
+
   public render(): React.ReactElement<any> {
     return (
       <div className="page-home js-home">
@@ -45,9 +51,7 @@ export class HomeComponent extends React.Component<IPageComponentProps, IPageCom
               <p className="text__link">{this.props.content.interaction}</p>
             </div>
             <div className="page-home__realisation js-realisation">
-            {this.props.content.authors.map((author: {poste: string, name: string}, index: number) =>
-              <p className="text__link" key={index}>{author.poste} : <span>{author.name}</span></p>
-            )}
+            {this.renderAuthors()}
             </div>
           </div>
         </div>

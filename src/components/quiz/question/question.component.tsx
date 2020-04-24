@@ -94,14 +94,30 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
       return className;
     };
 
+    public renderTitle(): any {
+      return (
+        <div className="section_quiz__question--title">
+            <p className="text__subtitle">Question {this.props.question.number}/{this.props.totQuestions}</p>
+            <p className="text__question section_quiz__question--desc">{this.props.question.question}</p>
+        </div>
+      );
+    };
+
+    public renderImage(): any {
+      if (this.props.question.image) {
+        return (
+          <div className="section_quiz__question--image">
+            <ImageComponent image={this.props.question.image} fullscreen={false} />
+          </div>
+        );
+      }
+    };
+
     public render(): React.ReactElement<any> {
         return (
             <div className={this.setClass('section_quiz__question', 'active', this.props.active)} ref={this.node}>
                 <div className="section_quiz__question--container">
-                  <div className="section_quiz__question--title">
-                      <p className="text__subtitle">Question {this.props.question.number}/{this.props.totQuestions}</p>
-                      <p className="text__question section_quiz__question--desc">{this.props.question.question}</p>
-                  </div>
+                  {this.renderTitle()}
                   <form onSubmit={this.validator}>
                       <ul className={this.setClass('section_quiz__question--responses', 'section_quiz__question--answered', this.state.submitted)}>
                         {this.state.propositions.map((answer: IQuestionProposition, index: number) =>
@@ -119,11 +135,7 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
                       </div>
                   </form>
                 </div>
-                {this.props.question.image &&
-                  <div className="section_quiz__question--image">
-                    <ImageComponent image={this.props.question.image} fullscreen={false} />
-                  </div>
-                }
+                {this.renderImage()}
             </div>
         );
     }

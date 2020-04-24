@@ -79,31 +79,35 @@ export class VideoComponent extends React.Component<IPageComponentProps, IVideoS
       this.video.current!.removeEventListener('mousemove', this.setControls, false);
     }
 
+    public renderVideo(): any {
+      return <video
+          playsInline = {true}
+          controls={false}
+          autoPlay={this.props.content.autoplay}
+          loop={this.props.content.loop}
+          muted = {this.props.content.muted}
+          preload={"auto"}
+          poster={this.props.content.poster}
+          onLoadedMetadata={this.setDuration}
+          onTimeUpdate={this.currentTime}
+          onEnded={this.setControls}
+          onClick={this.toggleVideo}
+          onMouseMove={this.setControls}
+          ref={this.video}
+      >
+        {this.props.content.sources.map( (source: any, index: number) =>
+          <source key={index} src={source.path} type={'video/' + source.type} />
+        )}
+        { this.props.content.subtitles &&
+          <track label="Français" kind="subtitles" srcLang="fr" src={this.props.content.subtitles} default={true} />
+        }
+      </video>;
+    };
+
     public render(): React.ReactElement<any> {
         return (
           <div className={this.props.content.cover ? "section_video js-bg page__bg" : "section_video js-bg"}>
-            <video
-                playsInline = {true}
-                controls={false}
-                autoPlay={this.props.content.autoplay}
-                loop={this.props.content.loop}
-                muted = {this.props.content.muted}
-                preload={"auto"}
-                poster={this.props.content.poster}
-                onLoadedMetadata={this.setDuration}
-                onTimeUpdate={this.currentTime}
-                onEnded={this.setControls}
-                onClick={this.toggleVideo}
-                onMouseMove={this.setControls}
-                ref={this.video}
-            >
-              {this.props.content.sources.map( (source: any, index: number) =>
-                <source key={index} src={source.path} type={'video/' + source.type} />
-              )}
-              { this.props.content.subtitles &&
-                <track label="Français" kind="subtitles" srcLang="fr" src={this.props.content.subtitles} default={true} />
-              }
-            </video>
+            {this.renderVideo()}
             { this.props.content.controls &&
               <React.Fragment>
                 <button className={this.setPlayerBtnClass()} />
