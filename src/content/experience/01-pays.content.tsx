@@ -1,7 +1,7 @@
-export const StyleguideMultiplepathContent: any = {
+export const PPaysContent: any = {
   animation: 'Common',
-  chapter: 1,
-  class: 'page_styleguide',
+  chapter: 2,
+  class: 'page_pays',
   codex: [
   ],
   container: false,
@@ -12,38 +12,39 @@ export const StyleguideMultiplepathContent: any = {
         {
           image: {
             alt: '',
-            path: require('../assets/images/jezael-melgoza-551505-unsplash.jpg'),
+            path: require('../../assets/images/jezael-melgoza-551505-unsplash.jpg'),
             title: ''
           },
           name: 'Mexique',
-          url: '/realisation'
+          url: '/exp/pays/mexique'
         },
         {
           image: {
             alt: '',
-            path: require('../assets/images/landscape-2389023_1920.jpg'),
+            path: require('../../assets/images/landscape-2389023_1920.jpg'),
             title: ''
           },
           name: 'Guatemala',
-          url: '/realisation'
+          url: '/exp/pays/mexique'
         },
         {
           image: {
             alt: '',
-            path: require('../assets/images/earth-608344-unsplash.jpg'),
+            path: require('../../assets/images/earth-608344-unsplash.jpg'),
             title: ''
           },
           name: 'Bélize',
-          url: '/realisation'
+          url: '/exp/pays/mexique'
         }
       ]
     }
   ],
   exactUrl: true,
   hasParent: '',
-  isExperience: false,
+  isExperience: true,
   isPage: true,
-  pageName: "multiplepath",
-  title: "Multiple path",
-  url: "/styleguide/multiplepath"
+  nextChapter: 'HomeContent',
+  pageName: "pays",
+  title: "Pays",
+  url: "/exp/pays"
 };

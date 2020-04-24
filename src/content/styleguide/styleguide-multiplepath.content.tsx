@@ -1,4 +1,4 @@
-export const StyleguideSubfolderContent: any = {
+export const StyleguideMultiplepathContent: any = {
   animation: 'Common',
   chapter: 1,
   class: 'page_styleguide',
@@ -7,12 +7,12 @@ export const StyleguideSubfolderContent: any = {
   container: false,
   content: [
     {
-      component: 'SubFolderComponent',
+      component: 'MultiplePathComponent',
       content: [
         {
           image: {
             alt: '',
-            path: require('../assets/images/jezael-melgoza-551505-unsplash.jpg'),
+            path: require('../../assets/images/jezael-melgoza-551505-unsplash.jpg'),
             title: ''
           },
           name: 'Mexique',
@@ -21,7 +21,7 @@ export const StyleguideSubfolderContent: any = {
         {
           image: {
             alt: '',
-            path: require('../assets/images/landscape-2389023_1920.jpg'),
+            path: require('../../assets/images/landscape-2389023_1920.jpg'),
             title: ''
           },
           name: 'Guatemala',
@@ -30,7 +30,7 @@ export const StyleguideSubfolderContent: any = {
         {
           image: {
             alt: '',
-            path: require('../assets/images/earth-608344-unsplash.jpg'),
+            path: require('../../assets/images/earth-608344-unsplash.jpg'),
             title: ''
           },
           name: 'Bélize',
@@ -43,7 +43,7 @@ export const StyleguideSubfolderContent: any = {
   hasParent: '',
   isExperience: false,
   isPage: true,
-  pageName: "subfolder",
-  title: "Subfolder",
-  url: "/styleguide/subfolder"
+  pageName: "multiplepath",
+  title: "Multiple path",
+  url: "/styleguide/multiplepath"
 };

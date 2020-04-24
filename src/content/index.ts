@@ -1,27 +1,34 @@
-export * from './00-introduction.content';
-export * from './01-pays-mexique.content';
-export * from './01-pays.content';
-export * from './404.content';
-export * from './codex.content';
-export * from './footer.content';
-export * from './home.content';
-export * from './menu.content';
-export * from './mobile.content';
-export * from './partenaires.content';
-export * from './preloader.content';
-export * from './realisation.content';
-export * from './soon.content';
-export * from './styleguide-entrychapter.content';
-export * from './styleguide-galerie.content';
-export * from './styleguide-home.content';
-export * from './styleguide-imageslider.content';
-export * from './styleguide-interactiveimage.content';
-export * from './styleguide-multiplepath.content';
-export * from './styleguide-quiz.content';
-export * from './styleguide-quote.content';
-export * from './styleguide-quoteImg.content';
-export * from './styleguide-subfolder.content';
-export * from './styleguide-text.content';
-export * from './styleguide-textImg.content';
-export * from './styleguide-video-youtube.content';
-export * from './styleguide-video.content';
+// Experience
+export * from './experience/00-introduction.content';
+export * from './experience/01-pays-mexique.content';
+export * from './experience/01-pays.content';
+
+// Pages
+export * from './pages/404.content';
+export * from './pages/home.content';
+export * from './pages/partenaires.content';
+export * from './pages/realisation.content';
+export * from './pages/soon.content';
+
+// Components
+export * from './components/codex.content';
+export * from './components/footer.content';
+export * from './components/menu.content';
+export * from './components/mobile.content';
+export * from './components/preloader.content';
+
+// Styleguide
+export * from './styleguide/styleguide-entrychapter.content';
+export * from './styleguide/styleguide-galerie.content';
+export * from './styleguide/styleguide-home.content';
+export * from './styleguide/styleguide-imageslider.content';
+export * from './styleguide/styleguide-interactiveimage.content';
+export * from './styleguide/styleguide-multiplepath.content';
+export * from './styleguide/styleguide-quiz.content';
+export * from './styleguide/styleguide-quote.content';
+export * from './styleguide/styleguide-quoteImg.content';
+export * from './styleguide/styleguide-subfolder.content';
+export * from './styleguide/styleguide-text.content';
+export * from './styleguide/styleguide-textImg.content';
+export * from './styleguide/styleguide-video-youtube.content';
+export * from './styleguide/styleguide-video.content';

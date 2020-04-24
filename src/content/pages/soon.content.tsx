@@ -1,7 +1,7 @@
-export const StyleguideHomeContent: any = {
+export const SoonContent: any = {
   animation: 'Accueil',
   chapter: 1,
-  class: 'page_styleguide',
+  class: 'page_home',
   codex: [
   ],
   container: false,
@@ -26,25 +26,25 @@ export const StyleguideHomeContent: any = {
         imgs: [
             {
               alt: '',
-              path: require('../assets/videos/Breezy/Breezy.jpg'),
+              path: require('../../assets/videos/Breezy/Breezy.jpg'),
               title: ''
             },
             [
-                { type: 'mp4', path: require('../assets/videos/Breezy/Breezy.mp4') },
-                { type: 'webm', path: require('../assets/videos/Breezy/Breezy.webm') },
-                { type: 'ogv', path: require('../assets/videos/Breezy/Breezy.ogv') }
+                { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
+                { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
+                { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
             ]
         ],
-        interaction: 'Glisser pour débuter l\'expérience',
+        interaction: 'Bientôt sur vos écrans',
         introduce: {
           subtitle: 'présente',
           title: 'Voyage en terres d\'histoire'
         },
-        start: 'PIntroductionContent',
         title: {
           subtitle: 'Sur les traces d\'une civilisation mystérieuse',
           title: 'Mayas'
         },
+        url: '',
         video: true
       }
     }
@@ -53,7 +53,7 @@ export const StyleguideHomeContent: any = {
   hasParent: '',
   isExperience: false,
   isPage: true,
-  pageName: "home",
-  title: "Home",
-  url: "/styleguide/home"
+  pageName: "soon",
+  title: "Soon",
+  url: "/soon"
 };

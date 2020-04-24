@@ -12,7 +12,7 @@ export const StyleguideQuoteImgContent: any = {
         imgs: [
           {
             alt: '',
-            path: require('../assets/images/jimmy-baum-346127-unsplash.jpg'),
+            path: require('../../assets/images/jimmy-baum-346127-unsplash.jpg'),
             title: ''
           }
         ],

@@ -11,7 +11,7 @@ export const StyleguideTextImgContent: any = {
       content: {
         image: {
           alt: '',
-          path: require('../assets/images/jimmy-baum-346127-unsplash.jpg'),
+          path: require('../../assets/images/jimmy-baum-346127-unsplash.jpg'),
           title: ''
         },
         sens: true,

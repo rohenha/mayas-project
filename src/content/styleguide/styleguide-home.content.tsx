@@ -1,7 +1,7 @@
-export const HomeContent: any = {
+export const StyleguideHomeContent: any = {
   animation: 'Accueil',
   chapter: 1,
-  class: 'page_home',
+  class: 'page_styleguide',
   codex: [
   ],
   container: false,
@@ -26,16 +26,16 @@ export const HomeContent: any = {
         imgs: [
             {
               alt: '',
-              path: require('../assets/videos/Breezy/Breezy.jpg'),
+              path: require('../../assets/videos/Breezy/Breezy.jpg'),
               title: ''
             },
             [
-                { type: 'mp4', path: require('../assets/videos/Breezy/Breezy.mp4') },
-                { type: 'webm', path: require('../assets/videos/Breezy/Breezy.webm') },
-                { type: 'ogv', path: require('../assets/videos/Breezy/Breezy.ogv') }
+                { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
+                { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
+                { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
             ]
         ],
-        interaction: 'Glisser pour commencer l\'expérience',
+        interaction: 'Glisser pour débuter l\'expérience',
         introduce: {
           subtitle: 'présente',
           title: 'Voyage en terres d\'histoire'
@@ -54,6 +54,6 @@ export const HomeContent: any = {
   isExperience: false,
   isPage: true,
   pageName: "home",
-  title: "Accueil",
-  url: "/"
+  title: "Home",
+  url: "/styleguide/home"
 };

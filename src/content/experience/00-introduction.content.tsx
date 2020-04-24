@@ -12,7 +12,7 @@ export const PIntroductionContent: any = {
        {
          content: {
            alt: 'alt',
-           path: require('../assets/videos/Breezy/Breezy.jpg'),
+           path: require('../../assets/videos/Breezy/Breezy.jpg'),
            title: 'title'
          },
          type: 'img'
@@ -21,13 +21,13 @@ export const PIntroductionContent: any = {
          content: {
            poster: {
              alt: '',
-             path: require('../assets/videos/Breezy/Breezy.jpg'),
+             path: require('../../assets/videos/Breezy/Breezy.jpg'),
              title: ''
            },
            sources: [
-               { type: 'mp4', path: require('../assets/videos/Breezy/Breezy.mp4') },
-               { type: 'webm', path: require('../assets/videos/Breezy/Breezy.webm') },
-               { type: 'ogv', path: require('../assets/videos/Breezy/Breezy.ogv') }
+               { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
+               { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
+               { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
            ]
          },
          type: 'video'
@@ -56,13 +56,13 @@ export const PIntroductionContent: any = {
         imgs: [
             {
               alt: '',
-              path: require('../assets/videos/Breezy/Breezy.jpg'),
+              path: require('../../assets/videos/Breezy/Breezy.jpg'),
               title: ''
             },
             [
-                { type: 'mp4', path: require('../assets/videos/Breezy/Breezy.mp4') },
-                { type: 'webm', path: require('../assets/videos/Breezy/Breezy.webm') },
-                { type: 'ogv', path: require('../assets/videos/Breezy/Breezy.ogv') }
+                { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
+                { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
+                { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
             ]
         ],
         introduction: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores provident minus.",

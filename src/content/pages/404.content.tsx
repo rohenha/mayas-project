@@ -15,7 +15,7 @@ export const P404Content: any = {
         },
         background: {
           alt: '',
-          path: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+          path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
           title: ''
         },
         subtitle: "Vous êtes vous perdu dans la",

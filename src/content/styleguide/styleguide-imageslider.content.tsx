@@ -12,17 +12,17 @@ export const StyleguideImagesSliderContent: any = {
         images: [
           {
             alt: '',
-            path: require('../assets/images/jimmy-baum-346127-unsplash.jpg'),
+            path: require('../../assets/images/jimmy-baum-346127-unsplash.jpg'),
             title: ''
           },
           {
             alt: '',
-            path: require('../assets/images/branches-dawn-environment-975771.jpg'),
+            path: require('../../assets/images/branches-dawn-environment-975771.jpg'),
             title: ''
           },
           {
             alt: '',
-            path: require('../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
+            path: require('../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
             title: ''
           }
         ],

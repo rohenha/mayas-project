@@ -12,13 +12,13 @@ export const StyleguideEntryChapterContent: any = {
         imgs: [
             {
               alt: '',
-              path: require('../assets/videos/Breezy/Breezy.jpg'),
+              path: require('../../assets/videos/Breezy/Breezy.jpg'),
               title: ''
             },
             [
-                { type: 'mp4', path: require('../assets/videos/Breezy/Breezy.mp4') },
-                { type: 'webm', path: require('../assets/videos/Breezy/Breezy.webm') },
-                { type: 'ogv', path: require('../assets/videos/Breezy/Breezy.ogv') }
+                { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
+                { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
+                { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
             ]
         ],
         introduction: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores provident minus.",

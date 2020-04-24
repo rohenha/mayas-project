@@ -28,7 +28,17 @@ export class VideoYoutubeComponent extends React.Component<IPageComponentProps, 
   public render(): React.ReactElement<any> {
     return (
       <div className="section_video-youtube">
-        <YouTube video={this.props.content.id} width={"100%"} autoplay={this.props.content.autoplay} playsInline={true} annotations={this.props.content.annotations} showRelatedVideos={false} modestBranding={false} allowFullscreen={this.props.content.allowFullscreen} controls={this.props.content.controls} showInfo={false} onEnd={this.onVideoEnded}/>
+        <YouTube
+          video={this.props.content.id}
+          width={"100%"}
+          autoplay={this.props.content.autoplay}
+          playsInline={true} annotations={this.props.content.annotations}
+          showRelatedVideos={false}
+          modestBranding={false}
+          allowFullscreen={this.props.content.allowFullscreen}
+          controls={this.props.content.controls}
+          showInfo={false}
+          onEnd={this.onVideoEnded}/>
       </div>
     );
   }

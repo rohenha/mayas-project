@@ -11,13 +11,13 @@ export const StyleguideInteractiveImageContent: any = {
       content: {
         image: {
           alt: '',
-          path: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+          path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
           title: ''
         },
         points: [
           {
             content: "",
-            file: require('../assets/sounds/carnival-daniel_simon.mp3'),
+            file: require('../../assets/sounds/carnival-daniel_simon.mp3'),
             title:"Lorem ipsum dolor sit amet, consectetur adipisicing elit",
             type: "audio",
             x: "20%",
@@ -25,7 +25,7 @@ export const StyleguideInteractiveImageContent: any = {
           },
           {
             content: "",
-            file: require('../assets/sounds/bensound-hey.mp3'),
+            file: require('../../assets/sounds/bensound-hey.mp3'),
             title:"Lorem ipsum",
             type: "audio",
             x: "50%",
@@ -61,17 +61,17 @@ export const StyleguideInteractiveImageContent: any = {
             file: [
               {
                 alt: '',
-                path: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+                path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
                 title: ''
               },
               {
                 alt: '',
-                path: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+                path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
                 title: ''
               },
               {
                 alt: '',
-                path: require('../assets/images/john-salzarulo-37827-unsplash.jpg'),
+                path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
                 title: ''
               }
             ],

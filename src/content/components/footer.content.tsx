@@ -16,7 +16,7 @@ export const FooterContent: any = {
     {
       image: {
         alt: 'Logo Instagram',
-        path: require('../assets/images/instagram.svg'),
+        path: require('../../assets/images/instagram.svg'),
         title: 'instagram'
       },
       link: "https://www.instagram.com/voyageterreshistoire/",
@@ -26,7 +26,7 @@ export const FooterContent: any = {
     {
       image: {
         alt: 'Logo Facebook',
-        path: require('../assets/images/facebook.svg'),
+        path: require('../../assets/images/facebook.svg'),
         title: 'Facebook'
       },
       link: "https://www.facebook.com/voyageterreshistoire/",

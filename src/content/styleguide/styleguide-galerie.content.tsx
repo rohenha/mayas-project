@@ -15,7 +15,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
+                path: require('../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
                 title: ''
               },
               name: 'Image 1',
@@ -26,7 +26,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
+                path: require('../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
                 title: ''
               },              name: 'Image 1',
               portrait: false,
@@ -36,7 +36,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/bernard-hermant-669688-unsplash.jpg'),
+                path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 title: ''
               },
               name: 'Image 1',
@@ -47,7 +47,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
+                path: require('../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
                 title: ''
               },
               name: 'Image 1',
@@ -72,7 +72,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/bernard-hermant-669688-unsplash.jpg'),
+                path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 title: ''
               },
               name: 'Image 1',
@@ -83,7 +83,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/bernard-hermant-669688-unsplash.jpg'),
+                path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 title: ''
               },
               name: 'Image 1',
@@ -94,7 +94,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/bernard-hermant-669688-unsplash.jpg'),
+                path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 title: ''
               },
               name: 'Image 1',
@@ -105,7 +105,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/bernard-hermant-669688-unsplash.jpg'),
+                path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 title: ''
               },
               name: 'Image 1',
@@ -116,7 +116,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
+                path: require('../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
                 title: ''
               },
               name: 'Image 1',
@@ -127,7 +127,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/bernard-hermant-669688-unsplash.jpg'),
+                path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 title: ''
               },
               name: 'Image 1',
@@ -138,7 +138,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/bernard-hermant-669688-unsplash.jpg'),
+                path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 title: ''
               },
               name: 'Image 1',
@@ -149,7 +149,7 @@ export const StyleguideGalerieContent: any = {
               description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque, nisi laborum minima deserunt cupiditate repellendus sunt ipsam perferendis voluptas tempora sed. Quo praesentium architecto aspernatur adipisci illo sunt nobis!',
               image: {
                 alt: '',
-                path: require('../assets/images/bernard-hermant-669688-unsplash.jpg'),
+                path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
                 title: ''
               },
               name: 'Image 1',
