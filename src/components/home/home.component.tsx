@@ -32,20 +32,25 @@ export class HomeComponent extends React.Component<IPageComponentProps, IPageCom
     );
   };
 
+  public renderTitle(contentName: string, elements: any): any {
+    return (
+      <div className={"page-home__" + contentName + " js-" + contentName}>
+        {elements.map((element: any, index: number) => {
+          const Element = element.element;
+          return <Element className={element.className} key={index}>{element.content}</Element>;
+        })}
+      </div>
+    );
+  };
+
   public render(): React.ReactElement<any> {
     return (
       <div className="page-home js-home">
         {this.contentService.renderBackground(this.props.content.video, this.props.content.imgs, this.props)}
         <div className="page__content js-container">
           <div className="container-fluid">
-            <div className="page-home__introduce js-introduce">
-              <h3 className="text__subtitle">{this.props.content.introduce.title}</h3>
-              <p className="text__link">{this.props.content.introduce.subtitle}</p>
-            </div>
-            <div className="page-home__title js-title">
-              <h1 className="text__title">{this.props.content.title.title}</h1>
-              <h2 className="text__subtitle">{this.props.content.title.subtitle}</h2>
-            </div>
+            {this.renderTitle('introduce', [ { className: 'text__subtitle', content: this.props.content.introduce.title , element: 'h3' }, { className: 'text__link', content: this.props.content.introduce.subtitle , element: 'p' } ])}
+            {this.renderTitle('title', [ { className: 'text__title', content: this.props.content.title.title , element: 'h1' }, { className: 'text__subtitle', content: this.props.content.title.subtitle , element: 'h2' } ])}
             <div className="page-home__form-enter js-form-enter">
               {this.props.content.start !== "" && <SliderComponent onDone={this.sliderDone}/>}
               <p className="text__link">{this.props.content.interaction}</p>
