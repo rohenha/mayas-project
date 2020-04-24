@@ -18,18 +18,18 @@
     "noUnusedLocals": true,
     "baseUrl": "./",
     "paths": {
-      "Pages": [ "src/app/pages/index.ts" ],
-      "Content": [ "src/app/content/index.ts" ],
-      "Services": [ "src/app/services/index.ts" ],
-      "Resolvers": [ "src/app/commons/resolvers/index.ts" ],
-      "Interfaces": [ "src/app/interfaces/index.ts" ],
-      "Mocks": [ "src/app/commons/mocks/index.ts" ],
-      "Animations": [ "src/app/animations/index.ts" ],
-      "Routes": [ "src/app/routes/index.ts" ],
-      "Styles": [ "src/app/styles/*" ],
-      "Images": [ "src/app/images/index.tsx"],
-      "Videos": [ "src/app/videos/index.tsx"],
-      "Components": [ "src/app/components/index.ts" ]
+      "Pages": [ "src/pages/index.ts" ],
+      "Content": [ "src/content/index.ts" ],
+      "Services": [ "src/services/index.ts" ],
+      "Resolvers": [ "src/commons/resolvers/index.ts" ],
+      "Interfaces": [ "src/interfaces/index.ts" ],
+      "Mocks": [ "src/commons/mocks/index.ts" ],
+      "Animations": [ "src/animations/index.ts" ],
+      "Routes": [ "src/routes/index.ts" ],
+      "Styles": [ "src/styles/*" ],
+      "Images": [ "src/images/index.tsx"],
+      "Videos": [ "src/videos/index.tsx"],
+      "Components": [ "src/components/index.ts" ]
     }
   },
   "include": [

@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 // Styles
 
 // Components
-import Layout from './app/layout';
+import Layout from './layout';
 
 export default class Router extends React.Component {
 
