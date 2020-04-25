@@ -43,8 +43,17 @@ export const PPaysContent: any = {
   hasParent: '',
   isExperience: true,
   isPage: true,
+  map: {
+    x: '-10%',
+    y: '-10%'
+  },
   nextChapter: 'HomeContent',
   pageName: "pays",
+  point: {
+    path: 890,
+    x: 245,
+    y: 204.9
+  },
   title: "Pays",
   url: "/exp/pays"
 };

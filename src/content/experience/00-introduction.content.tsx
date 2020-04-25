@@ -76,8 +76,17 @@ export const PIntroductionContent: any = {
   hasParent: '',
   isExperience: true,
   isPage: true,
+  map: {
+    x: '0%',
+    y: '0%'
+  },
   nextChapter: 'PPaysContent',
   pageName: "introduction",
+  point: {
+    path: 1040,
+    x: 170,
+    y: 93.9
+  },
   title: "Introduction",
   url: "/exp/introduction"
 };

@@ -5,6 +5,7 @@ export const MenuContent: any =  {
     title: 'Image Menu Title'
   },
   isPage: false,
+  map: require('../../assets/images/map-menu.svg'),
   menu: {
     subtitle: "Ouvrir le",
     title: "menu"

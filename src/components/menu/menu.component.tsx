@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 import './menu.component.sass';
 
 // Components
-import { ImageComponent } from 'Components';
+import { ImageComponent, MapComponent } from 'Components';
 
 // Content
 import { MenuContent } from 'Content';
@@ -54,14 +54,15 @@ export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
             <div className="menu" ref={this.node} >
               <ImageComponent image={MenuContent.background} fullscreen={true} />
               <div className="menu__content">
-                  <h2>
-                    {MenuContent.title}
-                    <button className="menu__close cross" onClick={this.props.closeMenu}/>
-                  </h2>
-                  <ul>
-                      {this.props.routes.map(this.onRenderRoute)}
-                  </ul>
-                </div>
+                <h2>
+                  {MenuContent.title}
+                  <button className="menu__close cross" onClick={this.props.closeMenu}/>
+                </h2>
+                <ul>{this.props.routes.map(this.onRenderRoute)}</ul>
+              </div>
+              <div className="menu__map">
+                <MapComponent routes={this.props.routes} current={this.props.current} />
+              </div>
             </div>
         );
     }

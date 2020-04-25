@@ -46,6 +46,8 @@ export * from './image/image.component';
 
 export * from './page/page.component';
 
+export * from './map/map.component';
+
 export * from './quiz/quiz.component';
 export * from './quiz/screen/screen.component';
 export * from './quiz/question/question.component';

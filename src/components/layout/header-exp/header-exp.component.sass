@@ -77,9 +77,16 @@
         display: inline-block
         height: 65px
         overflow: hidden
+        position: relative
         width: 65px
+
+        &--container
+            left: 0
+            position: absolute
+            top: 0
+            transform: translate(0%, 0%)
+            transition: transform 2s ease-in-out
+            width: 200%
 
         svg
             width: 100%
-            path
-                background-color: rgba(#F6F6F6, .3)

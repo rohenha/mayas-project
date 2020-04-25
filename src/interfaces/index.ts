@@ -32,6 +32,7 @@ export * from './components/buttonExp.interface';
 export * from './components/multiple-paths.interface';
 export * from './components/details.interface';
 export * from './components/load.interface';
+export * from './components/map.interface';
 export * from './components/image.interface';
 export * from './components/content.interface';
 export * from './components/page.interface';
