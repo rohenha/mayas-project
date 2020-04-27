@@ -13,24 +13,33 @@ import { ImageComponent } from 'Components';
 import { FooterContent } from 'Content';
 
 export class Footer extends React.Component<IFooterProps, IFooterState> {
-    // public onRenderLink: () => any = this.renderLink.bind(this);
     constructor(props: any) {
         super(props);
     }
 
-    // public renderLink (link: any, index: number): any {
-    //   if (link.outside) {
-    //
-    //   } else {
-    //     return <li key={index}>
-    //       <NavLink exact={true} to={link.link} activeClassName="active">
-    //         {link.image ?
-    //           <ImageComponent image={link.image} fullscreen={false} />
-    //         : link.name}
-    //       </NavLink>
-    //     </li>;
-    //   }
-    // };
+    public renderLink (link: any): any {
+      if (link.outside) {
+        return (
+          <a href={link.link} target="_blank">
+            {this.renderLinkContent(link)}
+          </a>
+        );
+      } else {
+        return (
+          <NavLink exact={true} to={link.link} activeClassName="active">
+            {this.renderLinkContent(link)}
+          </NavLink>
+        );
+      }
+    };
+
+    public renderLinkContent (link: any): any {
+      if (link.image) {
+        return <ImageComponent image={link.image} fullscreen={false} />;
+      } else {
+        return link.name;
+      }
+    };
 
     public render(): React.ReactElement<any> {
         return (
@@ -42,13 +51,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                   <nav>
                     <ul>
                       {FooterContent.links.map((link: any, index: number) =>
-                        <li key={index}>
-                          <NavLink className="link" exact={true} to={link.link} activeClassName="active">
-                            {link.image ?
-                              <ImageComponent image={link.image} fullscreen={false} />
-                            : link.name}
-                          </NavLink>
-                        </li>
+                        <li key={index}>{this.renderLink(link)}</li>
                       )}
                     </ul>
                   </nav>
