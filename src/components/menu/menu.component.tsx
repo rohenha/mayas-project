@@ -9,6 +9,7 @@ import './menu.component.sass';
 
 // Components
 import { ImageComponent, MapComponent } from 'Components';
+import { ThemeContext } from 'Providers';
 
 // Content
 import { MenuContent } from 'Content';
@@ -17,6 +18,7 @@ import { MenuContent } from 'Content';
 import { AnimationsService } from 'Services';
 
 export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
+    public static contextType = ThemeContext;
     public node: React.RefObject<HTMLDivElement>;
     public animationsService: AnimationsService = new AnimationsService();
     public onRenderRoute: () => any = this.renderRoute.bind(this);
@@ -58,10 +60,10 @@ export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
                   {MenuContent.title}
                   <button className="menu__close cross" onClick={this.props.closeMenu}/>
                 </h2>
-                <ul>{this.props.routes.map(this.onRenderRoute)}</ul>
+                <ul>{this.context.routes.map(this.onRenderRoute)}</ul>
               </div>
               <div className="menu__map">
-                <MapComponent routes={this.props.routes} current={this.props.current} />
+                <MapComponent />
               </div>
             </div>
         );

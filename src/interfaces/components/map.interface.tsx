@@ -1,7 +1,4 @@
 // tslint:disable-next-line:no-empty-interface
-export interface IMapProps {
-  current: any,
-  routes: any
-}
+export interface IMapProps {}
 // tslint:disable-next-line:no-empty-interface
 export interface IMapState {}

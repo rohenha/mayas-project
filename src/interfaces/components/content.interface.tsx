@@ -28,6 +28,13 @@ export interface IContentInteractiveState {
 }
 
 // tslint:disable-next-line:no-empty-interface
+export interface IVideoInteractiveProps {
+    content: any,
+    closeFunction: any,
+    history: any
+}
+
+// tslint:disable-next-line:no-empty-interface
 export interface IInteractive360Props {
     img: string,
     points: any[]

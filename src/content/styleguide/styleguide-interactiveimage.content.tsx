@@ -17,11 +17,45 @@ export const StyleguideInteractiveImageContent: any = {
         },
         points: [
           {
+            content: {
+              poster: {
+                alt: '',
+                path: require('../../assets/videos/Breezy/Breezy.jpg'),
+                title: ''
+              },
+              sources: [
+                  { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
+                  { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
+                  { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
+              ]
+            },
+            file: 'video',
+            title:"Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+            type: "video",
+            x: "20%",
+            y: "20%"
+          },
+          {
+            content: {
+              allowFullscreen: true,
+              annotations: false,
+              autoplay: false,
+              controls: true,
+              id: 'O2FQuz8CtHo',
+              nextPage: ''
+            },
+            file: 'youtube',
+            title:"Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+            type: "video",
+            x: "20%",
+            y: "50%"
+          },
+          {
             content: "",
             file: require('../../assets/sounds/carnival-daniel_simon.mp3'),
             title:"Lorem ipsum dolor sit amet, consectetur adipisicing elit",
             type: "audio",
-            x: "20%",
+            x: "40%",
             y: "20%"
           },
           {

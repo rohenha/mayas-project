@@ -1,6 +1,7 @@
 // Imports
 import { IFooterExpProps, IFooterExpState } from 'Interfaces';
 import * as React from 'react';
+import { PagesService } from 'Services';
 
 // Styles
 import './footer-exp.component.sass';
@@ -8,8 +9,11 @@ import './footer-exp.component.sass';
 // Components
 import { ButtonExpComponent, CodexComponent, ImageComponent } from 'Components';
 import { CodexContent } from 'Content';
+import { ThemeContext } from 'Providers';
 
 export class FooterExpComponent extends React.Component<IFooterExpProps, IFooterExpState> {
+    public static contextType = ThemeContext;
+    public pagesService: PagesService = new PagesService();
     public toggle: () => void = this.toggleCodex.bind(this);
     constructor(props: any) {
         super(props);
@@ -21,7 +25,7 @@ export class FooterExpComponent extends React.Component<IFooterExpProps, IFooter
     }
 
     public setText(): any {
-      return this.props.nextPage === '/' ?
+      return this.pagesService.getNextPage(this.context.page) === '/' ?
         { text1: "Terminer", text2: "l'expérience" } :
         { text1: "Poursuivre", text2: "l'expérience" };
     };
@@ -34,9 +38,9 @@ export class FooterExpComponent extends React.Component<IFooterExpProps, IFooter
                     <ImageComponent image={CodexContent.image} fullscreen={false} />
                 </button>
                 <div className="footer-exp footer-exp--right">
-                    <ButtonExpComponent redirection={this.props.nextPage} {...this.props} back={false} text={this.setText()} />
+                    <ButtonExpComponent redirection={this.pagesService.getNextPage(this.context.page)} {...this.props} back={false} text={this.setText()} />
                 </div>
-                <CodexComponent datas={this.props.codexDatas} toggleCodex={this.state.openCodex} closeCodex={this.toggle} history={this.props.history} />
+                <CodexComponent toggleCodex={this.state.openCodex} closeCodex={this.toggle} history={this.props.history} />
             </React.Fragment>
         );
     }

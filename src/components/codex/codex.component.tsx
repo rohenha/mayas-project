@@ -10,11 +10,13 @@ import { CodexDefinitionComponent, CodexListComponent } from 'Components';
 
 // Content
 import { CodexContent } from 'Content';
+import { ThemeContext } from 'Providers';
 
 // Services
 import { AnimationsService } from 'Services';
 
 export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
+    public static contextType = ThemeContext;
     public node: React.RefObject<HTMLDivElement>;
     public animationsService: AnimationsService = new AnimationsService();
     constructor(props: any) {
@@ -44,8 +46,8 @@ export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
         return (
             <div className="codex" ref={this.node}>
               <div className="codex__background js-bg" onClick={this.props.closeCodex} />
-              {this.props.datas[this.state.dataOpen] !== undefined &&
-                  <CodexDefinitionComponent data={this.props.datas[this.state.dataOpen]} history={this.props.history} />
+              {this.context.page.codex[this.state.dataOpen] !== undefined &&
+                  <CodexDefinitionComponent data={this.context.page.codex[this.state.dataOpen]} history={this.props.history} />
               }
               <div className="codex__home js-home">
                 <button className="codex__home--cross cross" onClick={this.props.closeCodex} />
@@ -53,7 +55,7 @@ export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
                 <p>{CodexContent.description}</p>
                 <nav>
                   <ul className="codex__home--list">
-                    {this.props.datas.map((data: { content: any[], title: string, type: string }, index: number) =>
+                    {this.context.page.codex.map((data: { content: any[], title: string, type: string }, index: number) =>
                       <CodexListComponent key={index} index={index} data={data} dataOpen={this.state.dataOpen} changeDef={this.changeData.bind(this, index)}/>
                     )}
                   </ul>

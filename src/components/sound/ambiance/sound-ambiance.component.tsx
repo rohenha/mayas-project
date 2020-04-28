@@ -13,6 +13,7 @@ export class SoundAmbianceComponent extends React.Component<ISoundAmbiantProps, 
     public playpauseSound: () => void = this.toggleSound.bind(this);
     public soundMax: number = 1;
     public fadeTiming: number = 500;
+    // public contextType: any = ThemeContext;
     constructor(props: any) {
         super(props);
         this.state = {
@@ -20,6 +21,7 @@ export class SoundAmbianceComponent extends React.Component<ISoundAmbiantProps, 
           muted: false,
           paused: false
         };
+        // console.log(this.contextType);
     }
 
     public componentDidMount(): void {
@@ -72,7 +74,7 @@ export class SoundAmbianceComponent extends React.Component<ISoundAmbiantProps, 
         return;
       }
       this.sound.fade(isPlaying ? this.soundMax : 0, isPlaying ? 0 : this.soundMax, this.fadeTiming);
-      this.setState({ canChange: false, muted: isPlaying, paused: isPlaying });
+      this.setState({ canChange: false, muted: !this.state.muted, paused: !this.state.muted });
       setTimeout(() => {
         this.setState({ canChange: true });
       }, this.fadeTiming);

@@ -11,6 +11,8 @@ export * from './menu/menu.component';
 
 export * from './404/404.component';
 
+export * from './container/container.component';
+
 export * from './mobile/mobile.component';
 
 export * from './loading/loading.component';
@@ -34,6 +36,7 @@ export * from './elements/content/image-slider/image-slider.component';
 export * from './elements/content/entry-chapter/entry-chapter.component';
 export * from './elements/content/interactive-photo/interactive-photo.component';
 export * from './elements/content/content-interactive/content-interactive.component';
+export * from './elements/content/video-interactive/video-interactive.component';
 export * from './elements/content/interactive-360/interactive-360.component';
 
 export * from './codex/codex.component';

@@ -2,7 +2,6 @@
 import { IHeaderExpProps, IHeaderExpState } from 'Interfaces';
 import * as React from 'react';
 
-
 // Styles
 import './header-exp.component.sass';
 
@@ -27,7 +26,7 @@ export class HeaderExpComponent extends React.Component<IHeaderExpProps, IHeader
       const chapter = "Chapitre " + this.props.page.chapter;
       return (
           <React.Fragment>
-              <MenuComponent toggleMenu={this.state.openMenu} current={this.props.page} closeMenu={this.toggle} routes={this.props.routes} />
+              <MenuComponent toggleMenu={this.state.openMenu} closeMenu={this.toggle} />
               <header className="header-exp header-exp--right">
               <button className="header-exp__button text__link">
                 <span className="header-exp__text">
@@ -36,7 +35,7 @@ export class HeaderExpComponent extends React.Component<IHeaderExpProps, IHeader
                 </span>
                 <div className="header-exp__map" onClick={this.toggle}>
                   <div className="header-exp__map--container" style={ { transform: 'translate(' + this.props.page.map.x + ', ' + this.props.page.map.y + ')' } }>
-                    <MapComponent routes={this.props.routes} current={this.props.page} />
+                    <MapComponent />
                   </div>
                 </div>
               </button>

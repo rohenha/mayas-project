@@ -2,7 +2,6 @@
 export interface ICodexProps {
     toggleCodex: boolean,
     closeCodex: () => any,
-    datas: ICodexData[],
     history: any
 }
 // tslint:disable-next-line:no-empty-interface

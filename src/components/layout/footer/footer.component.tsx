@@ -8,11 +8,13 @@ import './footer.component.sass';
 
 // Components
 import { ImageComponent, SoundAmbianceComponent } from 'Components';
+import { ThemeContext } from 'Providers';
 
 // Content
 import { FooterContent } from 'Content';
 
 export class Footer extends React.Component<IFooterProps, IFooterState> {
+    public static contextType = ThemeContext;
     constructor(props: any) {
         super(props);
     }
@@ -53,7 +55,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                       {FooterContent.links.map((link: any, index: number) =>
                         <li key={index}>{this.renderLink(link)}</li>
                       )}
-                      <li><SoundAmbianceComponent sound={this.props.page.ambiant} /></li>
+                      <li><SoundAmbianceComponent sound={this.context.page.ambiant} /></li>
                     </ul>
                   </nav>
                 </footer>

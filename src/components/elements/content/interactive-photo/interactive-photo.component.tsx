@@ -6,7 +6,7 @@ import * as React from 'react';
 import './interactive-photo.component.sass';
 
 // Components
-import { ContentInteractiveComponent, ImageComponent, SoundDocComponent } from 'Components';
+import { ContentInteractiveComponent, ImageComponent, SoundDocComponent, VideoInteractiveComponent } from 'Components';
 // import { ContentInteractiveComponent, SoundDocComponent } from 'Components';
 
 export class InteractivePhotoComponent extends React.Component<IPageComponentProps, IInteractivePhotoState> {
@@ -44,6 +44,10 @@ export class InteractivePhotoComponent extends React.Component<IPageComponentPro
 
         case 'text':
           return <ContentInteractiveComponent {...this.props} closeFunction={this.openElement.bind(this, this.state.active)} content={this.state.active} />;
+          break;
+
+        case 'video':
+          return <VideoInteractiveComponent {...this.props} closeFunction={this.openElement.bind(this, this.state.active)} content={this.state.active} />;
           break;
 
         default:

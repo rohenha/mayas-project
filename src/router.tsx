@@ -6,16 +6,18 @@ import { BrowserRouter } from 'react-router-dom';
 // Styles
 
 // Components
+import { ContainerComponent } from 'Components';
 import Layout from './layout';
+
 
 export default class Router extends React.Component {
 
   public render(): React.ReactElement<any> {
     return (
       <BrowserRouter>
-        <React.Fragment>
+        <ContainerComponent>
           <Route path="/" component={Layout}  />
-        </React.Fragment>
+        </ContainerComponent>
       </BrowserRouter>
     );
   }
