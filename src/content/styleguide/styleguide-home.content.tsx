@@ -1,4 +1,5 @@
 export const StyleguideHomeContent: any = {
+  ambiant: '',
   animation: 'Accueil',
   chapter: 1,
   class: 'page_styleguide',

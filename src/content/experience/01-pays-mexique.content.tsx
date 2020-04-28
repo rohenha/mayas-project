@@ -1,4 +1,5 @@
 export const PPaysMexiqueContent: any = {
+  ambiant: '',
   animation: 'Common',
   chapter: 2,
   class: 'page_pays',

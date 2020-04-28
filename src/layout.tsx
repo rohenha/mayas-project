@@ -134,7 +134,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
                   </Transition>
               </TransitionGroup>
               <MobileComponent />
-              <Footer/>
+              <Footer page={this.state.page}/>
             </React.Fragment>
         );
     }

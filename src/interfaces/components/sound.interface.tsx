@@ -11,3 +11,15 @@ export interface ISoundState {
     current: string,
     total: string
 }
+
+
+// tslint:disable-next-line:no-empty-interface
+export interface ISoundAmbiantProps {
+  sound: any
+}
+// tslint:disable-next-line:no-empty-interface
+export interface ISoundAmbiantState {
+  canChange: boolean,
+  muted: boolean,
+  paused: boolean
+}

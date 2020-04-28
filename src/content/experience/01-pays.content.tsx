@@ -1,4 +1,5 @@
 export const PPaysContent: any = {
+  ambiant: require('../../assets/sounds/bensound-hey.mp3'),
   animation: 'Common',
   chapter: 2,
   class: 'page_pays',

@@ -1,4 +1,5 @@
 export const P404Content: any = {
+  ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
   animation: 'Common',
   chapter: 0,
   class: 'page_404',

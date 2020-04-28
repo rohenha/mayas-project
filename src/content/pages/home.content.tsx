@@ -1,4 +1,5 @@
 export const HomeContent: any = {
+  ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
   animation: 'Accueil',
   chapter: 1,
   class: 'page_home',

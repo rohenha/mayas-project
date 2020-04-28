@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 import './footer.component.sass';
 
 // Components
-import { ImageComponent } from 'Components';
+import { ImageComponent, SoundAmbianceComponent } from 'Components';
 
 // Content
 import { FooterContent } from 'Content';
@@ -53,6 +53,7 @@ export class Footer extends React.Component<IFooterProps, IFooterState> {
                       {FooterContent.links.map((link: any, index: number) =>
                         <li key={index}>{this.renderLink(link)}</li>
                       )}
+                      <li><SoundAmbianceComponent sound={this.props.page.ambiant} /></li>
                     </ul>
                   </nav>
                 </footer>

@@ -1,4 +1,5 @@
 export const StyleguideEntryChapterContent: any = {
+  ambiant: '',
   animation: 'Common',
   chapter: 1,
   class: 'page_styleguide',
