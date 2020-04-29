@@ -1,4 +1,5 @@
 // Imports
+import { Howl } from 'howler';
 import { ISoundProps, ISoundState } from 'Interfaces';
 import * as React from 'react';
 import { VideoService } from 'Services';
@@ -11,8 +12,10 @@ import { ThemeContext } from 'Providers';
 
 export class SoundDocComponent extends React.Component<ISoundProps, ISoundState> {
     public static contextType = ThemeContext;
-    public sound: HTMLAudioElement = new Audio(this.props.sound);
+    public sound: Howl;
     public playpauseSound: () => void = this.toggleSound.bind(this);
+    public onCanPlay: () => void = this.canPlay.bind(this);
+    public animationFrame: any;
     public videoService: VideoService = new VideoService();
     public nodeTitle: React.RefObject<HTMLDivElement>;
     constructor(props: any) {
@@ -20,55 +23,73 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
       this.state = {
         current: '0:0',
         percent: 0,
+        play: false,
         total: '0:0'
       };
       this.nodeTitle = React.createRef();
     }
 
-    public componentWillUnmount(): void {
-      this.sound.ontimeupdate = null;
-      this.sound.pause();
+    public componentDidMount(): void {
+      this.setSound();
     };
 
-    public componentDidMount(): void {
-      this.sound.onloadedmetadata = this.setTotalTime.bind(this);
-      this.sound.ontimeupdate = this.updateSound.bind(this);
-      if (this.props.autoplay) {
-          setTimeout(this.toggleSound.bind(this), this.props.delay);
-      }
-    }
+    public componentWillUnmount(): void {
+      this.onUpdateComponent(false);
+    };
 
     public componentDidUpdate(prevProps: any): void {
-        if (this.props.sound !== prevProps.sound && this.props.sound) {
-            this.sound.pause();
-            this.sound = new Audio(this.props.sound);
-            this.componentDidMount();
-        }
-    }
+      if (this.props.sound !== prevProps.sound) {
+        this.onUpdateComponent(true);
+      }
+    };
+
+    public onUpdateComponent(setNewSound: boolean): void {
+      if (this.sound && this.sound.playing()) {
+        this.toggleSound();
+      }
+      window.cancelAnimationFrame(this.animationFrame);
+      this.sound.unload();
+      if (this.props.sound && setNewSound) {
+        this.setSound();
+      }
+    };
+
+    public setSound(): void {
+      if (this.props.sound !== '') {
+        this.sound = new Howl({
+          autoplay: false,
+          loop: false,
+          onload: this.onCanPlay,
+          src: [this.props.sound],
+          volume: 1
+        });
+        this.toggleSound();
+      }
+    };
 
     public toggleSound(): void {
-      this.context.toggleSound(!this.sound.paused);
-      if (this.sound.duration > 0 && !this.sound.paused) {
-        this.sound.pause();
-      } else {
-        this.sound.play();
-      }
-    }
+      const functionName = this.sound.playing() ? 'pause' : 'play';
+      this.context.toggleSound(this.sound.playing());
+      this.setState({ play: !this.sound.playing() })
+      this.sound[functionName]();
+    };
 
-    public setTotalTime(): void {
+    public canPlay(): void {
       this.setState({
         current: '0:0',
-        total: this.videoService.setTime(this.sound.duration)
+        total: this.videoService.setTime(this.sound.duration())
       });
+      this.updateSound();
     };
 
     public updateSound(): void {
-        const current = this.videoService.setTime(this.sound.currentTime);
-        this.setState({ percent: Math.round(this.sound.currentTime / this.sound.duration * 100), current });
-    }
-
-    public getSound(time: number) : string {
-        return Math.floor(time / 60) + ':' + Math.floor(time);
+      const currentTime = Number(this.sound.seek());
+      const current = this.videoService.setTime(currentTime);
+      this.setState({
+        current,
+        percent: Math.round(currentTime / this.sound.duration() * 100)
+      });
+      this.animationFrame = window.requestAnimationFrame(this.updateSound.bind(this));
     }
 
     public setTitleAnimated(): string {
@@ -85,7 +106,7 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
     public render(): React.ReactElement<any> {
         return (
             <div className="section_sound-document">
-                <button className={this.sound.paused === true ? "section_sound-document__player play" : "section_sound-document__player pause"} onClick={this.playpauseSound}/>
+                <button className={this.state.play ? "section_sound-document__player pause" : "section_sound-document__player play"} onClick={this.playpauseSound} />
                 <svg viewBox="0 0 36 36" >
                     <path
                         className="section_sound-document__player--back"
