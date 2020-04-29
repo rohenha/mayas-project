@@ -98,16 +98,6 @@ export const StyleguideInteractiveImageContent: any = {
                 alt: '',
                 path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
                 title: ''
-              },
-              {
-                alt: '',
-                path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
-                title: ''
-              },
-              {
-                alt: '',
-                path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
-                title: ''
               }
             ],
             title:"Intitulé",

@@ -1,5 +1,5 @@
 // Imports
-import { IPageComponentProps, ISimpleState } from 'Interfaces';
+import { IHomeText, IPageComponentProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -15,24 +15,25 @@ import * as Content from 'Content';
 import { ContentService } from 'Services';
 
 export class HomeComponent extends React.Component<IPageComponentProps, ISimpleState> {
-  public sliderDone: () => {} = this.onSliderDone.bind(this);
+  public sliderDone: () => void = this.onSliderDone.bind(this);
   public contentService: ContentService = new ContentService();
-  constructor(props: any) {
-    super(props);
-  }
 
-  public onSliderDone() : any {
+  private constructor(props: any) {
+    super(props);
+  };
+
+  public onSliderDone() : void {
     const redirection = Content[this.props.content.start];
     this.props.history.push(redirection.url);
-  }
+  };
 
-  public renderAuthors(): any {
+  public renderAuthors(): React.ReactElement<any> {
     return this.props.content.authors.map((author: {poste: string, name: string}, index: number) =>
       <p className="text__link" key={index}>{author.poste} : <span>{author.name}</span></p>
     );
   };
 
-  public renderTitle(contentName: string, elements: any): any {
+  public renderTitle(contentName: string, elements: IHomeText[]): React.ReactElement<any> {
     return (
       <div className={"page-home__" + contentName + " js-" + contentName}>
         {elements.map((element: any, index: number) => {
@@ -62,5 +63,5 @@ export class HomeComponent extends React.Component<IPageComponentProps, ISimpleS
         </div>
       </div>
     );
-  }
+  };
 }

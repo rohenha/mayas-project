@@ -5,17 +5,16 @@ import * as React from 'react';
 // Styles
 import './text.component.sass';
 
-// Components
-
 // Services
 import { ContentService } from 'Services';
 
 
 export class TextComponent extends React.Component<IPageComponentProps, ISimpleState> {
   public contentService: ContentService = new ContentService();
-  constructor(props: any) {
+
+  private constructor(props: IPageComponentProps) {
     super(props);
-  }
+  };
 
   public render(): React.ReactElement<any> {
     return (
@@ -27,5 +26,5 @@ export class TextComponent extends React.Component<IPageComponentProps, ISimpleS
         </div>
       </section>
     );
-  }
+  };
 }

@@ -5,16 +5,15 @@ import * as React from 'react';
 // Styles
 import './entry-chapter.component.sass';
 
-// Components
-
 // Services
 import { ContentService } from 'Services';
 
 export class EntryChapterComponent extends React.Component<IPageComponentProps, ISimpleState> {
   public contentService: ContentService = new ContentService();
-  constructor(props: any) {
+
+  private constructor(props: IPageComponentProps) {
     super(props);
-  }
+  };
 
   public render(): React.ReactElement<any> {
     return (
@@ -30,5 +29,5 @@ export class EntryChapterComponent extends React.Component<IPageComponentProps, 
         </div>
       </section>
     );
-  }
+  };
 }

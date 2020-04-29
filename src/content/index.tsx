@@ -16,6 +16,8 @@ export * from './components/footer.content';
 export * from './components/menu.content';
 export * from './components/mobile.content';
 export * from './components/preloader.content';
+export * from './components/quiz.content';
+export * from './components/controls.content';
 
 // Styleguide
 export * from './styleguide/styleguide-entrychapter.content';

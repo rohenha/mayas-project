@@ -22,7 +22,7 @@ export class VideoComponent extends React.Component<IPageComponentProps, IVideoS
     public video: React.RefObject<HTMLVideoElement>;
     public controlsTimeout: any;
 
-    constructor(props: any) {
+    private constructor(props: any) {
         super(props);
         this.video = React.createRef();
         this.state= {

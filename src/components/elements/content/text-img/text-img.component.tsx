@@ -13,9 +13,10 @@ import { ContentService } from 'Services';
 
 export class TextImgComponent extends React.Component<IPageComponentProps, ISimpleState> {
   public contentService: ContentService = new ContentService();
-  constructor(props: any) {
-      super(props);
-  }
+
+  private constructor(props: IPageComponentProps) {
+    super(props);
+  };
 
   public render(): React.ReactElement<any> {
     return (
@@ -30,5 +31,5 @@ export class TextImgComponent extends React.Component<IPageComponentProps, ISimp
         </div>
       </section>
     );
-  }
+  };
 }

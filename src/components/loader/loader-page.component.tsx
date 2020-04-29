@@ -8,17 +8,20 @@ import './loader-page.component.sass';
 // Components
 import { ImageComponent, LoadingComponent } from 'Components';
 
-export class LoaderPageComponent extends React.Component<ISimpleProps, ISimpleState> {
-    constructor(props: any) {
-        super(props);
-    }
+// Content
+import { PreloaderContent } from 'Content';
 
-    public render(): React.ReactElement<any> {
-        return (
-          <div data-page="Common">
-            <ImageComponent image={require('../../assets/images/john-salzarulo-37827-unsplash.jpg')} fullscreen={true} />
-            <LoadingComponent />
-          </div>
-        );
-    }
+export class LoaderPageComponent extends React.Component<ISimpleProps, ISimpleState> {
+  private constructor(props: ISimpleProps) {
+    super(props);
+  }
+
+  public render(): React.ReactElement<any> {
+    return (
+      <div data-page="Common">
+        <ImageComponent image={PreloaderContent.background} fullscreen={true} />
+        <LoadingComponent />
+      </div>
+    );
+  };
 }

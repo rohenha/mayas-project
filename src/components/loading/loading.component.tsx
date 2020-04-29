@@ -9,25 +9,24 @@ import './loading.component.sass';
 import { LoaderComponent } from 'Components';
 
 export class LoadingComponent extends React.Component<ISimpleProps, ISimpleState> {
-    public node: React.RefObject<HTMLDivElement>;
-    constructor(props: any) {
-        super(props);
-    }
+  public node: React.RefObject<HTMLDivElement>;
 
+  private constructor(props: ISimpleProps) {
+      super(props);
+  }
 
-    public render(): React.ReactElement<any> {
-        return (
-            <div className="loading" data-page="Common">
-                <div className="container">
-                    <div className="loader">
-                        <svg className="pulseSvg" height="100" width="100" viewBox="0 0 100 100">
-                            <circle cx="50" cy="50" r="40" />
-                        </svg>
-                        {/* <p>chargement</p> */}
-                        <LoaderComponent />
-                    </div>
-                </div>
-            </div>
-        );
-    }
+  public render(): React.ReactElement<any> {
+    return (
+      <div className="loading" data-page="Common">
+        <div className="container">
+          <div className="loader">
+            <svg className="pulseSvg" height="100" width="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" />
+            </svg>
+            <LoaderComponent />
+          </div>
+        </div>
+      </div>
+    );
+  };
 }

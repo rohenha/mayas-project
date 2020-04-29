@@ -15,14 +15,15 @@ export class VideoYoutubeComponent extends React.Component<IPageComponentProps, 
   public onVideoEnded: () => any = this.onEnd.bind(this);
   public onVideoPlay: () => any = this.changeSound.bind(this, false);
   public onVideoPause: () => any = this.changeSound.bind(this, true);
-  constructor(props: any) {
-      super(props);
+
+  private constructor(props: any) {
+    super(props);
   }
 
-  public onEnd(): any {
+  public onEnd(): void {
     this.changeSound(true);
     if (this.props.content.nextPage !== '') {
-      const redirection = Content[this.props.content.nextPage];
+      const redirection: any = Content[this.props.content.nextPage];
       setTimeout(() => {
         this.props.history.push(redirection.url);
       }, 1000);
@@ -53,5 +54,5 @@ export class VideoYoutubeComponent extends React.Component<IPageComponentProps, 
           />
       </div>
     );
-  }
+  };
 }

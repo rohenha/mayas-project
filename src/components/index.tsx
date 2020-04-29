@@ -39,7 +39,6 @@ export * from './elements/content/entry-chapter/entry-chapter.component';
 export * from './elements/content/interactive-photo/interactive-photo.component';
 export * from './elements/content/content-interactive/content-interactive.component';
 export * from './elements/content/video-interactive/video-interactive.component';
-export * from './elements/content/interactive-360/interactive-360.component';
 
 export * from './codex/codex.component';
 export * from './codex/codex-list/codex-list.component';

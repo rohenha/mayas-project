@@ -5,7 +5,7 @@
 ----------------------------------------*/
 export * from './layout/header.interface';
 export * from './layout/footerExp.interface';
-
+export * from './layout/footer.interface';
 
 /* ---------------------------------------
 ----------------- COMMON -----------------
@@ -16,6 +16,7 @@ export * from './commons/content.interface';
 export * from './commons/cursor.interface';
 export * from './commons/layout.interface';
 export * from './commons/menu.interface';
+export * from './commons/theme.interface';
 
 /* ---------------------------------------
 --------------- components ---------------
@@ -34,4 +35,4 @@ export * from './components/image.interface';
 export * from './components/content.interface';
 export * from './components/page.interface';
 export * from './components/component.interface';
-export * from './components/container.interface';
+export * from './components/home.interface';

@@ -15,16 +15,16 @@ export class QuoteImgComponent extends React.Component<IPageComponentProps, ISim
   public node: React.RefObject<HTMLDivElement>;
   public contentService: ContentService = new ContentService();
 
-  constructor(props: any) {
+  private constructor(props: IPageComponentProps) {
       super(props);
-  }
+  };
 
   public classQuoteImg(): any {
-    let classString = 'section_quote-img ';
+    let classString: string = 'section_quote-img ';
     classString = this.props.content.top ? classString : classString + ' section_quote-img__bottom ';
     classString = this.props.content.imgs.length > 1 ? classString : classString + ' section_quote-img__single';
     return classString;
-  }
+  };
 
 
   public render(): React.ReactElement<any> {
@@ -44,5 +44,5 @@ export class QuoteImgComponent extends React.Component<IPageComponentProps, ISim
         </div>
       </section>
     );
-  }
+  };
 }

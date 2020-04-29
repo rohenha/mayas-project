@@ -1,3 +1,8 @@
+export interface IButtonText {
+  text1: string,
+  text2: string
+}
+
 export interface IButtonExpProps {
     history: any,
     redirection: string,

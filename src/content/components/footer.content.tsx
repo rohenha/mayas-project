@@ -2,13 +2,21 @@ export const FooterContent: any = {
   isPage: false,
   links: [
     {
-      image: '',
+      image: {
+        alt: '',
+        path: '',
+        title: ''
+      },
       link: '/realisation',
       name: 'Realisation',
       outside: false
     },
     {
-      image: '',
+      image: {
+        alt: '',
+        path: '',
+        title: ''
+      },
       link: '/partenaires',
       name: 'Partenaires',
       outside: false
