@@ -1,5 +1,5 @@
 // Imports
-import { IHeaderProps, IHeaderState } from 'Interfaces';
+import { ISimpleProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import { PagesService } from 'Services';
@@ -10,7 +10,7 @@ import './header.component.sass';
 // Components
 import Providers from 'Providers';
 
-export class Header extends React.Component<IHeaderProps, IHeaderState> {
+export class Header extends React.Component<ISimpleProps, ISimpleState> {
     public static contextType = Providers['ThemeContext'];
     public pagesService: PagesService = new PagesService();
     constructor(props: any) {

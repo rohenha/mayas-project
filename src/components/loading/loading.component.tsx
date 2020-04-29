@@ -1,5 +1,5 @@
 // Imports
-import { ILoadingProps, ILoadingState } from 'Interfaces';
+import { ISimpleProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -8,7 +8,7 @@ import './loading.component.sass';
 // Components
 import { LoaderComponent } from 'Components';
 
-export class LoadingComponent extends React.Component<ILoadingProps, ILoadingState> {
+export class LoadingComponent extends React.Component<ISimpleProps, ISimpleState> {
     public node: React.RefObject<HTMLDivElement>;
     constructor(props: any) {
         super(props);

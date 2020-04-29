@@ -1,5 +1,5 @@
 // Imports
-import { IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IPageComponentProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -14,7 +14,7 @@ import * as Content from 'Content';
 // Services
 import { ContentService } from 'Services';
 
-export class HomeComponent extends React.Component<IPageComponentProps, IPageComponentState> {
+export class HomeComponent extends React.Component<IPageComponentProps, ISimpleState> {
   public sliderDone: () => {} = this.onSliderDone.bind(this);
   public contentService: ContentService = new ContentService();
   constructor(props: any) {

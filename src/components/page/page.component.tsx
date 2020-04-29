@@ -1,5 +1,5 @@
 // Imports
-import { IPageProps, IPageState } from 'Interfaces';
+import { IPageProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -10,7 +10,7 @@ import { DetailsComponent } from 'Components';
 import * as Components from 'Components';
 import Providers from 'Providers';
 
-export class PageComponent extends React.Component<IPageProps, IPageState> {
+export class PageComponent extends React.Component<IPageProps, ISimpleState> {
     public static contextType = Providers['ThemeContext'];
     constructor(props: any) {
       super(props);

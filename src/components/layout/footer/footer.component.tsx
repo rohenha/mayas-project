@@ -1,5 +1,5 @@
 // Imports
-import { IFooterProps, IFooterState } from 'Interfaces';
+import { ISimpleProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ import Providers from 'Providers';
 // Content
 import { FooterContent } from 'Content';
 
-export class Footer extends React.Component<IFooterProps, IFooterState> {
+export class Footer extends React.Component<ISimpleProps, ISimpleState> {
     public static contextType = Providers['ThemeContext'];
     constructor(props: any) {
         super(props);

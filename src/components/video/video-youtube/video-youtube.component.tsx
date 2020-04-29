@@ -1,6 +1,6 @@
 // Imports
 import YouTube from '@u-wave/react-youtube';
-import { IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IPageComponentProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -10,7 +10,7 @@ import './video-youtube.component.sass';
 import * as Content from 'Content';
 import Providers from 'Providers';
 
-export class VideoYoutubeComponent extends React.Component<IPageComponentProps, IPageComponentState> {
+export class VideoYoutubeComponent extends React.Component<IPageComponentProps, ISimpleState> {
   public static contextType = Providers['ThemeContext'];
   public onVideoEnded: () => any = this.onEnd.bind(this);
   public onVideoPlay: () => any = this.changeSound.bind(this, false);

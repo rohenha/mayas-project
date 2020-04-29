@@ -1,5 +1,5 @@
 // Imports
-import { IContentInteractiveState, IVideoInteractiveProps } from 'Interfaces';
+import { ISimpleState, IVideoInteractiveProps } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -11,7 +11,7 @@ import { VideoComponent, VideoYoutubeComponent } from 'Components';
 // Services
 // import { ContentService } from 'Services';
 
-export class VideoInteractiveComponent extends React.Component<IVideoInteractiveProps, IContentInteractiveState> {
+export class VideoInteractiveComponent extends React.Component<IVideoInteractiveProps, ISimpleState> {
     public closeFunction: () => {} = this.close.bind(this);
     public node: React.RefObject<HTMLDivElement>;
     constructor(props: any) {

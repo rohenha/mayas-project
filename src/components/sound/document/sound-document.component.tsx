@@ -1,6 +1,6 @@
 // Imports
-import { Howl } from 'howler';
-import { ISoundProps, ISoundState } from 'Interfaces';
+// import { Howl } from 'howler';
+import { IContentInteractiveProps, ISoundState } from 'Interfaces';
 import * as React from 'react';
 import { VideoService } from 'Services';
 
@@ -10,7 +10,7 @@ import './sound-document.component.sass';
 // Components
 import Providers from 'Providers';
 
-export class SoundDocComponent extends React.Component<ISoundProps, ISoundState> {
+export class SoundDocComponent extends React.Component<IContentInteractiveProps, ISoundState> {
     public static contextType = Providers['ThemeContext'];
     public sound: Howl;
     public playpauseSound: () => void = this.toggleSound.bind(this);
@@ -38,7 +38,7 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
     };
 
     public componentDidUpdate(prevProps: any): void {
-      if (this.props.sound !== prevProps.sound) {
+      if (this.props.content.file !== prevProps.content.file) {
         this.onUpdateComponent(true);
       }
     };
@@ -49,18 +49,18 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
       }
       window.cancelAnimationFrame(this.animationFrame);
       this.sound.unload();
-      if (this.props.sound && setNewSound) {
+      if (this.props.content.file && setNewSound) {
         this.setSound();
       }
     };
 
     public setSound(): void {
-      if (this.props.sound !== '') {
+      if (this.props.content.file !== '') {
         this.sound = new Howl({
           autoplay: false,
           loop: false,
           onload: this.onCanPlay,
-          src: [this.props.sound],
+          src: [this.props.content.file],
           volume: 1
         });
         this.toggleSound();
@@ -118,8 +118,8 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
                         style={{ strokeDasharray: this.state.percent + ", 100" }}
                     />
                 </svg>
-                <div className={this.props.sound ? "section_sound-document__details active" : "section_sound-document__details"}>
-                  <p ref={this.nodeTitle} className={this.setTitleAnimated()}><span>{this.props.title}</span></p>
+                <div className={this.props.content.file ? "section_sound-document__details active" : "section_sound-document__details"}>
+                  <p ref={this.nodeTitle} className={this.setTitleAnimated()}><span>{this.props.content.title}</span></p>
                   <p className="section_sound-document__time"><span>{this.state.current}</span> / <span>{this.state.total}</span></p>
                 </div>
             </div>

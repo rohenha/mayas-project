@@ -5,7 +5,6 @@ export interface IVideoState {
     total: any
 }
 
-// tslint:disable-next-line:no-empty-interface
 export interface IControlsProps {
     history: any,
     videoState: number,
@@ -14,7 +13,7 @@ export interface IControlsProps {
     video: React.RefObject<HTMLVideoElement>,
     fullscreen: boolean
 }
-// tslint:disable-next-line:no-empty-interface
+
 export interface IControlsState {
     videoDone: boolean
 }

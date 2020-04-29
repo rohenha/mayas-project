@@ -1,5 +1,5 @@
 // Imports
-import { IITitleProps, IITitleState } from 'Interfaces';
+import { IITitleProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -7,7 +7,7 @@ import './title.component.sass';
 
 // Components
 
-export class ImageTitleComponent extends React.Component<IITitleProps, IITitleState> {
+export class ImageTitleComponent extends React.Component<IITitleProps, ISimpleState> {
     constructor(props: any) {
         super(props);
     }

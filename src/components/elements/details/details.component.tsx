@@ -1,5 +1,5 @@
 // Imports
-import { IDetailsProps, IDetailsState } from 'Interfaces';
+import { ISimpleProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -7,12 +7,11 @@ import './details.component.sass';
 
 // Components
 
-export class DetailsComponent extends React.Component<IDetailsProps, IDetailsState> {
+export class DetailsComponent extends React.Component<ISimpleProps, ISimpleState> {
     public node: React.RefObject<HTMLDivElement>;
     constructor(props: any) {
         super(props);
     }
-
 
     public render(): React.ReactElement<any> {
         return (

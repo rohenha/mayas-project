@@ -1,5 +1,5 @@
 // Imports
-import { IContentInteractiveProps, IContentInteractiveState } from 'Interfaces';
+import { IContentInteractiveProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -11,7 +11,7 @@ import { ImageSliderComponent } from 'Components';
 // Services
 import { ContentService } from 'Services';
 
-export class ContentInteractiveComponent extends React.Component<IContentInteractiveProps, IContentInteractiveState> {
+export class ContentInteractiveComponent extends React.Component<IContentInteractiveProps, ISimpleState> {
     public closeFunction: () => {} = this.close.bind(this);
     public contentService: ContentService = new ContentService();
     public node: React.RefObject<HTMLDivElement>;

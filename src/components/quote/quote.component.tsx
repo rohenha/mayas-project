@@ -1,5 +1,5 @@
 // Imports
-import { IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IPageComponentProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -8,7 +8,7 @@ import './quote.component.sass';
 // Components
 import { ImageComponent } from 'Components';
 
-export class QuoteComponent extends React.Component<IPageComponentProps, IPageComponentState> {
+export class QuoteComponent extends React.Component<IPageComponentProps, ISimpleState> {
     public node: React.RefObject<HTMLDivElement>;
     constructor(props: any) {
         super(props);

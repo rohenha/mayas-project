@@ -51,7 +51,7 @@ export const StyleguideInteractiveImageContent: any = {
             y: "50%"
           },
           {
-            content: "",
+            content: {},
             file: require('../../assets/sounds/carnival-daniel_simon.mp3'),
             title:"Lorem ipsum dolor sit amet, consectetur adipisicing elit",
             type: "audio",
@@ -59,7 +59,7 @@ export const StyleguideInteractiveImageContent: any = {
             y: "20%"
           },
           {
-            content: "",
+            content: {},
             file: require('../../assets/sounds/bensound-hey.mp3'),
             title:"Lorem ipsum",
             type: "audio",

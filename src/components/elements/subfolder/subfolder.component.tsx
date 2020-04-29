@@ -1,5 +1,5 @@
 // Imports
-import { IMultiplePath, IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IMultiplePath, IPageComponentProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ import './subfolder.component.sass';
 // Components
 import { ImageComponent } from 'Components';
 
-export class SubFolderComponent extends React.Component<IPageComponentProps, IPageComponentState> {
+export class SubFolderComponent extends React.Component<IPageComponentProps, ISimpleState> {
 
     constructor(props: any) {
         super(props);

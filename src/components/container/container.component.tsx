@@ -1,6 +1,6 @@
 /* tslint:disable:no-empty */
 // Imports
-import { IContainerProps, IContainerState } from 'Interfaces';
+import { IContainerState, ISimpleProps } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -8,7 +8,7 @@ import * as React from 'react';
 import * as Content from 'Content';
 import Providers from 'Providers';
 
-export class ContainerComponent extends React.Component<IContainerProps, IContainerState> {
+export class ContainerComponent extends React.Component<ISimpleProps, IContainerState> {
     constructor(props: any) {
         super(props);
         const routes: any[] = [];

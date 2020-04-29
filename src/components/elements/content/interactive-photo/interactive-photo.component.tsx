@@ -7,7 +7,6 @@ import './interactive-photo.component.sass';
 
 // Components
 import { ContentInteractiveComponent, ImageComponent, SoundDocComponent, VideoInteractiveComponent } from 'Components';
-// import { ContentInteractiveComponent, SoundDocComponent } from 'Components';
 
 export class InteractivePhotoComponent extends React.Component<IPageComponentProps, IInteractivePhotoState> {
     constructor(props: any) {
@@ -37,21 +36,25 @@ export class InteractivePhotoComponent extends React.Component<IPageComponentPro
     };
 
     public setContent(): any {
+      let Component = null;
       switch (this.state.active.type) {
         case 'audio':
-          return <SoundDocComponent sound={this.state.active.file} title={this.state.active.title} delay={0} autoplay={true} />;
+          Component = SoundDocComponent;
           break;
 
         case 'text':
-          return <ContentInteractiveComponent {...this.props} closeFunction={this.openElement.bind(this, this.state.active)} content={this.state.active} />;
+          Component = ContentInteractiveComponent;
           break;
 
         case 'video':
-          return <VideoInteractiveComponent {...this.props} closeFunction={this.openElement.bind(this, this.state.active)} content={this.state.active} />;
+          Component = VideoInteractiveComponent;
           break;
 
         default:
           break;
+      }
+      if (Component) {
+        return <Component {...this.props} closeFunction={this.openElement.bind(this, this.state.active)} content={this.state.active} />;
       }
     };
 

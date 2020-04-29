@@ -1,8 +1,8 @@
 // Imports
-import { IAnswerQuizProps, IAnswerQuizState } from 'Interfaces';
+import { IAnswerQuizProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
-export class QuizAnswerComponent extends React.Component<IAnswerQuizProps, IAnswerQuizState> {
+export class QuizAnswerComponent extends React.Component<IAnswerQuizProps, ISimpleState> {
   constructor(props: any) {
       super(props);
   };

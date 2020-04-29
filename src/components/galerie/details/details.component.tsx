@@ -1,5 +1,5 @@
 // Imports
-import { IGalerieDetailsProps, IGalerieDetailsState } from 'Interfaces';
+import { IGalerieDetailsProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -10,7 +10,7 @@ import './details.component.sass';
 // Services
 import { AnimationsService } from 'Services';
 
-export class DetailsGalerieComponent extends React.Component<IGalerieDetailsProps, IGalerieDetailsState> {
+export class DetailsGalerieComponent extends React.Component<IGalerieDetailsProps, ISimpleState> {
     public node: React.RefObject<HTMLDivElement>;
     public animationsService: AnimationsService = new AnimationsService();
     public onCloseDetails: () => any = this.closeImage.bind(this);

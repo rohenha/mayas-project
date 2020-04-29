@@ -1,5 +1,5 @@
 // Imports
-import { ICodexDefProps, ICodexDefState } from 'Interfaces';
+import { ICodexDefProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -10,7 +10,7 @@ import './codex-definition.component.sass';
 // Services
 import { AnimationsService, ContentService } from 'Services';
 
-export class CodexDefinitionComponent extends React.Component<ICodexDefProps, ICodexDefState> {
+export class CodexDefinitionComponent extends React.Component<ICodexDefProps, ISimpleState> {
     public node: React.RefObject<HTMLDivElement>;
     public animationsService: AnimationsService = new AnimationsService();
     public contentService: ContentService = new ContentService();

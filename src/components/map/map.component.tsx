@@ -1,5 +1,5 @@
 // Imports
-import { IMapProps, IMapState } from 'Interfaces';
+import { IMapProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 // import { ReactSVG } from 'react-svg'
 
@@ -13,7 +13,7 @@ import Providers from 'Providers';
 
 // Services
 
-export class MapComponent extends React.Component<IMapProps, IMapState> {
+export class MapComponent extends React.Component<IMapProps, ISimpleState> {
     public static contextType = Providers['ThemeContext'];
     public lengthPath: number = 1040;
     public onRenderRoute: () => any = this.renderRoute.bind(this);

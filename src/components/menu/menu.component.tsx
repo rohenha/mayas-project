@@ -1,5 +1,5 @@
 // Imports
-import { IMenuProps, IMenuState } from 'Interfaces';
+import { IMenuProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import { PagesService } from 'Services';
@@ -17,7 +17,7 @@ import { MenuContent } from 'Content';
 // Services
 import { AnimationsService } from 'Services';
 
-export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
+export class MenuComponent extends React.Component<IMenuProps, ISimpleState> {
     public static contextType = Providers['ThemeContext'];
     public node: React.RefObject<HTMLDivElement>;
     public animationsService: AnimationsService = new AnimationsService();

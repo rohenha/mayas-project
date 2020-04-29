@@ -1,5 +1,5 @@
 // Imports
-import { ICodexListProps, ICodexListState } from 'Interfaces';
+import { ICodexListProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -7,7 +7,7 @@ import './codex-list.component.sass';
 
 // Components
 
-export class CodexListComponent extends React.Component<ICodexListProps, ICodexListState> {
+export class CodexListComponent extends React.Component<ICodexListProps, ISimpleState> {
     constructor(props: any) {
         super(props);
     }

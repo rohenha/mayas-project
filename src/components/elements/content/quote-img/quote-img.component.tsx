@@ -1,5 +1,5 @@
 // Imports
-import { IImage, IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IImage, IPageComponentProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -11,7 +11,7 @@ import { ImageComponent } from 'Components';
 // Services
 import { ContentService } from 'Services';
 
-export class QuoteImgComponent extends React.Component<IPageComponentProps, IPageComponentState> {
+export class QuoteImgComponent extends React.Component<IPageComponentProps, ISimpleState> {
   public node: React.RefObject<HTMLDivElement>;
   public contentService: ContentService = new ContentService();
 

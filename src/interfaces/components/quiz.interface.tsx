@@ -22,14 +22,6 @@ export interface IStep {
     content: any
 }
 
-export interface IPageQuizProps {
-    history: any
-}
-
-// tslint:disable-next-line:no-empty-interface
-export interface IPageQuizState {
-}
-
 export interface IQuizState {
     step: number,
     result: number,
@@ -46,9 +38,6 @@ export interface IScreenQuizProps {
     active: boolean,
     result: number | null,
     total: number | null
-}
-// tslint:disable-next-line:no-empty-interface
-export interface IScreenQuizState {
 }
 
 export interface IQuestionQuizProps {
@@ -74,8 +63,4 @@ export interface IAnswerQuizProps {
     index: number,
     questionName: string,
     type: string
-}
-
-// tslint:disable-next-line:no-empty-interface
-export interface IAnswerQuizState {
 }

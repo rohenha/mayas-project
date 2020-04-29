@@ -1,11 +1,11 @@
 // Imports
-import { IScreenQuizProps, IScreenQuizState } from 'Interfaces';
+import { IScreenQuizProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
 import './screen.component.sass';
 
-export class QuizScreenComponent extends React.Component<IScreenQuizProps, IScreenQuizState> {
+export class QuizScreenComponent extends React.Component<IScreenQuizProps, ISimpleState> {
     public node: React.RefObject<HTMLDivElement>;
     public onNextStep: () => {}= this.nextStep.bind(this);
     constructor(props: any) {

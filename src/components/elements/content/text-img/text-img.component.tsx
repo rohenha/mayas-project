@@ -1,5 +1,5 @@
 // Imports
-import { IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IPageComponentProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -11,7 +11,7 @@ import { ImageComponent } from 'Components';
 // Services
 import { ContentService } from 'Services';
 
-export class TextImgComponent extends React.Component<IPageComponentProps, IPageComponentState> {
+export class TextImgComponent extends React.Component<IPageComponentProps, ISimpleState> {
   public contentService: ContentService = new ContentService();
   constructor(props: any) {
       super(props);

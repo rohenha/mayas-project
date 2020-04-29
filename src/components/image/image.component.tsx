@@ -1,5 +1,5 @@
 // Imports
-import { IImageProps, IImageState } from 'Interfaces';
+import { IImageProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -9,7 +9,7 @@ import './image.component.sass';
 
 // Content
 
-export class ImageComponent extends React.Component<IImageProps, IImageState> {
+export class ImageComponent extends React.Component<IImageProps, ISimpleState> {
     public node: React.RefObject<HTMLDivElement>;
     constructor(props: any) {
         super(props);

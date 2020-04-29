@@ -1,5 +1,5 @@
 // Imports
-import { IMobileProps, IMobileState } from 'Interfaces';
+import { IMobileState, ISimpleProps } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -8,7 +8,7 @@ import './mobile.component.sass';
 // Content
 import { MobileContent } from 'Content';
 
-export class MobileComponent extends React.Component<IMobileProps, IMobileState> {
+export class MobileComponent extends React.Component<ISimpleProps, IMobileState> {
   public onUpdateDimensions: () => void = this.updateDimensions.bind(this);
     constructor(props: any) {
         super(props);

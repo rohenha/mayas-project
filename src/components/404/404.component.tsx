@@ -1,5 +1,5 @@
 // Imports
-import { IPageComponentProps, IPageComponentState } from 'Interfaces';
+import { IPageComponentProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -7,7 +7,7 @@ import * as React from 'react';
 // Components
 import { ButtonExpComponent, ImageComponent } from 'Components';
 
-export class P404Component extends React.Component<IPageComponentProps, IPageComponentState> {
+export class P404Component extends React.Component<IPageComponentProps, ISimpleState> {
     constructor(props: any) {
         super(props);
     }

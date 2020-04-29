@@ -1,5 +1,5 @@
 // Imports
-import { IImageGalerieProps, IImageGalerieState } from 'Interfaces';
+import { IImageGalerieProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -11,7 +11,7 @@ import { ImageComponent } from 'Components';
 // Services
 import { AnimationsService } from 'Services';
 
-export class ImageGalerieComponent extends React.Component<IImageGalerieProps, IImageGalerieState> {
+export class ImageGalerieComponent extends React.Component<IImageGalerieProps, ISimpleState> {
     public node: React.RefObject<HTMLDivElement>;
     public onClickImg: any = this.toggleImage.bind(this);
     public animationsService: AnimationsService = new AnimationsService();

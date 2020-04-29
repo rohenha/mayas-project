@@ -1,5 +1,5 @@
 // Imports
-import { ICursorProps, ICursorState } from 'Interfaces';
+import { ICursorState, ISimpleProps } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -7,7 +7,7 @@ import './cursor.component.sass';
 
 // Components
 
-export class CursorComponent extends React.Component<ICursorProps, ICursorState> {
+export class CursorComponent extends React.Component<ISimpleProps, ICursorState> {
   public onUpdateMousePosition: (event: any) => void = this.updateMousePosition.bind(this);
     constructor(props: any) {
         super(props);
@@ -39,9 +39,9 @@ export class CursorComponent extends React.Component<ICursorProps, ICursorState>
     public setStyle(): any {
       const translate = 'translate3d(' + this.state.x + 'px, ' + this.state.y + 'px, 0)';
       return {
-        mozTransform: translate,
-        transform: translate,
-        webkitTransform: translate
+        MozTransform: translate,
+        WebkitTransform: translate,
+        transform: translate
       }
     };
 
