@@ -11,7 +11,7 @@ import './multiple-paths.component.sass';
 export class MultiplePathComponent extends React.Component<IPageComponentProps, IMultiplePathsState> {
   public onMouseEnter: (event: any) => void = this.updateHover.bind(this, true);
   public onMouseLeave: (event: any) => void = this.updateHover.bind(this, false);
-
+  public onUpdateWidth: () => void =  this.updateWidth.bind(this);
   constructor(props: any) {
       super(props);
       this.state = {
@@ -21,12 +21,12 @@ export class MultiplePathComponent extends React.Component<IPageComponentProps, 
   }
 
   public componentDidMount(): void {
-    this.updateWidth();
-    window.addEventListener("resize", this.updateWidth.bind(this));
+    this.onUpdateWidth();
+    window.addEventListener("resize", this.onUpdateWidth);
   }
 
   public componentWillUnmount(): void {
-    window.removeEventListener('resize', this.updateWidth.bind(this));
+    window.removeEventListener('resize', this.onUpdateWidth);
   }
 
   public updateWidth(): void {

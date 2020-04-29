@@ -15,6 +15,7 @@ export class ImageSliderComponent extends React.Component<IPageComponentProps, I
     public imageHeight: number;
     public nextSlide: () => any = this.nextSlideAnimation.bind(this);
     public previousSlide: () => any = this.previousSlideAnimation.bind(this);
+    public onSetHeight: () => void = this.setHeight.bind(this);
     constructor(props: any) {
         super(props);
         this.node = React.createRef();
@@ -26,12 +27,12 @@ export class ImageSliderComponent extends React.Component<IPageComponentProps, I
     };
 
     public componentDidMount(): void {
-      this.setHeight();
-      window.addEventListener('resize', this.setHeight.bind(this));
+      this.onSetHeight();
+      window.addEventListener('resize', this.onSetHeight);
     };
 
     public componentWillUnmount(): void {
-      window.removeEventListener('resize', this.setHeight.bind(this));
+      window.removeEventListener('resize', this.onSetHeight);
     };
 
     public previousSlideAnimation(): void {

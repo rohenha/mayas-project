@@ -22,13 +22,19 @@ export class CursorComponent extends React.Component<ICursorProps, ICursorState>
       document.addEventListener('mousemove', this.onUpdateMousePosition);
     };
 
+    public componentWillUnmount(): void {
+      document.removeEventListener('mousemove', this.onUpdateMousePosition);
+    };
+
     public updateMousePosition(event: any): void {
       this.setState({
-        hover: event.target.tagName === 'A' ||  event.target.tagName === 'BUTTON',
+        hover: event.target.tagName === 'A' ||  event.target.tagName === 'BUTTON' || event.target.tagName === 'INPUT',
         x: event.clientX,
         y: event.clientY
       });
     };
+
+
 
     public setStyle(): any {
       const translate = 'translate3d(' + this.state.x + 'px, ' + this.state.y + 'px, 0)';

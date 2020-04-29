@@ -9,6 +9,7 @@ import './mobile.component.sass';
 import { MobileContent } from 'Content';
 
 export class MobileComponent extends React.Component<IMobileProps, IMobileState> {
+  public onUpdateDimensions: () => void = this.updateDimensions.bind(this);
     constructor(props: any) {
         super(props);
         this.state = {
@@ -17,12 +18,12 @@ export class MobileComponent extends React.Component<IMobileProps, IMobileState>
     }
 
     public componentDidMount(): void {
-      this.updateDimensions();
-      window.addEventListener('resize', this.updateDimensions.bind(this));
+      this.onUpdateDimensions();
+      window.addEventListener('resize', this.onUpdateDimensions);
     }
 
     public componentWillUnmount(): void {
-      window.removeEventListener('resize', this.updateDimensions.bind(this));
+      window.removeEventListener('resize', this.onUpdateDimensions);
     }
 
     public updateDimensions(): void {
