@@ -14,8 +14,22 @@
         &:hover
             background-color: $color-black
 
-        p, span
+        button, span
             text-align: left
 
-        .form-button-exp__text--title
-            color: $color-secondary
+        button
+            background: none
+            border: 0
+            width: 100%
+            &:focus,
+            &:hover
+                outline: none
+            p
+                margin-bottom: 0
+                pointer-events: none
+
+        .form-button-exp__text
+            &--subtitle
+                color: $color-primary
+            &--title
+                color: $color-secondary

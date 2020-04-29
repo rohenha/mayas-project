@@ -19,10 +19,10 @@ export class CodexListComponent extends React.Component<ICodexListProps, ICodexL
                 className={this.props.index === this.props.dataOpen ? 'codex__home--element active' : 'codex__home--element'}
                 onClick={this.props.changeDef}
             >
-              <p className="form-button-exp__text">
-                <span className="form-button-exp__text--subtitle">{this.props.data.type}</span>
-                <span className="form-button-exp__text--title">{this.props.data.title}</span>
-              </p>
+              <button className="form-button-exp__text">
+                <p className="form-button-exp__text--subtitle">{this.props.data.type}</p>
+                <p className="form-button-exp__text--title">{this.props.data.title}</p>
+              </button>
             </li>
         );
     }

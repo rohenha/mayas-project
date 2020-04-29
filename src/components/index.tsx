@@ -9,6 +9,8 @@ export * from './form/button-exp/button-exp.component';
 
 export * from './menu/menu.component';
 
+export * from './cursor/cursor.component';
+
 export * from './404/404.component';
 
 export * from './container/container.component';

@@ -9,6 +9,7 @@ import { PagesService } from 'Services';
 // Components
 import Animations from 'Animations';
 import {
+  CursorComponent,
   Footer,
   FooterExpComponent,
   Header,
@@ -120,6 +121,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
                     </Switch>
                 </Transition>
             </TransitionGroup>
+            <CursorComponent />
             <MobileComponent />
             <Footer />
           </React.Fragment>
