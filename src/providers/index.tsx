@@ -1,8 +1,8 @@
-
-import { ThemeContext } from './theme.provider';
+import { PageBase, ThemeContext } from './theme.provider';
 
 const Providers: any = {
-    ThemeContext
+  PageBase,
+  ThemeContext
 };
 
 export default Providers;
