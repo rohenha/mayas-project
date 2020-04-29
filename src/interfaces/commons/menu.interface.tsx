@@ -1,4 +1,4 @@
 export interface IMenuProps {
-    closeMenu: () => any,
+    closeMenu: () => void,
     toggleMenu: boolean
 }

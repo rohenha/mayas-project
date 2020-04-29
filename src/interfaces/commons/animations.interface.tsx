@@ -1,9 +1,9 @@
 export interface IAnimation {
     duration: { enter: number, leave: number },
     elements: any,
-    enter: (node: any, delay: number) => void,
-    exit: (node: any) => void,
-    setElements: (node: any) => any
+    enter: (node: HTMLElement, delay: number) => void,
+    exit: (node: HTMLElement) => void,
+    setElements: (node: HTMLElement) => any
 }
 
 export interface IAnimArray {

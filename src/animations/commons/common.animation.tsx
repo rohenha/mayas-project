@@ -8,8 +8,8 @@ export const CommonAnimation: IAnimation = {
       leave: 1
     },
     elements: {},
-    enter(node: any, delay: number): void {
-        const tlIn = new TimelineMax();
+    enter(node: HTMLElement, delay: number): void {
+        const tlIn: TimelineMax = new TimelineMax();
         tlIn.delay(delay);
         TweenMax.set(node, {
             autoAlpha: 0,
@@ -23,8 +23,8 @@ export const CommonAnimation: IAnimation = {
         });
     },
 
-    exit(node: any): void {
-        const tlOut = new TimelineMax();
+    exit(node: HTMLElement): void {
+        const tlOut: TimelineMax = new TimelineMax();
         tlOut
           .to(node, 1, {
               autoAlpha: 0,
@@ -33,7 +33,7 @@ export const CommonAnimation: IAnimation = {
           });
     },
 
-    setElements(node: any): any {
+    setElements(node: HTMLElement): any {
       const elements: any = {};
       elements['node'] = node;
       return elements;

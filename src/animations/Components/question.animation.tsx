@@ -7,7 +7,7 @@ export const QuestionAnimation: IAnimation = {
       leave: 1
     },
     elements: {},
-    enter(node: any, delay: number): void {
+    enter(node: HTMLElement, delay: number): void {
         const tlIn = new TimelineMax();
         tlIn.delay(delay);
         TweenMax.set(node, {
@@ -17,14 +17,14 @@ export const QuestionAnimation: IAnimation = {
             display: 'block'
         });
     },
-    exit(node: any): void {
+    exit(node: HTMLElement): void {
         const tlOut = new TimelineMax();
         tlOut.to(node, 1, {
             display: 'none'
         });
     },
 
-    setElements(node: any): void {
+    setElements(node: HTMLElement): any {
       console.log('hello world', node);
     }
 

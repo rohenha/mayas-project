@@ -1,6 +1,6 @@
 export interface ICodexProps {
     toggleCodex: boolean,
-    closeCodex: () => any,
+    closeCodex: () => void,
     history: any
 }
 export interface ICodexState {
@@ -16,7 +16,7 @@ export interface ICodexData {
 export interface ICodexListProps {
     index: number,
     dataOpen: number,
-    changeDef: () => any,
+    changeDef: () => void,
     data: { content: any[], title: string, type: string }
 }
 

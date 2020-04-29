@@ -28,7 +28,7 @@ export interface IGalerieDetailsProps {
 
 // tslint:disable-next-line:no-empty-interface
 export interface IImageGalerieProps {
-    toggleImage: (element:number) => any,
+    toggleImage: (element: number) => void,
     open: boolean,
     index: number,
     element: IGalerieElement

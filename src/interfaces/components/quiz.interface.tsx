@@ -10,11 +10,11 @@ export interface IQuestion {
     active: boolean,
     explication: string,
     name: string,
-    number: number | null,
+    number: number,
     propositions: IQuestionProposition[],
     question: string,
     reponse: number,
-    image: IImage | null
+    image: IImage
 }
 
 export interface IStep {
@@ -34,10 +34,10 @@ export interface IScreenQuizProps {
     end: boolean,
     nextUrl: string,
     chapter: {chapter: number, name: string},
-    nextStep: (result: false, question: false) => {},
+    nextStep: (result: boolean, question: boolean) => any,
     active: boolean,
-    result: number | null,
-    total: number | null
+    result: number,
+    total: number
 }
 
 export interface IQuestionQuizProps {

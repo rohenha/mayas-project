@@ -37,7 +37,7 @@ export class MenuComponent extends React.Component<IMenuProps, ISimpleState> {
     }
   };
 
-  public renderRoute(route: IRoute, index: number): React.ReactElement<any> {
+  public renderRoute(route: IRoute, index: number): React.ReactElement<any> | void {
     if (route.isExperience && route.hasParent === '') {
       return (
         <li key={index}>
@@ -51,8 +51,6 @@ export class MenuComponent extends React.Component<IMenuProps, ISimpleState> {
           </NavLink>
         </li>
       );
-    } else {
-      return <React.Fragment />;
     }
   };
 

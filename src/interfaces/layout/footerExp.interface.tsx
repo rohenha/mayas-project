@@ -1,5 +1,7 @@
+import { IRoute } from 'Interfaces';
+
 export interface IFooterExpProps {
-    history: any
+    history: IRoute
 }
 export interface IFooterExpState {
     openCodex: boolean

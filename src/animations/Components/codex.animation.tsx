@@ -8,8 +8,8 @@ export const CodexAnimation: IAnimation = {
       leave: 1
     },
     elements: {},
-    enter(node: any, delay: number): void {
-        const tlIn = new TimelineMax();
+    enter(node: HTMLElement, delay: number): void {
+        const tlIn: TimelineMax = new TimelineMax();
         const elements = this.setElements(node);
         tlIn.delay(delay);
         TweenMax.set(elements.bg, { autoAlpha: 0, opacity: 0 })
@@ -21,13 +21,13 @@ export const CodexAnimation: IAnimation = {
           .to(elements.home, 0.5, { ease: Power1.easeInOut, autoAlpha: 1, opacity: 1, x: 0 }, '-=0.1');
     },
 
-    exit(node: any): void {
-        const tlOut = new TimelineMax();
+    exit(node: HTMLElement): void {
+        const tlOut: TimelineMax = new TimelineMax();
         tlOut
           .to(node, 1, { autoAlpha: 0, opacity: 0 });
     },
 
-    setElements(node: any): void {
+    setElements(node: HTMLElement): any {
       const elements: any = {};
       elements.node = node;
       elements.bg = elements.node.querySelector('.js-bg');

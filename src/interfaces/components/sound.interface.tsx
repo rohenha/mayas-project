@@ -1,8 +1,3 @@
-export interface ISoundProps {
-  sound: any
-  title: string
-}
-
 export interface ISoundState {
   current: string,
   percent: number,
@@ -11,7 +6,7 @@ export interface ISoundState {
 }
 
 export interface ISoundAmbiantProps {
-  sound: any
+  sound: string
 }
 
 export interface ISoundAmbiantState {

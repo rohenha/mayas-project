@@ -18,25 +18,14 @@ export interface IInteractivePhotoState {
 
 export interface IContentInteractiveProps {
     content: ITextInteractive,
-    closeFunction: any,
+    closeFunction: () => void,
     history: any
 }
 
 export interface IVideoInteractiveProps {
     content: any,
-    closeFunction: any,
+    closeFunction: () => void,
     history: any
-}
-
-export interface IInteractive360Props {
-    img: string,
-    points: any[]
-}
-export interface IInteractive360State {
-    sound: any,
-    play: boolean,
-    mousePos: { x: number, y: number },
-    rot: { x: number, y: number},
 }
 
 export interface IImageSliderState {

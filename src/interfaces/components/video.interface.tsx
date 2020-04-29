@@ -1,8 +1,8 @@
 export interface IVideoState {
     controls: boolean,
     percent: number,
-    current: any,
-    total: any
+    current: string,
+    total: string
 }
 
 export interface IControlsProps {

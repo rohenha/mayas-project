@@ -1,7 +1,7 @@
 import { IImage } from 'Interfaces';
 
 export interface IMultiplePathsState {
-    hover : string,
+    hover: string,
     screenSize: number
 }
 

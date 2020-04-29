@@ -7,7 +7,7 @@ export const MenuAnimation: IAnimation = {
       leave: 1
     },
     elements: {},
-    enter(node: any, delay: number): void {
+    enter(node: HTMLElement, delay: number): void {
         const tlIn = new TimelineMax();
         tlIn.delay(delay);
         tlIn.to(node, 1, {
@@ -16,7 +16,7 @@ export const MenuAnimation: IAnimation = {
               x: 0,
           });
     },
-    exit(node: any): void {
+    exit(node: HTMLElement): void {
         const tlOut = new TimelineMax();
         tlOut
           .to(node, 1, {
@@ -26,7 +26,7 @@ export const MenuAnimation: IAnimation = {
           });
     },
 
-    setElements(node: any): void {
+    setElements(node: HTMLElement): any {
       this.elements.node = node;
     }
 

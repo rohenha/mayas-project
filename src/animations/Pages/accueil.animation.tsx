@@ -7,9 +7,9 @@ export const AccueilAnimation: IAnimation  = {
       leave: 2.7
     },
     elements: {},
-    enter(node: any, delay: number): void {
-        const tlIn = new TimelineMax();
-        const elements = this.setElements(node);
+    enter(node: HTMLElement, delay: number): void {
+        const tlIn: TimelineMax = new TimelineMax();
+        const elements: any = this.setElements(node);
         tlIn.delay(delay);
         TweenMax.set(elements.bg, { autoAlpha: 0, opacity: 0, scaleX: 1.5, scaleY:1.5 });
         TweenMax.set(elements.container.querySelectorAll('h3, p, h1, h2, .form-range__input'), { autoAlpha: 0, opacity: 0, y: 50 });
@@ -23,7 +23,7 @@ export const AccueilAnimation: IAnimation  = {
           .staggerTo(elements.realisationElements, 0.4, { ease: Power1.easeInOut,autoAlpha: 1, opacity: 1, y: 0 }, 0.1, '-=0.1');
     },
 
-    exit(node: any): void {
+    exit(node: HTMLElement): void {
         const tlOut = new TimelineMax();
         const elements = this.setElements(node);
         tlOut
@@ -31,7 +31,7 @@ export const AccueilAnimation: IAnimation  = {
           .to(elements.bg, 2, { autoAlpha: 0, opacity: 0, scaleX: 1.5, scaleY: 1.5 });
     },
 
-    setElements(node: any): void {
+    setElements(node: any): any {
       const elements: any = {};
       elements.node = node;
       elements.bg = elements.node.querySelector('.js-bg');

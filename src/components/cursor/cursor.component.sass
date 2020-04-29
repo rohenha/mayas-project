@@ -25,11 +25,15 @@ input
         display: inline-block
         height: 100%
         pointer-events: none
-        transform: scale(.4)
+        transform: scale(0)
         transition: transform .2s ease-in-out, background-color .2s ease-in-out
         width: 100%
 
-    &__active
+    &__hover
         .section_cursor__content
             background-color: rgba($color-black, .4)
             transform: scale(1)
+
+    &__active
+        .section_cursor__content
+            transform: scale(.4)

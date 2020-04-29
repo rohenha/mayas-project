@@ -1,3 +1,5 @@
+import { IRoute } from 'Interfaces';
+
 export interface IMapProps {
-  page: any
+  page: IRoute
 }

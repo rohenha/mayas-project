@@ -4,8 +4,8 @@ export interface ITheme {
   muted: boolean,
   page: IRoute,
   routes: IRoute[],
-  setPage: () => any,
+  setPage: (page: IRoute) => void,
   sound: boolean,
-  toggleMute: () => any,
-  toggleSound: () => any
+  toggleMute: (newValue: boolean) => void,
+  toggleSound: (sound: boolean) => void
 }
