@@ -7,8 +7,10 @@ import { VideoService } from 'Services';
 import './sound-document.component.sass';
 
 // Components
+import { ThemeContext } from 'Providers';
 
 export class SoundDocComponent extends React.Component<ISoundProps, ISoundState> {
+    public static contextType = ThemeContext;
     public sound: HTMLAudioElement = new Audio(this.props.sound);
     public playpauseSound: () => void = this.toggleSound.bind(this);
     public videoService: VideoService = new VideoService();
@@ -45,11 +47,12 @@ export class SoundDocComponent extends React.Component<ISoundProps, ISoundState>
     }
 
     public toggleSound(): void {
-        if (this.sound.duration > 0 && !this.sound.paused) {
-            this.sound.pause();
-        } else {
-            this.sound.play();
-        }
+      this.context.toggleSound(!this.sound.paused);
+      if (this.sound.duration > 0 && !this.sound.paused) {
+        this.sound.pause();
+      } else {
+        this.sound.play();
+      }
     }
 
     public setTotalTime(): void {

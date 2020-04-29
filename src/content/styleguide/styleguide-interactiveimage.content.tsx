@@ -1,5 +1,5 @@
 export const StyleguideInteractiveImageContent: any = {
-  ambiant: '',
+  ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
   animation: 'Common',
   chapter: 1,
   class: 'page_styleguide',

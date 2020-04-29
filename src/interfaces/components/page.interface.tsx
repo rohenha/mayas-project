@@ -10,6 +10,7 @@ export interface IPageState {}
 export interface IContainerProps {}
 // tslint:disable-next-line:no-empty-interface
 export interface IContainerState {
+  muted: boolean,
   page: any,
   routes: any,
   sound: boolean

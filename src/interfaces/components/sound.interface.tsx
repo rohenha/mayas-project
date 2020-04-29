@@ -19,7 +19,5 @@ export interface ISoundAmbiantProps {
 }
 // tslint:disable-next-line:no-empty-interface
 export interface ISoundAmbiantState {
-  canChange: boolean,
-  muted: boolean,
-  paused: boolean
+  canChange: boolean
 }

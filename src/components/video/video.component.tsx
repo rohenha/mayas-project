@@ -9,8 +9,10 @@ import './video.component.sass';
 
 // Components
 import { ControlsComponent } from 'Components';
+import { ThemeContext } from 'Providers';
 
 export class VideoComponent extends React.Component<IPageComponentProps, IVideoState> {
+    public static contextType = ThemeContext;
     public currentTime: () => void = this.getCurrentTime.bind(this);
     public toggleVideo: () => void = this.changeVideoState.bind(this);
     public setDuration: () => void = this.setTotalTime.bind(this);
@@ -69,6 +71,7 @@ export class VideoComponent extends React.Component<IPageComponentProps, IVideoS
 
     public changeVideoState(): void {
       const videoState = this.video.current!.paused ? 'play' : 'pause';
+      this.context.toggleSound(!this.video.current!.paused);
       this.video.current![videoState]();
       this.setControls();
     };

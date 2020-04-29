@@ -7,21 +7,20 @@ import * as React from 'react';
 import './sound-ambiance.component.sass';
 
 // Components
+import { ThemeContext } from 'Providers';
 
 export class SoundAmbianceComponent extends React.Component<ISoundAmbiantProps, ISoundAmbiantState> {
+    public static contextType = ThemeContext;
     public sound: Howl;
-    public playpauseSound: () => void = this.toggleSound.bind(this);
+    public playpauseSound: () => void = this.toggleMute.bind(this);
     public soundMax: number = 1;
     public fadeTiming: number = 500;
-    // public contextType: any = ThemeContext;
+    public play: boolean = true;
     constructor(props: any) {
         super(props);
         this.state = {
-          canChange: true,
-          muted: false,
-          paused: false
+          canChange: true
         };
-        // console.log(this.contextType);
     }
 
     public componentDidMount(): void {
@@ -33,15 +32,20 @@ export class SoundAmbianceComponent extends React.Component<ISoundAmbiantProps, 
     };
 
     public componentDidUpdate(prevProps: any): void {
-        if (this.props.sound !== prevProps.sound) {
-          this.onUpdateComponent(true);
-        }
+      console.log('component updated');
+      if (this.props.sound !== prevProps.sound) {
+        this.onUpdateComponent(true);
+        return;
+      }
+      if (this.play !== this.context.sound) {
+        this.toggleSound(null);
+        this.play = this.context.sound;
+      }
     };
 
     public onUpdateComponent(setNewSound: boolean): void {
-      if (this.sound.playing()) {
-        this.toggleSound();
-        this.setState({ muted: false });
+      if (this.sound && this.sound.playing()) {
+        this.toggleSound(null);
       }
       setTimeout(() => {
         this.sound.unload();
@@ -54,10 +58,10 @@ export class SoundAmbianceComponent extends React.Component<ISoundAmbiantProps, 
     public setSound(): void {
       if (this.props.sound !== '') {
         this.sound = new Howl({
-          autoplay: !this.state.muted,
+          autoplay: this.context.sound,
           loop: true,
           src: [this.props.sound],
-          volume: this.state.muted ? 0 : this.soundMax
+          volume: this.context.sound ? this.soundMax : 0
         });
         this.sound.on('fade', this.toggleSoundFade.bind(this));
       }
@@ -68,21 +72,24 @@ export class SoundAmbianceComponent extends React.Component<ISoundAmbiantProps, 
       this.sound[functionName]();
     };
 
-    public toggleSound(): void {
+    public toggleSound(ev: any): void {
       const isPlaying = this.sound.playing();
       if (!this.state.canChange) {
         return;
       }
       this.sound.fade(isPlaying ? this.soundMax : 0, isPlaying ? 0 : this.soundMax, this.fadeTiming);
-      this.setState({ canChange: false, muted: !this.state.muted, paused: !this.state.muted });
       setTimeout(() => {
         this.setState({ canChange: true });
       }, this.fadeTiming);
-    }
+    };
+
+    public toggleMute(): void {
+      this.context.toggleMute(!this.context.sound);
+    };
 
     public render(): React.ReactElement<any> {
         return (
-          <button onClick={this.playpauseSound} className={this.state.muted ? 'section_sound-ambiant' : 'section_sound-ambiant active'}>Son</button>
+          <button onClick={this.playpauseSound} className={this.context.muted ? 'section_sound-ambiant' : 'section_sound-ambiant active'}>Son</button>
         );
     }
 }

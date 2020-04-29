@@ -23,7 +23,7 @@ export class MapComponent extends React.Component<IMapProps, IMapState> {
 
     public renderRoute(route: any, index: number): any {
       if (route.isExperience && route.hasParent === '') {
-        return <circle key={index} className={this.context.page === route || route.chapter < this.context.page.chapter ? "section_map__chapter active" : "section_map__chapter"} cx={route.point.x} cy={route.point.y} r="6.1"/>;
+        return <circle key={index} className={this.props.page === route || route.chapter < this.props.page.chapter ? "section_map__chapter active" : "section_map__chapter"} cx={route.point.x} cy={route.point.y} r="6.1"/>;
       }
     };
 
@@ -174,7 +174,7 @@ export class MapComponent extends React.Component<IMapProps, IMapState> {
                 <path className="section_map__path section_map__path--fixed" d="M170,93.9c21,9,50,20,59,37s-0.9,64.9,16,74c36,19.4,68.1-42.6,112.6-20.1c28.8,14.6,71.3,84.6,33.2,90.9
                   c-22,3.7-72.7,17.7-72.4,35.2c0.3,17.9,13.5,58.9,66.5,76.9s79.2,1,100.1,6s36.1,46.7,71.1,44.7s42.5-28.4,54.8-32.7
                   c28.4-10.1,48.8,5.9,81-5c24.8-8.4-19-49,0-59s37-13.1,49-9"/>
-                <path className="section_map__path section_map__path--animated js-path-animated" style={{ strokeDashoffset: this.context.page.point.path + 'px'}} d="M170,93.9c21,9,50,20,59,37s-0.9,64.9,16,74c36,19.4,68.1-42.6,112.6-20.1c28.8,14.6,71.3,84.6,33.2,90.9
+                <path className="section_map__path section_map__path--animated js-path-animated" style={{ strokeDashoffset: this.props.page.point.path + 'px'}} d="M170,93.9c21,9,50,20,59,37s-0.9,64.9,16,74c36,19.4,68.1-42.6,112.6-20.1c28.8,14.6,71.3,84.6,33.2,90.9
                   c-22,3.7-72.7,17.7-72.4,35.2c0.3,17.9,13.5,58.9,66.5,76.9s79.2,1,100.1,6s36.1,46.7,71.1,44.7s42.5-28.4,54.8-32.7
                   c28.4-10.1,48.8,5.9,81-5c24.8-8.4-19-49,0-59s37-13.1,49-9"/>
                 {this.context.routes.map(this.onRenderRoute)}

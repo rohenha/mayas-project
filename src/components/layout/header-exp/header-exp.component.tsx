@@ -35,7 +35,7 @@ export class HeaderExpComponent extends React.Component<IHeaderExpProps, IHeader
                 </span>
                 <div className="header-exp__map" onClick={this.toggle}>
                   <div className="header-exp__map--container" style={ { transform: 'translate(' + this.props.page.map.x + ', ' + this.props.page.map.y + ')' } }>
-                    <MapComponent />
+                    <MapComponent page={this.props.page} />
                   </div>
                 </div>
               </button>

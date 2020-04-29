@@ -2,7 +2,7 @@
 import { IMenuProps, IMenuState } from 'Interfaces';
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import { PagesService } from 'Services';
 
 // Styles
 import './menu.component.sass';
@@ -22,6 +22,7 @@ export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
     public node: React.RefObject<HTMLDivElement>;
     public animationsService: AnimationsService = new AnimationsService();
     public onRenderRoute: () => any = this.renderRoute.bind(this);
+    public pagesService: PagesService = new PagesService();
     constructor(props: any) {
         super(props);
         this.node = React.createRef();
@@ -63,7 +64,7 @@ export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
                 <ul>{this.context.routes.map(this.onRenderRoute)}</ul>
               </div>
               <div className="menu__map">
-                <MapComponent />
+                <MapComponent page={this.pagesService.getParent(this.context.page)} />
               </div>
             </div>
         );
