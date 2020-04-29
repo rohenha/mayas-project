@@ -7,10 +7,10 @@ import * as React from 'react';
 import './sound-ambiance.component.sass';
 
 // Components
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 export class SoundAmbianceComponent extends React.Component<ISoundAmbiantProps, ISoundAmbiantState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     public sound: Howl;
     public playpauseSound: () => void = this.toggleMute.bind(this);
     public soundMax: number = 1;

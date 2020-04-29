@@ -8,13 +8,13 @@ import './footer.component.sass';
 
 // Components
 import { ImageComponent, SoundAmbianceComponent } from 'Components';
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 // Content
 import { FooterContent } from 'Content';
 
 export class Footer extends React.Component<IFooterProps, IFooterState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     constructor(props: any) {
         super(props);
     }

@@ -8,10 +8,10 @@ import './footer-exp.component.sass';
 
 // Components
 import { ButtonExpComponent, CodexComponent } from 'Components';
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 export class FooterExpComponent extends React.Component<IFooterExpProps, IFooterExpState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     public pagesService: PagesService = new PagesService();
     public toggle: () => void = this.toggleCodex.bind(this);
     constructor(props: any) {

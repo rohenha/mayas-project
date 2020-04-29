@@ -1,12 +1,8 @@
-/* tslint:disable:no-empty */
-import * as React from 'react';
 
-export const ThemeContext = React.createContext({
-  muted: false,
-  page: {},
-  routes: [],
-  setPage: () => {},
-  sound: true,
-  toggleMute: () => {},
-  toggleSound: () => {}
-});
+import { ThemeContext } from './theme.provider';
+
+const Providers: any = {
+    ThemeContext
+};
+
+export default Providers;

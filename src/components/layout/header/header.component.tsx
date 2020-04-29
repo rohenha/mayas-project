@@ -8,10 +8,10 @@ import { PagesService } from 'Services';
 import './header.component.sass';
 
 // Components
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 export class Header extends React.Component<IHeaderProps, IHeaderState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     public pagesService: PagesService = new PagesService();
     constructor(props: any) {
         super(props);

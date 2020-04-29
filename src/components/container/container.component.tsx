@@ -6,7 +6,7 @@ import * as React from 'react';
 // Styles
 // Components
 import * as Content from 'Content';
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 export class ContainerComponent extends React.Component<IContainerProps, IContainerState> {
     constructor(props: any) {
@@ -42,8 +42,9 @@ export class ContainerComponent extends React.Component<IContainerProps, IContai
     };
 
     public render(): React.ReactElement<any> {
+      const TagName = Providers['ThemeContext'];
       return (
-        <ThemeContext.Provider
+        <TagName.Provider
           value={{
             muted: this.state.muted,
             page: this.state.page,
@@ -55,7 +56,7 @@ export class ContainerComponent extends React.Component<IContainerProps, IContai
           }}
         >
           {this.props.children}
-        </ThemeContext.Provider>
+        </TagName.Provider>
       );
     }
 }

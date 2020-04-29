@@ -8,10 +8,10 @@ import './page.component.sass';
 // Components
 import { DetailsComponent } from 'Components';
 import * as Components from 'Components';
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 export class PageComponent extends React.Component<IPageProps, IPageState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     constructor(props: any) {
       super(props);
     };

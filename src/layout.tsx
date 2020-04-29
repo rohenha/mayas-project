@@ -17,10 +17,10 @@ import {
   MobileComponent,
   PageComponent
 } from 'Components';
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 export default class Layout extends React.Component<ILayoutProps, ILayoutState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     public enterTrans: (node: any) => void = this.enter.bind(this);
     public exitTrans: (node: any) => void = this.exit.bind(this);
     public pagesService: PagesService = new PagesService();

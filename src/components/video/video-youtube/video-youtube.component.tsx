@@ -8,10 +8,10 @@ import './video-youtube.component.sass';
 
 // Components
 import * as Content from 'Content';
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 export class VideoYoutubeComponent extends React.Component<IPageComponentProps, IPageComponentState> {
-  public static contextType = ThemeContext;
+  public static contextType = Providers['ThemeContext'];
   public onVideoEnded: () => any = this.onEnd.bind(this);
   public onVideoPlay: () => any = this.changeSound.bind(this, false);
   public onVideoPause: () => any = this.changeSound.bind(this, true);

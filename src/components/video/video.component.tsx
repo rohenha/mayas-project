@@ -9,10 +9,10 @@ import './video.component.sass';
 
 // Components
 import { ControlsComponent } from 'Components';
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 export class VideoComponent extends React.Component<IPageComponentProps, IVideoState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     public currentTime: () => void = this.getCurrentTime.bind(this);
     public toggleVideo: () => void = this.changeVideoState.bind(this);
     public setDuration: () => void = this.setTotalTime.bind(this);

@@ -10,13 +10,13 @@ import { CodexDefinitionComponent, CodexListComponent } from 'Components';
 
 // Content
 import { CodexContent } from 'Content';
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 // Services
 import { AnimationsService } from 'Services';
 
 export class CodexComponent extends React.Component<ICodexProps, ICodexState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     public node: React.RefObject<HTMLDivElement>;
     public animationsService: AnimationsService = new AnimationsService();
     constructor(props: any) {

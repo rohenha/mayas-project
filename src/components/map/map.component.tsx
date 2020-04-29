@@ -8,13 +8,13 @@ import * as React from 'react';
 import './map.component.sass';
 
 // Components
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 // Content
 
 // Services
 
 export class MapComponent extends React.Component<IMapProps, IMapState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     public lengthPath: number = 1040;
     public onRenderRoute: () => any = this.renderRoute.bind(this);
     constructor(props: any) {

@@ -8,10 +8,10 @@ import { VideoService } from 'Services';
 import './sound-document.component.sass';
 
 // Components
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 export class SoundDocComponent extends React.Component<ISoundProps, ISoundState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     public sound: Howl;
     public playpauseSound: () => void = this.toggleSound.bind(this);
     public onCanPlay: () => void = this.canPlay.bind(this);

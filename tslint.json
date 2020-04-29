@@ -8,6 +8,7 @@
   },
   "rules": {
     "no-console": false,
+    "no-string-literal": false,
     "no-await-in-loop": 1,
     "no-extra-parens": [1, "all"],
     "no-template-curly-in-string": 0,

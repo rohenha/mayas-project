@@ -9,7 +9,7 @@ import './menu.component.sass';
 
 // Components
 import { ImageComponent, MapComponent } from 'Components';
-import { ThemeContext } from 'Providers';
+import Providers from 'Providers';
 
 // Content
 import { MenuContent } from 'Content';
@@ -18,7 +18,7 @@ import { MenuContent } from 'Content';
 import { AnimationsService } from 'Services';
 
 export class MenuComponent extends React.Component<IMenuProps, IMenuState> {
-    public static contextType = ThemeContext;
+    public static contextType = Providers['ThemeContext'];
     public node: React.RefObject<HTMLDivElement>;
     public animationsService: AnimationsService = new AnimationsService();
     public onRenderRoute: () => any = this.renderRoute.bind(this);
