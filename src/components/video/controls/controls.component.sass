@@ -2,11 +2,10 @@
 
 .section_video
     &__player
-        background: none
-        background-image: url('../../../assets/images/controls.png')
-        background-position:  0 -49px
-        background-size: 50px auto
-        border: 0
+        background: url('../../../assets/images/controls.svg'), rgba($color-black, .4)
+        background-position:  3px -88px
+        background-size: 90px auto
+        border: 2px solid $color-secondary
         border-radius: 50px
         height: 50px
         left: 50%
@@ -20,7 +19,7 @@
         &.active
             opacity: 1
         &.pause
-            background-position: 0 0
+            background-position: -46px -88px
 
     &__controls
         display: inline-block
@@ -45,8 +44,8 @@
     &__subtitles,
     &__fullscreen
         background: none
-        background-image: url('../../../assets/images/controls.png')
-        background-size: 60px auto
+        background-image: url('../../../assets/images/controls.svg')
+        background-size: 50px auto
         border: 0
         display: inline-block
         font-size: 0
@@ -58,17 +57,17 @@
             outline: none
 
     &__fullscreen
-        background-position: -3px -232px
+        background-position: -2px -77px
 
     &__subtitles
-        background-position: 37px -197px
+        background-position: -31px -29px
         &.active
-            background-position: 37px -179px
+            background-position: -31px -2px
 
     &__sound
-        background-position: -3px -198px
+        background-position: -2px -30px
         &.active
-            background-position: -3px -180px
+            background-position: -2px -2px
 
 
     &__status

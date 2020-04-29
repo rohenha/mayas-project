@@ -17,6 +17,7 @@ export class VideoComponent extends React.Component<IPageComponentProps, IVideoS
     public toggleVideo: () => void = this.changeVideoState.bind(this);
     public setDuration: () => void = this.setTotalTime.bind(this);
     public setControls: () => void = this.activeControls.bind(this);
+    public onVideoEnded: () => void = this.videoEnded.bind(this);
     public videoService: VideoService = new VideoService();
     public video: React.RefObject<HTMLVideoElement>;
     public controlsTimeout: any;
@@ -82,6 +83,11 @@ export class VideoComponent extends React.Component<IPageComponentProps, IVideoS
       this.video.current!.removeEventListener('mousemove', this.setControls, false);
     }
 
+    public videoEnded(): void {
+      this.setControls();
+      this.context.toggleSound(true);
+    };
+
     public renderVideo(): any {
       return <video
           playsInline = {true}
@@ -93,7 +99,7 @@ export class VideoComponent extends React.Component<IPageComponentProps, IVideoS
           poster={this.props.content.poster}
           onLoadedMetadata={this.setDuration}
           onTimeUpdate={this.currentTime}
-          onEnded={this.setControls}
+          onEnded={this.onVideoEnded}
           onClick={this.toggleVideo}
           onMouseMove={this.setControls}
           ref={this.video}

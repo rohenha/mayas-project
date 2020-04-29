@@ -16,7 +16,9 @@
         top: 0
 
     &__player
-        background-color: $color-primary
+        background: url('../../../assets/images/controls.svg'), $color-primary
+        background-position: -33px -63px
+        background-size: 65px auto
         border: none
         border-radius: 35px
         height: 100%
@@ -25,36 +27,15 @@
         width: 100%
 
         &:focus
-            border: 1px solid $color-primary
             outline: none
 
         &.visible
             opacity: 1
             pointer-events: inherit
 
-        &::before,
-        &::after
-            bottom: 0
-            content: ''
-            display: block
-            left: 0
-            margin: auto
-            position: absolute
-            right: 0
-            top: 0
 
         &.pause
-            &::before,
-            &::after
-                background-color: $color-secondary
-                height: 50%
-                width: 10%
-
-            &::before
-                right: 7px
-
-            &::after
-                left: 7px
+            background-position: 3px -63px
 
         &.play
             &::before

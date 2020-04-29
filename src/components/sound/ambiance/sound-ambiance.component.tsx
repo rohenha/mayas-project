@@ -32,20 +32,19 @@ export class SoundAmbianceComponent extends React.Component<ISoundAmbiantProps, 
     };
 
     public componentDidUpdate(prevProps: any): void {
-      console.log('component updated');
       if (this.props.sound !== prevProps.sound) {
         this.onUpdateComponent(true);
         return;
       }
       if (this.play !== this.context.sound) {
-        this.toggleSound(null);
+        this.toggleSound();
         this.play = this.context.sound;
       }
     };
 
     public onUpdateComponent(setNewSound: boolean): void {
       if (this.sound && this.sound.playing()) {
-        this.toggleSound(null);
+        this.toggleSound();
       }
       setTimeout(() => {
         this.sound.unload();
@@ -72,7 +71,7 @@ export class SoundAmbianceComponent extends React.Component<ISoundAmbiantProps, 
       this.sound[functionName]();
     };
 
-    public toggleSound(ev: any): void {
+    public toggleSound(): void {
       const isPlaying = this.sound.playing();
       if (!this.state.canChange) {
         return;

@@ -29,7 +29,10 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
             pageEnter: '',
             pageLeave: '',
         };
+    };
 
+    public componentDidMount(): any {
+      this.enter(document.querySelector('#content')!.children[0]);
     };
 
     public enter(node: any): void {
@@ -62,7 +65,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
       let page;
       const state = {};
       TweenMax.killTweensOf(node);
-      if (node === null) {
+      if (!node) {
         this.props.history.push('/404');
         return;
       }

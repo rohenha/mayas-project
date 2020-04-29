@@ -8,20 +8,29 @@ import './video-youtube.component.sass';
 
 // Components
 import * as Content from 'Content';
+import { ThemeContext } from 'Providers';
 
 export class VideoYoutubeComponent extends React.Component<IPageComponentProps, IPageComponentState> {
+  public static contextType = ThemeContext;
   public onVideoEnded: () => any = this.onEnd.bind(this);
+  public onVideoPlay: () => any = this.changeSound.bind(this, false);
+  public onVideoPause: () => any = this.changeSound.bind(this, true);
   constructor(props: any) {
       super(props);
   }
 
   public onEnd(): any {
+    this.changeSound(true);
     if (this.props.content.nextPage !== '') {
       const redirection = Content[this.props.content.nextPage];
       setTimeout(() => {
         this.props.history.push(redirection.url);
       }, 1000);
     }
+  };
+
+  public changeSound(value: boolean): void {
+    this.context.toggleSound(value);
   };
 
 
@@ -38,7 +47,10 @@ export class VideoYoutubeComponent extends React.Component<IPageComponentProps, 
           allowFullscreen={this.props.content.allowFullscreen}
           controls={this.props.content.controls}
           showInfo={false}
-          onEnd={this.onVideoEnded}/>
+          onEnd={this.onVideoEnded}
+          onPlaying={this.onVideoPlay}
+          onPause={this.onVideoPause}
+          />
       </div>
     );
   }

@@ -7,8 +7,7 @@ import { PagesService } from 'Services';
 import './footer-exp.component.sass';
 
 // Components
-import { ButtonExpComponent, CodexComponent, ImageComponent } from 'Components';
-import { CodexContent } from 'Content';
+import { ButtonExpComponent, CodexComponent } from 'Components';
 import { ThemeContext } from 'Providers';
 
 export class FooterExpComponent extends React.Component<IFooterExpProps, IFooterExpState> {
@@ -35,7 +34,7 @@ export class FooterExpComponent extends React.Component<IFooterExpProps, IFooter
             <React.Fragment>
                 <button className="footer-exp footer-exp--left button__base" onClick={this.toggle} >
                     <span>Codex</span>
-                    <ImageComponent image={CodexContent.image} fullscreen={false} />
+                    <span className="footer-exp__codex-img" />
                 </button>
                 <div className="footer-exp footer-exp--right">
                     <ButtonExpComponent redirection={this.pagesService.getNextPage(this.context.page)} {...this.props} back={false} text={this.setText()} />
