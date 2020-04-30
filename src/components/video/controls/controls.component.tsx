@@ -13,7 +13,7 @@ export class ControlsComponent extends React.Component<IControlsProps, IControls
   public onChangeSound: () => void = this.toggleSound.bind(this);
   public onChangeSubtitles: () => void = this.toggleSubtitles.bind(this);
   public onSetFullsreen: () => void = this.setFullscreen.bind(this);
-  public track: any;
+  public track: any = null;
 
   private constructor(props: IControlsProps) {
     super(props);
@@ -23,7 +23,11 @@ export class ControlsComponent extends React.Component<IControlsProps, IControls
   };
 
   public componentDidMount(): void {
-    this.track = this.props.video.current!.textTracks[0];
+    console.log(this.props.video.current!.textTracks.length > 0);
+    if (this.props.video.current!.textTracks.length > 0) {
+      console.log(this.props.video.current!, this.props.video.current!.textTracks[0]);
+      this.track = this.props.video.current!.textTracks[0];
+    }
   };
 
   public toggleSound(): void {

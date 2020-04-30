@@ -26,7 +26,7 @@ export class MapComponent extends React.Component<IMapProps, ISimpleState> {
   public render(): React.ReactElement<any> {
     return (
       <div className="section_map" >
-        <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 761.1 497.5">
+        <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 761.1 497.5" enableBackground="new 0 0 761.1 497.5" preserveAspectRatio="none slice">
           <path className="section_map__container" d="M343.9,107.5l-1.2-0.6l-0.5-0.8l-0.6,0.1l0.1-0.5l-2.1-2.1h-2.3l-0.3-0.4l-1.5-0.3l-1-1.4l-0.4,0.3l-0.2-1.3
             l-0.4,0.2l-1.4-0.6l-3-0.4l-2-0.9l-1.4-1.3l-1.4-0.6l-1.2-1.7l0.1-0.6l-0.6-0.2l-0.1-0.4l-2-1l-0.5,0.3l-1.1-0.6l-0.4-0.8l-3.5-2.7
             l-1.3-3.9l-1.1-1.9l-1.1-0.9l-0.3-1.1l0.3-0.4l-0.4-0.7v-1.1l-0.4-0.2l0.5-2.1l-0.3-1l0.2-1.5l-0.5-1.6l-1.4-1.1l0.1-0.5l-1.5-1.6

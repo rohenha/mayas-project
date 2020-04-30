@@ -9,31 +9,30 @@ import './galerie.component.sass';
 import { DetailsComponent, DetailsGalerieComponent, ImageGalerieComponent, ImageTitleComponent } from 'Components';
 
 // Services
+import Providers from 'Providers';
 import { AnimationsService } from 'Services';
 
 export class GalerieComponent extends React.Component<IPageComponentProps, IGalerieState> {
   public images: IGalerieElement[];
-  public toggleImage: (element: number) => void = this.openImage.bind(this);
+  public onToggleImage: (element: IGalerieElement) => void = this.toggleImage.bind(this);
   public animationsService: AnimationsService = new AnimationsService();
   public node: React.RefObject<HTMLDivElement>;
-
+  public detailsNode: React.RefObject<HTMLDivElement>;
   private constructor(props: IPageComponentProps) {
     super(props);
     this.state = {
-        imageOpen: -1
+        element: Providers['ImageGalerieBase'],
+        open: false
     };
     this.node = React.createRef();
   };
 
-  public openImage(element: number): void {
-    const newEl = element !== this.state.imageOpen || element !== -1 ? element : -1;
-    let delay = 0;
-    if (element === -1) {
-      this.animationsService.toggleAnimation(null, 'CommonAnimation', 'exit');
-      delay = this.props.content.delayClose;
-    }
+  public toggleImage(element: IGalerieElement): void {
+    const open: boolean = element !== Providers['ImageGalerieBase'];
+    const delay: number = open ? 0 : this.props.content.delayClose;
+    this.setState({ open });
     setTimeout(() => {
-      this.setState({ imageOpen: newEl });
+      this.setState({ element });
     }, delay);
   };
 
@@ -43,8 +42,8 @@ export class GalerieComponent extends React.Component<IPageComponentProps, IGale
         return <ImageGalerieComponent
           key={index}
           index={index}
-          toggleImage={this.toggleImage}
-          open={this.state.imageOpen === index}
+          toggleImage={this.onToggleImage}
+          open={this.state.element === element}
           delayClose={this.props.content.delayClose}
           element={element} />
         break;
@@ -60,14 +59,6 @@ export class GalerieComponent extends React.Component<IPageComponentProps, IGale
     }
   };
 
-  public renderDetailsGalerie(): React.ReactElement<any> {
-    if (this.state.imageOpen > -1) {
-      return <DetailsGalerieComponent content={this.props.content.images[this.state.imageOpen]} closeDetails={this.toggleImage} />;
-    } else {
-      return <React.Fragment />;
-    }
-  };
-
   public render(): React.ReactElement<any> {
     return (
       <div className="section_galerie">
@@ -75,7 +66,7 @@ export class GalerieComponent extends React.Component<IPageComponentProps, IGale
           {this.props.content.images.map((element: IGalerieElement, index: number) =>
             this.renderGalerie(element, index)
           )}
-          {this.renderDetailsGalerie()}
+          <DetailsGalerieComponent content={this.state.element} closeDetails={this.onToggleImage} open={this.state.open} />;
         </DetailsComponent>
       </div>
     );

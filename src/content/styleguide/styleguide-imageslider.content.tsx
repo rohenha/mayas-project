@@ -18,7 +18,7 @@ export const StyleguideImagesSliderContent: any = {
           },
           {
             alt: '',
-            path: require('../../assets/images/branches-dawn-environment-975771.jpg'),
+            path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
             title: ''
           },
           {

@@ -6,6 +6,7 @@ import * as React from 'react';
 import './details.component.sass';
 
 // Services
+import Providers from 'Providers';
 import { AnimationsService } from 'Services';
 
 export class DetailsGalerieComponent extends React.Component<IGalerieDetailsProps, ISimpleState> {
@@ -13,17 +14,20 @@ export class DetailsGalerieComponent extends React.Component<IGalerieDetailsProp
   public animationsService: AnimationsService = new AnimationsService();
   public onCloseDetails: () => void = this.closeImage.bind(this);
 
-  private constructor(props: any) {
+  private constructor(props: IGalerieDetailsProps) {
     super(props);
     this.node = React.createRef();
   }
 
   public closeImage(): void {
-    this.props.closeDetails(-1);
+    this.props.closeDetails(Providers['ImageGalerieBase']);
   };
 
-  public componentDidMount(): void {
-    this.animationsService.toggleAnimation(this.node.current, 'CommonAnimation', 'enter');
+  public componentDidUpdate(prevProps: IGalerieDetailsProps): void {
+    if (this.props.open !== prevProps.open) {
+      const state: string = this.props.open ? 'enter' : 'exit';
+      this.animationsService.toggleAnimation(this.node.current, 'CommonAnimation', state);
+    }
   }
 
   public render(): React.ReactElement<any> {

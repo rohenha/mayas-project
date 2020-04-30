@@ -1,9 +1,23 @@
 @import "tools/variables"
 
 .section_galerie__image
-    cursor: pointer
     position: relative
     transition: opacity .3s ease-in-out
+
+    .section_image,
+    .section_galerie__image--hoverImg
+        pointer-events: none
+
+    button
+        background: none
+        border: none
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+        &:focus
+            outline: none
 
     &:hover
         .section_galerie__image--hoverImg
@@ -13,6 +27,8 @@
         max-width: 100%
 
     &--container
+        background: none
+        border: none
         flex: 0 0 auto
         height: calc(50% - 30px)
         padding: 0 30px

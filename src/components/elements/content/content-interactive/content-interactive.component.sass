@@ -31,10 +31,15 @@
             height: 100%
             width: 70%
             &__image
-                align-items: center
-                display: flex
                 .section_image
-                    height: auto
+                    height: 100%
+                    position: relative
+                    width: 100%
+                    img
+                        left: 50%
+                        position: absolute
+                        top: 50%
+                        transform: translate(-50%, -50%)
 
     &__text
         display: inline-block

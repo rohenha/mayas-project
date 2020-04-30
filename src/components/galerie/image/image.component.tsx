@@ -9,6 +9,7 @@ import './image.component.sass';
 import { ImageComponent } from 'Components';
 
 // Services
+import Providers from 'Providers';
 import { AnimationsService } from 'Services';
 
 export class ImageGalerieComponent extends React.Component<IImageGalerieProps, ISimpleState> {
@@ -34,7 +35,7 @@ export class ImageGalerieComponent extends React.Component<IImageGalerieProps, I
     setTimeout(() => {
       this.animationsService.toggleAnimation(this.node.current, 'GalerieImageAnimation', state);
     }, delay);
-    this.props.toggleImage(index);
+    this.props.toggleImage(!this.props.open ? this.props.element : Providers['ImageGalerieBase']);
   }
 
   public classGalerie(): string {
@@ -49,7 +50,9 @@ export class ImageGalerieComponent extends React.Component<IImageGalerieProps, I
       <div className={this.classGalerie()} onClick={this.onClickImg} ref={this.node}>
         <div className="section_galerie__image">
           <ImageComponent image={this.props.element.image} fullscreen={false} />
-          <div className="section_galerie__image--hoverImg"/>
+          <button className="section_galerie__image--button">
+            <div className="section_galerie__image--hoverImg"/>
+          </button>
         </div>
       </div>
     );
