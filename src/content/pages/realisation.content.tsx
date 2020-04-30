@@ -1,10 +1,9 @@
-export const RealisationContent: any = {
+import { IRoute } from 'Interfaces';
+
+export const RealisationContent: IRoute = {
   ambiant: '',
   animation: 'Common',
-  chapter: 1,
   class: 'page_realisation',
-  codex: [
-  ],
   container: true,
   content: [
     {
@@ -30,7 +29,6 @@ export const RealisationContent: any = {
     }
   ],
   exactUrl: true,
-  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "realisation",

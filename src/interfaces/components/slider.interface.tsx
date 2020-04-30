@@ -1,8 +1,8 @@
 export interface ISliderProps {
-    onDone: () => void
+  onDone: () => void
 }
 
 export interface ISliderState {
-    end: boolean,
-    value: number
+  end: boolean,
+  value: number
 }

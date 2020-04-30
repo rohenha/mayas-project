@@ -1,5 +1,5 @@
 // Imports
-import { IMapProps, IRoute, ISimpleState } from 'Interfaces';
+import { IExperience, IMapProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -11,13 +11,13 @@ import Providers from 'Providers';
 export class MapComponent extends React.Component<IMapProps, ISimpleState> {
   public static contextType = Providers['ThemeContext'];
   public lengthPath: number = 1040;
-  public onRenderRoute: () => any = this.renderRoute.bind(this);
+  public onRenderRoute: (route: IExperience, index: number) => React.ReactElement<any> | void = this.renderRoute.bind(this);
 
   private constructor(props: IMapProps) {
     super(props);
   };
 
-  public renderRoute(route: IRoute, index: number): any {
+  public renderRoute(route: IExperience, index: number): React.ReactElement<any> | void {
     if (route.isExperience && route.hasParent === '') {
       return <circle key={index} className={this.props.page === route || route.chapter < this.props.page.chapter ? "section_map__chapter active" : "section_map__chapter"} cx={route.point.x} cy={route.point.y} r="6.1"/>;
     }

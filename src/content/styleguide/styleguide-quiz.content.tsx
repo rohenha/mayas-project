@@ -1,10 +1,9 @@
-export const StyleguideQuizContent: any = {
+import { IRoute } from 'Interfaces';
+
+export const StyleguideQuizContent: IRoute = {
   ambiant: '',
   animation: 'Common',
-  chapter: 1,
   class: 'page_styleguide',
-  codex: [
-  ],
   container: false,
   content: [
     {
@@ -85,12 +84,11 @@ export const StyleguideQuizContent: any = {
                 },
                 type: "end",
             },
-        ],
+        ]
       }
     }
   ],
   exactUrl: true,
-  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "quiz",

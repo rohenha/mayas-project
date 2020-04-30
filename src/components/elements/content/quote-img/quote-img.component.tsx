@@ -16,10 +16,10 @@ export class QuoteImgComponent extends React.Component<IPageComponentProps, ISim
   public contentService: ContentService = new ContentService();
 
   private constructor(props: IPageComponentProps) {
-      super(props);
+    super(props);
   };
 
-  public classQuoteImg(): any {
+  public classQuoteImg(): string {
     let classString: string = 'section_quote-img ';
     classString = this.props.content.top ? classString : classString + ' section_quote-img__bottom ';
     classString = this.props.content.imgs.length > 1 ? classString : classString + ' section_quote-img__single';

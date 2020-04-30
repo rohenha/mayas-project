@@ -1,4 +1,6 @@
-export const PPaysMexiqueContent: any = {
+import { IExperience } from 'Interfaces';
+
+export const PPaysMexiqueContent: IExperience = {
   ambiant: '',
   animation: 'Common',
   chapter: 2,
@@ -37,8 +39,17 @@ export const PPaysMexiqueContent: any = {
   hasParent: 'PPaysContent',
   isExperience: true,
   isPage: true,
+  map: {
+    x: '',
+    y: ''
+  },
   nextChapter: '',
   pageName: "pays-mexique",
+  point: {
+    path: 0,
+    x: 0,
+    y: 0
+  },
   title: "Pays Mexique",
   url: "/exp/pays/mexique"
 };

@@ -1,5 +1,5 @@
 // Imports
-import { IPageComponentProps, IVideoState } from 'Interfaces';
+import { IPageComponentProps, ISource, IVideoState } from 'Interfaces';
 import * as React from 'react';
 import { VideoService } from 'Services';
 
@@ -20,9 +20,9 @@ export class VideoComponent extends React.Component<IPageComponentProps, IVideoS
     public onVideoEnded: () => void = this.videoEnded.bind(this);
     public videoService: VideoService = new VideoService();
     public video: React.RefObject<HTMLVideoElement>;
-    public controlsTimeout: any;
+    public controlsTimeout: ReturnType<typeof setTimeout>;
 
-    private constructor(props: any) {
+    private constructor(props: IPageComponentProps) {
         super(props);
         this.video = React.createRef();
         this.state= {
@@ -88,7 +88,7 @@ export class VideoComponent extends React.Component<IPageComponentProps, IVideoS
       this.context.toggleSound(true);
     };
 
-    public renderVideo(): any {
+    public renderVideo(): React.ReactElement<any> {
       return <video
           playsInline = {true}
           controls={false}
@@ -104,7 +104,7 @@ export class VideoComponent extends React.Component<IPageComponentProps, IVideoS
           onMouseMove={this.setControls}
           ref={this.video}
       >
-        {this.props.content.sources.map( (source: any, index: number) =>
+        {this.props.content.sources.map((source: ISource, index: number) =>
           <source key={index} src={source.path} type={'video/' + source.type} />
         )}
         { this.props.content.subtitles &&

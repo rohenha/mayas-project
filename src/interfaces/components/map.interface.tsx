@@ -1,5 +1,5 @@
-import { IRoute } from 'Interfaces';
+import { IExperience } from 'Interfaces';
 
 export interface IMapProps {
-  page: IRoute
+  page: IExperience
 }

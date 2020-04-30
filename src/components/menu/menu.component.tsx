@@ -1,5 +1,5 @@
 // Imports
-import { IMenuProps, IRoute, ISimpleState } from 'Interfaces';
+import { IExperience, IMenuProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import { PagesService } from 'Services';
@@ -21,7 +21,7 @@ export class MenuComponent extends React.Component<IMenuProps, ISimpleState> {
   public static contextType = Providers['ThemeContext'];
   public node: React.RefObject<HTMLDivElement>;
   public animationsService: AnimationsService = new AnimationsService();
-  public onRenderRoute: () => any = this.renderRoute.bind(this);
+  public onRenderRoute: (route: IExperience, index: number) => React.ReactElement<any> | void = this.renderRoute.bind(this);
   public pagesService: PagesService = new PagesService();
 
   private constructor(props: IMenuProps) {
@@ -37,7 +37,7 @@ export class MenuComponent extends React.Component<IMenuProps, ISimpleState> {
     }
   };
 
-  public renderRoute(route: IRoute, index: number): React.ReactElement<any> | void {
+  public renderRoute(route: IExperience, index: number): React.ReactElement<any> | void {
     if (route.isExperience && route.hasParent === '') {
       return (
         <li key={index}>

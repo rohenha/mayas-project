@@ -13,7 +13,7 @@ export class ControlsComponent extends React.Component<IControlsProps, IControls
   public onChangeSound: () => void = this.toggleSound.bind(this);
   public onChangeSubtitles: () => void = this.toggleSubtitles.bind(this);
   public onSetFullsreen: () => void = this.setFullscreen.bind(this);
-  public track: any = null;
+  public track: TextTrack | null = null;
 
   private constructor(props: IControlsProps) {
     super(props);
@@ -35,7 +35,7 @@ export class ControlsComponent extends React.Component<IControlsProps, IControls
   };
 
   public toggleSubtitles(): void {
-    this.track.mode = this.track.mode === 'showing' ? 'hidden' : 'showing';
+    this.track!.mode = this.track!.mode === 'showing' ? 'hidden' : 'showing';
   };
 
   public setFullscreen(): void {

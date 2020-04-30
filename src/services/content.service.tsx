@@ -5,7 +5,7 @@ import * as React from 'react';
 import { ImageComponent, VideoComponent, VideoYoutubeComponent } from 'Components';
 
 // Services
-import { IContent } from 'Interfaces';
+import { IBackground, IContent } from 'Interfaces';
 
 export class ContentService {
 
@@ -15,7 +15,7 @@ export class ContentService {
     );
   };
 
-  public renderElement(element: IContent, key: number, history: any): any {
+  public renderElement(element: IContent, key: number, history: any): React.ReactElement<any> | void {
     switch(element.type) {
       case 'text':
         return <p key={key}>{element.content}</p>;
@@ -38,11 +38,11 @@ export class ContentService {
           subtitles: ''
         }} />;
       default:
-        return null;
+        break;
     }
   };
 
-  public renderBackground(isVideo: boolean, imgs: any, props: any): any {
+  public renderBackground(isVideo: boolean, media: IBackground, props: any): React.ReactElement<any> {
     if (isVideo) {
       return <VideoComponent
         {...props}
@@ -53,13 +53,13 @@ export class ContentService {
           loop: true,
           muted: true,
           nextPage: '',
-          poster: imgs[0],
-          sources: imgs[1],
+          poster: media.poster,
+          sources: media.sources,
           subtitles: ''
         }}
       />;
     } else {
-      return <ImageComponent image={imgs[0]} fullscreen={true} />;
+      return <ImageComponent image={media.poster} fullscreen={true} />;
     }
   };
 }

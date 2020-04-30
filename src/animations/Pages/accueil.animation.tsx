@@ -31,7 +31,7 @@ export const AccueilAnimation: IAnimation  = {
           .to(elements.bg, 2, { autoAlpha: 0, opacity: 0, scaleX: 1.5, scaleY: 1.5 });
     },
 
-    setElements(node: any): any {
+    setElements(node: HTMLElement): any {
       const elements: any = {};
       elements.node = node;
       elements.bg = elements.node.querySelector('.js-bg');

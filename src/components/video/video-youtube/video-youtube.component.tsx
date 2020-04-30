@@ -12,11 +12,11 @@ import Providers from 'Providers';
 
 export class VideoYoutubeComponent extends React.Component<IPageComponentProps, ISimpleState> {
   public static contextType = Providers['ThemeContext'];
-  public onVideoEnded: () => any = this.onEnd.bind(this);
-  public onVideoPlay: () => any = this.changeSound.bind(this, false);
-  public onVideoPause: () => any = this.changeSound.bind(this, true);
+  public onVideoEnded: () => void = this.onEnd.bind(this);
+  public onVideoPlay: () => void = this.changeSound.bind(this, false);
+  public onVideoPause: () => void = this.changeSound.bind(this, true);
 
-  private constructor(props: any) {
+  private constructor(props: IPageComponentProps) {
     super(props);
   }
 

@@ -1,10 +1,9 @@
-export const StyleguideTextImgContent: any = {
+import { IRoute } from 'Interfaces';
+
+export const StyleguideTextImgContent: IRoute = {
   ambiant: '',
   animation: 'Common',
-  chapter: 1,
   class: 'page_styleguide',
-  codex: [
-  ],
   container: true,
   content: [
     {
@@ -34,7 +33,6 @@ export const StyleguideTextImgContent: any = {
     }
   ],
   exactUrl: true,
-  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "textimg",

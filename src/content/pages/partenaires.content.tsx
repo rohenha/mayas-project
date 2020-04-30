@@ -1,10 +1,9 @@
-export const PartenairesContent: any = {
+import { IRoute } from 'Interfaces';
+
+export const PartenairesContent: IRoute = {
   ambiant: '',
   animation: 'Common',
-  chapter: 1,
   class: 'page_partenaires',
-  codex: [
-  ],
   container: true,
   content: [
     {
@@ -30,7 +29,6 @@ export const PartenairesContent: any = {
     }
   ],
   exactUrl: true,
-  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "partenaires",

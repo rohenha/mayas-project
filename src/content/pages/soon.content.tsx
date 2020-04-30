@@ -1,10 +1,9 @@
-export const SoonContent: any = {
+import { IRoute } from 'Interfaces';
+
+export const SoonContent: IRoute = {
   ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
   animation: 'Accueil',
-  chapter: 1,
   class: 'page_home',
-  codex: [
-  ],
   container: false,
   content: [
     {
@@ -24,22 +23,22 @@ export const SoonContent: any = {
             poste: 'Compositeur'
           }
         ],
-        imgs: [
-            {
-              alt: '',
-              path: require('../../assets/videos/Breezy/Breezy.jpg'),
-              title: ''
-            },
-            [
-                { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
-                { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
-                { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
-            ]
-        ],
         interaction: 'Bientôt sur vos écrans',
         introduce: {
           subtitle: 'présente',
           title: 'Voyage en terres d\'histoire'
+        },
+        media: {
+          poster: {
+            alt: '',
+            path: require('../../assets/videos/Breezy/Breezy.jpg'),
+            title: ''
+          },
+          sources: [
+            { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
+            { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
+            { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
+          ]
         },
         title: {
           subtitle: 'Sur les traces d\'une civilisation mystérieuse',
@@ -51,7 +50,6 @@ export const SoonContent: any = {
     }
   ],
   exactUrl: true,
-  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "soon",

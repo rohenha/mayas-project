@@ -1,10 +1,9 @@
-export const StyleguideQuoteImgContent: any = {
+import { IRoute } from 'Interfaces';
+
+export const StyleguideQuoteImgContent: IRoute = {
   ambiant: '',
   animation: 'Common',
-  chapter: 1,
   class: 'page_styleguide',
-  codex: [
-  ],
   container: true,
   content: [
     {
@@ -32,7 +31,6 @@ export const StyleguideQuoteImgContent: any = {
     }
   ],
   exactUrl: true,
-  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "quoteimg",

@@ -16,7 +16,8 @@ export class ImageSliderComponent extends React.Component<IPageComponentProps, I
   public nextSlide: () => void = this.nextSlideAnimation.bind(this);
   public previousSlide: () => void = this.previousSlideAnimation.bind(this);
   public onSetHeight: () => void = this.setHeight.bind(this);
-  private constructor(props: any) {
+  
+  private constructor(props: IPageComponentProps) {
     super(props);
     this.node = React.createRef();
     this.container = React.createRef();

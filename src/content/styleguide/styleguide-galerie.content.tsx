@@ -1,10 +1,9 @@
-export const StyleguideGalerieContent: any = {
+import { IRoute } from 'Interfaces';
+
+export const StyleguideGalerieContent: IRoute = {
   ambiant: '',
   animation: 'Common',
-  chapter: 1,
   class: 'page_styleguide',
-  codex: [
-  ],
   container: false,
   content: [
     {
@@ -162,7 +161,6 @@ export const StyleguideGalerieContent: any = {
     }
   ],
   exactUrl: true,
-  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "galerie",

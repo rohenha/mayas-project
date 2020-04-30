@@ -8,7 +8,7 @@ import './slider.component.sass';
 // Components
 
 export class SliderComponent extends React.Component<ISliderProps, ISliderState> {
-  public onChange: (event: any) => void = this.changeValue.bind(this);
+  public onChange: (event: React.ChangeEvent<HTMLInputElement>) => void = this.changeValue.bind(this);
   public onReset: () => void = this.resetVal.bind(this);
   private animationInterval: ReturnType<typeof setTimeout>;
   constructor (props: ISliderProps) {
@@ -19,11 +19,14 @@ export class SliderComponent extends React.Component<ISliderProps, ISliderState>
     };
   };
 
-  public changeValue(event: any): void  {
-    const value = event.target.value;
+  public changeValue(event: React.ChangeEvent<HTMLInputElement>): void  {
+    const value = Number(event.target!.value);
     if (!this.state.end) {
       this.setState(
-        { end: value === '100' , value },
+        {
+          end: value === 100,
+          value
+        },
         this.checkIsDone
       );
     }

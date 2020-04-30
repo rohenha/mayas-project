@@ -3,7 +3,7 @@ import { IAnswerQuizProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 export class QuizAnswerComponent extends React.Component<IAnswerQuizProps, ISimpleState> {
-  private constructor(props: any) {
+  private constructor(props: IAnswerQuizProps) {
       super(props);
   };
 

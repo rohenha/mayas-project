@@ -1,6 +1,6 @@
 /* tslint:disable:no-empty */
 // Imports
-import { IContainerState, IRoute, ISimpleProps } from 'Interfaces';
+import { IContainerState, IExperience, IRoute, ISimpleProps } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -11,7 +11,7 @@ import Providers from 'Providers';
 export class ContainerComponent extends React.Component<ISimpleProps, IContainerState> {
   private constructor(props: ISimpleProps) {
       super(props);
-      const routes: IRoute | any[]  = [];
+      const routes: IRoute | IExperience []  = [];
       Object.keys(Content)
         .forEach((key: string) => {
           const content = Content[key];

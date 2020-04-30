@@ -18,7 +18,7 @@ export class EntryChapterComponent extends React.Component<IPageComponentProps, 
   public render(): React.ReactElement<any> {
     return (
       <section className="section__entry-chapter">
-        {this.contentService.renderBackground(this.props.content.video, this.props.content.imgs, this.props)}
+        {this.contentService.renderBackground(this.props.content.video, this.props.content.media, this.props)}
         <div className="page__content">
           <div className="container-fluid">
             <h3 className="text__subtitle" dangerouslySetInnerHTML={{__html: this.props.content.subtitle}}/>

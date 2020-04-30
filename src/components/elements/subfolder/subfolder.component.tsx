@@ -31,7 +31,7 @@ export class SubFolderComponent extends React.Component<IPageComponentProps, ISi
   public render(): React.ReactElement<any> {
     return (
       <div className="section_subfolder">
-        {this.props.content.map(this.renderPath.bind(this))}
+        {this.props.content.paths.map(this.renderPath.bind(this))}
       </div>
     );
   }

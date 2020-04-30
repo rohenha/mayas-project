@@ -1,10 +1,9 @@
-export const StyleguideVideoContent: any = {
+import { IRoute } from 'Interfaces';
+
+export const StyleguideVideoContent: IRoute = {
   ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
   animation: 'Common',
-  chapter: 1,
   class: 'page_styleguide',
-  codex: [
-  ],
   container: true,
   content: [
     {
@@ -29,7 +28,6 @@ export const StyleguideVideoContent: any = {
     }
   ],
   exactUrl: true,
-  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "video",

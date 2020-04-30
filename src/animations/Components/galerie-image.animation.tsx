@@ -9,7 +9,7 @@ export const GalerieImageAnimation: IAnimation = {
     elements: {},
     enter(node: HTMLElement, delay: number): void {
         const tlIn: TimelineMax = new TimelineMax();
-        const nodeDetails: any = node.getBoundingClientRect();
+        const nodeDetails: ClientRect = node.getBoundingClientRect();
         const scale: number = nodeDetails.width > nodeDetails.height ? (window.innerWidth / 2) / (nodeDetails.width - 30) : (window.innerHeight * (2 / 3)) / nodeDetails.width;
         const xPos: number = (window.innerWidth - nodeDetails.width * scale / 2) - (nodeDetails.left + (nodeDetails.width / 2));
         const yPos: number = ((window.innerHeight / 2) - (nodeDetails.top + nodeDetails.height / 2));

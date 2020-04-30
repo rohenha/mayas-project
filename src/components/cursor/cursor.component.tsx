@@ -6,7 +6,7 @@ import * as React from 'react';
 import './cursor.component.sass';
 
 export class CursorComponent extends React.Component<ISimpleProps, ICursorState> {
-  public onUpdateMousePosition: (event: any) => void = this.updateMousePosition.bind(this);
+  public onUpdateMousePosition: (event: MouseEvent) => void = this.updateMousePosition.bind(this);
   public onEnterCursor: () => void = this.toggleActive.bind(this, true);
   public onLeaveCursor: () => void = this.toggleActive.bind(this, false);
   private constructor(props: ISimpleProps) {
@@ -35,7 +35,7 @@ export class CursorComponent extends React.Component<ISimpleProps, ICursorState>
     this.setState({ active: state });
   };
 
-  public updateMousePosition(event: any): void {
+  public updateMousePosition(event: MouseEvent): void {
     this.setState({
       hover: this.isCursorHover(event.target),
       x: event.clientX,
@@ -43,8 +43,8 @@ export class CursorComponent extends React.Component<ISimpleProps, ICursorState>
     });
   };
 
-  public isCursorHover(target: HTMLElement): boolean {
-    const tagName: string = target.tagName;
+  public isCursorHover(target: EventTarget | null): boolean {
+    const tagName: string = (target as HTMLElement).tagName;
     return tagName === 'A' ||
       tagName === 'BUTTON' ||
       tagName === 'INPUT' ||

@@ -1,4 +1,6 @@
-export const PIntroductionContent: any = {
+import { IExperience } from 'Interfaces';
+
+export const PIntroductionContent: IExperience = {
   ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
   animation: 'Common',
   chapter: 1,
@@ -54,19 +56,19 @@ export const PIntroductionContent: any = {
     {
       component: 'EntryChapterComponent',
       content: {
-        imgs: [
-            {
-              alt: '',
-              path: require('../../assets/videos/Breezy/Breezy.jpg'),
-              title: ''
-            },
-            [
-                { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
-                { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
-                { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
-            ]
-        ],
         introduction: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores provident minus.",
+        media: {
+          poster: {
+            alt: '',
+            path: require('../../assets/videos/Breezy/Breezy.jpg'),
+            title: ''
+          },
+          sources: [
+            { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
+            { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
+            { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
+          ]
+        },
         subtitle: "Chapitre 1<span>Mayas</span>",
         text: "Chapter",
         video: true

@@ -1,7 +1,9 @@
+import { IExperience } from 'Interfaces';
+
 export interface IHeaderExpProps {
-    page: any
+  page: IExperience
 }
 
 export interface IHeaderExpState {
-    openMenu: boolean
+  openMenu: boolean
 }

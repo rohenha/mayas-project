@@ -38,9 +38,9 @@ export class QuizQuestionComponent extends React.Component<IQuestionQuizProps, I
     return goodAnswers;
   };
 
-  public changeValue(event: Event): void {
-    const target: any = event.target;
-    const newPropositions: any = this.state.propositions;
+  public changeValue(event: React.ChangeEvent<HTMLInputElement>): void {
+    const target: any = event.target!;
+    const newPropositions: IQuestionProposition[] = this.state.propositions;
     if (this.state.numberAnswers === 1) {
       newPropositions.map((proposition: IQuestionProposition, index: number) => {
         proposition.checked = false;

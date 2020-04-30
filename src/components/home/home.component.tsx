@@ -1,5 +1,5 @@
 // Imports
-import { IHomeText, IPageComponentProps, ISimpleState } from 'Interfaces';
+import { IAuthor, IHomeText, IPageComponentProps, ISimpleState } from 'Interfaces';
 import * as React from 'react';
 
 // Styles
@@ -18,17 +18,17 @@ export class HomeComponent extends React.Component<IPageComponentProps, ISimpleS
   public sliderDone: () => void = this.onSliderDone.bind(this);
   public contentService: ContentService = new ContentService();
 
-  private constructor(props: any) {
+  private constructor(props: IPageComponentProps) {
     super(props);
   };
 
   public onSliderDone() : void {
-    const redirection = Content[this.props.content.start];
+    const redirection: any = Content[this.props.content.start];
     this.props.history.push(redirection.url);
   };
 
   public renderAuthors(): React.ReactElement<any> {
-    return this.props.content.authors.map((author: {poste: string, name: string}, index: number) =>
+    return this.props.content.authors.map((author: IAuthor, index: number) =>
       <p className="text__link" key={index}>{author.poste} : <span>{author.name}</span></p>
     );
   };
@@ -47,7 +47,7 @@ export class HomeComponent extends React.Component<IPageComponentProps, ISimpleS
   public render(): React.ReactElement<any> {
     return (
       <div className="page-home js-home">
-        {this.contentService.renderBackground(this.props.content.video, this.props.content.imgs, this.props)}
+        {this.contentService.renderBackground(this.props.content.video, this.props.content.media, this.props)}
         <div className="page__content js-container">
           <div className="container-fluid">
             {this.renderTitle('introduce', [ { className: 'text__subtitle', content: this.props.content.introduce.title , element: 'h3' }, { className: 'text__link', content: this.props.content.introduce.subtitle , element: 'p' } ])}

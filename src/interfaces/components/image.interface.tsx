@@ -13,8 +13,8 @@ export interface IGalerieElement {
 }
 
 export interface IGalerieState {
-    element: IGalerieElement,
-    open: boolean
+  element: IGalerieElement,
+  open: boolean
 }
 
 export interface IImageProps {
@@ -24,17 +24,16 @@ export interface IImageProps {
 
 export interface IGalerieDetailsProps {
   content: IGalerieElement,
-  closeDetails: (element: IGalerieElement) => any,
+  closeDetails: (element: IGalerieElement) => void,
   open: boolean
 }
 
-// tslint:disable-next-line:no-empty-interface
 export interface IImageGalerieProps {
-    toggleImage: (element: IGalerieElement) => void,
-    open: boolean,
-    index: number,
-    element: IGalerieElement
-    delayClose: number
+  toggleImage: (element: IGalerieElement) => void,
+  open: boolean,
+  index: number,
+  element: IGalerieElement
+  delayClose: number
 }
 
 export interface IITitleProps {

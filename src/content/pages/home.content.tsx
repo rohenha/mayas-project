@@ -1,10 +1,9 @@
-export const HomeContent: any = {
+import { IRoute } from 'Interfaces';
+
+export const HomeContent: IRoute = {
   ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
   animation: 'Accueil',
-  chapter: 1,
   class: 'page_home',
-  codex: [
-  ],
   container: false,
   content: [
     {
@@ -24,22 +23,22 @@ export const HomeContent: any = {
             poste: 'Compositeur'
           }
         ],
-        imgs: [
-            {
-              alt: '',
-              path: require('../../assets/videos/Breezy/Breezy.jpg'),
-              title: ''
-            },
-            [
-                { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
-                { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
-                { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
-            ]
-        ],
         interaction: 'Glisser pour commencer l\'expérience',
         introduce: {
           subtitle: 'présente',
           title: 'Voyage en terres d\'histoire'
+        },
+        media: {
+          poster: {
+            alt: '',
+            path: require('../../assets/videos/Breezy/Breezy.jpg'),
+            title: ''
+          },
+          sources: [
+            { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
+            { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
+            { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
+          ]
         },
         start: 'PIntroductionContent',
         title: {
@@ -51,7 +50,6 @@ export const HomeContent: any = {
     }
   ],
   exactUrl: true,
-  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "home",

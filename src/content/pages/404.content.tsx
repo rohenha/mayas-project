@@ -1,10 +1,9 @@
-export const P404Content: any = {
+import { IRoute } from 'Interfaces';
+
+export const P404Content: IRoute = {
   ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
   animation: 'Common',
-  chapter: 0,
   class: 'page_404',
-  codex: [
-  ],
   container: false,
   content: [
     {
@@ -27,7 +26,6 @@ export const P404Content: any = {
     }
   ],
   exactUrl: true,
-  hasParent: '',
   isExperience: false,
   isPage: true,
   pageName: "404",

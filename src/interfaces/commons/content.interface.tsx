@@ -6,8 +6,8 @@ export interface IComponent {
 }
 
 export interface IContent {
-    content: any,
-    type: string
+  content: any,
+  type: string
 }
 
 export interface IMapPosition {
@@ -24,26 +24,29 @@ export interface IPoint {
 export interface IRoute {
   ambiant: string,
   animation: string,
-  chapter: number,
   class: string,
-  codex: ICodexData[],
   container: boolean,
   content: any[],
   exactUrl: boolean,
-  hasParent: '',
   isExperience: boolean,
   isPage: boolean,
-  map: IMapPosition,
-  nextChapter: string,
   pageName: string,
-  point: IPoint,
   title: string,
   url: string
 }
 
+export interface IExperience extends IRoute {
+  chapter: number,
+  codex: ICodexData[],
+  hasParent: string,
+  map: IMapPosition,
+  nextChapter: string,
+  point: IPoint,
+}
+
 export interface IContainerState {
   muted: boolean,
-  page: IRoute,
-  routes: IRoute[],
+  page: IRoute | IExperience,
+  routes: IRoute | IExperience[],
   sound: boolean
 }
