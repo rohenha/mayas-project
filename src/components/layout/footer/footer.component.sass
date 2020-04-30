@@ -1,0 +1,44 @@
+@import "tools/variables"
+
+.footer
+    bottom: $padding
+    position: fixed
+    z-index: 30
+    ul
+        align-items: center
+        display: flex
+        flex-flow: row wrap
+        li
+            font-size: 0
+            list-style-type: none
+            &:not(:last-child)
+                margin-right: 15px
+
+            a
+                display: inline-block
+
+            .section_image,
+            img
+                pointer-events: none
+
+            img
+                opacity: .5
+                padding-top: 5px
+                transition: opacity .2s ease-in-out
+                width: 12px
+
+    &--left
+        left: $padding
+
+    &--right
+        right: $padding
+
+.footer,
+.header
+    a
+        transition: color .2s ease-in-out
+        &:hover
+            color: $color-secondary
+
+            img
+                opacity: 1

@@ -1,0 +1,70 @@
+@import "tools/variables"
+
+.section_multiple-paths
+    height: 100%
+    list-style: none
+    padding: 0
+    position: relative
+    width: 100%
+
+    &::before
+        background-color: $color-black
+        content: ''
+        display: block
+        height: 100%
+        left: 0
+        opacity: .4
+        position: absolute
+        top: 0
+        width: 100%
+
+    &.active
+        .section_multiple-paths__element:not(:hover)
+            img
+                opacity: 0
+            a
+                opacity: .5
+
+    &__element
+        display: inline-block
+        float: left
+        height: 100%
+        overflow: hidden
+        position: relative
+
+        &:first-child img
+            left: 0
+
+        &:nth-child(2) img
+            left: 50%
+            transform: translateX(-50%)
+
+        &:last-child img
+            right: 0
+
+        &:hover
+            overflow: visible
+            img,
+            a
+                opacity: 1
+
+        img
+            height: 100%
+            object-fit: cover
+            position: absolute
+            top: 0
+            width: 100%
+            z-index: -1
+
+        a
+            align-items: center
+            display: flex
+            flex-flow: column wrap
+            height: 100%
+            justify-content: center
+            width: 100%
+
+        &--content
+            height: 100%
+            text-align: center
+            width: 100%

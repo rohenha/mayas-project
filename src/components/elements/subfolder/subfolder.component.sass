@@ -1,0 +1,59 @@
+/* autoprefixer grid: autoplace */
+@import "tools/variables"
+
+.section_subfolder
+    display: grid
+    grid-template-areas: 'a b' 'a c'
+    grid-template-columns: 50% 50%
+    grid-template-rows: 50% 50%
+    height: 100%
+    overflow: hidden
+    width: 100%
+    &__single
+        background-color: $color-black
+        height: 100%
+        overflow: hidden
+        width: 100%
+        &:hover
+            img
+                opacity: .8
+                transform: scale(1)
+
+        &:first-child
+            grid-area: a
+
+        &:nth-child(2)
+            grid-area: b
+
+        &:last-child
+            grid-area: c
+
+        a
+            display: inline-block
+            height: 100%
+            position: relative
+            width: 100%
+
+            div,
+            span
+                pointer-events: none
+
+        img
+            height: 100%
+            object-fit: cover
+            opacity: .5
+            transform: scale(1.03)
+            transition: all .5s ease-in-out
+            width: 100%
+
+        .text__title-multi-path
+            bottom: 40px
+            display: inline-block
+            left: 40px
+            margin: auto
+            max-width: 200px
+            pointer-events: none
+            position: absolute
+            z-index: 4
+            span
+                display: block

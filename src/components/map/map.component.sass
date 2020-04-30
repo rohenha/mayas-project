@@ -1,0 +1,36 @@
+@import "tools/variables"
+
+.section_map
+    div
+        display: inline-block
+        width: 100%
+
+    svg
+        display: inline-block
+        enable-background: 'new 0 0 761.1 497.5'
+        width: 100%
+
+    &__container
+        fill: rgba($color-secondary, .3)
+
+    &__path
+        fill: none
+        stroke-linecap: round
+
+        &--fixed
+            stroke: $color-secondary
+            stroke-dasharray: 5px
+            stroke-width: 1px
+
+        &--animated
+            stroke: $color-primary
+            stroke-dasharray: 1040px
+            stroke-dashoffset: 1040px
+            stroke-width: 4px
+            transition: stroke-dasharray 2s ease-in-out
+
+    &__chapter
+        fill: $color-secondary
+        opacity: .4
+        &.active
+            opacity: 1

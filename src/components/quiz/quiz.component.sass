@@ -1,0 +1,31 @@
+@import "tools/variables"
+
+.section_quiz
+    .page__bg
+        opacity: .5
+    .container-fluid
+        display: flex
+        flex-flow: column wrap
+        justify-content: center
+        padding-bottom: calc(#{$padding} + #{$navHeight} + 48px)
+        padding-top: calc(#{$padding} + 65px)
+        position: relative
+        z-index: 2
+    &__title
+        .text__subtitle
+            span
+                color: $color-secondary
+                margin-left: 10px
+                padding-left: 10px
+                position: relative
+
+                &::before
+                    background-color: $color-secondary
+                    content: ""
+                    display: block
+                    height: 20px
+                    left: 0
+                    position: absolute
+                    top: 50%
+                    transform: translate(0, -50%)
+                    width: 1px

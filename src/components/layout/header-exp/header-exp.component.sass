@@ -1,0 +1,100 @@
+@import "tools/variables"
+
+.header-exp
+    display: inline-block
+    position: absolute
+    top: $padding
+    z-index: 5
+
+    &--left
+        left: $padding
+
+    &--right
+        right: $padding
+
+    &__text,
+    &__map
+        pointer-events: none
+
+    &__text
+        display: inline-block
+        margin-right: 10px
+        text-align: right
+        > span
+            overflow: hidden
+
+        span
+            display: block
+            text-align: right
+
+        &--content
+            position: relative
+            transform: translateX(0)
+            transition: transform .6s ease-in-out
+            &::before
+                content: attr(data-content)
+                display: block
+                position: absolute
+                right: calc(100% + 10px)
+                top: 0
+                width: 100%
+
+        &--subtitle
+            color: $color-primary
+
+        &--subtitle
+            .header-exp__text--content
+                transition-delay: .1s
+
+    &__button
+        appearance: none
+        background: transparent
+        border: none
+        color: $color-secondary
+        cursor: pointer
+        display: flex
+        outline: none
+
+        &:hover
+            .header-exp
+                &__text
+                    &--subtitle .header-exp__text--content
+                        transition-delay: 0s
+
+                    &--title .header-exp__text--content
+                        transition-delay: .1s
+
+                    &--content
+                        transform: translateX(calc(100% + 10px))
+
+                &__map
+                    background: rgba($color-black, 1)
+                    outline: none
+
+    &__map
+        appearance: none
+        background: rgba(#49403A, .5)
+        border: 1px solid rgba(#F6F6F6, .3)
+        border-radius: 2px
+        color: $color-secondary
+        cursor: pointer
+        display: inline-block
+        height: 65px
+        overflow: hidden
+        position: relative
+        width: 65px
+
+        &--container
+            height: 83px
+            left: 0
+            position: absolute
+            top: 0
+            transform: translate(0%, 0%)
+            transition: transform 2s ease-in-out
+            width: 200%
+
+            .section_map
+                height: 100%
+
+        svg
+            width: 100%

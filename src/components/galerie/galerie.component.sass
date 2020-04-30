@@ -1,0 +1,22 @@
+@import "tools/variables"
+
+.section_galerie
+    display: flex
+    height: 100%
+    overflow: hidden
+    padding: calc(#{$padding} + #{$navHeight} + 10px) 0
+    position: relative
+    width: 100%
+    z-index: 1
+
+    &::before,
+    .section_details::before
+        display: none
+
+    .section_details__content
+        align-items: center
+        flex-flow: column wrap
+        width: 100%
+
+    &--active
+        overflow: hidden

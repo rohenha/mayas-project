@@ -1,0 +1,84 @@
+@import "tools/variables"
+
+.section_sound-document
+    height: 35px
+    left: calc(#{$padding} + 20px)
+    position: absolute
+    top: $padding
+    width: 35px
+    z-index: 5
+
+    &__player,
+    &__details
+        bottom: 0
+        margin: auto
+        position: absolute
+        top: 0
+
+    &__player
+        background: url('../../../assets/images/controls.svg'), $color-primary
+        background-position: -33px -63px
+        background-size: 65px 193px
+        border: none
+        border-radius: 35px
+        height: 100%
+        left: 0
+        right: 0
+        width: 100%
+
+        &:focus
+            outline: none
+
+        &.visible
+            opacity: 1
+            pointer-events: inherit
+
+
+        &.pause
+            background-position: 3px -63px
+
+        &--back
+            fill-opacity: 0
+            stroke: rgba($color-secondary, .3)
+            stroke-width: 2
+
+        &--front
+            fill-opacity: 0
+            stroke: $color-secondary
+            stroke-width: 2
+            transition: stroke-dasharray .1s linear
+
+    svg
+        pointer-events: none
+        position: relative
+        transform: scale(1.1)
+        z-index: 2
+
+    &__details
+        background-color: rgba($color-black, .5)
+        border-radius: 35px
+        height: 100%
+        left: 2px
+        opacity: 0
+        overflow: hidden
+        padding-left: 120%
+        transform: translateX(-10px)
+        transition: transform .3s ease-in-out, opacity .3s ease-in-out
+        width: 190px
+        z-index: -1
+        &.active
+            opacity: 1
+            transform: translateX(0)
+
+
+    &__title
+        overflow: hidden
+        white-space: nowrap
+        &:not(:last-child)
+            margin-bottom: 0
+        span
+            display: inline-block
+
+        &.animated
+            span
+                animation: animSoundTitle 10s infinite linear alternate

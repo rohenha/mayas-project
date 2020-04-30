@@ -1,0 +1,60 @@
+@import "tools/variables"
+
+.section_quote-img
+    flex: 0 0 auto
+    height: 100%
+    padding: calc(#{$padding} + #{$navHeight} + 10px) 0
+    width: 70vw
+
+    .container-fluid
+        height: 100%
+
+    h3:not(:last-child)
+        margin-bottom: 30px
+
+    &__content,
+    &__images
+        width: 100%
+
+    &__images
+        height: 65%
+        padding: 0 0 30px
+        .section_image
+            display: inline-block
+            float: left
+            height: 100%
+            overflow: hidden
+            position: relative
+            width: calc(50% - 15px)
+
+            &:first-child
+                margin-right: 15px
+            &:last-child
+                margin-left: 15px
+
+            img
+                height: 100%
+                left: 50%
+                max-width: inherit
+                position: absolute
+                top: 50%
+                transform: translate(-50%, -50%)
+
+
+    &__content
+        height: 35%
+        padding: 0 0
+        text-align: center
+
+    &__bottom
+        .section_quote-img
+            &__images
+                padding: 30px 0 0
+
+    &__single
+        .section_image
+            width: 100%
+            &:first-child,
+            &:last-child
+                margin-left: 0
+                margin-right: 0

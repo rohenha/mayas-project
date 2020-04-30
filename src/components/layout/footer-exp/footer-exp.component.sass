@@ -1,0 +1,23 @@
+@import "tools/variables"
+
+.footer-exp
+    bottom: calc(#{$padding} + #{$navHeight} + 10px)
+    position: absolute
+    z-index: 3
+
+    &--left
+        left: $padding
+        span
+            pointer-events: none
+
+    &--right
+        right: $padding
+
+    &__codex-img
+        background-image: url('../../../assets/images/controls.svg')
+        background-position: -8px -205px
+        background-size: 80px 238px
+        display: inline-block
+        height: 20px
+        margin-left: 10px
+        width: 20px

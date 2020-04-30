@@ -1,0 +1,45 @@
+@import "tools/variables"
+
+.page-home
+    overflow: hidden
+    width: 100%
+    .page__content
+        display: flex
+        flex-flow: column wrap
+        justify-content: center
+        padding: calc(#{$padding} + #{$navHeight}) 0
+
+    .container-fluid
+        padding-left: 80px
+
+    &__introduce,
+    &__title,
+    &__form-enter
+        margin-bottom: 70px
+    &__introduce
+        h3
+            color: $color-secondary
+    &__introduce,
+    &__form-enter
+        p
+            color: $color-secondary
+
+    &__form-enter
+        max-width: 500px
+        .form-range
+            &__container
+                margin-bottom: 20px
+            &__input
+                width: 100%
+    &__realisation
+        p
+            display: inline-block
+            font-weight: 800
+            &:not(:last-child)
+                margin: 0 20px 20px 0
+            span
+                color: $color-secondary
+
+    h1,
+    h2
+        margin-bottom: 0

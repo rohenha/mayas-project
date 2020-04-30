@@ -1,0 +1,68 @@
+@import "tools/variables"
+
+.section_quote
+    height: 100%
+    padding: calc(#{$padding} + #{$navHeight}) 0
+    position: relative
+    width: 100%
+
+    &::before
+        background-color: $color-black
+        content: ''
+        display: block
+        height: 100%
+        left: 0
+        opacity: .5
+        position: absolute
+        top: 0
+        width: 100%
+        z-index: 2
+
+    .container-fluid
+        display: flex
+        flex-flow: column wrap
+        height: 100%
+        justify-content: center
+        position: relative
+        text-align: center
+        z-index: 3
+
+    h2,
+    h3
+        &:first-child
+            &::before
+                background: url('../../assets/images/quote.svg')
+                background-position: center center
+                background-size: contain
+                content: ''
+                display: inline-block
+                height: 16px
+                opacity: 1
+                width: 16px
+
+    h2::before,
+    h3::after
+        background: url('../../assets/images/quote.svg')
+        background-position: center center
+        background-size: contain
+        content: ''
+        display: inline-block
+        height: 16px
+        opacity: 1
+        width: 16px
+
+    h2
+        margin-bottom: 0
+        &::before
+            margin-right: 10px
+            vertical-align: top
+
+    h3
+        color: $color-secondary
+        margin-bottom: 0
+        &::after
+            margin-left: 10px
+            vertical-align: bottom
+
+    p
+        margin-top: 60px

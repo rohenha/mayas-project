@@ -1,0 +1,31 @@
+.cross
+    background: none
+    border: none
+    display: inline-block
+    height: 25px
+    position: relative
+    transition: transform .3s ease-in-out
+    width: 25px
+    &::before,
+    &::after
+        background-color: $color-secondary
+        bottom: 0
+        content: ''
+        display: block
+        height: 1px
+        left: 0
+        margin: auto
+        pointer-events: none
+        position: absolute
+        right: 0
+        top: 0
+        transform: rotate(45deg)
+        width: 100%
+
+    &::after
+        transform: rotate(-45deg)
+
+    &:hover,
+    &:focus
+        outline: none
+        transform: rotate(90deg)

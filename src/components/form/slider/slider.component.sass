@@ -1,0 +1,47 @@
+@import "tools/variables"
+
+.form
+    &-range
+        &__input
+            -webkit-appearance: none
+            animation: slider 20s linear infinite
+            background: url('../../../assets/images/dot.svg')
+            background-position: 0 center
+            background-repeat: repeat-x
+            background-size: auto 3px
+            border: transparent
+            height: 16px
+            padding: 0
+            &:focus
+                border: transparent
+                outline: none
+                &::-webkit-slider-thumb
+                    background-color: darken($color-primary, 5%)
+                &::-moz-range-thumb
+                    background-color: darken($color-primary, 5%)
+                &::-ms-thumb
+                    background-color: darken($color-primary, 5%)
+
+            &::-webkit-slider-thumb
+                -webkit-appearance: none
+                background: $color-primary
+                border: none
+                border-radius: 16px
+                height: 16px
+                width: 16px
+
+            &::-moz-range-thumb
+                -webkit-appearance: none
+                background: $color-primary
+                border: none
+                border-radius: 16px
+                height: 16px
+                width: 16px
+
+            &::-ms-thumb
+                -webkit-appearance: none
+                background: $color-primary
+                border: none
+                border-radius: 16px
+                height: 16px
+                width: 16px

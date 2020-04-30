@@ -1,0 +1,47 @@
+@import "tools/variables"
+
+.codex
+    display: flex
+    flex-flow: row wrap
+    height: 100%
+    justify-content: flex-end
+    left: 0
+    opacity: 0
+    position: fixed
+    top: 0
+    visibility: hidden
+    width: 100%
+    z-index: 100
+
+    p
+        color: lighten($color-black, 40%)
+
+    &__background
+        background-color: rgba(#000000, .8)
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+        z-index: -1
+
+    &__home
+        background-color: rgba(#000000, .9)
+        border-left: 3px solid $color-black
+        height: 100%
+        padding: 20px
+        position: relative
+        width: 350px
+        z-index: 2
+
+        &--cross
+            position: absolute
+            right: 20px
+            top: 20px
+
+        &--list
+            -webkit-overflow-scrolling: touch
+            max-height: 70%
+            overflow-y: auto
+            &::-webkit-scrollbar
+                display: none

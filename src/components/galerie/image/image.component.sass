@@ -1,0 +1,87 @@
+@import "tools/variables"
+
+.section_galerie__image
+    position: relative
+    transition: opacity .3s ease-in-out
+
+    .section_image,
+    .section_galerie__image--hoverImg
+        pointer-events: none
+
+    button
+        background: none
+        border: none
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+        &:focus
+            outline: none
+
+    &:hover
+        .section_galerie__image--hoverImg
+            transform: rotate(45deg)
+    img
+        max-height: 100%
+        max-width: 100%
+
+    &--container
+        background: none
+        border: none
+        flex: 0 0 auto
+        height: calc(50% - 30px)
+        padding: 0 30px
+        position: relative
+        &:nth-child(odd)
+            margin-bottom: 30px
+        &:nth-child(even)
+            margin-top: 30px
+
+    &--hoverImg
+        background-color: $color-black
+        border-radius: 20px
+        bottom: 10px
+        height: 20px
+        opacity: .6
+        position: absolute
+        right: 10px
+        transition: transform .1s ease-in-out, opacity .5s ease-in-out
+        width: 20px
+        z-index: 2
+        &::before,
+        &::after
+            background-color: $color-secondary
+            bottom: 0
+            content: ''
+            display: block
+            height: 2px
+            left: 0
+            margin: auto
+            position: absolute
+            right: 0
+            top: 0
+            width: 50%
+
+        &::after
+            transform: rotate(90deg)
+
+    &--portrait
+        .section_galerie__image
+            height: 100%
+        .section_image
+            height: 100%
+            width: auto
+
+    &--paysage
+        align-items: center
+        display: flex
+        flex-flow: row wrap
+        width: 320px
+        .section_galerie__image
+            width: 100%
+
+    &--open
+        z-index: 5
+        .section_galerie__image--hoverImg
+            opacity: 0

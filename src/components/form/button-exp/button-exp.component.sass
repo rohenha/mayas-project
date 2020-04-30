@@ -1,0 +1,107 @@
+@import "tools/variables"
+
+.form-button-exp
+    display: inline-block
+    span
+        pointer-events: none
+    &__text
+        text-align: right
+        text-transform: uppercase
+        > span
+            overflow: hidden
+
+        span
+            display: block
+            text-align: right
+
+        &--content
+            position: relative
+            transform: translateX(0)
+            transition: transform .6s ease-in-out
+            &::before
+                content: attr(data-content)
+                display: block
+                position: absolute
+                right: calc(100% + 10px)
+                top: 0
+                width: 100%
+
+        &--subtitle
+            color: $color-primary
+
+        &--subtitle
+            .form-button-exp__text--content
+                transition-delay: .1s
+
+    &__button
+        align-items: center
+        appearance: none
+        background: transparent
+        border: none
+        color: $color-secondary
+        cursor: pointer
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        outline: none
+
+        &:hover
+            .form-button-exp
+                &__text
+                    &--subtitle .form-button-exp__text--content
+                        transition-delay: 0s
+
+                    &--title .form-button-exp__text--content
+                        transition-delay: .1s
+
+                    &--content
+                        transform: translateX(calc(100% + 10px))
+
+                &__circle
+                    background-color: $color-primary
+                    border: 1px solid $color-primary
+                    &::before
+                        background-position: 30px center
+
+    &__circle
+        background: rgba(#49403A, .5)
+        border: 1px solid rgba(#F6F6F6, .3)
+        border-radius: 35px
+        height: 35px
+        margin-left: 10px
+        overflow: hidden
+        position: relative
+        transition: background .3s ease-in-out, border .3s ease-in-out
+        width: 35px
+        &::before
+            background: url('../../../assets/images/arrow.svg')
+            background-position: center center
+            background-repeat: repeat-x
+            background-size: 75% 75%
+            content: ''
+            display: block
+            height: 100%
+            left: 0
+            position: absolute
+            top: 0
+            transition: background-position .6s ease-in-out
+            width: 100%
+
+    &__back
+        .form-button-exp
+            &__button
+                flex-flow: row-reverse wrap
+                span
+                    text-align: left
+                .form-button-exp__text--content
+                    &::before
+                        left: calc(100% + 10px)
+
+                &:hover
+                    .form-button-exp__text--content
+                        transform: translateX(calc(-100% - 10px))
+
+            &__circle
+                margin: 0 10px 0 0
+                &::before
+                    transform: scaleX(-1)

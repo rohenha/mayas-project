@@ -1,0 +1,41 @@
+
+.button
+    &__base
+        align-items: center
+        appearance: none
+        background: rgba(#49403A, .5)
+        border: 1px solid rgba(#F6F6F6, .3)
+        border-radius: 2px
+        color: $color-secondary
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        padding: 4px 20px
+        transition: background .3s ease-in-out
+        &:not(:disabled)
+            &:hover,
+            &:focus
+                background: rgba($color-black, 1)
+                outline: none
+
+        &:disabled
+            opacity: .5
+
+        .section_image
+            display: inline-block
+            height: 20px
+            margin-left: 5px
+            width: 20px
+
+    &__red
+        background: rgba($color-primary, .5)
+        border: 1px solid rgba($color-primary,.3)
+        &:not(:disabled)
+            &:hover,
+            &:focus
+                background: rgba($color-primary, 1)
+                outline: none
+
+        &:disabled
+            background: rgba(#49403A, .5)
+            border: 1px solid rgba(#F6F6F6, .3)

@@ -1,0 +1,96 @@
+@import "tools/variables"
+
+.section_video
+    &__player
+        background: url('../../../assets/images/controls.svg'), rgba($color-black, .4)
+        background-position:  3px -88px
+        background-size: 90px 268px
+        border: 2px solid $color-secondary
+        border-radius: 50px
+        height: 50px
+        left: 50%
+        opacity: 0
+        pointer-events: none
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+        transition: opacity .2s ease-in-out
+        width: 50px
+        &.active
+            opacity: 1
+        &.pause
+            background-position: -46px -88px
+
+    &__controls
+        display: inline-block
+        position: relative
+
+        &--left,
+        &--right
+            font-size: 0
+            position: absolute
+            top: 0
+            width: 100%
+
+        &--left
+            right: calc(100% + 10px)
+            text-align: right
+
+        &--right
+            left: calc(100% + 10px)
+            text-align: left
+
+    &__sound,
+    &__subtitles,
+    &__fullscreen
+        background: none
+        background-image: url('../../../assets/images/controls.svg')
+        background-size: 50px 149px
+        border: 0
+        display: inline-block
+        font-size: 0
+        height: 20px
+        width: 20px
+        &:not(:last-child)
+            margin-right: 10px
+        &:focus
+            outline: none
+
+    &__fullscreen
+        background-position: -2px -77px
+
+    &__subtitles
+        background-position: -31px -29px
+        &.active
+            background-position: -31px -2px
+
+    &__sound
+        background-position: -2px -30px
+        &.active
+            background-position: -2px -2px
+
+
+    &__status
+        bottom: 0
+        font-size: 0
+        left: 0
+        position: absolute
+        text-align: center
+        width: 100%
+        z-index: 3
+        width: 100%
+
+        p
+            color: $color-secondary
+            margin-bottom: 10px
+
+    &__progress
+        background-color: $color-primary
+        height: 100%
+        width: 0
+        &--container
+            background-color: rgba($color-secondary, .1)
+            cursor: pointer
+            display: inline-block
+            height: 7px
+            width: 100%

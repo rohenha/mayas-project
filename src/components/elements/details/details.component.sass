@@ -1,0 +1,38 @@
+@import "tools/variables"
+
+.section_details
+    justify-content: flex-start
+    overflow: hidden
+    &::before
+        display: none
+    &__content
+        -webkit-overflow-scrolling: touch
+        align-items: flex-start
+        background-color: $color-black
+        display: flex
+        flex-flow: row nowrap
+        height: 100%
+        justify-content: flex-start
+        overflow-x: auto
+        overflow-y: hidden
+        &::-webkit-scrollbar
+            display: none
+
+        >div
+            &:last-child
+                &:not(.section_galerie__image--container),
+                &:not(.section_galerie__details)
+                    padding-right: 60px
+
+        .block
+            flex: 0 0 auto
+            height: 100%
+            padding: 20px
+            width: 700px
+
+.square
+    &-red
+        background-color: $color-primary
+
+    &-blue
+        background-color: $color-secondary

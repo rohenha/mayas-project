@@ -1,0 +1,63 @@
+@import "tools/variables"
+
+.section_interactive-photo
+    flex: 0 0 auto
+    height: 100%
+    .container-fluid
+        height: 100%
+        position: relative
+
+    .section_image
+        display: inline-block
+        height: 100%
+        width: auto
+        img
+            max-height: 100%
+            max-width: auto
+    &__points
+        height: 100%
+        left: 20px
+        position: absolute
+        top: 0
+        width: calc(100% - 40px)
+        z-index: 2
+
+        li
+            list-style: none
+            position: absolute
+
+            button
+                background-color: $color-black
+                border: 1px solid $color-secondary
+                border-radius: 30px
+                font-size: 0
+                height: 30px
+                opacity: .5
+                transition: opacity .3s ease-in-out, transform .3s ease-in-out, background-color .3s ease-in-out
+                width: 30px
+
+                &:hover,
+                &:focus,
+                &.active
+                    opacity: 1
+                    outline: none
+                    transform: scale(1.1)
+
+                &.active
+                    background-color: $color-primary
+
+        &--audio,
+        &--text,
+        &--video
+            background: none
+            background-image: url('../../../../assets/images/controls.svg')
+            background-size: 60px 178px
+
+        &--audio
+            background-position: 1px 1px
+
+        &--text
+            background-position: 1px -119px
+
+        &--video
+            background-position: -33px -119px
