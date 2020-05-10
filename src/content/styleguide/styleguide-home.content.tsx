@@ -1,4 +1,5 @@
 import { IRoute } from 'Interfaces';
+import Videos from 'Videos';
 
 export const StyleguideHomeContent: IRoute = {
   ambiant: '',
@@ -31,13 +32,13 @@ export const StyleguideHomeContent: IRoute = {
         media: {
           poster: {
             alt: '',
-            path: require('../../assets/videos/Breezy/Breezy.jpg'),
+            path: Videos.breezy.poster,
             title: ''
           },
           sources: [
-            { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
-            { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
-            { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
+            { type: 'mp4', path: Videos.breezy.mp4 },
+            { type: 'webm', path: Videos.breezy.webm },
+            { type: 'ogv', path: Videos.breezy.ogv }
           ]
         },
         start: 'PIntroductionContent',

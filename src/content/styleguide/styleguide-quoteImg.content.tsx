@@ -1,3 +1,4 @@
+import Images from 'Images';
 import { IRoute } from 'Interfaces';
 
 export const StyleguideQuoteImgContent: IRoute = {
@@ -12,7 +13,7 @@ export const StyleguideQuoteImgContent: IRoute = {
         imgs: [
           {
             alt: '',
-            path: require('../../assets/images/jimmy-baum-346127-unsplash.jpg'),
+            path: Images.chichenItzaLarge,
             title: ''
           }
         ],

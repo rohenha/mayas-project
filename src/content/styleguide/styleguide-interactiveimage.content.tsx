@@ -1,4 +1,7 @@
+import Images from 'Images';
 import { IRoute } from 'Interfaces';
+import Sounds from 'Sounds';
+import Videos from 'Videos';
 
 export const StyleguideInteractiveImageContent: IRoute = {
   ambiant: require('../../assets/sounds/bensound-hey.mp3'),
@@ -11,7 +14,7 @@ export const StyleguideInteractiveImageContent: IRoute = {
       content: {
         image: {
           alt: '',
-          path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
+          path: Images.foret,
           title: ''
         },
         points: [
@@ -19,13 +22,13 @@ export const StyleguideInteractiveImageContent: IRoute = {
             content: {
               poster: {
                 alt: '',
-                path: require('../../assets/videos/Breezy/Breezy.jpg'),
+                path: Videos.breezy.poster,
                 title: ''
               },
               sources: [
-                  { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
-                  { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
-                  { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
+                { type: 'mp4', path: Videos.breezy.mp4 },
+                { type: 'webm', path: Videos.breezy.webm },
+                { type: 'ogv', path: Videos.breezy.ogv }
               ]
             },
             file: 'video',
@@ -51,7 +54,7 @@ export const StyleguideInteractiveImageContent: IRoute = {
           },
           {
             content: {},
-            file: require('../../assets/sounds/carnival-daniel_simon.mp3'),
+            file: Sounds.carnival,
             title:"Lorem ipsum dolor sit amet, consectetur adipisicing elit",
             type: "audio",
             x: "40%",
@@ -59,7 +62,7 @@ export const StyleguideInteractiveImageContent: IRoute = {
           },
           {
             content: {},
-            file: require('../../assets/sounds/bensound-hey.mp3'),
+            file: Sounds.bensound,
             title:"Lorem ipsum",
             type: "audio",
             x: "50%",
@@ -95,12 +98,12 @@ export const StyleguideInteractiveImageContent: IRoute = {
             file: [
               {
                 alt: '',
-                path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
+                path: Images.foret,
                 title: ''
               },
               {
                 alt: '',
-                path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
+                path: Images.portraitStatue,
                 title: ''
               }
             ],

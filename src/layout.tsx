@@ -15,7 +15,8 @@ import {
   Header,
   HeaderExpComponent,
   MobileComponent,
-  PageComponent
+  PageComponent,
+  PreloaderComponent
 } from 'Components';
 import Providers from 'Providers';
 
@@ -24,7 +25,9 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
   public enterTrans: (node: HTMLElement) => void = this.enter.bind(this);
   public exitTrans: (node: HTMLElement) => void = this.exit.bind(this);
   public pagesService: PagesService = new PagesService();
-
+  public onInitContent: () => void = this.initContent.bind(this);
+  public content: HTMLElement;
+  public container: HTMLElement | null;
   constructor(props: ILayoutProps) {
     super(props);
     this.state = {
@@ -34,7 +37,13 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
   };
 
   public componentDidMount(): void {
-    this.enter(document.querySelector('#content')!.children[0] as HTMLElement);
+    this.container = document.querySelector('#content');
+    this.content = this.container!.children[0] as HTMLElement;
+  };
+
+  public initContent(): void {
+    this.container!.style.display = 'block';
+    this.enter(this.content);
   };
 
   public enter(node: HTMLElement): void {
@@ -108,6 +117,7 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
       <React.Fragment>
         {this.renderHeader()}
         {this.renderExperience()}
+        <PreloaderComponent callback={this.onInitContent} />
         <TransitionGroup component="div" id="content">
           <Transition
             key={this.props.location.pathname}

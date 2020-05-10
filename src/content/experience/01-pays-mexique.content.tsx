@@ -1,3 +1,4 @@
+import Images from 'Images';
 import { IExperience } from 'Interfaces';
 
 export const PPaysMexiqueContent: IExperience = {
@@ -14,7 +15,7 @@ export const PPaysMexiqueContent: IExperience = {
       content: {
         image: {
           alt: '',
-          path: require('../../assets/images/jimmy-baum-346127-unsplash.jpg'),
+          path: Images.chichenItzaLarge,
           title: ''
         },
         sens: true,

@@ -6,7 +6,7 @@ rules:
 
   # Possible Errors
   no-await-in-loop: 1
-  no-console: 0
+  no-console: 1
   no-extra-parens: [1, 'all']
   no-template-curly-in-string: 0
 

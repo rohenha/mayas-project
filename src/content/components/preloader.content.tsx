@@ -1,5 +1,7 @@
+import Images from 'Images';
+
 export const PreloaderContent: any =  {
-  background: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
+  background: Images.foret,
   isPage: false,
   text: {
     experience: "Pour une meilleure expérience utilisez des écouteurs",

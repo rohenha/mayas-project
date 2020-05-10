@@ -1,11 +1,13 @@
+import Images from 'Images';
+
 export const MenuContent: any =  {
   background: {
     alt: 'Image Menu',
-    path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
+    path: Images.foret,
     title: 'Image Menu Title'
   },
   isPage: false,
-  map: require('../../assets/images/map-menu.svg'),
+  map: Images.mapMenu,
   menu: {
     subtitle: "Ouvrir le",
     title: "menu"

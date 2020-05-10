@@ -1,7 +1,9 @@
 import { IRoute } from 'Interfaces';
+import Sounds from 'Sounds';
+import Videos from 'Videos';
 
 export const StyleguideVideoContent: IRoute = {
-  ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
+  ambiant: Sounds.carnival,
   animation: 'Common',
   class: 'page_styleguide',
   container: true,
@@ -17,13 +19,15 @@ export const StyleguideVideoContent: IRoute = {
         nextPage: '',
         poster: {
           alt: '',
-          path: require('../../assets/videos/Semaine/semaine.jpg'),
+          path: Videos.breezy.poster,
           title: ''
         },
         sources: [
-            { type: 'mp4', path: require('../../assets/videos/Semaine/semaine.mp4') }
+          { type: 'mp4', path: Videos.breezy.mp4 },
+          { type: 'webm', path: Videos.breezy.webm },
+          { type: 'ogv', path: Videos.breezy.ogv }
         ],
-        subtitles: require('../../assets/videos/Semaine/sous-titres.vtt')
+        subtitles: Videos.semaine.subtitles
       }
     }
   ],

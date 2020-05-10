@@ -1,5 +1,5 @@
 // Imports
-// import { Howl } from 'howler';
+import { Howl } from 'howler';
 import { IContentInteractiveProps, ISoundState } from 'Interfaces';
 import * as React from 'react';
 import { VideoService } from 'Services';

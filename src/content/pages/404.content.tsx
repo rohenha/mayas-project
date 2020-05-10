@@ -1,7 +1,9 @@
+import Images from 'Images';
 import { IRoute } from 'Interfaces';
+import Sounds from 'Sounds';
 
 export const P404Content: IRoute = {
-  ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
+  ambiant: Sounds.carnival,
   animation: 'Common',
   class: 'page_404',
   container: false,
@@ -15,7 +17,7 @@ export const P404Content: IRoute = {
         },
         background: {
           alt: '',
-          path: require('../../assets/images/john-salzarulo-37827-unsplash.jpg'),
+          path: Images.foret,
           title: ''
         },
         subtitle: "Vous êtes vous perdu dans la",

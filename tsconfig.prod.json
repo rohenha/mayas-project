@@ -18,17 +18,16 @@
     "noUnusedLocals": true,
     "baseUrl": "./",
     "paths": {
-      "Content": [ "src/content/index.tsx" ],
-      "Services": [ "src/services/index.tsx" ],
-      "Resolvers": [ "src/commons/resolvers/index.tsx" ],
-      "Interfaces": [ "src/interfaces/index.tsx" ],
-      "Mocks": [ "src/commons/mocks/index.tsx" ],
-      "Animations": [ "src/animations/index.tsx" ],
-      "Styles": [ "src/styles/*" ],
-      "Images": [ "src/images/index.tsx"],
-      "Videos": [ "src/videos/index.tsx"],
-      "Components": [ "src/components/index.tsx" ],
-      "Providers": [ "src/providers/index.tsx" ]
+      "Content": ["src/content/index.tsx"],
+      "Services": ["src/services/index.tsx"],
+      "Interfaces": ["src/interfaces/index.tsx"],
+      "Animations": ["src/animations/index.tsx"],
+      "Styles": ["src/assets/stylesheets/*"],
+      "Images": ["src/assets/images/index.tsx"],
+      "Videos": ["src/assets/videos/index.tsx"],
+      "Sounds": ["src/assets/sounds/index.tsx"],
+      "Components": ["src/components/index.tsx"],
+      "Providers": ["src/providers/index.tsx"]
     }
   },
   "include": [

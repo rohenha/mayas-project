@@ -1,7 +1,8 @@
 import { IRoute } from 'Interfaces';
+import Sounds from 'Sounds';
 
 export const StyleguideVideoYoutubeContent: IRoute = {
-  ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
+  ambiant: Sounds.carnival,
   animation: 'Common',
   class: 'page_styleguide',
   container: true,

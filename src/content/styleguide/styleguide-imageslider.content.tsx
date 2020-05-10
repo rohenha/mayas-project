@@ -1,3 +1,4 @@
+import Images from 'Images';
 import { IRoute } from 'Interfaces';
 
 export const StyleguideImagesSliderContent: IRoute = {
@@ -12,17 +13,17 @@ export const StyleguideImagesSliderContent: IRoute = {
         images: [
           {
             alt: '',
-            path: require('../../assets/images/jimmy-baum-346127-unsplash.jpg'),
+            path: Images.chichenItzaLarge,
             title: ''
           },
           {
             alt: '',
-            path: require('../../assets/images/bernard-hermant-669688-unsplash.jpg'),
+            path: Images.portraitStatue,
             title: ''
           },
           {
             alt: '',
-            path: require('../../assets/images/forest-hd-wallpaper-jungle-58557.jpg'),
+            path: Images.foretCanyon,
             title: ''
           }
         ],

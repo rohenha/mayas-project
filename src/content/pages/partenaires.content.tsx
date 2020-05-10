@@ -1,4 +1,5 @@
 import { IRoute } from 'Interfaces';
+import Videos from 'Videos';
 
 export const PartenairesContent: IRoute = {
   ambiant: '',
@@ -9,19 +10,19 @@ export const PartenairesContent: IRoute = {
     {
       component: 'EntryChapterComponent',
       content: {
-        imgs: [
-            {
-              alt: '',
-              path: require('../../assets/videos/Breezy/Breezy.jpg'),
-              title: ''
-            },
-            [
-                { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
-                { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
-                { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
-            ]
-        ],
         introduction: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolores provident minus.",
+        media: {
+          poster: {
+            alt: '',
+            path: Videos.breezy.poster,
+            title: ''
+          },
+          sources: [
+            { type: 'mp4', path: Videos.breezy.mp4 },
+            { type: 'webm', path: Videos.breezy.webm },
+            { type: 'ogv', path: Videos.breezy.ogv }
+          ]
+        },
         subtitle: "Les personnes qui ont apportées leur",
         text: "contribution",
         video: true

@@ -1,7 +1,10 @@
+import Images from 'Images';
 import { IExperience } from 'Interfaces';
+import Sounds from 'Sounds';
+
 
 export const PPaysContent: IExperience = {
-  ambiant: require('../../assets/sounds/bensound-hey.mp3'),
+  ambiant: Sounds.bensound,
   animation: 'Common',
   chapter: 2,
   class: 'page_pays',
@@ -16,7 +19,7 @@ export const PPaysContent: IExperience = {
           {
             image: {
               alt: '',
-              path: require('../../assets/images/jezael-melgoza-551505-unsplash.jpg'),
+              path: Images.mexique,
               title: ''
             },
             name: 'Mexique',
@@ -25,7 +28,7 @@ export const PPaysContent: IExperience = {
           {
             image: {
               alt: '',
-              path: require('../../assets/images/landscape-2389023_1920.jpg'),
+              path: Images.paysage,
               title: ''
             },
             name: 'Guatemala',
@@ -34,7 +37,7 @@ export const PPaysContent: IExperience = {
           {
             image: {
               alt: '',
-              path: require('../../assets/images/earth-608344-unsplash.jpg'),
+              path: Images.mer,
               title: ''
             },
             name: 'Bélize',

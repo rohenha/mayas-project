@@ -1,4 +1,6 @@
-export const FooterContent: any = {
+import Images from 'Images';
+
+export const FooterContent: any =  {
   isPage: false,
   links: [
     {
@@ -24,7 +26,7 @@ export const FooterContent: any = {
     {
       image: {
         alt: 'Logo Instagram',
-        path: require('../../assets/images/instagram.svg'),
+        path: Images.instagram,
         title: 'instagram'
       },
       link: "https://www.instagram.com/voyageterreshistoire/",
@@ -34,7 +36,7 @@ export const FooterContent: any = {
     {
       image: {
         alt: 'Logo Facebook',
-        path: require('../../assets/images/facebook.svg'),
+        path: Images.facebook,
         title: 'Facebook'
       },
       link: "https://www.facebook.com/voyageterreshistoire/",

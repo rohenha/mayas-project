@@ -14,7 +14,7 @@ export default class Router extends React.Component {
 
   public render(): React.ReactElement<any> {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ContainerComponent>
           <Route path="/" component={Layout}  />
         </ContainerComponent>

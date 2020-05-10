@@ -1,4 +1,6 @@
+import Images from 'Images';
 import { IExperience } from 'Interfaces';
+import Videos from 'Videos';
 
 export const PIntroductionContent: IExperience = {
   ambiant: require('../../assets/sounds/carnival-daniel_simon.mp3'),
@@ -15,25 +17,25 @@ export const PIntroductionContent: IExperience = {
        {
          content: {
            alt: 'alt',
-           path: require('../../assets/videos/Breezy/Breezy.jpg'),
+           path: Images.chichenItza,
            title: 'title'
          },
          type: 'img'
        },
        {
-         content: {
-           poster: {
-             alt: '',
-             path: require('../../assets/videos/Breezy/Breezy.jpg'),
-             title: ''
-           },
-           sources: [
-               { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
-               { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
-               { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
-           ]
-         },
-         type: 'video'
+        content: {
+          poster: {
+            alt: '',
+            path: Videos.breezy.poster,
+            title: ''
+          },
+          sources: [
+            { type: 'mp4', path: Videos.breezy.mp4 },
+            { type: 'webm', path: Videos.breezy.webm },
+            { type: 'ogv', path: Videos.breezy.ogv }
+          ]
+        },
+        type: 'video'
        },
        {
          content: {
@@ -60,13 +62,13 @@ export const PIntroductionContent: IExperience = {
         media: {
           poster: {
             alt: '',
-            path: require('../../assets/videos/Breezy/Breezy.jpg'),
+            path: Videos.breezy.poster,
             title: ''
           },
           sources: [
-            { type: 'mp4', path: require('../../assets/videos/Breezy/Breezy.mp4') },
-            { type: 'webm', path: require('../../assets/videos/Breezy/Breezy.webm') },
-            { type: 'ogv', path: require('../../assets/videos/Breezy/Breezy.ogv') }
+            { type: 'mp4', path: Videos.breezy.mp4 },
+            { type: 'webm', path: Videos.breezy.webm },
+            { type: 'ogv', path: Videos.breezy.ogv }
           ]
         },
         subtitle: "Chapitre 1<span>Mayas</span>",

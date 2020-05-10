@@ -1,5 +1,5 @@
 export interface IPreloadProps {
-  sound: boolean
+  callback: () => void
 }
 export interface IPreloadState {
   avancement: number

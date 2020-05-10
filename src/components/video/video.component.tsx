@@ -95,7 +95,7 @@ export class VideoComponent extends React.Component<IPageComponentProps, IVideoS
           autoPlay={this.props.content.autoplay}
           loop={this.props.content.loop}
           muted = {this.props.content.muted}
-          preload={"auto"}
+          preload={"metadata"}
           poster={this.props.content.poster}
           onLoadedMetadata={this.setDuration}
           onTimeUpdate={this.currentTime}

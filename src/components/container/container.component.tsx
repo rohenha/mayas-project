@@ -10,21 +10,25 @@ import Providers from 'Providers';
 
 export class ContainerComponent extends React.Component<ISimpleProps, IContainerState> {
   private constructor(props: ISimpleProps) {
-      super(props);
-      const routes: IRoute | IExperience []  = [];
-      Object.keys(Content)
-        .forEach((key: string) => {
-          const content = Content[key];
-          if (content.isPage) {
-            routes.push(content);
-          }
+    super(props);
+    this.state = {
+      muted: false,
+      page: Providers['PageBase'],
+      routes: this.initRoutes(),
+      sound: true
+    };
+  };
+
+  public initRoutes(): IRoute | IExperience[] {
+    const routes: IRoute | IExperience[] = [];
+    Object.keys(Content)
+      .forEach((key: string) => {
+        const content = Content[key];
+        if (content.isPage) {
+          routes.push(content);
+        }
       });
-      this.state = {
-        muted: false,
-        page: Providers['PageBase'],
-        routes,
-        sound: true
-      };
+    return routes;
   };
 
   public setContent(page: IRoute): void {

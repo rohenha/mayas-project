@@ -1,3 +1,4 @@
+import Images from 'Images';
 import { IRoute } from 'Interfaces';
 
 export const StyleguideMultiplepathContent: IRoute = {
@@ -13,7 +14,7 @@ export const StyleguideMultiplepathContent: IRoute = {
           {
             image: {
               alt: '',
-              path: require('../../assets/images/jezael-melgoza-551505-unsplash.jpg'),
+              path: Images.mexique,
               title: ''
             },
             name: 'Mexique',
@@ -22,7 +23,7 @@ export const StyleguideMultiplepathContent: IRoute = {
           {
             image: {
               alt: '',
-              path: require('../../assets/images/landscape-2389023_1920.jpg'),
+              path: Images.paysage,
               title: ''
             },
             name: 'Guatemala',
@@ -31,7 +32,7 @@ export const StyleguideMultiplepathContent: IRoute = {
           {
             image: {
               alt: '',
-              path: require('../../assets/images/earth-608344-unsplash.jpg'),
+              path: Images.mer,
               title: ''
             },
             name: 'Bélize',
